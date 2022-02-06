@@ -1,0 +1,2 @@
+ip=${ip}
+key=${key}
