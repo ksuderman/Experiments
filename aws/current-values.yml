@@ -1,0 +1,88 @@
+USER-SUPPLIED VALUES:
+configs:
+  galaxy.yml:
+    galaxy:
+      admin_users: afgane@gmail.com,suderman@jhu.edu
+      job_metrics_config_file: job_metrics_conf.yml
+      master_api_key: galaxypassword
+  job_metrics_conf.yml:
+  - type: core
+  - type: cgroup
+  - type: cpuinfo
+  - type: meminfo
+  - type: uname
+cvmfs:
+  cache:
+    alienCache:
+      storageClass: nfs
+  deploy: true
+  enabled: true
+image:
+  repository: galaxyproject/galaxy-min
+  tag: dev
+ingress:
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+  - host: null
+    paths:
+    - path: /
+  path: /
+initJob:
+  downloadToolConfs:
+    enabled: true
+jobHandlers:
+  startupDelay: 5
+jobs:
+  rules:
+    container_mapper_rules.yml:
+      resources:
+        default_resource_set: small
+        resource_sets:
+          2xlarge:
+            limits:
+              cpu: 16
+              memory: 32G
+            requests:
+              cpu: 16
+              memory: 32G
+          large:
+            limits:
+              cpu: 16
+              memory: 32G
+            requests:
+              cpu: 16
+              memory: 32G
+          medium:
+            limits:
+              cpu: 16
+              memory: 32G
+            requests:
+              cpu: 16
+              memory: 32G
+          mlarge:
+            limits:
+              cpu: 16
+              memory: 32G
+            requests:
+              cpu: 16
+              memory: 32G
+          small:
+            limits:
+              cpu: 16
+              memory: 32G
+            requests:
+              cpu: 16
+              memory: 32G
+persistence:
+  accessMode: ReadWriteMany
+  size: 470Gi
+  storageClass: nfs
+postgresql:
+  galaxyDatabasePassword: galaxydbpassword
+  persistence:
+    storageClass: nfs
+webHandlers:
+  startupDelay: 10
+workflowHandlers:
+  startupDelay: 0

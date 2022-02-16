@@ -1,0 +1,18 @@
+resource "aws_route53_record" "dns" {
+  for_each = var.flavors
+  zone_id = var.dns_zone_id
+  name    = "${var.instance_name}-${each.value}.${var.domain}"
+  type    = "A"
+  ttl     = "3600"
+  records = [openstack_compute_floatingip_v2.floating_ips[count.index].address]
+}
+
+resource "aws_route53_record" "dns_wildcard" {
+  #count = var.num_nodes
+  for_each = var.flavors
+  zone_id = var.dns_zone_id
+  name    = "*.${var.instance_name}-${each.value}.${var.domain}"
+  type    = "A"
+  ttl     = "3600"
+  records = [openstack_compute_floatingip_v2.floating_ips[count.index].address]
+}

@@ -1,0 +1,5 @@
+ingress:
+  tls:
+    - secretName: {{ name }}-{{ domain }}-{{ tld }}
+      hosts:
+      - {{ name }}.{{ domain }}.{{ tld }}

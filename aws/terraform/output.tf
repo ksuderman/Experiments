@@ -15,13 +15,13 @@ locals {
 resource "local_file" "ipfile" {
     count = length(var.instance_types)
     content = templatefile("./templates/cluster.tpl", { ip=local.ips[count.index].public_ip, key=local.key})
-    filename = pathexpand("~/.cluster/aws${var.instance_types[count.index]}")
+    filename = pathexpand("~/.cluster/${var.prefix}${var.instance_types[count.index]}")
 }
 
 resource "local_file" "inventories" {
     count = length(var.instance_types)
     content = templatefile("./templates/inventory.tpl", { ip=local.ips[count.index].public_ip, key=local.key, name="aws${var.instance_types[count.index]}"})
-    filename = pathexpand("~/.inventories/aws${var.instance_types[count.index]}.ini")    #filename = "/tmp/bench${count.index+1}.ini"
+    filename = pathexpand("~/.inventories/${var.prefix}${var.instance_types[count.index]}.ini")    #filename = "/tmp/bench${count.index+1}.ini"
 }
 
 output "ip_addresses" {

@@ -4,6 +4,11 @@ variable "cluster_name" {
   default = "ks-cloudcost"
 }
 
+variable "prefix" {
+  type = string
+  default = "aws"
+}
+
 variable "instance_types" {
   type = list(string)
   default = ["m5", "m5a"]

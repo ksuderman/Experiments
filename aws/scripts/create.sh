@@ -44,7 +44,7 @@ done
 
 echo "[$S]"
 cd terraform
-terraform apply --auto-approve -var instance_types="[$S]"
+terraform apply --auto-approve -var instance_types="[$S]" --var prefix="$prefix"
 cd -
 
 set -- $saved

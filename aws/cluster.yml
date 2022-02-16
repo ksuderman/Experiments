@@ -1,0 +1,19 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: cost-modeling
+  region: us-east-1
+
+vpc:
+  subnets:
+    private:
+      us-east-1b: { id: subnet-06303a87249b06b29 }
+nodeGroups:
+  - name: group-1
+    instanceType: m5.8xlarge
+    desiredCapacity: 1
+    volumeSize: 200
+    ssh:
+      allow: true # will use ~/.ssh/id_rsa.pub as the default ssh key
+  

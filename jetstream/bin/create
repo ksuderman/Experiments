@@ -1,0 +1,64 @@
+#1/usr/bin/env bash
+
+# ANSI color codes for the console.
+reset="\033[0m"
+bold="\033[1m"
+ital="\033[3m" # does not work on OS X
+
+PROG=$(basename $0)
+
+# Function used to highlight text.
+function hi() {
+    echo -e "$bold$@$reset"
+}
+
+if [[ $# = 0 ]] ; then
+    echo
+    echo "$(hi SYNOPSIS)"
+    echo "    Create a cluster at Jetstream/TACC or Jetstream/IU"
+    echo
+    echo "$(hi USAGE)"
+    echo "    \$> $PROG [tacc|iu] <N>"
+    echo
+    echo "$(hi OPTIONS)"
+    echo "    $(hi tacc)|$(hi iu)  where the cluster will be created"
+    echo "    $(hi N)        the number of nodes to create"
+    echo
+    exit 1
+fi
+
+set -eu
+
+# These will need to be changed
+TERRAFORM_HOME=~/Workspaces/JHU/terraform
+OPENRC_HOME=~/bin
+
+prefix=$1
+num_nodes=$2
+plan=jetstream-$prefix
+
+dir=$TERRAFORM_HOME/$plan
+if [[ ! -e $dir ]] ; then
+    echo "No such terraform plan $dir"
+    exit 1
+fi
+
+openrc=$OPENRC_HOME/galaxy-$prefix-openrc.sh
+if [[ ! -e $openrc ]] ; then
+    echo "Openrc file not found: $openrc"
+    exit 1
+fi
+source $openrc
+
+cd $TERRAFORM_HOME/$plan
+terraform apply --auto-approve -var num_nodes=$num_nodes
+cd -
+
+for ((i=1;i<=$num_nodes;i++)) ; do
+    echo "Provisioning instance $prefix$i"
+    scripts/end2end.sh $prefix $i
+done
+
+
+
+

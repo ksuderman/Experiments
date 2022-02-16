@@ -1,11 +1,10 @@
-#!/usr/bin/env bash
 set -e
 
 reset="\033[0m"
 bold="\033[1m"
 ital="\033[3m" # does not work on OS X
 
-DIR=.cluster
+DIR=~/.cluster
 NAME=$(basename $0)
 
 # Function used to highlight text.

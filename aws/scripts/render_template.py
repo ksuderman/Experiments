@@ -6,7 +6,7 @@ import sys
 from jinja2 import Template
 
 def main(args):
-    with open('helm/cloudcosts-template.yml', "r") as f:
+    with open('helm/cloudcosts-template.yml.j2', "r") as f:
         template = Template(f.read())
 
     data = {
