@@ -1,0 +1,41 @@
+jobs:
+  rules:
+    container_mapper_rules.yml:
+      resources:
+        resource_sets:
+          small:
+            requests:
+              cpu: '15'
+              memory: 31G
+            limits:
+              cpu: '15'
+              memory: 31G
+          medium:
+            requests:
+              cpu: '15'
+              memory: 31G
+            limits:
+              cpu: '15'
+              memory: 31G
+          large:
+            requests:
+              cpu: '15'
+              memory: 31G
+            limits:
+              cpu: '15'
+              memory: 31G
+          2xlarge:
+            requests:
+              cpu: '15'
+              memory: 31G
+            limits:
+              cpu: '15'
+              memory: 31G
+          mlarge:
+            requests:
+              cpu: '15'
+              memory: 31G
+            limits:
+              cpu: '15'
+              memory: 31G
+        default_resource_set: small

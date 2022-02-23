@@ -24,7 +24,7 @@ for i in $INSTANCES ; do
     abm config url $i $url
     #rewrite "__URL__" $url
     curl $url
-    key=$(abm $i user key alex@fake.org)
+    key=$(abm $i user key suderman@jhu.edu)
     #rewrite "__KEY__" $key
     abm config key $i $key
     echo "Bootstrapping $i"

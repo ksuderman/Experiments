@@ -71,8 +71,8 @@ fi
 function cleanup() {
     echo "Cleaning up"
     gcloud container clusters delete -q $CLUSTER_NAME --zone $ZONE
-    gcloud compute disks delete -q "$CLUSTER_NAME-postgres-pd" --zone $ZONE
-    gcloud compute disks delete -q "$CLUSTER_NAME-nfs-pd" --zone $ZONE
+    #gcloud compute disks delete -q "$CLUSTER_NAME-postgres-pd" --zone $ZONE
+    #gcloud compute disks delete -q "$CLUSTER_NAME-nfs-pd" --zone $ZONE
 }
 
 function cluster() {
