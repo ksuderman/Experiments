@@ -2,7 +2,7 @@
 # The script MUST be sourced so the environment variables persist.
 #
 source $(cat SECRETS)
-#export PATH=./scripts:$PATH
+#export PATH=./bin:$PATH
 CHART=/Users/suderman/Workspaces/JHU/galaxy-helm-upstream/galaxy
 
 if [[ ! -e .venv ]] ; then

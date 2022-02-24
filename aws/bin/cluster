@@ -49,7 +49,7 @@ CONFIG=./clusters/$2.$3.yml
 case $1 in
 	create)
 		if [[ ! -e $CONFIG ]] ; then
-		  ./scripts/render-cluster.sh $2 $3
+		  ./bin/render-cluster.sh $2 $3
 		fi
 		eksctl create cluster -f $CONFIG --profile cost-modeling 
 		;;
@@ -63,7 +63,7 @@ case $1 in
 		;;
 	render)
 		if [[ ! -e $CONFIG ]] ; then
-		  ./scripts/render-cluster.sh $2 $3
+		  ./bin/render-cluster.sh $2 $3
 		else
 			echo "There is already a cluster configuration named $CONFIG"
 		fi

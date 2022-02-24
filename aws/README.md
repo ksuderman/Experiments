@@ -3,18 +3,47 @@
 ## TL ; DR
 
 ```
-./scripts/render-cluster.sh m5a 2xlarge
-eksctl create cluster -f ./clusters/m5a.2xlarge.yml --profile cost-modeling
+./bin/cluster create c5a 2xlarge
 cd ansible
-ansible-playbook galaxy.helm.yml
+ansible-playbook galaxy-helm.yml
+cd -
+abm experiment run experiment.yml
+./bin/cluster delete c5a 2xlarge
 ```
+
+ :bulb: The `bin/cluster create` command will write a cluster configiuration file to the `clusters` directory. This file is used by the `bin/cluster delete` command. The following command are equivalent to running the above `bin/cluster delete` command.
+
+ ```
+ eksctl delete cluster -f clusters/c5a2xlarge.yml --profile cost-modeling
+ eksctl delete cluster --name c5a2xlarge --profile cost-modeling
+ ```
 
 ## Setup
 
+Create a virtual env and install `ansible` and `abm`.
+
+```
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install ansible
+pip install --extral-index-url https://test.pypi.org gxabm
+abm version
+```
+
+> :bulb: Once the `gxabm` package has been released to PyPi the `--extra-index-url` argument can be removed from the above `pip install` command.
 
 ## Scripts
 
-**render-template.py**<
+**bin/cluster**
+
+This is typically the only script that will be called to launch an EKS cluster.  
+
+```
+bin/cluster c5 4xlarge
+```
+
+**render-template.py**
 
 Renders a Jinja2 template.  Parameters to be used in the template can be loaded from a file, or as `key=value` pairs on the command line.
 

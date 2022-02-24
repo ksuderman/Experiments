@@ -15,6 +15,7 @@ NAMESPACE=${NAMESPACE:-gxy}
 CHART=$HOME/Workspaces/JHU/galaxy-helm-upstream/galaxy
 #CHART=${CHART:-galaxy/galaxy}
 
+#TODO Parameterize the location of the kubeconfig file.
 KUBECONFIG=~/.kube/configs/eks helm upgrade galaxy -n $NAMESPACE $CHART \
  --reuse-values --set-file jobs.rules.container_mapper_rules\.yml.content=$1
  
