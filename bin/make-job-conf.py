@@ -1,25 +1,26 @@
 #!/usr/bin/env python3
 
+# A simple script to generate the resource_sets sections of the container_mapper_rules.yml
+# file that will be used the `helm upgrade` clusters.
+#
+# USAGE
+#
+# python3 make-job-conf.py CPU_LIMIT MEMORY_LIMIT
+#
+# EXAMPLE
+#
+# python3 make-job-conf.py 4 16
+
 import sys
 from ruamel.yaml import YAML
 
-STARTER_YAML = '''jobs:
-  rules:
-    container_mapper_rules.yml:
-      resources:
-        resource_sets:
-'''
-
 resource_sets = ['small', 'medium', 'large', '2xlarge', 'mlarge']
-limit_types = ['requests', 'limits']
-resources = ['cpu', 'memory']
-
-#        default_resource_set: small
 
 def run(cpu: int, memory: str):
 	yaml = YAML()
 	root = {}
 	node = root
+	# Build the root of the tree up to the resource_sets entry
 	for section in "jobs rules container_mapper_rules.yml resources resource_sets".split():
 		node[section] = {}
 		node = node[section]
