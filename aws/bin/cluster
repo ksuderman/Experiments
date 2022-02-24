@@ -1,0 +1,81 @@
+#!/usr/bin/env bash
+
+set -eu
+
+reset="\033[0m"
+bold="\033[1m"
+ital="\033[3m" # does not work on OS X
+
+NAME=$(basename $0)
+
+# Function used to highlight text.
+function hi() {
+    echo -e "$bold$@$reset"
+}
+
+function usage() {
+	cat | less -R << EOF 
+	
+$(hi SYNOPSIS) 
+    Manage EKS clusters with the eksctl program
+		
+$(hi USAGE) 
+    $NAME [create|delete]
+	
+$(hi COMMANDS)
+	$(hi create) CPU SIZE
+	    Renders the cluster.yml template and then uses that template with
+	    eksctl to launch the cluster on AWS
+	$(hi delete) CPU SIZE
+	    If a cluster.yml file exists for the given configuration then it will be
+	    used with $(hi eksctl delete cluster) to attempt to destroy the cluster.
+  $(hi render) CPU SIZE
+      Renders a cluster.yml configuration file
+$(hi EXAMPLES)
+    $(hi \$\>) $NAME create c6i 2xlarge
+    $(hi \$\>) $NAME delete c6i 2xlarge
+    
+EOF
+
+}
+
+if [[ $# = 0 ]] ; then
+	usage
+	exit
+fi
+
+CONFIG=./clusters/$2.$3.yml
+
+case $1 in
+	create)
+		if [[ ! -e $CONFIG ]] ; then
+		  ./scripts/render-cluster.sh $2 $3
+		fi
+		eksctl create cluster -f $CONFIG --profile cost-modeling 
+		;;
+	delete|destroy)
+		if [[ ! -e $CONFIG ]] ; then
+		  echo "No such cluster was found"
+		  exit 1
+		fi
+		eksctl delete cluster -f $CONFIG --profile cost-modeling
+		rm $CONFIG
+		;;
+	render)
+		if [[ ! -e $CONFIG ]] ; then
+		  ./scripts/render-cluster.sh $2 $3
+		else
+			echo "There is already a cluster configuration named $CONFIG"
+		fi
+		;;	
+	help)
+		usage
+		;;
+	*)
+		echo "ERROR: Invalid command $1"
+		usage
+		;;
+esac
+		
+exit
+

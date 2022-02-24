@@ -16,19 +16,14 @@ resources = ['cpu', 'memory']
 
 #        default_resource_set: small
 
-def run(cpu: str, memory: str):
+def run(cpu: int, memory: str):
 	yaml = YAML()
-	#root = yaml.load(STARTER_YAML)
-	#yaml.dump(root, sys.stdout)
 	root = {}
 	node = root
 	for section in "jobs rules container_mapper_rules.yml resources resource_sets".split():
 		node[section] = {}
 		node = node[section]
 
-	#data = root['jobs']['rules']['container_mapper_rules.yml']['resources']['resource_sets']
-	#pprint(data)
-	#yaml.dump(data, sys.stdout)
 	for size in resource_sets:
 		resource_set = {}
 		node[size] = resource_set

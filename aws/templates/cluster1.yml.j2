@@ -6,16 +6,17 @@ kind: ClusterConfig
 
 metadata:
   name: {{ cpuType }}{{ cpuSize }}
-  region: us-east-1
+  region: {{ region }}
   version: '1.19'
 
 managedNodeGroups:
   - name: master
     ami: ami-070e4812804b3c418  # Official Ubuntu image for EKS
-    instanceType: c5a.xlarge
-    minSize: 1
-    maxSize: 1
-    volumeSize: 99
+    instanceType: {{ cpuType }}.{{ cpuSize }}
+    minSize: {{ minSize }}
+    maxSize: {{ maxSize }}
+    zones: {{ availabilityZones }}
+    volumeSize: {{ volumeSize }}
     ssh:
       allow: true
       publicKeyName: {{ key }}
@@ -25,23 +26,4 @@ managedNodeGroups:
         externalDNS: true
         certManager: true
         ebs: true
-    overrideBootstrapCommand: |
-      #!/bin/bash
-      /etc/eks/bootstrap.sh ea-cluster --container-runtime containerd
-      sudo apt-get update && sudo apt-get install -y nfs-common
 
-  - name: workers
-    ami: ami-070e4812804b3c418
-    instanceType: {{ cpuType }}.{{ cpuSize }}
-    minSize: {{ minSize }}
-    maxSize: {{ maxSize }}
-    desiredCapacity: {{ minSize }}
-    volumeSize: {{ volumeSize }}
-    iam:
-      withAddonPolicies:
-        ebs: true
-    labels: {role: worker}
-    overrideBootstrapCommand: |
-      #!/bin/bash
-      /etc/eks/bootstrap.sh ea-cluster --container-runtime containerd
-      sudo apt-get update && sudo apt-get install -y nfs-common
