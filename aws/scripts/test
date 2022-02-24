@@ -1,9 +1,0 @@
-#!/bin/bash
-
-S="'$1'"
-shift
-while [[ $# > 0 ]] ; do
-	S="$S,'$1'"
-	shift
-done
-echo "[$S]"
