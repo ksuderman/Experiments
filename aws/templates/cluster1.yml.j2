@@ -11,7 +11,7 @@ metadata:
 
 managedNodeGroups:
   - name: master
-    ami: ami-070e4812804b3c418  # Official Ubuntu image for EKS
+    ami: {{ ami }}  # Official Ubuntu image for EKS
     instanceType: {{ cpuType }}.{{ cpuSize }}
     minSize: {{ minSize }}
     maxSize: {{ maxSize }}

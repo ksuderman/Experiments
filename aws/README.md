@@ -7,7 +7,8 @@
 cd ansible
 ansible-playbook galaxy-helm.yml
 cd -
-abm experiment run experiment.yml
+./bin/bootstrap.sh c5a2xlarge
+abm experiment run experiment.yml  # Assumes we have written this to use the new cluster
 ./bin/cluster delete c5a 2xlarge
 ```
 
@@ -33,11 +34,26 @@ abm version
 
 > :bulb: Once the `gxabm` package has been released to PyPi the `--extra-index-url` argument can be removed from the above `pip install` command.
 
+## Pricing Information
+
+The latest AWS price list can be fetched from [https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/index.json]() **BUT DON'T CLICK THAT LINK!!!** It is a 2.7G JSON file.
+
+Another source, but I don't know if this is current as I found it on [StackOverflow](https://stackoverflow.com/questions/7334035/get-ec2-pricing-programmatically) 
+
+- http://a0.awsstatic.com/pricing/1/ec2/linux-od.min.js
+
+The `bin/pricing.py` script contains an example of using the `boto3` library to query the AWS Pricing API, but it returns a huge amount of information.
+ 
 ## Scripts
 
 **bin/cluster**
 
-This is typically the only script that will be called to launch an EKS cluster.  
+This is typically the only script that will be called to launch an EKS cluster.  The `bin/cluster` script expects the instance type to be specified as two paramters:
+
+- **cpuType**<br/>
+The CPU type family, for example cost optimized or memory optimized, Intel or AMD, etc.  For example `c5i`, `m5a`.
+- **cpuSize**</br>
+The number of cores per instance.  For example `2xlarge`, `8xlarge`.
 
 ```
 bin/cluster c5 4xlarge
@@ -56,7 +72,7 @@ Renders a Jinja2 template.  Parameters to be used in the template can be loaded 
 
 Generates the `cluster.yml` files used to launch EKS clusters.  Takes two parameters, the CPU class (m5, c5, etc) and size (xlarge, 2xlarge, etc.)
 
-The Jinja2 template and values file are located in the `templates` directory.
+This script calls the `bin/render-template.py` script with the template and values to generate the cluster configuration for an AWS EKS cluster. The Jinja2 template and values file are located in the `templates` directory.
 
 ```
 ./scripts/render-cluster.sh m5a 4xlarge

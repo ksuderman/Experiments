@@ -11,7 +11,7 @@ metadata:
 
 managedNodeGroups:
   - name: master
-    ami: ami-070e4812804b3c418  # Official Ubuntu image for EKS
+    ami: {{ ami }}  # Official Ubuntu image for EKS
     instanceType: {{ cpuType }}.xlarge
     #availabilityZones: {{ availabilityZones }}
     minSize: 1
@@ -32,7 +32,7 @@ managedNodeGroups:
       sudo apt-get update && sudo apt-get install -y nfs-common
 
   - name: workers
-    ami: ami-070e4812804b3c418
+    ami: {{ ami }}
     instanceType: {{ cpuType }}.{{ cpuSize }}
     minSize: {{ minSize }}
     maxSize: {{ maxSize }}

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 # A simple script to generate the resource_sets sections of the container_mapper_rules.yml
-# file that will be used the `helm upgrade` clusters.
+# file that will be used to `helm upgrade` clusters.
 #
 # USAGE
 #
