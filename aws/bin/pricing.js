@@ -26,14 +26,11 @@ let http = require("http")
 http.get("http://a0.awsstatic.com/pricing/1/ec2/linux-od.min.js", (response) => {
   let data = ''
   response.on('data', (chunk) => {
-      console.log("chunk")
       data += chunk
   })
   response.on('end', () => {
-      console.log("end")
       eval(data)
   })
 })
 
-console.log("Done")
 
