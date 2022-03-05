@@ -3,17 +3,32 @@
 
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
+#availabilityZones: {{ availabilityZones }}
 
 metadata:
   name: {{ cpuType }}{{ cpuSize }}
   region: {{ region }}
   version: '1.19'
 
+vpc:
+  id: "vpc-0222f1be914d667d7"
+  cidr: "192.168.0.0/16"
+  subnets:
+    private:
+      us-east-1a:
+        id: "subnet-0b1f63545d55bf7f2"
+        cidr: "192.168.96.0/19"
+      us-east-1b:
+        id: "subnet-0788b1c2d6520cbe3"
+        cidr: "192.168.32.0/19"
+      us-east-1c:
+        id:  "subnet-08c5b718f883dfca6"
+        cidr: "192.168.160.0/19"
+
 managedNodeGroups:
   - name: master
     ami: {{ ami }}  # Official Ubuntu image for EKS
     instanceType: {{ cpuType }}.xlarge
-    #availabilityZones: {{ availabilityZones }}
     minSize: 1
     maxSize: 1
     volumeSize: 99
@@ -28,7 +43,7 @@ managedNodeGroups:
         ebs: true
     overrideBootstrapCommand: |
       #!/bin/bash
-      /etc/eks/bootstrap.sh {{ cpuType }}{{ cpuSize }}-cluster --container-runtime containerd
+      /etc/eks/bootstrap.sh {{ cpuType }}{{ cpuSize }} --container-runtime containerd
       sudo apt-get update && sudo apt-get install -y nfs-common
 
   - name: workers
@@ -36,7 +51,6 @@ managedNodeGroups:
     instanceType: {{ cpuType }}.{{ cpuSize }}
     minSize: {{ minSize }}
     maxSize: {{ maxSize }}
-    #availabilityZones: {{ availabilityZones }}
     desiredCapacity: {{ minSize }}
     volumeSize: {{ volumeSize }}
     iam:
@@ -45,5 +59,5 @@ managedNodeGroups:
     labels: {role: worker}
     overrideBootstrapCommand: |
       #!/bin/bash
-      /etc/eks/bootstrap.sh ea-cluster --container-runtime containerd
+      /etc/eks/bootstrap.sh {{ cpuType }}{{ cpuSize }} --container-runtime containerd
       sudo apt-get update && sudo apt-get install -y nfs-common

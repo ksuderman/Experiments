@@ -1,0 +1,90 @@
+---
+- hosts: localhost
+  # ansible-galaxy collection install kubernetes.core
+  collections:
+    - kubernetes.core
+  tasks:
+    #
+    # Add Helm repositories
+    #
+    - name: Add Helm repository for Nginx ingress
+      helm_repository:
+        name: "{{ item.name}}"
+        repo_url: "{{ item.url }}"
+        state: present
+      loop:
+        - name: ingress-nginx
+          url: https://kubernetes.github.io/ingress-nginx
+        - name: stable
+          url: https://charts.helm.sh/stable
+        - name: galaxy
+          url: https://raw.githubusercontent.com/CloudVE/helm-charts/master/
+    - name: Install OpenShift
+      pip:
+        name: openshift
+        state: present
+    #
+    # Create namespaces
+    #
+    - name: Create the namespace for Nginx
+      k8s:
+        kind: Namespace
+        name: "{{ item }}"
+        state: present
+      loop:
+        - ingress-nginx
+        - csi-drivers
+        - galaxy
+    #
+    # Install packages
+    #
+    - name: Install Nginx Ingress
+      helm:
+        name: ingress-nginx
+        namespace: ingress-nginx
+        chart_ref: ingress-nginx/ingress-nginx
+        chart_version: 3.34.0
+        values:
+          controller:
+            kind: "DaemonSet"
+            hostNetwork: true
+            daemonset:
+              useHostPort: true
+    - name: Install EBS Storage Class
+      k8s:
+        src: files/ebs_storage_class.yml
+        state: present
+    - name: Install EBS CSI drivers
+      helm:
+        name: aws-ebs-csi-driver
+        namespace: csi-drivers
+        chart_ref: files/aws-ebs-csi-drivers.tgz
+        values:
+          enableVolumeScheduling: true
+          enableVolumeResizing: true
+          enableVolumeSnapshot: true
+    - name: Install NFS Provisioner
+      helm:
+        name: nfs-provisioner
+        namespace: csi-drivers
+        chart_ref: stable/nfs-server-provisioner
+        values:
+          peristence:
+            enabled: true
+            storageClass: ebs
+            size: "200Gi"
+          storageClass:
+            create: true
+            reclaimPolicy: Delete
+            allowVolumeExpansion: true
+    - name: Install Galaxy
+      helm:
+        name: galaxy
+        namespace: galaxy
+        #chart_ref: galaxy/galaxy
+        chart_ref: /Users/suderman/Workspaces/JHU/galaxy-helm/galaxy
+        values_files: files/values.yml
+
+
+
+

@@ -2,10 +2,10 @@ cpuType: c5a
 cpuSize: xlarge
 minSize: 1
 maxSize: 1
-volumeSize: 99
+volumeSize: 500
 key: aws-cloudcost-benchmark
-availabilityZones: [ 'us-east-1a' ]
-region: us-east-2
-ami: ami-039996e8636e0549a
+availabilityZones: [ 'us-east-1a', 'us-east-1b', 'us-east-1c' ]
+region: us-east-1
+#ami: ami-039996e8636e0549a
 # ami on us-east-1
-#ami: ami-070e4812804b3c418
+ami: ami-070e4812804b3c418
