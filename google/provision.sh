@@ -9,12 +9,14 @@ export IMAGE=${IMAGE:-galaxyproject/galaxy-min}
 export TAG=${TAG:-dev}
 export GKE_VERSION=${GKE_VERSION:-1.19}
 export ZONE=${ZONE:-us-east1-b}
-export CHART=${CHART:-galaxy/galaxy}
+#export CHART=${CHART:-galaxy/galaxy}
 #export CHART=${CHART:-anvil/galaxykubeman}
-#export CHART=${CHART:=/Users/suderman/Workspaces/JHU/galaxy-helm-upstream/galaxy}
+export CHART=${CHART:=/Users/suderman/Workspaces/JHU/galaxy-helm/galaxy}
 export GKM_VERSION=${GKM_VERSION:-1.1.0}
 export PASSWORD=${PASSWORD:-galaxypassword}
-export EMAIL=${EMAIL:-alex@fake.org}
+#export EMAIL=${EMAIL:-alex@fake.org}
+export EMAIL=${EMAIL:=suderman@jhu.edu,admin@galaxyproject.org}
+
 export DISK=${DISK:-250}
 export MACHINE_FAMILY=${MACHINE_FAMILY:-n2}
 export MACHINE_TYPE=${MACHINE_TYPE:-standard}
@@ -73,6 +75,9 @@ function cleanup() {
     gcloud container clusters delete -q $CLUSTER_NAME --zone $ZONE
     #gcloud compute disks delete -q "$CLUSTER_NAME-postgres-pd" --zone $ZONE
     #gcloud compute disks delete -q "$CLUSTER_NAME-nfs-pd" --zone $ZONE
+    if [[ -e ~/.kube/configs/$KUBE ]] ; then
+      rm ~/.kube/configs/$KUBE
+    fi
 }
 
 function cluster() {
@@ -82,7 +87,7 @@ function cluster() {
 	fi
     echo "Creating the cluster"
     gcloud container clusters create "$CLUSTER_NAME" --cluster-version="$GKE_VERSION" --disk-size=$DISK --num-nodes=1 --machine-type=$MACHINE_DEFINITION --zone "$ZONE"
-    mv ~/.kube/config ~/.kube/configs/$KUBE
+    #mv ~/.kube/config ~/.kube/configs/$KUBE
 }
 
 function disks() {
@@ -92,7 +97,11 @@ function disks() {
 }
 
 function invoke() {
-	KUBECONFIG=~/.kube/configs/$KUBE $@ 
+  if [[ -e ~/.kube/configs/$KUBE ]] ; then
+	  KUBECONFIG=~/.kube/configs/$KUBE $@
+	else
+	  $@
+	fi
 }
 
 function anvil() {
