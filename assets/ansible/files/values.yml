@@ -6,6 +6,8 @@ postgresql:
   persistence:
     storageClass: nfs
 ingress:
+  canary:
+    enabled: false
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
   path: "/"
