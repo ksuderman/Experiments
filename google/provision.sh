@@ -17,7 +17,7 @@ export PASSWORD=${PASSWORD:-galaxypassword}
 #export EMAIL=${EMAIL:-alex@fake.org}
 export EMAIL=${EMAIL:=suderman@jhu.edu,admin@galaxyproject.org}
 
-export DISK=${DISK:-250}
+export DISK=${DISK:-505}
 export MACHINE_FAMILY=${MACHINE_FAMILY:-n2}
 export MACHINE_TYPE=${MACHINE_TYPE:-standard}
 export MACHINE_CPU=${MACHINE_CPU:-32}
