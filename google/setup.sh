@@ -5,6 +5,10 @@ set -eu
 INSTANCES=${@:-n1}
 PROFILE=~/.abm/profile.yml
 
+USER=suderman
+EMAIL=suderman@jhu.edu
+PASSWORD=galaxypassword
+
 function rewrite() {
     cat $PROFILE | sed "s|$1|$2|" > /tmp/profile.yml
     rm $PROFILE
@@ -20,7 +24,7 @@ for i in $INSTANCES ; do
     abm config create $i ~/.kube/configs/$i
     abm config url $i http://$ip
     #curl $url
-  	key=$(abm $i user create $NAME $EMAIL $PASSWORD | cut -d\  -f7)
+  	key=$(abm $i user create $USER $EMAIL $PASSWORD | cut -d\  -f7)
   	#key=$(abm $type user key $EMAIL)
 	  abm config key $i $key
   	abm $i workflow upload ../assets/workflows/dna-cloud-costs.ga
