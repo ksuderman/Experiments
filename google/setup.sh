@@ -28,11 +28,11 @@ for i in $INSTANCES ; do
   	#key=$(abm $type user key $EMAIL)
 	  abm config key $i $key
   	abm $i workflow upload ../assets/workflows/dna-cloud-costs.ga
-	  count=3
+	  count=5
     while [[ $count > 0 ]] ; do
       count=$((count - 1))
       abm $i history import dna
-      state=$(abm $i job ls | head -n 1 | awk '{print $2')
+      state=$(abm $i job ls | head -n 1 | awk '{print $2}')
       if [[ $state == ok ]] ; then
         echo "Upload successful"
       else

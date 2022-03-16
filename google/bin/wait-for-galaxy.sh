@@ -2,13 +2,21 @@
 
 NS=galaxy
 which k
+if [[ $? -eq 1 ]] ; then
+  alias k=kubectl
+fi
 P="Waiting for the pods"
-running=$(k get pods -n $NS | grep 'web\|job\|workflow' | wc -l)
-while [[ $running -gt 3 ]] ; do
+
+function count_pods() {
+  echo $(k get pods -n $NS | grep 'web\|job\|workflow' | grep Running | wc -l)
+}
+
+running=$(count_pods)
+while [[ $running -ne 3 ]] ; do
 	echo -n $P
 	P="."
 	sleep 30
-	running=$(k get pods -n $NS | grep 'web\|job\|workflow' | wc -l)
+	running=$(count_pods)
 done
 echo
 echo "All Galaxy pods are ready"

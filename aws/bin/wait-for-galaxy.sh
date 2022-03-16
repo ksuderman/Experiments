@@ -8,7 +8,7 @@ fi
 P="Waiting for the pods"
 
 function count_pods() {
-  return $(k get pods -n $NS | grep 'web\|job\|workflow' | grep Running | wc -l)
+  echo $(k get pods -n $NS | grep 'web\|job\|workflow' | grep Running | wc -l)
 }
 
 running=$(count_pods)
