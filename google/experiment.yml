@@ -1,5 +1,5 @@
 # Run the simple experiment on four GCP instances with all the job conf files.
-name: DNA 
+name: Google DNA 
 # The number of times each benchmark will be executed.
 runs: 1
 # The benchmarks that will be run as part of the experiment. Each benchmark
@@ -9,16 +9,21 @@ benchmark_confs:
   - benchmarks/large.yml
 # The cloud instances, as defined in the $HOME/.abm/profile.yml file.
 cloud:
-  - google
+  - n1
+  - n2
+  - c2
+  - e2
 # The Galaxy container_mapper_rules.yml files that defined the CPU and memory
 # resources allocated to tools. List the file names without the .yml extension.
 # These files are expected to be found in the rules directory.
 job_configs:
   - default
   - 4x8
+  - 4x16
   - 8x16
+  - 8x32
   - 16x32
 # TODO Discuss if this belongs here...
 galaxy:
   namespace: galaxy
-  chart: /Users/suderman/Workspaces/JHU/galaxy-helm/galaxy
+  chart: galaxy/galaxy
