@@ -1,22 +1,31 @@
 #!/usr/bin/env bash
 
-NS=galaxy
+NAMESPACE=${NAMESPACE:-galaxy}
 which k
 if [[ $? -eq 1 ]] ; then
   alias k=kubectl
 fi
 P="Waiting for the pods"
 
-function count_pods() {
-  echo $(k get pods -n $NS | grep 'web\|job\|workflow' | grep Running | wc -l)
+function is_ready() {
+  output=$(k get pods -n $NAMESPACE | grep 'web\|job\|workflow')
+  if [[ $($output | wc -l) -ne 3 ]] ; then
+    echo 0
+    return
+  fi
+  if [[ $(echo $output | grep Init | wc -l) -gt 0 ]] ; then
+    echo 0
+    return
+  fi
+  return 1
 }
 
-running=$(count_pods)
-while [[ $running -ne 3 ]] ; do
+ready=$(is_ready)
+while [[ ready -ne 1 ]] ; do
 	echo -n $P
 	P="."
 	sleep 30
-	running=$(count_pods)
+	ready=$(is_ready)
 done
 echo
 echo "All Galaxy pods are ready"
