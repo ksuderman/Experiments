@@ -16,7 +16,7 @@ fi
 for type in $INSTANCE_TYPES ; do
 	echo "Creating $type cluster"
 	bin/cluster create $type 8xlarge
-	cd ../assets/ansible
+	cd ./ansible
 	ansible-playbook galaxy-helm.yml
 	cd -
 	bin/wait-for-galaxy.sh
