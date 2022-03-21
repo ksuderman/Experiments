@@ -12,7 +12,7 @@ function is_ready() {
     echo 0
     return
   fi
-  if [[ $(k get pods -n $NAMESPACE | grep 'web\|job\|workflow' | grep Init | wc -l) -gt 0 ]] ; then
+  if [[ $(k get pods -n $NAMESPACE | grep 'web\|job\|workflow' | grep Running | grep 1/1 | wc -l) -ne 3 ]] ; then
     echo 0
     return
   fi
