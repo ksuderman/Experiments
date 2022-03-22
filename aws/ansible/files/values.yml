@@ -23,7 +23,7 @@ cvmfs:
       storageClass: nfs
 persistence:
   accessMode: ReadWriteMany
-  storageClass: ebs
+  storageClass: nfs
   size: 400Gi
 initJob:
   downloadToolConfs:
