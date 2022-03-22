@@ -19,6 +19,7 @@ for i in $INSTANCES ; do
     echo "Provisioning $i"
     (source settings/$i && ./provision.sh cluster nfs galaxy)
     bin/wait-for-galaxy.sh
+    kubectl get pods -A
     ip=$(kubectl get svc -n galaxy galaxy-nginx -o json | jq .status.loadBalancer.ingress[0].ip | sed 's/\"//g')
     mv ~/.kube/config ~/.kube/configs/$i
     abm config create $i ~/.kube/configs/$i
@@ -35,6 +36,7 @@ for i in $INSTANCES ; do
       state=$(abm $i job ls | head -n 1 | awk '{print $2}')
       if [[ $state == ok ]] ; then
         echo "Upload successful"
+        break
       else
         echo "Upload failed.  Retrying"
       fi
