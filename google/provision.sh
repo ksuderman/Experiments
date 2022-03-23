@@ -6,12 +6,12 @@ YEAR=$(($(date +%Y)-2000))
 PROJECT=anvil-cost-modeling
 
 export IMAGE=${IMAGE:-galaxyproject/galaxy-min}
-export TAG=${TAG:-dev}
+export TAG=${TAG:-21.09}
 export GKE_VERSION=${GKE_VERSION:-1.19}
 export ZONE=${ZONE:-us-east1-b}
-export CHART=${CHART:-galaxy/galaxy}
+#export CHART=${CHART:-galaxy/galaxy}
 #export CHART=${CHART:-anvil/galaxykubeman}
-#export CHART=${CHART:=/Users/suderman/Workspaces/JHU/galaxy-helm/galaxy}
+export CHART=${CHART:=/Users/suderman/Workspaces/JHU/galaxy-helm/galaxy}
 export GKM_VERSION=${GKM_VERSION:-1.1.0}
 export PASSWORD=${PASSWORD:-galaxypassword}
 #export EMAIL=${EMAIL:-alex@fake.org}
@@ -178,6 +178,7 @@ function cvmfs() {
 }
 
 function galaxy() {
+  echo "Installing Galaxy from Helm chart $CHART"
 	invoke helm upgrade --install galaxy $CHART \
 	--namespace $NAMESPACE\
 	--create-namespace\

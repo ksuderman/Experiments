@@ -1,5 +1,5 @@
 image:
-  repository: ksuderman/galaxy-min
+  repository: galaxyproject/galaxy-min
   tag: 22.01
 postgresql:
   galaxyDatabasePassword: galaxydbpassword
@@ -24,7 +24,7 @@ cvmfs:
 persistence:
   accessMode: ReadWriteMany
   storageClass: nfs
-  size: 400Gi
+  size: 470Gi
 initJob:
   downloadToolConfs:
     enabled: true

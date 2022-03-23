@@ -9,16 +9,11 @@ benchmark_confs:
   - benchmarks/large.yml
 # The cloud instances, as defined in the $HOME/.abm/profile.yml file.
 cloud:
-  - n1
-  - n2
   - c2
-  - e2
 # The Galaxy container_mapper_rules.yml files that defined the CPU and memory
 # resources allocated to tools. List the file names without the .yml extension.
 # These files are expected to be found in the rules directory.
 job_configs:
-  - default
-  - 4x8
   - 4x16
   - 8x16
   - 8x32

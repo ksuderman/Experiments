@@ -5,7 +5,7 @@ apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
 metadata:
-  name: bench
+  name: ks-m5a
   region: us-east-1
   version: '1.19'
 
@@ -27,7 +27,7 @@ managedNodeGroups:
         ebs: true
     overrideBootstrapCommand: |
       #!/bin/bash
-      /etc/eks/bootstrap.sh ea-cluster --container-runtime containerd
+      /etc/eks/bootstrap.sh ks-m5a --container-runtime containerd
       sudo apt-get update && sudo apt-get install -y nfs-common
 
   - name: workers
@@ -43,5 +43,5 @@ managedNodeGroups:
     labels: {role: worker}
     overrideBootstrapCommand: |
       #!/bin/bash
-      /etc/eks/bootstrap.sh ea-cluster --container-runtime containerd
+      /etc/eks/bootstrap.sh ks-m5a --container-runtime containerd
       sudo apt-get update && sudo apt-get install -y nfs-common
