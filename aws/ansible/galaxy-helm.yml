@@ -21,7 +21,12 @@
       helm_repository:
         name: galaxy 
         repo_url: https://raw.githubusercontent.com/CloudVE/helm-charts/master/
-        state: present 
+        state: present
+    - name: Add my local Helm repo
+      helm_repository:
+        name: ksuderman
+        repo_url: https://ksuderman.github.io/helm_charts
+        state: present
     #
     # Create namespaces
     #
@@ -85,7 +90,8 @@
       helm:
         name: galaxy
         namespace: galaxy
-        chart_ref: galaxy/galaxy
+        chart_ref: ksuderman/galaxy
+        chart_version: 4.10.2
         values_files: files/values.yml
 
 

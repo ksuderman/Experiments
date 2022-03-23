@@ -11,7 +11,9 @@ export GKE_VERSION=${GKE_VERSION:-1.19}
 export ZONE=${ZONE:-us-east1-b}
 #export CHART=${CHART:-galaxy/galaxy}
 #export CHART=${CHART:-anvil/galaxykubeman}
-export CHART=${CHART:=/Users/suderman/Workspaces/JHU/galaxy-helm/galaxy}
+#export CHART=${CHART:=/Users/suderman/Workspaces/JHU/galaxy-helm/galaxy}
+export CHART=${CHART:=ksuderman/galaxy-helm}
+export CHART_VERSION=${CHART_VERSION:-4.10.2}
 export GKM_VERSION=${GKM_VERSION:-1.1.0}
 export PASSWORD=${PASSWORD:-galaxypassword}
 #export EMAIL=${EMAIL:-alex@fake.org}
@@ -182,8 +184,9 @@ function galaxy() {
 	invoke helm upgrade --install galaxy $CHART \
 	--namespace $NAMESPACE\
 	--create-namespace\
+	--version $CHART_VERSION\
 	-f original-values.yml\
-    --set-file extraFileMappings."/galaxy/server/static/welcome\.html".content=welcome.html 	
+  --set-file extraFileMappings."/galaxy/server/static/welcome\.html".content=welcome.html
 }
 
 function _galaxy() {
