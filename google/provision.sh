@@ -12,7 +12,7 @@ export ZONE=${ZONE:-us-east1-b}
 #export CHART=${CHART:-galaxy/galaxy}
 #export CHART=${CHART:-anvil/galaxykubeman}
 #export CHART=${CHART:=/Users/suderman/Workspaces/JHU/galaxy-helm/galaxy}
-export CHART=${CHART:=ksuderman/galaxy-helm}
+export CHART=${CHART:=ksuderman/galaxy}
 export CHART_VERSION=${CHART_VERSION:-4.10.2}
 export GKM_VERSION=${GKM_VERSION:-1.1.0}
 export PASSWORD=${PASSWORD:-galaxypassword}
