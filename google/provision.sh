@@ -9,10 +9,10 @@ export IMAGE=${IMAGE:-galaxyproject/galaxy-min}
 export TAG=${TAG:-21.09}
 export GKE_VERSION=${GKE_VERSION:-1.19}
 export ZONE=${ZONE:-us-east1-b}
-#export CHART=${CHART:-galaxy/galaxy}
+export CHART=${CHART:-galaxy/galaxy}
 #export CHART=${CHART:-anvil/galaxykubeman}
 #export CHART=${CHART:=/Users/suderman/Workspaces/JHU/galaxy-helm/galaxy}
-export CHART=${CHART:=ksuderman/galaxy}
+#export CHART=${CHART:=ksuderman/galaxy}
 export CHART_VERSION=${CHART_VERSION:-4.10.2}
 export GKM_VERSION=${GKM_VERSION:-1.1.0}
 export PASSWORD=${PASSWORD:-galaxypassword}
