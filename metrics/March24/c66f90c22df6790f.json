@@ -1,0 +1,234 @@
+{
+    "run": "2",
+    "cloud": "c2",
+    "job_conf": "4x8",
+    "workflow_id": "fef2ee4a0f3859cb",
+    "history_id": "3c41b828b2f7c254",
+    "inputs": "ERR015526_2.fastq.gz",
+    "metrics": {
+        "model_class": "Job",
+        "id": "c66f90c22df6790f",
+        "state": "error",
+        "exit_code": 127,
+        "update_time": "2022-03-25T09:17:28.914223",
+        "create_time": "2022-03-25T09:08:17.404237",
+        "galaxy_version": "22.01",
+        "command_version": "/galaxy/server/database/jobs_directory/000/58/tool_script.sh: line 22: stringtie: command not found",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/2.1.1",
+        "history_id": "3c41b828b2f7c254",
+        "external_id": "gxy-galaxy-79vmn",
+        "command_line": "mkdir -p ./special_de_output/sample1/ &&    stringtie '/galaxy/server/database/objects/a/3/d/dataset_a3d754fa-4810-46ed-ba10-1271b388c607.dat'    -o '/galaxy/server/database/objects/5/7/7/dataset_577a2cb2-b3ca-4aa5-bce3-acaaad2c4aeb.dat' -p \"${GALAXY_SLOTS:-1}\"     -f '0.15' -m '200' -a '10' -j '1' -c '2' -g '50' -M '0.95'",
+        "traceback": null,
+        "params": {
+            "adv": "{\"abundance_estimation\": \"false\", \"bdist\": \"50\", \"bundle_fraction\": \"0.95\", \"disable_trimming\": \"false\", \"fraction\": \"0.15\", \"min_anchor_cov\": \"1\", \"min_anchor_len\": \"10\", \"min_bundle_cov\": \"2\", \"min_tlen\": \"200\", \"multi_mapping\": \"false\", \"name_prefix\": \"\", \"omit_sequences\": \"\"}",
+            "guide": "{\"__current_case__\": 0, \"use_guide\": \"no\"}",
+            "long_reads": "\"false\"",
+            "rna_strandness": "\"\"",
+            "__workflow_invocation_uuid__": "\"1bb6b180ac1b11ec97c7768cdf110d73\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38.len\"",
+            "dbkey": "\"hg38\"",
+            "__input_ext": "\"bam\""
+        },
+        "inputs": {
+            "input_bam": {
+                "id": "206a792917a304bd",
+                "src": "hda",
+                "uuid": "a3d754fa-4810-46ed-ba10-1271b388c607"
+            }
+        },
+        "outputs": {
+            "output_gtf": {
+                "id": "33b28d89d07fdfc0",
+                "src": "hda",
+                "uuid": "577a2cb2-b3ca-4aa5-bce3-acaaad2c4aeb"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "/galaxy/server/database/jobs_directory/000/58/tool_script.sh: line 23: stringtie: command not found\n",
+        "stderr": "\n/galaxy/server/database/jobs_directory/000/58/tool_script.sh: line 23: stringtie: command not found\n",
+        "stdout": "",
+        "job_messages": [
+            {
+                "code_desc": "",
+                "desc": "Fatal error: Exit code 127 ()",
+                "error_level": 3,
+                "exit_code": 127,
+                "type": "exit_code"
+            }
+        ],
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-79vmn-4wzw8 5.4.171+ #1 SMP Sun Feb 27 19:59:37 PST 2022 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-79vmn-4wzw8 5.4.171+ #1 SMP Sun Feb 27 19:59:37 PST 2022 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "4",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "4.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "8000",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "8000.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2022-03-25 09:17:23",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1648199843.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2022-03-25 09:17:23",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1648199843.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "0 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "0.066339732 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "66339732.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "7.5 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "8000000000.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "7.0 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "7380992.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "7.1 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "7458816.0000000"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "30",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "30.0000000"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "115.2 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "123667232.0000000"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "c66f90c22df6790f",
+        "state": "error",
+        "exit_code": 127,
+        "update_time": "2022-03-25T09:17:28.914223",
+        "create_time": "2022-03-25T09:08:17.404237",
+        "galaxy_version": "22.01",
+        "command_version": "/galaxy/server/database/jobs_directory/000/58/tool_script.sh: line 22: stringtie: command not found",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/2.1.1",
+        "history_id": "3c41b828b2f7c254",
+        "external_id": "gxy-galaxy-79vmn",
+        "command_line": "mkdir -p ./special_de_output/sample1/ &&    stringtie '/galaxy/server/database/objects/a/3/d/dataset_a3d754fa-4810-46ed-ba10-1271b388c607.dat'    -o '/galaxy/server/database/objects/5/7/7/dataset_577a2cb2-b3ca-4aa5-bce3-acaaad2c4aeb.dat' -p \"${GALAXY_SLOTS:-1}\"     -f '0.15' -m '200' -a '10' -j '1' -c '2' -g '50' -M '0.95'",
+        "traceback": null,
+        "params": {
+            "adv": "{\"abundance_estimation\": \"false\", \"bdist\": \"50\", \"bundle_fraction\": \"0.95\", \"disable_trimming\": \"false\", \"fraction\": \"0.15\", \"min_anchor_cov\": \"1\", \"min_anchor_len\": \"10\", \"min_bundle_cov\": \"2\", \"min_tlen\": \"200\", \"multi_mapping\": \"false\", \"name_prefix\": \"\", \"omit_sequences\": \"\"}",
+            "guide": "{\"__current_case__\": 0, \"use_guide\": \"no\"}",
+            "long_reads": "\"false\"",
+            "rna_strandness": "\"\"",
+            "__workflow_invocation_uuid__": "\"1bb6b180ac1b11ec97c7768cdf110d73\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38.len\"",
+            "dbkey": "\"hg38\"",
+            "__input_ext": "\"bam\""
+        },
+        "inputs": {
+            "input_bam": {
+                "id": "206a792917a304bd",
+                "src": "hda",
+                "uuid": "a3d754fa-4810-46ed-ba10-1271b388c607"
+            }
+        },
+        "outputs": {
+            "output_gtf": {
+                "id": "33b28d89d07fdfc0",
+                "src": "hda",
+                "uuid": "577a2cb2-b3ca-4aa5-bce3-acaaad2c4aeb"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.148.216.24"
+}

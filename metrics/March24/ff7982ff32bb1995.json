@@ -1,0 +1,226 @@
+{
+    "run": "1",
+    "cloud": "n1",
+    "job_conf": "4x16",
+    "workflow_id": "431a6946ac30b42e",
+    "history_id": "32d640112b773128",
+    "inputs": "SRR592109_2.fastq.gz",
+    "metrics": {
+        "model_class": "Job",
+        "id": "ff7982ff32bb1995",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2022-03-26T22:09:48.338496",
+        "create_time": "2022-03-26T22:07:32.787607",
+        "galaxy_version": "22.01",
+        "command_version": "/usr/local/bin/hisat2-align-s version 2.1.0\n64-bit\nBuilt on login-node03\nWed Jun  7 15:53:42 EDT 2017\nCompiler: gcc version 4.8.2 (GCC) \nOptions: -O3 -m64 -msse2 -funroll-loops -g3 -DPOPCNT_CAPABILITY\nSizeof {int, long, long long, void*, size_t, off_t}: {4, 8, 8, 8, 8, 8}",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.1.0+galaxy7",
+        "history_id": "32d640112b773128",
+        "external_id": "gxy-galaxy-jqlbd",
+        "command_line": "ln -f -s '/galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat' input_f.fastq &&    hisat2  -p ${GALAXY_SLOTS:-1}  -x '/cvmfs/data.galaxyproject.org/managed/hisat2_index/hg38/hg38'     -U 'input_f.fastq'                                | samtools sort -l 0 -T \"${TMPDIR:-.}\" -O bam | samtools view -O bam -@ ${GALAXY_SLOTS:-1} -o '/galaxy/server/database/objects/8/f/f/dataset_8ffa064e-c708-420f-a838-074ed13e3e1e.dat'",
+        "traceback": null,
+        "params": {
+            "adv": "{\"alignment_options\": {\"__current_case__\": 0, \"alignment_options_selector\": \"defaults\"}, \"input_options\": {\"__current_case__\": 0, \"input_options_selector\": \"defaults\"}, \"other_options\": {\"__current_case__\": 0, \"other_options_selector\": \"defaults\"}, \"output_options\": {\"__current_case__\": 0, \"output_options_selector\": \"defaults\"}, \"reporting_options\": {\"__current_case__\": 0, \"reporting_options_selector\": \"defaults\"}, \"sam_options\": {\"__current_case__\": 0, \"sam_options_selector\": \"defaults\"}, \"scoring_options\": {\"__current_case__\": 0, \"scoring_options_selector\": \"defaults\"}, \"spliced_options\": {\"__current_case__\": 0, \"spliced_options_selector\": \"defaults\"}}",
+            "library": "{\"__current_case__\": 0, \"input_1\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}]}, \"rna_strandness\": \"\", \"type\": \"single\"}",
+            "reference_genome": "{\"__current_case__\": 0, \"index\": \"hg38\", \"source\": \"indexed\"}",
+            "sum": "{\"new_summary\": \"false\", \"summary_file\": \"false\"}",
+            "__workflow_invocation_uuid__": "\"22298844ad5111ec8689e69d304c7cb3\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "input_1": {
+                "id": "717acf00ed1ffe6e",
+                "src": "hda",
+                "uuid": "66467de1-d709-4ac5-a336-32c951920f9c"
+            }
+        },
+        "outputs": {
+            "output_alignments": {
+                "id": "763a7b1b2cb2d855",
+                "src": "hda",
+                "uuid": "8ffa064e-c708-420f-a838-074ed13e3e1e"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "2263238 reads; of these:\n  2263238 (100.00%) were unpaired; of these:\n    297178 (13.13%) aligned 0 times\n    1855791 (82.00%) aligned exactly 1 time\n    110269 (4.87%) aligned >1 times\n86.87% overall alignment rate\n",
+        "stderr": "\n2263238 reads; of these:\n  2263238 (100.00%) were unpaired; of these:\n    297178 (13.13%) aligned 0 times\n    1855791 (82.00%) aligned exactly 1 time\n    110269 (4.87%) aligned >1 times\n86.87% overall alignment rate\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-jqlbd-lrlt7 5.4.171+ #1 SMP Sun Feb 27 19:59:37 PST 2022 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-jqlbd-lrlt7 5.4.171+ #1 SMP Sun Feb 27 19:59:37 PST 2022 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "4",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "4.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "16000",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "16000.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2022-03-26 22:08:37",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1648332517.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2022-03-26 22:09:37",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1648332577.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "1 minute",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "60.0000000"
+            },
+            {
+                "title": "CPU Time",
+                "value": "3 minutes",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "196340106534.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "14.9 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "16000000000.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "8.4 GB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "8995307520.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "8.4 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "8995307520.0000000"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "32",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "32.0000000"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "115.2 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "123666772.0000000"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "ff7982ff32bb1995",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2022-03-26T22:09:48.338496",
+        "create_time": "2022-03-26T22:07:32.787607",
+        "galaxy_version": "22.01",
+        "command_version": "/usr/local/bin/hisat2-align-s version 2.1.0\n64-bit\nBuilt on login-node03\nWed Jun  7 15:53:42 EDT 2017\nCompiler: gcc version 4.8.2 (GCC) \nOptions: -O3 -m64 -msse2 -funroll-loops -g3 -DPOPCNT_CAPABILITY\nSizeof {int, long, long long, void*, size_t, off_t}: {4, 8, 8, 8, 8, 8}",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.1.0+galaxy7",
+        "history_id": "32d640112b773128",
+        "external_id": "gxy-galaxy-jqlbd",
+        "command_line": "ln -f -s '/galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat' input_f.fastq &&    hisat2  -p ${GALAXY_SLOTS:-1}  -x '/cvmfs/data.galaxyproject.org/managed/hisat2_index/hg38/hg38'     -U 'input_f.fastq'                                | samtools sort -l 0 -T \"${TMPDIR:-.}\" -O bam | samtools view -O bam -@ ${GALAXY_SLOTS:-1} -o '/galaxy/server/database/objects/8/f/f/dataset_8ffa064e-c708-420f-a838-074ed13e3e1e.dat'",
+        "traceback": null,
+        "params": {
+            "adv": "{\"alignment_options\": {\"__current_case__\": 0, \"alignment_options_selector\": \"defaults\"}, \"input_options\": {\"__current_case__\": 0, \"input_options_selector\": \"defaults\"}, \"other_options\": {\"__current_case__\": 0, \"other_options_selector\": \"defaults\"}, \"output_options\": {\"__current_case__\": 0, \"output_options_selector\": \"defaults\"}, \"reporting_options\": {\"__current_case__\": 0, \"reporting_options_selector\": \"defaults\"}, \"sam_options\": {\"__current_case__\": 0, \"sam_options_selector\": \"defaults\"}, \"scoring_options\": {\"__current_case__\": 0, \"scoring_options_selector\": \"defaults\"}, \"spliced_options\": {\"__current_case__\": 0, \"spliced_options_selector\": \"defaults\"}}",
+            "library": "{\"__current_case__\": 0, \"input_1\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}]}, \"rna_strandness\": \"\", \"type\": \"single\"}",
+            "reference_genome": "{\"__current_case__\": 0, \"index\": \"hg38\", \"source\": \"indexed\"}",
+            "sum": "{\"new_summary\": \"false\", \"summary_file\": \"false\"}",
+            "__workflow_invocation_uuid__": "\"22298844ad5111ec8689e69d304c7cb3\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "input_1": {
+                "id": "717acf00ed1ffe6e",
+                "src": "hda",
+                "uuid": "66467de1-d709-4ac5-a336-32c951920f9c"
+            }
+        },
+        "outputs": {
+            "output_alignments": {
+                "id": "763a7b1b2cb2d855",
+                "src": "hda",
+                "uuid": "8ffa064e-c708-420f-a838-074ed13e3e1e"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.237.142.90"
+}

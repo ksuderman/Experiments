@@ -1,0 +1,230 @@
+{
+    "run": "0",
+    "cloud": "m5n",
+    "job_conf": "16x32",
+    "workflow_id": "3cdb1ed91f329b6d",
+    "history_id": "f86404eff9111578",
+    "inputs": "ERR015526_2.fastq.gz",
+    "metrics": {
+        "model_class": "Job",
+        "id": "8df527e6a7d96861",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2022-03-26T02:58:08.279014",
+        "create_time": "2022-03-26T02:51:44.302938",
+        "galaxy_version": "22.01",
+        "command_version": "/usr/local/bin/bowtie2-align-s version 2.4.2\n64-bit\nBuilt on default-bf91a638-95fa-4b77-97c5-abccd9855c3e\nMon Nov  2 17:36:36 UTC 2020\nCompiler: gcc version 7.5.0 (crosstool-NG 1.24.0.131_87df0e6_dirty) \nOptions: -O3 -msse2 -funroll-loops -g3 -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /usr/local/include -fdebug-prefix-map=/opt/conda/conda-bld/bowtie2_1604337828546/work=/usr/local/src/conda/bowtie2-2.4.2 -fdebug-prefix-map=/usr/local=/usr/local/src/conda-prefix -DPOPCNT_CAPABILITY -DWITH_TBB -std=c++11 -DNO_SPINLOCK -DWITH_QUEUELOCK=1\nSizeof {int, long, long long, void*, size_t, off_t}: {4, 8, 8, 8, 8, 8}",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.4.2+galaxy0",
+        "history_id": "f86404eff9111578",
+        "external_id": "gxy-galaxy-fkvh5",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;   ln -s '/galaxy/server/database/objects/1/7/e/dataset_17ee2516-0c8d-4b8a-b732-aec3a3f20e50.dat' input_f.fastq &&   bowtie2  -p ${GALAXY_SLOTS:-4}  -x '/cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bowtie2_index/hg38full'   -U 'input_f.fastq'                  | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/c/8/b/dataset_c8b37d8b-617c-43fc-91d0-0e7d60b9afe1.dat'",
+        "traceback": null,
+        "params": {
+            "analysis_type": "{\"__current_case__\": 0, \"analysis_type_selector\": \"simple\", \"presets\": \"no_presets\"}",
+            "library": "{\"__current_case__\": 0, \"aligned_file\": \"false\", \"input_1\": {\"values\": [{\"id\": 2, \"src\": \"hda\"}]}, \"type\": \"single\", \"unaligned_file\": \"false\"}",
+            "reference_genome": "{\"__current_case__\": 0, \"index\": \"hg38\", \"source\": \"indexed\"}",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "sam_options": "{\"__current_case__\": 1, \"sam_options_selector\": \"no\"}",
+            "save_mapping_stats": "\"false\"",
+            "__workflow_invocation_uuid__": "\"ab60bf3aacaf11ec910eeade0d5c31ae\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "input_1": {
+                "id": "dccf5307fcd89ce1",
+                "src": "hda",
+                "uuid": "17ee2516-0c8d-4b8a-b732-aec3a3f20e50"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "d630f5dbe7729e7c",
+                "src": "hda",
+                "uuid": "c8b37d8b-617c-43fc-91d0-0e7d60b9afe1"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "20487991 reads; of these:\n  20487991 (100.00%) were unpaired; of these:\n    7907439 (38.60%) aligned 0 times\n    9655882 (47.13%) aligned exactly 1 time\n    2924670 (14.28%) aligned >1 times\n61.40% overall alignment rate\n[bam_sort_core] merging from 0 files and 16 in-memory blocks...\n",
+        "stderr": "\n20487991 reads; of these:\n  20487991 (100.00%) were unpaired; of these:\n    7907439 (38.60%) aligned 0 times\n    9655882 (47.13%) aligned exactly 1 time\n    2924670 (14.28%) aligned >1 times\n61.40% overall alignment rate\n[bam_sort_core] merging from 0 files and 16 in-memory blocks...\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-fkvh5-lnk6s 5.11.0-1027-aws #30~20.04.1-Ubuntu SMP Thu Jan 13 11:46:53 UTC 2022 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-fkvh5-lnk6s 5.11.0-1027-aws #30~20.04.1-Ubuntu SMP Thu Jan 13 11:46:53 UTC 2022 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "16",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "16.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "32000",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "32000.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2022-03-26 02:52:24",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1648263144.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2022-03-26 02:57:36",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1648263456.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "5 minutes",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "312.0000000"
+            },
+            {
+                "title": "CPU Time",
+                "value": "1 hour and 20 minutes",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "4843502347958.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "29.8 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "32000000000.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "9.7 GB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "10376335360.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "29.8 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "32000000000.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "9.7 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "10376335360.0000000"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "32",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "32.0000000"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "121.5 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "130406652.0000000"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "8df527e6a7d96861",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2022-03-26T02:58:08.279014",
+        "create_time": "2022-03-26T02:51:44.302938",
+        "galaxy_version": "22.01",
+        "command_version": "/usr/local/bin/bowtie2-align-s version 2.4.2\n64-bit\nBuilt on default-bf91a638-95fa-4b77-97c5-abccd9855c3e\nMon Nov  2 17:36:36 UTC 2020\nCompiler: gcc version 7.5.0 (crosstool-NG 1.24.0.131_87df0e6_dirty) \nOptions: -O3 -msse2 -funroll-loops -g3 -fvisibility-inlines-hidden -std=c++17 -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /usr/local/include -fdebug-prefix-map=/opt/conda/conda-bld/bowtie2_1604337828546/work=/usr/local/src/conda/bowtie2-2.4.2 -fdebug-prefix-map=/usr/local=/usr/local/src/conda-prefix -DPOPCNT_CAPABILITY -DWITH_TBB -std=c++11 -DNO_SPINLOCK -DWITH_QUEUELOCK=1\nSizeof {int, long, long long, void*, size_t, off_t}: {4, 8, 8, 8, 8, 8}",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.4.2+galaxy0",
+        "history_id": "f86404eff9111578",
+        "external_id": "gxy-galaxy-fkvh5",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;   ln -s '/galaxy/server/database/objects/1/7/e/dataset_17ee2516-0c8d-4b8a-b732-aec3a3f20e50.dat' input_f.fastq &&   bowtie2  -p ${GALAXY_SLOTS:-4}  -x '/cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bowtie2_index/hg38full'   -U 'input_f.fastq'                  | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/c/8/b/dataset_c8b37d8b-617c-43fc-91d0-0e7d60b9afe1.dat'",
+        "traceback": null,
+        "params": {
+            "analysis_type": "{\"__current_case__\": 0, \"analysis_type_selector\": \"simple\", \"presets\": \"no_presets\"}",
+            "library": "{\"__current_case__\": 0, \"aligned_file\": \"false\", \"input_1\": {\"values\": [{\"id\": 2, \"src\": \"hda\"}]}, \"type\": \"single\", \"unaligned_file\": \"false\"}",
+            "reference_genome": "{\"__current_case__\": 0, \"index\": \"hg38\", \"source\": \"indexed\"}",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "sam_options": "{\"__current_case__\": 1, \"sam_options_selector\": \"no\"}",
+            "save_mapping_stats": "\"false\"",
+            "__workflow_invocation_uuid__": "\"ab60bf3aacaf11ec910eeade0d5c31ae\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "input_1": {
+                "id": "dccf5307fcd89ce1",
+                "src": "hda",
+                "uuid": "17ee2516-0c8d-4b8a-b732-aec3a3f20e50"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "d630f5dbe7729e7c",
+                "src": "hda",
+                "uuid": "c8b37d8b-617c-43fc-91d0-0e7d60b9afe1"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://a9d4a8cca809c42b987fef83c9a2b0c5-633977042.us-east-1.elb.amazonaws.com"
+}
