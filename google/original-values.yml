@@ -17,13 +17,15 @@ cvmfs:
   deploy: true
   enabled: true
 image:
-  repository: ksuderman/galaxy-min
-  tag: dev
+  repository: galaxyproject/galaxy-min
+  tag: 22.01
 service:
   type: LoadBalancer
   port: 80
 ingress:
   enabled: false
+  canary:
+    enabled: false
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:

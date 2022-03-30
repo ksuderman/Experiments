@@ -3,27 +3,12 @@
 
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
-#availabilityZones: {{ availabilityZones }}
+availabilityZones: {{ availabilityZones }}
 
 metadata:
   name: {{ cpuType }}{{ cpuSize }}
   region: {{ region }}
   version: '1.19'
-
-vpc:
-  id: "vpc-0222f1be914d667d7"
-  cidr: "192.168.0.0/16"
-  subnets:
-    private:
-      us-east-1a:
-        id: "subnet-0b1f63545d55bf7f2"
-        cidr: "192.168.96.0/19"
-      us-east-1b:
-        id: "subnet-0788b1c2d6520cbe3"
-        cidr: "192.168.32.0/19"
-      us-east-1c:
-        id:  "subnet-08c5b718f883dfca6"
-        cidr: "192.168.160.0/19"
 
 managedNodeGroups:
   - name: master

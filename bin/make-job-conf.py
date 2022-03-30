@@ -30,7 +30,7 @@ def run(cpu: int, memory: str):
 		node[size] = resource_set
 		for limits in ['requests', 'limits']:
 			resource_set[limits] = {
-				'cpu': cpu,
+				'cpu': int(cpu),
 				'memory': f"{memory}G"
 			}
 	root['jobs']['rules']['container_mapper_rules.yml']['resources']['default_resource_set'] = "small"

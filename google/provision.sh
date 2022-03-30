@@ -6,16 +6,20 @@ YEAR=$(($(date +%Y)-2000))
 PROJECT=anvil-cost-modeling
 
 export IMAGE=${IMAGE:-galaxyproject/galaxy-min}
-export TAG=${TAG:-dev}
+export TAG=${TAG:-21.09}
 export GKE_VERSION=${GKE_VERSION:-1.19}
 export ZONE=${ZONE:-us-east1-b}
 export CHART=${CHART:-galaxy/galaxy}
 #export CHART=${CHART:-anvil/galaxykubeman}
-#export CHART=${CHART:=/Users/suderman/Workspaces/JHU/galaxy-helm-upstream/galaxy}
+#export CHART=${CHART:=/Users/suderman/Workspaces/JHU/galaxy-helm/galaxy}
+#export CHART=${CHART:=ksuderman/galaxy}
+export CHART_VERSION=${CHART_VERSION:-4.10.2}
 export GKM_VERSION=${GKM_VERSION:-1.1.0}
 export PASSWORD=${PASSWORD:-galaxypassword}
-export EMAIL=${EMAIL:-alex@fake.org}
-export DISK=${DISK:-250}
+#export EMAIL=${EMAIL:-alex@fake.org}
+export EMAIL=${EMAIL:=suderman@jhu.edu,admin@galaxyproject.org}
+
+export DISK=${DISK:-505}
 export MACHINE_FAMILY=${MACHINE_FAMILY:-n2}
 export MACHINE_TYPE=${MACHINE_TYPE:-standard}
 export MACHINE_CPU=${MACHINE_CPU:-32}
@@ -73,6 +77,9 @@ function cleanup() {
     gcloud container clusters delete -q $CLUSTER_NAME --zone $ZONE
     #gcloud compute disks delete -q "$CLUSTER_NAME-postgres-pd" --zone $ZONE
     #gcloud compute disks delete -q "$CLUSTER_NAME-nfs-pd" --zone $ZONE
+    if [[ -e ~/.kube/configs/$KUBE ]] ; then
+      rm ~/.kube/configs/$KUBE
+    fi
 }
 
 function cluster() {
@@ -82,7 +89,7 @@ function cluster() {
 	fi
     echo "Creating the cluster"
     gcloud container clusters create "$CLUSTER_NAME" --cluster-version="$GKE_VERSION" --disk-size=$DISK --num-nodes=1 --machine-type=$MACHINE_DEFINITION --zone "$ZONE"
-    mv ~/.kube/config ~/.kube/configs/$KUBE
+    #mv ~/.kube/config ~/.kube/configs/$KUBE
 }
 
 function disks() {
@@ -92,7 +99,11 @@ function disks() {
 }
 
 function invoke() {
-	KUBECONFIG=~/.kube/configs/$KUBE $@ 
+  if [[ -e ~/.kube/configs/$KUBE ]] ; then
+	  KUBECONFIG=~/.kube/configs/$KUBE $@
+	else
+	  $@
+	fi
 }
 
 function anvil() {
@@ -169,11 +180,13 @@ function cvmfs() {
 }
 
 function galaxy() {
+  echo "Installing Galaxy from Helm chart $CHART"
 	invoke helm upgrade --install galaxy $CHART \
 	--namespace $NAMESPACE\
 	--create-namespace\
+	--version $CHART_VERSION\
 	-f original-values.yml\
-    --set-file extraFileMappings."/galaxy/server/static/welcome\.html".content=welcome.html 	
+  --set-file extraFileMappings."/galaxy/server/static/welcome\.html".content=welcome.html
 }
 
 function _galaxy() {

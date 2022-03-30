@@ -1,0 +1,99 @@
+{
+    "run": "0",
+    "cloud": "m5a",
+    "job_conf": "8x32",
+    "workflow_id": "2de55e949235df66",
+    "history_id": "44dee4df34c6d227",
+    "inputs": "SRR592109_2.fastq.gz",
+    "metrics": {
+        "model_class": "Job",
+        "id": "ad5add0d94ae809f",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2022-03-26T01:11:31.090695",
+        "create_time": "2022-03-25T20:16:21.713904",
+        "galaxy_version": "22.01",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/2.1.1",
+        "history_id": "44dee4df34c6d227",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "adv": "{\"abundance_estimation\": \"false\", \"bdist\": \"50\", \"bundle_fraction\": \"0.95\", \"disable_trimming\": \"false\", \"fraction\": \"0.15\", \"min_anchor_cov\": \"1\", \"min_anchor_len\": \"10\", \"min_bundle_cov\": \"2\", \"min_tlen\": \"200\", \"multi_mapping\": \"false\", \"name_prefix\": \"\", \"omit_sequences\": \"\"}",
+            "guide": "{\"__current_case__\": 0, \"use_guide\": \"no\"}",
+            "long_reads": "\"false\"",
+            "rna_strandness": "\"\"",
+            "__workflow_invocation_uuid__": "\"6f631ed8ac7811ecaa628a0bb439132e\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38.len\"",
+            "dbkey": "\"hg38\"",
+            "__input_ext": "\"bam\""
+        },
+        "inputs": {
+            "input_bam": {
+                "id": "4eb96d5b8bc4160d",
+                "src": "hda",
+                "uuid": "53fa3343-c919-4d4a-b746-846c1d425123"
+            }
+        },
+        "outputs": {
+            "output_gtf": {
+                "id": "136a6d251acb0e81",
+                "src": "hda",
+                "uuid": "906a02bd-aa0b-4dba-bfcc-bd60410ea992"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": null,
+        "tool_stderr": null,
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "ad5add0d94ae809f",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2022-03-26T01:11:31.090695",
+        "create_time": "2022-03-25T20:16:21.713904",
+        "galaxy_version": "22.01",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/stringtie/stringtie/2.1.1",
+        "history_id": "44dee4df34c6d227",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "adv": "{\"abundance_estimation\": \"false\", \"bdist\": \"50\", \"bundle_fraction\": \"0.95\", \"disable_trimming\": \"false\", \"fraction\": \"0.15\", \"min_anchor_cov\": \"1\", \"min_anchor_len\": \"10\", \"min_bundle_cov\": \"2\", \"min_tlen\": \"200\", \"multi_mapping\": \"false\", \"name_prefix\": \"\", \"omit_sequences\": \"\"}",
+            "guide": "{\"__current_case__\": 0, \"use_guide\": \"no\"}",
+            "long_reads": "\"false\"",
+            "rna_strandness": "\"\"",
+            "__workflow_invocation_uuid__": "\"6f631ed8ac7811ecaa628a0bb439132e\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38.len\"",
+            "dbkey": "\"hg38\"",
+            "__input_ext": "\"bam\""
+        },
+        "inputs": {
+            "input_bam": {
+                "id": "4eb96d5b8bc4160d",
+                "src": "hda",
+                "uuid": "53fa3343-c919-4d4a-b746-846c1d425123"
+            }
+        },
+        "outputs": {
+            "output_gtf": {
+                "id": "136a6d251acb0e81",
+                "src": "hda",
+                "uuid": "906a02bd-aa0b-4dba-bfcc-bd60410ea992"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://ab9a868c9bfa14a7baa507be41d52840-1308913446.us-east-1.elb.amazonaws.com"
+}

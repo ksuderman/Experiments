@@ -6,7 +6,7 @@ EMAIL=suderman@jhu.edu
 PASSWORD=galaxypassword
 
 #INSTANCE_TYPES="c6a c6i m5 m5a m6a m6i r4 r5 r5a"
-INSTANCE_TYPES="c5a c6a c6i"
+INSTANCE_TYPES=${@:-"c6a c6i"}
 
 if [[ -e ~/.kube/config ]] ; then
 	echo "Please delete the global kube config before proceeding."
@@ -14,20 +14,31 @@ if [[ -e ~/.kube/config ]] ; then
 fi
 
 for type in $INSTANCE_TYPES ; do
-	echo "Created $type cluster"
+	echo "Creating $type cluster"
 	bin/cluster create $type 8xlarge
-	cd ../assets/ansible
+	cd ./ansible
 	ansible-playbook galaxy-helm.yml
 	cd -
 	bin/wait-for-galaxy.sh
 	abm config create $type ~/.kube/configs/$type
 	url=$(kubectl get svc -n ingress-nginx ingress-nginx-controller -o json | jq .status.loadBalancer.ingress[0].hostname | sed 's/"//g')
 	mv ~/.kube/config ~/.kube/configs/$type
-	abm config url $type $url
-	abm $type user create $NAME $EMAIL $PASSWORD
-	key=$(abm $type user key $EMAIL)
+	abm config url $type "http://$url"
+	key=$(abm $type user create $NAME $EMAIL $PASSWORD | cut -d\  -f7)
+	#key=$(abm $type user key $EMAIL)
 	abm config key $type $key
 	abm $type workflow upload ../assets/workflows/dna-cloud-costs.ga
-	abm $type history import dna
+	count=3
+	while [[ $count > 0 ]] ; do
+	  count=$((count - 1))
+	  abm $type history import dna
+	  state=$(abm $type job ls | head -n 1 | awk '{print $2}')
+	  if [[ $state == ok ]] ; then
+	    echo "Upload successful"
+	  else
+	    echo "Upload failed.  Retrying"
+	  fi
+	done
+	abm $type job ls | head -n 1
 	echo "Instance $type has been configured"
 done

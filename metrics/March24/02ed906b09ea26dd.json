@@ -1,0 +1,238 @@
+{
+    "run": "2",
+    "cloud": "c6i",
+    "job_conf": "4x8",
+    "workflow_id": "496ce56de96f6d95",
+    "history_id": "549b7b43fdae20a0",
+    "inputs": "SRR592109_2.fastq.gz",
+    "metrics": {
+        "model_class": "Job",
+        "id": "02ed906b09ea26dd",
+        "state": "error",
+        "exit_code": 127,
+        "update_time": "2022-03-28T19:17:25.411169",
+        "create_time": "2022-03-28T19:16:45.438877",
+        "galaxy_version": "22.01",
+        "command_version": "/galaxy/server/database/jobs_directory/000/30/tool_script.sh: line 9: bowtie2: command not found",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.4.2+galaxy0",
+        "history_id": "549b7b43fdae20a0",
+        "external_id": "gxy-galaxy-nvxwv",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;   ln -s '/galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat' input_f.fastq &&   bowtie2  -p ${GALAXY_SLOTS:-4}  -x '/cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bowtie2_index/hg38full'   -U 'input_f.fastq'                  | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/1/7/8/dataset_1781025a-1c2c-46c2-83bb-46a9776bcf03.dat'",
+        "traceback": null,
+        "params": {
+            "analysis_type": "{\"__current_case__\": 0, \"analysis_type_selector\": \"simple\", \"presets\": \"no_presets\"}",
+            "library": "{\"__current_case__\": 0, \"aligned_file\": \"false\", \"input_1\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}]}, \"type\": \"single\", \"unaligned_file\": \"false\"}",
+            "reference_genome": "{\"__current_case__\": 0, \"index\": \"hg38\", \"source\": \"indexed\"}",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "sam_options": "{\"__current_case__\": 1, \"sam_options_selector\": \"no\"}",
+            "save_mapping_stats": "\"false\"",
+            "__workflow_invocation_uuid__": "\"9b0c1f58aecb11ecb97efa3bebcfd74c\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "input_1": {
+                "id": "6195f47716e6085e",
+                "src": "hda",
+                "uuid": "66467de1-d709-4ac5-a336-32c951920f9c"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "4421935bb8cdc7a5",
+                "src": "hda",
+                "uuid": "1781025a-1c2c-46c2-83bb-46a9776bcf03"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "/galaxy/server/database/jobs_directory/000/30/tool_script.sh: line 10: bowtie2: command not found\n/galaxy/server/database/jobs_directory/000/30/tool_script.sh: line 10: samtools: command not found\n",
+        "stderr": "\n/galaxy/server/database/jobs_directory/000/30/tool_script.sh: line 10: bowtie2: command not found\n/galaxy/server/database/jobs_directory/000/30/tool_script.sh: line 10: samtools: command not found\n",
+        "stdout": "",
+        "job_messages": [
+            {
+                "code_desc": "",
+                "desc": "Fatal error: Exit code 127 ()",
+                "error_level": 3,
+                "exit_code": 127,
+                "type": "exit_code"
+            }
+        ],
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-nvxwv-99wbc 5.11.0-1027-aws #30~20.04.1-Ubuntu SMP Thu Jan 13 11:46:53 UTC 2022 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-nvxwv-99wbc 5.11.0-1027-aws #30~20.04.1-Ubuntu SMP Thu Jan 13 11:46:53 UTC 2022 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "4",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "4.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "8000",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "8000.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2022-03-28 19:17:21",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1648495041.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2022-03-28 19:17:21",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1648495041.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "0 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "0.053626863 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "53626863.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "7.5 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "8000000000.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "3.9 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "4108288.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "7.5 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "8000000000.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "3.9 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "4108288.0000000"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "32",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "32.0000000"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "60.4 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "64805144.0000000"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "02ed906b09ea26dd",
+        "state": "error",
+        "exit_code": 127,
+        "update_time": "2022-03-28T19:17:25.411169",
+        "create_time": "2022-03-28T19:16:45.438877",
+        "galaxy_version": "22.01",
+        "command_version": "/galaxy/server/database/jobs_directory/000/30/tool_script.sh: line 9: bowtie2: command not found",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.4.2+galaxy0",
+        "history_id": "549b7b43fdae20a0",
+        "external_id": "gxy-galaxy-nvxwv",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;   ln -s '/galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat' input_f.fastq &&   bowtie2  -p ${GALAXY_SLOTS:-4}  -x '/cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bowtie2_index/hg38full'   -U 'input_f.fastq'                  | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/1/7/8/dataset_1781025a-1c2c-46c2-83bb-46a9776bcf03.dat'",
+        "traceback": null,
+        "params": {
+            "analysis_type": "{\"__current_case__\": 0, \"analysis_type_selector\": \"simple\", \"presets\": \"no_presets\"}",
+            "library": "{\"__current_case__\": 0, \"aligned_file\": \"false\", \"input_1\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}]}, \"type\": \"single\", \"unaligned_file\": \"false\"}",
+            "reference_genome": "{\"__current_case__\": 0, \"index\": \"hg38\", \"source\": \"indexed\"}",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "sam_options": "{\"__current_case__\": 1, \"sam_options_selector\": \"no\"}",
+            "save_mapping_stats": "\"false\"",
+            "__workflow_invocation_uuid__": "\"9b0c1f58aecb11ecb97efa3bebcfd74c\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "input_1": {
+                "id": "6195f47716e6085e",
+                "src": "hda",
+                "uuid": "66467de1-d709-4ac5-a336-32c951920f9c"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "4421935bb8cdc7a5",
+                "src": "hda",
+                "uuid": "1781025a-1c2c-46c2-83bb-46a9776bcf03"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://aebdeb7f2e6b0496f9a1e9d080af05b6-1904670019.us-east-1.elb.amazonaws.com"
+}

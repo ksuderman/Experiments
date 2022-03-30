@@ -1,0 +1,226 @@
+{
+    "run": "2",
+    "cloud": "c2",
+    "job_conf": "16x32",
+    "workflow_id": "9c81f5006e126d68",
+    "history_id": "fd9fdb4487ef2ea9",
+    "inputs": "SRR592109_2.fastq.gz",
+    "metrics": {
+        "model_class": "Job",
+        "id": "c1834ca43db717d8",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2022-03-26T01:03:31.455266",
+        "create_time": "2022-03-26T00:58:42.741226",
+        "galaxy_version": "22.01",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.1",
+        "history_id": "fd9fdb4487ef2ea9",
+        "external_id": "gxy-galaxy-z9c8q",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;     bwa mem -t \"${GALAXY_SLOTS:-1}\" -v 1                '/cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa' '/galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat'  | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/9/c/5/dataset_9c5582c8-b3d9-4de6-9038-b819640d1643.dat'",
+        "traceback": null,
+        "params": {
+            "analysis_type": "{\"__current_case__\": 0, \"analysis_type_selector\": \"illumina\"}",
+            "fastq_input": "{\"__current_case__\": 1, \"fastq_input1\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}]}, \"fastq_input_selector\": \"single\"}",
+            "reference_source": "{\"__current_case__\": 0, \"ref_file\": \"hg38\", \"reference_source_selector\": \"cached\"}",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "__workflow_invocation_uuid__": "\"e12480eeac9f11eca454ce8ddc5ac878\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"fastqsanger\""
+        },
+        "inputs": {
+            "fastq_input1": {
+                "id": "46f0df62c495f64e",
+                "src": "hda",
+                "uuid": "66467de1-d709-4ac5-a336-32c951920f9c"
+            }
+        },
+        "outputs": {
+            "bam_output": {
+                "id": "2e82ed5f4e8aa981",
+                "src": "hda",
+                "uuid": "9c5582c8-b3d9-4de6-9038-b819640d1643"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "[main] Version: 0.7.17-r1188\n[main] CMD: bwa mem -t 16 -v 1 /cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa /galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat\n[main] Real time: 48.658 sec; CPU: 673.025 sec\n[bam_sort_core] merging from 0 files and 16 in-memory blocks...\n",
+        "stderr": "\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa mem -t 16 -v 1 /cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa /galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat\n[main] Real time: 48.658 sec; CPU: 673.025 sec\n[bam_sort_core] merging from 0 files and 16 in-memory blocks...\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-z9c8q-58h7w 5.4.171+ #1 SMP Sun Feb 27 19:59:37 PST 2022 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-z9c8q-58h7w 5.4.171+ #1 SMP Sun Feb 27 19:59:37 PST 2022 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "16",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "16.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "32000",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "32000.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2022-03-26 01:02:30",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1648256550.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2022-03-26 01:03:22",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1648256602.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "52 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "52.0000000"
+            },
+            {
+                "title": "CPU Time",
+                "value": "12 minutes",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "729622551571.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "29.8 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "32000000000.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "13.6 GB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "14609076224.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "13.6 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "14609076224.0000000"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "30",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "30.0000000"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "115.2 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "123667232.0000000"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "c1834ca43db717d8",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2022-03-26T01:03:31.455266",
+        "create_time": "2022-03-26T00:58:42.741226",
+        "galaxy_version": "22.01",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.1",
+        "history_id": "fd9fdb4487ef2ea9",
+        "external_id": "gxy-galaxy-z9c8q",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;     bwa mem -t \"${GALAXY_SLOTS:-1}\" -v 1                '/cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa' '/galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat'  | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/9/c/5/dataset_9c5582c8-b3d9-4de6-9038-b819640d1643.dat'",
+        "traceback": null,
+        "params": {
+            "analysis_type": "{\"__current_case__\": 0, \"analysis_type_selector\": \"illumina\"}",
+            "fastq_input": "{\"__current_case__\": 1, \"fastq_input1\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}]}, \"fastq_input_selector\": \"single\"}",
+            "reference_source": "{\"__current_case__\": 0, \"ref_file\": \"hg38\", \"reference_source_selector\": \"cached\"}",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "__workflow_invocation_uuid__": "\"e12480eeac9f11eca454ce8ddc5ac878\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"fastqsanger\""
+        },
+        "inputs": {
+            "fastq_input1": {
+                "id": "46f0df62c495f64e",
+                "src": "hda",
+                "uuid": "66467de1-d709-4ac5-a336-32c951920f9c"
+            }
+        },
+        "outputs": {
+            "bam_output": {
+                "id": "2e82ed5f4e8aa981",
+                "src": "hda",
+                "uuid": "9c5582c8-b3d9-4de6-9038-b819640d1643"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.148.216.24"
+}
