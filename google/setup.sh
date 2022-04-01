@@ -17,6 +17,11 @@ function rewrite() {
 
 for i in $INSTANCES ; do
     echo "Provisioning $i"
+    if [[ -e welcome.html ]] ; then
+      rm welcome.html
+    fi
+    ui=$(echo $i | tr 'a-z' 'A-Z')
+    cat welcome-template.html | sed "s/__INSTANCE__/$ui/g" > welcome.html
     (source settings/$i && ./provision.sh cluster nfs galaxy)
     bin/wait-for-galaxy.sh
     kubectl get pods -A
