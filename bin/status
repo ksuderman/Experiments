@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -eu
+
+INSTANCES=${@:-n1 n2 c2 e2 m5 m5a m5n m6i c6i}
+
+for i in $INSTANCES ; do
+    echo "Instance: $i"
+    abm $i job ls | head -5
+done
+echo "Done"
