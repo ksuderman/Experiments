@@ -4,11 +4,9 @@ set -eu
 
 TYPE=${TYPE:-8xlarge}
 
-DIR=$(dirname $(realpath $0))
-
 while [[ $# > 0 ]] ; do
 	echo "Deleting clustere $1.$TYPE"
-	$DIR/cluster delete $1 $TYPE
+	eksctl delete cluster $1$TYPE --profile cost-modeling
 	shift
 done
 
