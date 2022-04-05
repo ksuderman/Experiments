@@ -17,6 +17,11 @@ for type in $INSTANCE_TYPES ; do
 	echo "Creating $type cluster"
 	bin/cluster create $type 8xlarge
 	cd ./ansible
+	upper=$(echo $type | tr 'a-z' 'A-Z')
+	if [[ -e files/values.yml ]] ; then
+	  rm files/values.yml
+	fi
+	cat files/values-template.yml | sed "s/__INSTANCE__/$upper/g" > files/values.yml
 	ansible-playbook galaxy-helm.yml
 	cd -
 	bin/wait-for-galaxy.sh
