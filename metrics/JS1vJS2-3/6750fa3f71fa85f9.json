@@ -1,0 +1,212 @@
+{
+    "run": "0",
+    "cloud": "js2",
+    "job_conf": "1x8",
+    "workflow_id": "a39e04a94b92a63a",
+    "history_id": "aa54c2a8017f078a",
+    "inputs": "SRR592109_2.fastq.gz",
+    "metrics": {
+        "model_class": "Job",
+        "id": "6750fa3f71fa85f9",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2022-04-14T14:00:24.730758",
+        "create_time": "2022-04-14T13:27:42.578204",
+        "galaxy_version": "21.09",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa/0.7.17.4",
+        "history_id": "aa54c2a8017f078a",
+        "external_id": "gxy-galaxy-jhfj6",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;                  bwa aln -t \"${GALAXY_SLOTS:-1}\"     '/cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa' '/galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat' > first.sai &&  bwa samse    '/cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa' first.sai '/galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat'    | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/c/c/7/dataset_cc74d8c0-ced6-40b4-9fbb-7d888cdc2852.dat'",
+        "traceback": null,
+        "params": {
+            "analysis_type": "{\"__current_case__\": 0, \"analysis_type_selector\": \"illumina\"}",
+            "input_type": "{\"__current_case__\": 2, \"adv_se_options\": {\"__current_case__\": 1, \"adv_se_options_selector\": \"do_not_set\"}, \"fastq_input1\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}]}, \"input_type_selector\": \"single\"}",
+            "reference_source": "{\"__current_case__\": 0, \"ref_file\": \"hg38\", \"reference_source_selector\": \"cached\"}",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "__workflow_invocation_uuid__": "\"a91157debbf611ec8a933e2a5d832fb3\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"fastqsanger\""
+        },
+        "inputs": {
+            "fastq_input1": {
+                "id": "2d50a5921722c0ad",
+                "src": "hda",
+                "uuid": "66467de1-d709-4ac5-a336-32c951920f9c"
+            }
+        },
+        "outputs": {
+            "bam_output": {
+                "id": "0db3566e20c290f4",
+                "src": "hda",
+                "uuid": "cc74d8c0-ced6-40b4-9fbb-7d888cdc2852"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "[bwa_aln] 17bp reads: max_diff = 2\n[bwa_aln] 38bp reads: max_diff = 3\n[bwa_aln] 64bp reads: max_diff = 4\n[bwa_aln] 93bp reads: max_diff = 5\n[bwa_aln] 124bp reads: max_diff = 6\n[bwa_aln] 157bp reads: max_diff = 7\n[bwa_aln] 190bp reads: max_diff = 8\n[bwa_aln] 225bp reads: max_diff = 9\n[bwa_aln_core] calculate SA coordinate... 167.76 sec\n[bwa_aln_core] write to the disk... 0.05 sec\n[bwa_aln_core] 262144 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 150.76 sec\n[bwa_aln_core] write to the disk... 0.05 sec\n[bwa_aln_core] 524288 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 155.15 sec\n[bwa_aln_core] write to the disk... 0.06 sec\n[bwa_aln_core] 786432 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 159.09 sec\n[bwa_aln_core] write to the disk... 0.04 sec\n[bwa_aln_core] 1048576 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 168.02 sec\n[bwa_aln_core] write to the disk... 0.06 sec\n[bwa_aln_core] 1310720 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 163.13 sec\n[bwa_aln_core] write to the disk... 0.06 sec\n[bwa_aln_core] 1572864 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 185.90 sec\n[bwa_aln_core] write to the disk... 0.04 sec\n[bwa_aln_core] 1835008 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 193.80 sec\n[bwa_aln_core] write to the disk... 0.05 sec\n[bwa_aln_core] 2097152 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 152.87 sec\n[bwa_aln_core] write to the disk... 0.03 sec\n[bwa_aln_core] 2263238 sequences have been processed.\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa aln -t 1 /cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa /galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat\n[main] Real time: 1535.191 sec; CPU: 1505.008 sec\n[bwa_aln_core] convert to sequence coordinate... 10.16 sec\n[bwa_aln_core] refine gapped alignments... 0.92 sec\n[bwa_aln_core] print alignments... 0.36 sec\n[bwa_aln_core] 262144 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 7.24 sec\n[bwa_aln_core] refine gapped alignments... 0.85 sec\n[bwa_aln_core] print alignments... 0.35 sec\n[bwa_aln_core] 524288 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.31 sec\n[bwa_aln_core] refine gapped alignments... 0.87 sec\n[bwa_aln_core] print alignments... 0.36 sec\n[bwa_aln_core] 786432 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.42 sec\n[bwa_aln_core] refine gapped alignments... 0.88 sec\n[bwa_aln_core] print alignments... 0.36 sec\n[bwa_aln_core] 1048576 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.49 sec\n[bwa_aln_core] refine gapped alignments... 0.85 sec\n[bwa_aln_core] print alignments... 0.36 sec\n[bwa_aln_core] 1310720 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.39 sec\n[bwa_aln_core] refine gapped alignments... 0.87 sec\n[bwa_aln_core] print alignments... 0.35 sec\n[bwa_aln_core] 1572864 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.55 sec\n[bwa_aln_core] refine gapped alignments... 0.86 sec\n[bwa_aln_core] print alignments... 0.36 sec\n[bwa_aln_core] 1835008 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.25 sec\n[bwa_aln_core] refine gapped alignments... 0.87 sec\n[bwa_aln_core] print alignments... 0.37 sec\n[bwa_aln_core] 2097152 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 4.97 sec\n[bwa_aln_core] refine gapped alignments... 0.76 sec\n[bwa_aln_core] print alignments... 0.20 sec\n[bwa_aln_core] 2263238 sequences have been processed.\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa samse /cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa first.sai /galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat\n[main] Real time: 93.196 sec; CPU: 74.546 sec\n",
+        "stderr": "\n[bwa_aln] 17bp reads: max_diff = 2\n[bwa_aln] 38bp reads: max_diff = 3\n[bwa_aln] 64bp reads: max_diff = 4\n[bwa_aln] 93bp reads: max_diff = 5\n[bwa_aln] 124bp reads: max_diff = 6\n[bwa_aln] 157bp reads: max_diff = 7\n[bwa_aln] 190bp reads: max_diff = 8\n[bwa_aln] 225bp reads: max_diff = 9\n[bwa_aln_core] calculate SA coordinate... 167.76 sec\n[bwa_aln_core] write to the disk... 0.05 sec\n[bwa_aln_core] 262144 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 150.76 sec\n[bwa_aln_core] write to the disk... 0.05 sec\n[bwa_aln_core] 524288 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 155.15 sec\n[bwa_aln_core] write to the disk... 0.06 sec\n[bwa_aln_core] 786432 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 159.09 sec\n[bwa_aln_core] write to the disk... 0.04 sec\n[bwa_aln_core] 1048576 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 168.02 sec\n[bwa_aln_core] write to the disk... 0.06 sec\n[bwa_aln_core] 1310720 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 163.13 sec\n[bwa_aln_core] write to the disk... 0.06 sec\n[bwa_aln_core] 1572864 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 185.90 sec\n[bwa_aln_core] write to the disk... 0.04 sec\n[bwa_aln_core] 1835008 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 193.80 sec\n[bwa_aln_core] write to the disk... 0.05 sec\n[bwa_aln_core] 2097152 sequences have been processed.\n[bwa_aln_core] calculate SA coordinate... 152.87 sec\n[bwa_aln_core] write to the disk... 0.03 sec\n[bwa_aln_core] 2263238 sequences have been processed.\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa aln -t 1 /cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa /galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat\n[main] Real time: 1535.191 sec; CPU: 1505.008 sec\n[bwa_aln_core] convert to sequence coordinate... 10.16 sec\n[bwa_aln_core] refine gapped alignments... 0.92 sec\n[bwa_aln_core] print alignments... 0.36 sec\n[bwa_aln_core] 262144 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 7.24 sec\n[bwa_aln_core] refine gapped alignments... 0.85 sec\n[bwa_aln_core] print alignments... 0.35 sec\n[bwa_aln_core] 524288 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.31 sec\n[bwa_aln_core] refine gapped alignments... 0.87 sec\n[bwa_aln_core] print alignments... 0.36 sec\n[bwa_aln_core] 786432 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.42 sec\n[bwa_aln_core] refine gapped alignments... 0.88 sec\n[bwa_aln_core] print alignments... 0.36 sec\n[bwa_aln_core] 1048576 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.49 sec\n[bwa_aln_core] refine gapped alignments... 0.85 sec\n[bwa_aln_core] print alignments... 0.36 sec\n[bwa_aln_core] 1310720 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.39 sec\n[bwa_aln_core] refine gapped alignments... 0.87 sec\n[bwa_aln_core] print alignments... 0.35 sec\n[bwa_aln_core] 1572864 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.55 sec\n[bwa_aln_core] refine gapped alignments... 0.86 sec\n[bwa_aln_core] print alignments... 0.36 sec\n[bwa_aln_core] 1835008 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 6.25 sec\n[bwa_aln_core] refine gapped alignments... 0.87 sec\n[bwa_aln_core] print alignments... 0.37 sec\n[bwa_aln_core] 2097152 sequences have been processed.\n[bwa_aln_core] convert to sequence coordinate... 4.97 sec\n[bwa_aln_core] refine gapped alignments... 0.76 sec\n[bwa_aln_core] print alignments... 0.20 sec\n[bwa_aln_core] 2263238 sequences have been processed.\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa samse /cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa first.sai /galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat\n[main] Real time: 93.196 sec; CPU: 74.546 sec\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-jhfj6-fvx67 5.4.0-107-generic #121-Ubuntu SMP Thu Mar 24 16:04:27 UTC 2022 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-jhfj6-fvx67 5.4.0-107-generic #121-Ubuntu SMP Thu Mar 24 16:04:27 UTC 2022 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "1",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "1.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "8000",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "8000.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2022-04-14 13:32:01",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1649943121.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2022-04-14 14:00:16",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1649944816.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "28 minutes",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "1695.0000000"
+            },
+            {
+                "title": "CPU Time",
+                "value": "27 minutes",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "1651938127878.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "7.5 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "8000000000.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "7.4 GB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "7998816256.0000000"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "8",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "8.0000000"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "28.7 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "30818572.0000000"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "6750fa3f71fa85f9",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2022-04-14T14:00:24.730758",
+        "create_time": "2022-04-14T13:27:42.578204",
+        "galaxy_version": "21.09",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa/0.7.17.4",
+        "history_id": "aa54c2a8017f078a",
+        "external_id": "gxy-galaxy-jhfj6",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;                  bwa aln -t \"${GALAXY_SLOTS:-1}\"     '/cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa' '/galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat' > first.sai &&  bwa samse    '/cvmfs/data.galaxyproject.org/byhand/hg38/hg38full/bwa_index_v0.7.10-r789/hg38full.fa' first.sai '/galaxy/server/database/objects/6/6/4/dataset_66467de1-d709-4ac5-a336-32c951920f9c.dat'    | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/c/c/7/dataset_cc74d8c0-ced6-40b4-9fbb-7d888cdc2852.dat'",
+        "traceback": null,
+        "params": {
+            "analysis_type": "{\"__current_case__\": 0, \"analysis_type_selector\": \"illumina\"}",
+            "input_type": "{\"__current_case__\": 2, \"adv_se_options\": {\"__current_case__\": 1, \"adv_se_options_selector\": \"do_not_set\"}, \"fastq_input1\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}]}, \"input_type_selector\": \"single\"}",
+            "reference_source": "{\"__current_case__\": 0, \"ref_file\": \"hg38\", \"reference_source_selector\": \"cached\"}",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "__workflow_invocation_uuid__": "\"a91157debbf611ec8a933e2a5d832fb3\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"fastqsanger\""
+        },
+        "inputs": {
+            "fastq_input1": {
+                "id": "2d50a5921722c0ad",
+                "src": "hda",
+                "uuid": "66467de1-d709-4ac5-a336-32c951920f9c"
+            }
+        },
+        "outputs": {
+            "bam_output": {
+                "id": "0db3566e20c290f4",
+                "src": "hda",
+                "uuid": "cc74d8c0-ced6-40b4-9fbb-7d888cdc2852"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://149.165.153.191/galaxy/"
+}
