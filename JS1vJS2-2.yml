@@ -1,5 +1,5 @@
 # Run the simple experiment on four GCP instances with all the job conf files.
-name: JS1vJS2
+name: JS1vJS2-2
 # The number of times each benchmark will be executed.
 runs: 1
 # The benchmarks that will be run as part of the experiment. Each benchmark
@@ -15,8 +15,7 @@ cloud:
 # resources allocated to tools. List the file names without the .yml extension.
 # These files are expected to be found in the rules directory.
 job_configs:
-  - 4x8
-  - 7x15
+  - 6x16
 # TODO Discuss if this belongs here...
 galaxy:
   namespace: galaxy

@@ -1,0 +1,99 @@
+{
+    "run": "0",
+    "cloud": "js2",
+    "job_conf": "7x15",
+    "workflow_id": "b74c49d5e29e4064",
+    "history_id": "2c0b736583bdd365",
+    "inputs": "ERR015526_2.fastq.gz",
+    "metrics": {
+        "model_class": "Job",
+        "id": "c37227e481c299d3",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2022-04-14T01:20:48.910863",
+        "create_time": "2022-04-14T01:18:47.030936",
+        "galaxy_version": "21.09",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.1.0+galaxy7",
+        "history_id": "2c0b736583bdd365",
+        "external_id": "gxy-galaxy-trm6r",
+        "command_line": "ln -f -s '/galaxy/server/database/objects/1/7/e/dataset_17ee2516-0c8d-4b8a-b732-aec3a3f20e50.dat' input_f.fastq &&    hisat2  -p ${GALAXY_SLOTS:-1}  -x '/cvmfs/data.galaxyproject.org/managed/hisat2_index/hg38/hg38'     -U 'input_f.fastq'                                | samtools sort -l 0 -T \"${TMPDIR:-.}\" -O bam | samtools view -O bam -@ ${GALAXY_SLOTS:-1} -o '/galaxy/server/database/objects/7/a/8/dataset_7a84601c-2008-41ba-8092-c8f1a212251e.dat'",
+        "traceback": null,
+        "params": {
+            "adv": "{\"alignment_options\": {\"__current_case__\": 0, \"alignment_options_selector\": \"defaults\"}, \"input_options\": {\"__current_case__\": 0, \"input_options_selector\": \"defaults\"}, \"other_options\": {\"__current_case__\": 0, \"other_options_selector\": \"defaults\"}, \"output_options\": {\"__current_case__\": 0, \"output_options_selector\": \"defaults\"}, \"reporting_options\": {\"__current_case__\": 0, \"reporting_options_selector\": \"defaults\"}, \"sam_options\": {\"__current_case__\": 0, \"sam_options_selector\": \"defaults\"}, \"scoring_options\": {\"__current_case__\": 0, \"scoring_options_selector\": \"defaults\"}, \"spliced_options\": {\"__current_case__\": 0, \"spliced_options_selector\": \"defaults\"}}",
+            "library": "{\"__current_case__\": 0, \"input_1\": {\"values\": [{\"id\": 2, \"src\": \"hda\"}]}, \"rna_strandness\": \"\", \"type\": \"single\"}",
+            "reference_genome": "{\"__current_case__\": 0, \"index\": \"hg38\", \"source\": \"indexed\"}",
+            "sum": "{\"new_summary\": \"false\", \"summary_file\": \"false\"}",
+            "__workflow_invocation_uuid__": "\"d4b6b836bb9011ecbcf3b6bd504c8c5e\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "input_1": {
+                "id": "8711f6b0264e799c",
+                "src": "hda",
+                "uuid": "17ee2516-0c8d-4b8a-b732-aec3a3f20e50"
+            }
+        },
+        "outputs": {
+            "output_alignments": {
+                "id": "f5a97ebebc972e57",
+                "src": "hda",
+                "uuid": "7a84601c-2008-41ba-8092-c8f1a212251e"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": null,
+        "tool_stderr": null,
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "c37227e481c299d3",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2022-04-14T01:20:48.910863",
+        "create_time": "2022-04-14T01:18:47.030936",
+        "galaxy_version": "21.09",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/2.1.0+galaxy7",
+        "history_id": "2c0b736583bdd365",
+        "external_id": "gxy-galaxy-trm6r",
+        "command_line": "ln -f -s '/galaxy/server/database/objects/1/7/e/dataset_17ee2516-0c8d-4b8a-b732-aec3a3f20e50.dat' input_f.fastq &&    hisat2  -p ${GALAXY_SLOTS:-1}  -x '/cvmfs/data.galaxyproject.org/managed/hisat2_index/hg38/hg38'     -U 'input_f.fastq'                                | samtools sort -l 0 -T \"${TMPDIR:-.}\" -O bam | samtools view -O bam -@ ${GALAXY_SLOTS:-1} -o '/galaxy/server/database/objects/7/a/8/dataset_7a84601c-2008-41ba-8092-c8f1a212251e.dat'",
+        "traceback": null,
+        "params": {
+            "adv": "{\"alignment_options\": {\"__current_case__\": 0, \"alignment_options_selector\": \"defaults\"}, \"input_options\": {\"__current_case__\": 0, \"input_options_selector\": \"defaults\"}, \"other_options\": {\"__current_case__\": 0, \"other_options_selector\": \"defaults\"}, \"output_options\": {\"__current_case__\": 0, \"output_options_selector\": \"defaults\"}, \"reporting_options\": {\"__current_case__\": 0, \"reporting_options_selector\": \"defaults\"}, \"sam_options\": {\"__current_case__\": 0, \"sam_options_selector\": \"defaults\"}, \"scoring_options\": {\"__current_case__\": 0, \"scoring_options_selector\": \"defaults\"}, \"spliced_options\": {\"__current_case__\": 0, \"spliced_options_selector\": \"defaults\"}}",
+            "library": "{\"__current_case__\": 0, \"input_1\": {\"values\": [{\"id\": 2, \"src\": \"hda\"}]}, \"rna_strandness\": \"\", \"type\": \"single\"}",
+            "reference_genome": "{\"__current_case__\": 0, \"index\": \"hg38\", \"source\": \"indexed\"}",
+            "sum": "{\"new_summary\": \"false\", \"summary_file\": \"false\"}",
+            "__workflow_invocation_uuid__": "\"d4b6b836bb9011ecbcf3b6bd504c8c5e\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/hg38Patch11.len\"",
+            "dbkey": "\"hg38Patch11\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "input_1": {
+                "id": "8711f6b0264e799c",
+                "src": "hda",
+                "uuid": "17ee2516-0c8d-4b8a-b732-aec3a3f20e50"
+            }
+        },
+        "outputs": {
+            "output_alignments": {
+                "id": "f5a97ebebc972e57",
+                "src": "hda",
+                "uuid": "7a84601c-2008-41ba-8092-c8f1a212251e"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://149.165.153.191/galaxy/"
+}
