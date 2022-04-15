@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+FIRST="OneKGenome"
+DIRECTORIES="March24 March28 JS1vJS2 JS1vJS2-2 JS1vJS2-3"
+#dir=$(dirname $(realpath $0))
+
+OUTFILE="results/all.csv"
+
+echo "Summarizing $FIRST"
+abm experiment summarize metrics/$FIRST > $OUTFILE
+for dir in $DIRECTORIES ; do
+	echo "Summarizing $dir"
+	abm experiment summarize metrics/$dir | tail -n+2 >> $OUTFILE
+done
+echo "Wrote $OUTFILE"
