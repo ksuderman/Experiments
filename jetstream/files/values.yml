@@ -1,10 +1,10 @@
 image:
   repository: galaxyproject/galaxy-min
-  tag: dev
+  tag: 21.09
 configs:
   galaxy.yml:
     galaxy:
-      admin_users: suderman@jhu.edu,admin@galaxyproject.org
+      admin_users: suderman@jhu.edu,bcarr15@jhu.edu,vwen2@jhu.edu,enis.afgan@gmail.com,admin@galaxyproject.org
       job_metrics_config_file: job_metrics_conf.yml
       allow_user_creation: true
       use_remote_user: false
@@ -28,7 +28,7 @@ initJob:
     enabled: true
 persistence:
   accessMode: ReadWriteMany
-  size: '50Gi'
+  size: '300Gi'
   storageClass: "nfs"
 postgresql:
   deploy: true
@@ -38,7 +38,7 @@ postgresql:
 ingress:
   enabled: true
   canary:
-    enabled: true
+    enabled: false
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/proxy-body-size: "10G"

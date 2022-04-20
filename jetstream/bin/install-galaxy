@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+#NAME=${NAME:-galaxy}
+CHART=${CHART:-galaxy/galaxy}
+HTML=${1:-files/welcome-js1.html}
+
+helm upgrade --install galaxy -n galaxy $CHART \
+  --reset-values \
+  --create-namespace \
+  -f files/values.yml \
+  --set-file extraFileMappings."/galaxy/server/static/welcome\.html".content=$HTML

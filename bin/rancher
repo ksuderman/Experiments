@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+SECRET=${SECRET:-~/.secret/rancher-keys.sh}
+source $SECRET
+
+if [[ $# != 2 ]] ; then
+	echo "$0 NAME DESCRIPTION"
+	echo "$0 n1 'GCP cost modeling'"
+	exit 1
+fi
+
+echo "Posting data"
+curl -i -u "$ACCESS_KEY:$SECRET_KEY" \
+  -X POST \
+  -H 'Accept: application/json' \
+  -H 'Content-type: application/json' \
+  -d "{\"name\":\"$1\", \"description\":\"$2\", \"dockerRootDir\": \"/var/lib/docker\"}" \
+  https://rancher-galaxy.duckdns.org/v3/clusters
+
+#echo $response

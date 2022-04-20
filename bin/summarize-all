@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 FIRST="OneKGenome"
-DIRECTORIES="March24 March28 JS1vJS2 JS1vJS2-2 JS1vJS2-3"
+DIRECTORIES="March24 JS1vJS2 JS1vJS2-2 JS1vJS2-3 JS1vJS2-4.small"
 #dir=$(dirname $(realpath $0))
 
 OUTFILE="results/all.csv"
@@ -9,7 +9,11 @@ OUTFILE="results/all.csv"
 echo "Summarizing $FIRST"
 abm experiment summarize metrics/$FIRST > $OUTFILE
 for dir in $DIRECTORIES ; do
-	echo "Summarizing $dir"
-	abm experiment summarize metrics/$dir | tail -n+2 >> $OUTFILE
+	if [[ -e metrics/$dir ]] ; then
+		echo "Summarizing $dir"
+		abm experiment summarize metrics/$dir | tail -n+2 >> $OUTFILE
+	else
+		echo "Directory not found. Unable to summarize $dir."
+	fi
 done
 echo "Wrote $OUTFILE"

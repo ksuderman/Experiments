@@ -1,86 +1,42 @@
 #!/usr/bin/env bash
 
-PROG=$(basename $0)
 if [[ -z $1 ]] ; then
-    echo "USAGE: $PROG <name> <number>"
-    echo "     : $PROG tacc 1"
-    exit 1
+	echo "Please specify one of js1 or js2"
+	exit 1
 fi
 
-set -eu
+INVENTORY=$HOME/.inventories/$1.ini
+HTML=files/welcome-$1.html
 
-CLOUD=$1
-#echo "CLOUD is $CLOUD"
-shift
+if [[ ! -e $INVENTORY ]] ; then
+	echo "Inventory file $INVENTORY not found"
+	exit 1
+fi
 
-while [[ $# > 0 ]] ; do
-    ID=$1
-    #echo "ID is $ID"
-    shift
-    
-    NAME="$CLOUD$ID"
-    echo "Instance name is $NAME"
+cd ansible
 
-    CHART="galaxy/galaxy"
-    INVENTORY=~/.inventories/$NAME.ini
+if [[ -e $HTML ]] ; then
+	echo "Welcome HTML file $HTML not found:"
+	exit 1
+fi
 
-    if [[ ! -e $INVENTORY ]] ; then
-        echo "ERROR: File not found: $INVENTORY"
-        exit 1
-    fi
+echo "Installing RKE2"
+rm rke/outputs/*
+ansible-playbook -i $INVENTORY rke/main.yml
+config=$(ls rke/outputs)
 
-    if [[ -L ~/.kube/config ]] ; then
-        echo "Removing the currently linked kubeconfig"
-        rm ~/.kube/config
-    fi
+echo "Copying kubeconfig file"
+mv rke/outputs/$config $HOME/.kube/configs/$1
+chmod 0600 $HOME/.kube/$1
 
-    cd ansible
+if [[ -e .ktx ]] ; then
+	rm .ktx
+fi
+kshim global $1
+ansible-playbook -i $INVENTORY setup.yml
+ansible-playbook -i $INVENTORY cert-manager.yml
+cd ../
 
-    # Update and reboot if needed.
-    ansible-playbook -i $INVENTORY update.yml
-
-    # Install RKE2
-    rm rke/outputs/*.config
-    ansible-playbook -i $INVENTORY rke/main.yml
-
-    kubeconfig=$(ls rke/outputs/*.config)
-    if [[ ! -e $kubeconfig ]] ; then
-        echo "ERROR: Unable to find the kubeconfig in rke/outputs"
-        echo $kubeconfig
-        exit 1
-    fi
-    if [[ -e ~/.kube/configs/$NAME ]] ; then
-        echo "Removing the existing kubeconfig ~/.kube/configs/$NAME"
-        rm ~/.kube/configs/$NAME
-    fi
-
-    cp $kubeconfig ~/.kube/configs/$NAME
-    ln -s ~/.kube/configs/$NAME ~/.kube/config
-    chmod 0600 ~/.kube/configs/$NAME
-    chmod 0600 ~/.kube/config
-
-    while [[ -z $(kubectl get nodes | grep master | grep ' Ready') ]] ; do
-        echo "Waiting for Kubernetes to be ready"
-        sleep 30
-    done
-    echo "Kubernetes is ready"
-    #exit
-
-    ansible-playbook -i $INVENTORY setup.yml
-    ansible-playbook -i $INVENTORY cert-manager.yml
-
-    cd -
-
-    VALUES=templates/$NAME.yml # ../helm-configs/cloudcosts-$1.yml
-    if [[ ! -e $VALUES ]] ; then
-        echo "Generating $VALUES"
-        python3 scripts/render_template.py $CLOUD $ID > $VALUES
-    fi
-    COMMON=helm/cloudcosts-common.yml
-
-    #cd ~/Workspaces/JHU/galaxy-helm
-    #WELCOME=./welcome-2109-$1.html
-    helm upgrade galaxy -n galaxy $CHART --install --create-namespace --reuse-values -f $COMMON -f $VALUES --set-file extraFileMappings."/galaxy/server/static/welcome\.html".content=helm/welcome.html 
-
-    echo "Galaxy should be available in a few minutes"
-done
+bin/install-galaxy files/welcome-$1.html
+kshim clear
+echo "Done"

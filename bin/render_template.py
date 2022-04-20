@@ -9,7 +9,7 @@ from pprint import pprint
 
 def render_template(template, values):
     if not os.path.exists(template):
-        print(f"ERROR: Template not found: {args.template}")
+        print(f"ERROR: Template not found: {template}")
         return
 
     with open(template, "r") as f:
