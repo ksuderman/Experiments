@@ -1,18 +1,14 @@
 #!/usr/bin/env bash
 
 NAMESPACE=${NAMESPACE:-galaxy}
-which k
-if [[ $? -eq 1 ]] ; then
-  alias k=kubectl
-fi
 P="Waiting for the pods"
 
 function is_ready() {
-  if [[ $(k get pods -n $NAMESPACE | grep 'web\|job\|workflow' | wc -l) -ne 3 ]] ; then
+  if [[ $(kubectl get pods -n $NAMESPACE | grep 'web\|job\|workflow' | wc -l) -ne 3 ]] ; then
     echo 0
     return
   fi
-  if [[ $(k get pods -n $NAMESPACE | grep 'web\|job\|workflow' | grep Running | grep 1/1 | wc -l) -ne 3 ]] ; then
+  if [[ $(kubectl get pods -n $NAMESPACE | grep 'web\|job\|workflow' | grep Running | grep 1/1 | wc -l) -ne 3 ]] ; then
     echo 0
     return
   fi
