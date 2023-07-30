@@ -1,0 +1,168 @@
+{
+    "run": "2",
+    "cloud": "gkm",
+    "job_conf": "8x16",
+    "workflow_id": "e692fc44b9391f5f",
+    "history_id": "110c1b7290aff8a8",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "200134f8572b7427",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-07-11T16:49:18.976567",
+        "create_time": "2023-07-11T16:30:47.342336",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0",
+        "history_id": "110c1b7290aff8a8",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"49da40c4200811eebee156872ea4f77d\"",
+            "title": "\"\"",
+            "saveLog": "false",
+            "results": "[{\"__index__\": 0, \"software_cond\": {\"__current_case__\": 7, \"input\": {\"values\": [{\"id\": 98, \"src\": \"hda\"}]}, \"software\": \"fastp\"}}, {\"__index__\": 1, \"software_cond\": {\"__current_case__\": 24, \"output\": [{\"__index__\": 0, \"type\": {\"__current_case__\": 0, \"input\": {\"values\": [{\"id\": 105, \"src\": \"hda\"}]}, \"type\": \"stats\"}}], \"software\": \"samtools\"}}, {\"__index__\": 2, \"software_cond\": {\"__current_case__\": 17, \"output\": [{\"__index__\": 0, \"input\": {\"values\": [{\"id\": 103, \"src\": \"hda\"}]}, \"type\": \"markdups\"}], \"software\": \"picard\"}}]",
+            "flat": "false",
+            "export": "false",
+            "comment": "\"\""
+        },
+        "inputs": {
+            "results_0|input": {
+                "id": "d85bc6010d098a01",
+                "src": "hda",
+                "uuid": "ff74f069-0b22-4713-a3ed-6877aa382acf"
+            },
+            "results_0|input1": {
+                "id": "d85bc6010d098a01",
+                "src": "hda",
+                "uuid": "ff74f069-0b22-4713-a3ed-6877aa382acf"
+            },
+            "results_1|software_cond|output_0|input": {
+                "id": "8da15ddba260914b",
+                "src": "hda",
+                "uuid": "92956c3a-5610-4550-bac5-a8b8d66b024d"
+            },
+            "results_1|software_cond|output_0|input1": {
+                "id": "8da15ddba260914b",
+                "src": "hda",
+                "uuid": "92956c3a-5610-4550-bac5-a8b8d66b024d"
+            },
+            "results_2|software_cond|output_0|input": {
+                "id": "68ead1703e46b43d",
+                "src": "hda",
+                "uuid": "df12d033-aa0f-4d1a-890b-55f69dc027e9"
+            },
+            "results_2|software_cond|output_0|input1": {
+                "id": "68ead1703e46b43d",
+                "src": "hda",
+                "uuid": "df12d033-aa0f-4d1a-890b-55f69dc027e9"
+            }
+        },
+        "outputs": {
+            "html_report": {
+                "id": "675eba43a20dd90d",
+                "src": "hda",
+                "uuid": "afdb2a8c-0571-4f86-828e-d5a39f17fe3c"
+            }
+        },
+        "output_collections": {
+            "stats": {
+                "id": "c02adb6523da425a",
+                "src": "hdca"
+            }
+        },
+        "tool_stdout": null,
+        "tool_stderr": null,
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "200134f8572b7427",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-07-11T16:49:18.976567",
+        "create_time": "2023-07-11T16:30:47.342336",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0",
+        "history_id": "110c1b7290aff8a8",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"49da40c4200811eebee156872ea4f77d\"",
+            "title": "\"\"",
+            "saveLog": "false",
+            "results": "[{\"__index__\": 0, \"software_cond\": {\"__current_case__\": 7, \"input\": {\"values\": [{\"id\": 98, \"src\": \"hda\"}]}, \"software\": \"fastp\"}}, {\"__index__\": 1, \"software_cond\": {\"__current_case__\": 24, \"output\": [{\"__index__\": 0, \"type\": {\"__current_case__\": 0, \"input\": {\"values\": [{\"id\": 105, \"src\": \"hda\"}]}, \"type\": \"stats\"}}], \"software\": \"samtools\"}}, {\"__index__\": 2, \"software_cond\": {\"__current_case__\": 17, \"output\": [{\"__index__\": 0, \"input\": {\"values\": [{\"id\": 103, \"src\": \"hda\"}]}, \"type\": \"markdups\"}], \"software\": \"picard\"}}]",
+            "flat": "false",
+            "export": "false",
+            "comment": "\"\""
+        },
+        "inputs": {
+            "results_0|input": {
+                "id": "d85bc6010d098a01",
+                "src": "hda",
+                "uuid": "ff74f069-0b22-4713-a3ed-6877aa382acf"
+            },
+            "results_0|input1": {
+                "id": "d85bc6010d098a01",
+                "src": "hda",
+                "uuid": "ff74f069-0b22-4713-a3ed-6877aa382acf"
+            },
+            "results_1|software_cond|output_0|input": {
+                "id": "8da15ddba260914b",
+                "src": "hda",
+                "uuid": "92956c3a-5610-4550-bac5-a8b8d66b024d"
+            },
+            "results_1|software_cond|output_0|input1": {
+                "id": "8da15ddba260914b",
+                "src": "hda",
+                "uuid": "92956c3a-5610-4550-bac5-a8b8d66b024d"
+            },
+            "results_2|software_cond|output_0|input": {
+                "id": "68ead1703e46b43d",
+                "src": "hda",
+                "uuid": "df12d033-aa0f-4d1a-890b-55f69dc027e9"
+            },
+            "results_2|software_cond|output_0|input1": {
+                "id": "68ead1703e46b43d",
+                "src": "hda",
+                "uuid": "df12d033-aa0f-4d1a-890b-55f69dc027e9"
+            }
+        },
+        "outputs": {
+            "html_report": {
+                "id": "675eba43a20dd90d",
+                "src": "hda",
+                "uuid": "afdb2a8c-0571-4f86-828e-d5a39f17fe3c"
+            }
+        },
+        "output_collections": {
+            "stats": {
+                "id": "c02adb6523da425a",
+                "src": "hdca"
+            }
+        }
+    },
+    "server": "http://34.23.223.221:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

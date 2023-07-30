@@ -1,0 +1,144 @@
+{
+    "run": "2",
+    "cloud": "gkm",
+    "job_conf": "8x16",
+    "workflow_id": "2986ca77a6154e30",
+    "history_id": "356ae51a2f2db219",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "022cc7ea53a250e9",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-09T22:30:22.252252",
+        "create_time": "2023-07-09T22:28:43.767382",
+        "galaxy_version": "23.0",
+        "command_version": "2.1.5",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_indelqual/lofreq_indelqual/2.1.5+galaxy0",
+        "history_id": "356ae51a2f2db219",
+        "external_id": "gxy-galaxy-galaxy-rbnfg",
+        "command_line": "ln -s '/galaxy/server/database/objects/0/f/5/dataset_0f5425a2-f116-4a2c-a1fb-d880d4725db1.dat' reference.fa && lofreq faidx reference.fa 2>&1 || echo \"Error running samtools faidx for indexing fasta reference for lofreq\" >&2 &&  lofreq indelqual --dindel --ref reference.fa -o output.bam /galaxy/server/database/objects/2/1/6/dataset_21623b96-8290-4632-93e3-b610d5599b4e.dat",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"f5b284f41ea711ee9ada367d3aa430c2\"",
+            "strategy": "{\"__current_case__\": 1, \"reference_source\": {\"__current_case__\": 1, \"ref\": {\"values\": [{\"id\": 124, \"src\": \"hda\"}]}, \"ref_selector\": \"history\"}, \"selector\": \"dindel\"}"
+        },
+        "inputs": {
+            "reads": {
+                "id": "5325119a86516865",
+                "src": "hda",
+                "uuid": "21623b96-8290-4632-93e3-b610d5599b4e"
+            },
+            "strategy|ref": {
+                "id": "bc2ba255a6646f01",
+                "src": "hda",
+                "uuid": "0f5425a2-f116-4a2c-a1fb-d880d4725db1"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "aa9f0de244fcd16a",
+                "src": "hda",
+                "uuid": "e9e6f3b9-bf5e-4edc-b675-8f938791d34e"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "0 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-09 22:30:13",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1688941813.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-09 22:30:13",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1688941813.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "12240",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "12240.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "1",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "1.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "022cc7ea53a250e9",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-09T22:30:22.252252",
+        "create_time": "2023-07-09T22:28:43.767382",
+        "galaxy_version": "23.0",
+        "command_version": "2.1.5",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_indelqual/lofreq_indelqual/2.1.5+galaxy0",
+        "history_id": "356ae51a2f2db219",
+        "external_id": "gxy-galaxy-galaxy-rbnfg",
+        "command_line": "ln -s '/galaxy/server/database/objects/0/f/5/dataset_0f5425a2-f116-4a2c-a1fb-d880d4725db1.dat' reference.fa && lofreq faidx reference.fa 2>&1 || echo \"Error running samtools faidx for indexing fasta reference for lofreq\" >&2 &&  lofreq indelqual --dindel --ref reference.fa -o output.bam /galaxy/server/database/objects/2/1/6/dataset_21623b96-8290-4632-93e3-b610d5599b4e.dat",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"f5b284f41ea711ee9ada367d3aa430c2\"",
+            "strategy": "{\"__current_case__\": 1, \"reference_source\": {\"__current_case__\": 1, \"ref\": {\"values\": [{\"id\": 124, \"src\": \"hda\"}]}, \"ref_selector\": \"history\"}, \"selector\": \"dindel\"}"
+        },
+        "inputs": {
+            "reads": {
+                "id": "5325119a86516865",
+                "src": "hda",
+                "uuid": "21623b96-8290-4632-93e3-b610d5599b4e"
+            },
+            "strategy|ref": {
+                "id": "bc2ba255a6646f01",
+                "src": "hda",
+                "uuid": "0f5425a2-f116-4a2c-a1fb-d880d4725db1"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "aa9f0de244fcd16a",
+                "src": "hda",
+                "uuid": "e9e6f3b9-bf5e-4edc-b675-8f938791d34e"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.73.244.95:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

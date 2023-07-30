@@ -1,0 +1,100 @@
+{
+    "run": "2",
+    "cloud": "test",
+    "job_conf": "4x8",
+    "workflow_id": "4128845e2e684201",
+    "history_id": "7a1907697393a357",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "1115c6a460246abc",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-27T15:46:11.971226",
+        "create_time": "2023-07-27T15:37:23.232947",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/sceasy_convert/sceasy_convert/0.0.5+galaxy1",
+        "history_id": "7a1907697393a357",
+        "external_id": "gxy-galaxy-galaxy-f9wwp",
+        "command_line": "ln -s /galaxy/server/database/objects/3/9/2/dataset_39295dba-50ea-4355-862e-f4ac8525b2ce.dat input.rds &&  Rscript -e 'library(sceasy)' -e 'sce <- readRDS(\"input.rds\")' -e 'sceasy::convertFormat(sce, outFile=\"output.h5ad\", from=\"sce\", to=\"anndata\", main_layer=\"counts\")' -e 'print(sce)'",
+        "traceback": null,
+        "params": {
+            "conversion": "{\"__current_case__\": 2, \"assay\": \"counts\", \"direction\": \"sce2anndata\", \"input_object_file\": {\"values\": [{\"id\": 75, \"src\": \"hda\"}]}}",
+            "__workflow_invocation_uuid__": "\"7a00576a2c9311eeb1e162763338e84b\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"rdata\""
+        },
+        "inputs": {
+            "input_object_file": {
+                "id": "17e2f7b1aa1fab84",
+                "src": "hda",
+                "uuid": "39295dba-50ea-4355-862e-f4ac8525b2ce"
+            }
+        },
+        "outputs": {
+            "output_anndata": {
+                "id": "1dec2bedc1295538",
+                "src": "hda",
+                "uuid": "faded5f7-4a3a-4851-9ad7-8a00ba0bfdb6"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "1115c6a460246abc",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-27T15:46:11.971226",
+        "create_time": "2023-07-27T15:37:23.232947",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/sceasy_convert/sceasy_convert/0.0.5+galaxy1",
+        "history_id": "7a1907697393a357",
+        "external_id": "gxy-galaxy-galaxy-f9wwp",
+        "command_line": "ln -s /galaxy/server/database/objects/3/9/2/dataset_39295dba-50ea-4355-862e-f4ac8525b2ce.dat input.rds &&  Rscript -e 'library(sceasy)' -e 'sce <- readRDS(\"input.rds\")' -e 'sceasy::convertFormat(sce, outFile=\"output.h5ad\", from=\"sce\", to=\"anndata\", main_layer=\"counts\")' -e 'print(sce)'",
+        "traceback": null,
+        "params": {
+            "conversion": "{\"__current_case__\": 2, \"assay\": \"counts\", \"direction\": \"sce2anndata\", \"input_object_file\": {\"values\": [{\"id\": 75, \"src\": \"hda\"}]}}",
+            "__workflow_invocation_uuid__": "\"7a00576a2c9311eeb1e162763338e84b\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"rdata\""
+        },
+        "inputs": {
+            "input_object_file": {
+                "id": "17e2f7b1aa1fab84",
+                "src": "hda",
+                "uuid": "39295dba-50ea-4355-862e-f4ac8525b2ce"
+            }
+        },
+        "outputs": {
+            "output_anndata": {
+                "id": "1dec2bedc1295538",
+                "src": "hda",
+                "uuid": "faded5f7-4a3a-4851-9ad7-8a00ba0bfdb6"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.139.202.124:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

@@ -1,0 +1,124 @@
+{
+    "run": "1",
+    "cloud": "test4",
+    "job_conf": "4x32",
+    "workflow_id": "7b571c18809a3ef6",
+    "history_id": "9029a4a5a3f06990",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "a6550800ff478c1b",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-29T02:26:22.218580",
+        "create_time": "2023-07-29T02:26:05.169074",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/gtf2gene_list/_ensembl_gtf2gene_list/1.52.0+galaxy0",
+        "history_id": "9029a4a5a3f06990",
+        "external_id": "gxy-galaxy-galaxy-kwhmb",
+        "command_line": "ln -s '/galaxy/server/database/objects/a/a/3/dataset_aa3cea26-50d8-4657-90a4-821ca638b640.dat' input.gtf; gtf2featureAnnotation.R --gtf-file input.gtf --no-header --version-transcripts --mito --mito-chr \"mt,mitochondrion_genome,mito,m,chrM,chrMt\" --mito-biotypes \"mt_trna,mt_rrna,mt_trna_pseudogene\" --feature-type \"gene\" --first-field \"gene_id\" --output-file annotation.txt --fields \"gene_id,gene_name,mito\"",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"44230fe62db711eea7b99e7b1091148c\"",
+            "version_transcripts": "true",
+            "noheader": "true",
+            "mito": "{\"__current_case__\": 0, \"mark_mito\": true, \"mito_biotypes\": \"mt_trna,mt_rrna,mt_trna_pseudogene\", \"mito_chr\": \"mt,mitochondrion_genome,mito,m,chrM,chrMt\"}",
+            "first_field": "\"gene_id\"",
+            "fill_empty": "\"\"",
+            "fields": "\"gene_id,gene_name,mito\"",
+            "feature_type": "\"gene\"",
+            "cdnas": "{\"__current_case__\": 1, \"parse_cdnas\": false}"
+        },
+        "inputs": {
+            "gtf_input": {
+                "id": "70d794534b61e542",
+                "src": "hda",
+                "uuid": "aa3cea26-50d8-4657-90a4-821ca638b640"
+            }
+        },
+        "outputs": {
+            "fasta_output": {
+                "id": "a81a037ff35ba4c5",
+                "src": "hda",
+                "uuid": "5d076cb3-ae9b-47e8-8fb6-0fb6384a541b"
+            },
+            "feature_annotation": {
+                "id": "f764afaeaef59b4d",
+                "src": "hda",
+                "uuid": "8942267c-9fd8-4162-8dd0-e2e70fc0d550"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "a6550800ff478c1b",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-29T02:26:22.218580",
+        "create_time": "2023-07-29T02:26:05.169074",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/gtf2gene_list/_ensembl_gtf2gene_list/1.52.0+galaxy0",
+        "history_id": "9029a4a5a3f06990",
+        "external_id": "gxy-galaxy-galaxy-kwhmb",
+        "command_line": "ln -s '/galaxy/server/database/objects/a/a/3/dataset_aa3cea26-50d8-4657-90a4-821ca638b640.dat' input.gtf; gtf2featureAnnotation.R --gtf-file input.gtf --no-header --version-transcripts --mito --mito-chr \"mt,mitochondrion_genome,mito,m,chrM,chrMt\" --mito-biotypes \"mt_trna,mt_rrna,mt_trna_pseudogene\" --feature-type \"gene\" --first-field \"gene_id\" --output-file annotation.txt --fields \"gene_id,gene_name,mito\"",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"44230fe62db711eea7b99e7b1091148c\"",
+            "version_transcripts": "true",
+            "noheader": "true",
+            "mito": "{\"__current_case__\": 0, \"mark_mito\": true, \"mito_biotypes\": \"mt_trna,mt_rrna,mt_trna_pseudogene\", \"mito_chr\": \"mt,mitochondrion_genome,mito,m,chrM,chrMt\"}",
+            "first_field": "\"gene_id\"",
+            "fill_empty": "\"\"",
+            "fields": "\"gene_id,gene_name,mito\"",
+            "feature_type": "\"gene\"",
+            "cdnas": "{\"__current_case__\": 1, \"parse_cdnas\": false}"
+        },
+        "inputs": {
+            "gtf_input": {
+                "id": "70d794534b61e542",
+                "src": "hda",
+                "uuid": "aa3cea26-50d8-4657-90a4-821ca638b640"
+            }
+        },
+        "outputs": {
+            "fasta_output": {
+                "id": "a81a037ff35ba4c5",
+                "src": "hda",
+                "uuid": "5d076cb3-ae9b-47e8-8fb6-0fb6384a541b"
+            },
+            "feature_annotation": {
+                "id": "f764afaeaef59b4d",
+                "src": "hda",
+                "uuid": "8942267c-9fd8-4162-8dd0-e2e70fc0d550"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.185.17.116:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

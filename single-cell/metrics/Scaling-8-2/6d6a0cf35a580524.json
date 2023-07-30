@@ -1,0 +1,251 @@
+{
+    "run": "2",
+    "cloud": "test",
+    "job_conf": "8x8",
+    "workflow_id": "c9c53695ff75b8ea",
+    "history_id": "8fff7edcb61e9ab3",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "6d6a0cf35a580524",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-28T18:36:54.500496",
+        "create_time": "2023-07-28T18:36:31.145121",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/gtf2gene_list/_ensembl_gtf2gene_list/1.52.0+galaxy0",
+        "history_id": "8fff7edcb61e9ab3",
+        "external_id": "gxy-galaxy-galaxy-l8cxg",
+        "command_line": "ln -s '/galaxy/server/database/objects/a/a/3/dataset_aa3cea26-50d8-4657-90a4-821ca638b640.dat' input.gtf; gtf2featureAnnotation.R --gtf-file input.gtf --no-header --version-transcripts --mito --mito-chr \"mt,mitochondrion_genome,mito,m,chrM,chrMt\" --mito-biotypes \"mt_trna,mt_rrna,mt_trna_pseudogene\" --feature-type \"gene\" --first-field \"gene_id\" --output-file annotation.txt --fields \"gene_id,gene_name,mito\"",
+        "traceback": null,
+        "params": {
+            "cdnas": "{\"__current_case__\": 1, \"parse_cdnas\": false}",
+            "feature_type": "\"gene\"",
+            "fields": "\"gene_id,gene_name,mito\"",
+            "fill_empty": "\"\"",
+            "first_field": "\"gene_id\"",
+            "mito": "{\"__current_case__\": 0, \"mark_mito\": true, \"mito_biotypes\": \"mt_trna,mt_rrna,mt_trna_pseudogene\", \"mito_chr\": \"mt,mitochondrion_genome,mito,m,chrM,chrMt\"}",
+            "noheader": "true",
+            "version_transcripts": "true",
+            "__workflow_invocation_uuid__": "\"ab2105462d7511ee952cf65758c121ac\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "gtf_input": {
+                "id": "9f5b103910660c99",
+                "src": "hda",
+                "uuid": "aa3cea26-50d8-4657-90a4-821ca638b640"
+            }
+        },
+        "outputs": {
+            "feature_annotation": {
+                "id": "a7fd3799bc75bfe7",
+                "src": "hda",
+                "uuid": "a409c348-bcba-4e3b-98d8-cd4b2502ab3c"
+            },
+            "fasta_output": {
+                "id": "6ecdb3fb0f208c5f",
+                "src": "hda",
+                "uuid": "42781e38-7bd3-46f0-b934-3bb2c57eec26"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "[1] \"Reading input.gtf elements of type gene\"\n[1] \"Found 55487 features\"\n[1] \"Storing output to annotation.txt\"\n",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "",
+        "stdout": "[1] \"Reading input.gtf elements of type gene\"\n[1] \"Found 55487 features\"\n[1] \"Storing output to annotation.txt\"\n",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-galaxy-l8cxg-2k8lt 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-galaxy-l8cxg-2k8lt 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "122.9 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "132016184.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "32",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "32.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "633.9 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "664702976.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "8.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "8589934592.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "633.9 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "664702976.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "8.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "8589934592.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "11.162772624 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "11162772624.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "9 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "9.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-28 18:36:43",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1690569403.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-28 18:36:34",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1690569394.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "8589",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "8589.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "8",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "8.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "6d6a0cf35a580524",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-28T18:36:54.500496",
+        "create_time": "2023-07-28T18:36:31.145121",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/gtf2gene_list/_ensembl_gtf2gene_list/1.52.0+galaxy0",
+        "history_id": "8fff7edcb61e9ab3",
+        "external_id": "gxy-galaxy-galaxy-l8cxg",
+        "command_line": "ln -s '/galaxy/server/database/objects/a/a/3/dataset_aa3cea26-50d8-4657-90a4-821ca638b640.dat' input.gtf; gtf2featureAnnotation.R --gtf-file input.gtf --no-header --version-transcripts --mito --mito-chr \"mt,mitochondrion_genome,mito,m,chrM,chrMt\" --mito-biotypes \"mt_trna,mt_rrna,mt_trna_pseudogene\" --feature-type \"gene\" --first-field \"gene_id\" --output-file annotation.txt --fields \"gene_id,gene_name,mito\"",
+        "traceback": null,
+        "params": {
+            "cdnas": "{\"__current_case__\": 1, \"parse_cdnas\": false}",
+            "feature_type": "\"gene\"",
+            "fields": "\"gene_id,gene_name,mito\"",
+            "fill_empty": "\"\"",
+            "first_field": "\"gene_id\"",
+            "mito": "{\"__current_case__\": 0, \"mark_mito\": true, \"mito_biotypes\": \"mt_trna,mt_rrna,mt_trna_pseudogene\", \"mito_chr\": \"mt,mitochondrion_genome,mito,m,chrM,chrMt\"}",
+            "noheader": "true",
+            "version_transcripts": "true",
+            "__workflow_invocation_uuid__": "\"ab2105462d7511ee952cf65758c121ac\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "gtf_input": {
+                "id": "9f5b103910660c99",
+                "src": "hda",
+                "uuid": "aa3cea26-50d8-4657-90a4-821ca638b640"
+            }
+        },
+        "outputs": {
+            "feature_annotation": {
+                "id": "a7fd3799bc75bfe7",
+                "src": "hda",
+                "uuid": "a409c348-bcba-4e3b-98d8-cd4b2502ab3c"
+            },
+            "fasta_output": {
+                "id": "6ecdb3fb0f208c5f",
+                "src": "hda",
+                "uuid": "42781e38-7bd3-46f0-b934-3bb2c57eec26"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.185.17.116:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

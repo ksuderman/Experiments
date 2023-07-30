@@ -1,0 +1,110 @@
+{
+    "run": "3",
+    "cloud": "gkm",
+    "job_conf": "8x32",
+    "workflow_id": "09f3c2ea89c8e9e7",
+    "history_id": "7ea462ba137718aa",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "3a4766bb544f9f2a",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-11T19:25:00.960643",
+        "create_time": "2023-07-11T19:23:52.475674",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_viterbi/lofreq_viterbi/2.1.5+galaxy0",
+        "history_id": "7ea462ba137718aa",
+        "external_id": "gxy-galaxy-galaxy-cgdp5",
+        "command_line": "ln -s '/galaxy/server/database/objects/2/7/5/dataset_275f3ac9-24b0-4b9d-8cbe-7cc7322d14f6.dat' reference.fa && lofreq faidx reference.fa 2>&1 || echo \"Error running samtools faidx for indexing fasta reference for lofreq\" >&2 &&  lofreq viterbi --ref 'reference.fa'  --defqual 2 --out tmp.bam '/galaxy/server/database/objects/9/c/e/dataset_9ce8933c-2b13-4e9b-a900-abb8a4fd108b.dat' &&  samtools sort --no-PG -T \"${TMPDIR:-.}\" -@ ${GALAXY_SLOTS:-1} -O BAM -o '/galaxy/server/database/objects/2/4/9/dataset_24947273-378f-4906-b7af-8a501db34f10.dat' tmp.bam",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"77782fce202011eeaf8b0a5c9fb31a9f\"",
+            "reference_source": "{\"__current_case__\": 1, \"ref\": {\"values\": [{\"id\": 746, \"src\": \"hda\"}]}, \"ref_selector\": \"history\"}",
+            "adv_options": "{\"bq2_handling\": {\"__current_case__\": 0, \"defqual\": \"2\", \"replace_bq2\": \"keep\"}, \"keepflags\": false}"
+        },
+        "inputs": {
+            "ref": {
+                "id": "1ac69226c13c425c",
+                "src": "hda",
+                "uuid": "275f3ac9-24b0-4b9d-8cbe-7cc7322d14f6"
+            },
+            "reads": {
+                "id": "24f78adcbbaca377",
+                "src": "hda",
+                "uuid": "9ce8933c-2b13-4e9b-a900-abb8a4fd108b"
+            }
+        },
+        "outputs": {
+            "realigned": {
+                "id": "5e6f1640f307106c",
+                "src": "hda",
+                "uuid": "24947273-378f-4906-b7af-8a501db34f10"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "3a4766bb544f9f2a",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-11T19:25:00.960643",
+        "create_time": "2023-07-11T19:23:52.475674",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_viterbi/lofreq_viterbi/2.1.5+galaxy0",
+        "history_id": "7ea462ba137718aa",
+        "external_id": "gxy-galaxy-galaxy-cgdp5",
+        "command_line": "ln -s '/galaxy/server/database/objects/2/7/5/dataset_275f3ac9-24b0-4b9d-8cbe-7cc7322d14f6.dat' reference.fa && lofreq faidx reference.fa 2>&1 || echo \"Error running samtools faidx for indexing fasta reference for lofreq\" >&2 &&  lofreq viterbi --ref 'reference.fa'  --defqual 2 --out tmp.bam '/galaxy/server/database/objects/9/c/e/dataset_9ce8933c-2b13-4e9b-a900-abb8a4fd108b.dat' &&  samtools sort --no-PG -T \"${TMPDIR:-.}\" -@ ${GALAXY_SLOTS:-1} -O BAM -o '/galaxy/server/database/objects/2/4/9/dataset_24947273-378f-4906-b7af-8a501db34f10.dat' tmp.bam",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"77782fce202011eeaf8b0a5c9fb31a9f\"",
+            "reference_source": "{\"__current_case__\": 1, \"ref\": {\"values\": [{\"id\": 746, \"src\": \"hda\"}]}, \"ref_selector\": \"history\"}",
+            "adv_options": "{\"bq2_handling\": {\"__current_case__\": 0, \"defqual\": \"2\", \"replace_bq2\": \"keep\"}, \"keepflags\": false}"
+        },
+        "inputs": {
+            "ref": {
+                "id": "1ac69226c13c425c",
+                "src": "hda",
+                "uuid": "275f3ac9-24b0-4b9d-8cbe-7cc7322d14f6"
+            },
+            "reads": {
+                "id": "24f78adcbbaca377",
+                "src": "hda",
+                "uuid": "9ce8933c-2b13-4e9b-a900-abb8a4fd108b"
+            }
+        },
+        "outputs": {
+            "realigned": {
+                "id": "5e6f1640f307106c",
+                "src": "hda",
+                "uuid": "24947273-378f-4906-b7af-8a501db34f10"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.23.223.221:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

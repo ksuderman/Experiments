@@ -1,0 +1,249 @@
+{
+    "run": "3",
+    "cloud": "gkm",
+    "job_conf": "32x64",
+    "workflow_id": "173545dfeceb86f9",
+    "history_id": "e22bf1f0b22959aa",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "92df899ffb502b60",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-11T17:46:32.873647",
+        "create_time": "2023-07-11T17:45:20.763778",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2",
+        "history_id": "e22bf1f0b22959aa",
+        "external_id": "gxy-galaxy-galaxy-vzscs",
+        "command_line": "_JAVA_OPTIONS=${_JAVA_OPTIONS:-'-Xmx2048m -Xms256m'} && export _JAVA_OPTIONS &&   ln -f -s '/galaxy/server/database/objects/9/a/2/dataset_9a2214d4-a7a6-4f9c-85ef-84ce6b5e970a.dat' 'Mapped_read_pairs__filtered_bwa-mem_result_' &&  picard MarkDuplicates  INPUT='Mapped_read_pairs__filtered_bwa-mem_result_' OUTPUT='/galaxy/server/database/objects/9/9/1/dataset_991e371c-afad-4f0e-b140-fc64b47d8bff.dat'  METRICS_FILE='/galaxy/server/database/objects/f/7/5/dataset_f75188c5-d489-417d-8d8d-ad4a1c5f4bcd.dat'  REMOVE_DUPLICATES='true' ASSUME_SORTED='true'  DUPLICATE_SCORING_STRATEGY='SUM_OF_BASE_QUALITIES'  OPTICAL_DUPLICATE_PIXEL_DISTANCE='100'   VALIDATION_STRINGENCY='LENIENT' QUIET=true VERBOSITY=ERROR  `if [ -n \"$TMPDIR\" ] ; then echo 'TMP_DIR=$TMPDIR' ; else if [ -n \"$TEMP\" ] ; then echo 'TMP_DIR=$TEMP' ; fi ; fi`",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"bam\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"b421fa9e201211ee850f1e5762bb551e\"",
+            "validation_stringency": "\"LENIENT\"",
+            "remove_duplicates": "true",
+            "read_name_regex": "\"\"",
+            "optical_duplicate_pixel_distance": "\"100\"",
+            "duplicate_scoring_strategy": "\"SUM_OF_BASE_QUALITIES\"",
+            "comments": "[]",
+            "barcode_tag": "\"\"",
+            "assume_sorted": "true"
+        },
+        "inputs": {
+            "inputFile": {
+                "id": "2bf47798324532dd",
+                "src": "hda",
+                "uuid": "9a2214d4-a7a6-4f9c-85ef-84ce6b5e970a"
+            }
+        },
+        "outputs": {
+            "metrics_file": {
+                "id": "af45d41e76930833",
+                "src": "hda",
+                "uuid": "f75188c5-d489-417d-8d8d-ad4a1c5f4bcd"
+            },
+            "outFile": {
+                "id": "eb5a12c883c0accc",
+                "src": "hda",
+                "uuid": "991e371c-afad-4f0e-b140-fc64b47d8bff"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "/usr/local/bin/picard: line 5: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory\nPicked up _JAVA_OPTIONS: -Xmx64G -Xms1G\n17:46:02.978 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/usr/local/share/picard-2.18.2-0/picard.jar!/com/intel/gkl/native/libgkl_compression.so\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "/usr/local/bin/picard: line 5: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory\nPicked up _JAVA_OPTIONS: -Xmx64G -Xms1G\n17:46:02.978 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/usr/local/share/picard-2.18.2-0/picard.jar!/com/intel/gkl/native/libgkl_compression.so\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-galaxy-vzscs-qxv4x 5.10.162+ #1 SMP Thu Mar 16 14:55:19 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-galaxy-vzscs-qxv4x 5.10.162+ #1 SMP Thu Mar 16 14:55:19 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "492.1 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "528367336.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "64",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "64.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "18.4 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "19799638016.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "48.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "51539607552.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "18.4 GB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "19799638016.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "48.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "51539607552.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "1 minute",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "97742772639.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "22 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "22.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-11 17:46:24",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1689097584.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-11 17:46:02",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1689097562.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "51539",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "51539.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "8",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "8.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "92df899ffb502b60",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-11T17:46:32.873647",
+        "create_time": "2023-07-11T17:45:20.763778",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2",
+        "history_id": "e22bf1f0b22959aa",
+        "external_id": "gxy-galaxy-galaxy-vzscs",
+        "command_line": "_JAVA_OPTIONS=${_JAVA_OPTIONS:-'-Xmx2048m -Xms256m'} && export _JAVA_OPTIONS &&   ln -f -s '/galaxy/server/database/objects/9/a/2/dataset_9a2214d4-a7a6-4f9c-85ef-84ce6b5e970a.dat' 'Mapped_read_pairs__filtered_bwa-mem_result_' &&  picard MarkDuplicates  INPUT='Mapped_read_pairs__filtered_bwa-mem_result_' OUTPUT='/galaxy/server/database/objects/9/9/1/dataset_991e371c-afad-4f0e-b140-fc64b47d8bff.dat'  METRICS_FILE='/galaxy/server/database/objects/f/7/5/dataset_f75188c5-d489-417d-8d8d-ad4a1c5f4bcd.dat'  REMOVE_DUPLICATES='true' ASSUME_SORTED='true'  DUPLICATE_SCORING_STRATEGY='SUM_OF_BASE_QUALITIES'  OPTICAL_DUPLICATE_PIXEL_DISTANCE='100'   VALIDATION_STRINGENCY='LENIENT' QUIET=true VERBOSITY=ERROR  `if [ -n \"$TMPDIR\" ] ; then echo 'TMP_DIR=$TMPDIR' ; else if [ -n \"$TEMP\" ] ; then echo 'TMP_DIR=$TEMP' ; fi ; fi`",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"bam\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"b421fa9e201211ee850f1e5762bb551e\"",
+            "validation_stringency": "\"LENIENT\"",
+            "remove_duplicates": "true",
+            "read_name_regex": "\"\"",
+            "optical_duplicate_pixel_distance": "\"100\"",
+            "duplicate_scoring_strategy": "\"SUM_OF_BASE_QUALITIES\"",
+            "comments": "[]",
+            "barcode_tag": "\"\"",
+            "assume_sorted": "true"
+        },
+        "inputs": {
+            "inputFile": {
+                "id": "2bf47798324532dd",
+                "src": "hda",
+                "uuid": "9a2214d4-a7a6-4f9c-85ef-84ce6b5e970a"
+            }
+        },
+        "outputs": {
+            "metrics_file": {
+                "id": "af45d41e76930833",
+                "src": "hda",
+                "uuid": "f75188c5-d489-417d-8d8d-ad4a1c5f4bcd"
+            },
+            "outFile": {
+                "id": "eb5a12c883c0accc",
+                "src": "hda",
+                "uuid": "991e371c-afad-4f0e-b140-fc64b47d8bff"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.23.223.221:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

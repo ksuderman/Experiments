@@ -1,0 +1,14 @@
+- output_history_base_name: VariantCalling
+  workflow_id: Generic variation analysis on WGS PE data
+  runs:
+  - history_name: err3485802
+    inputs:
+    - name: Paired Collection
+      history: Input Data
+      paired:
+        - forward: forward
+          reverse: reverse
+    - name: GenBank genome
+      dataset_id: genome.genbank
+    - name: Name for genome database
+      value: Test genome database

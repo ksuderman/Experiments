@@ -1,0 +1,218 @@
+{
+    "run": "2",
+    "cloud": "test",
+    "job_conf": "16x32",
+    "workflow_id": "5d77085cf1cd436d",
+    "history_id": "256a85cd904f6641",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "be3e37e106482bf3",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-27T17:20:40.843609",
+        "create_time": "2023-07-27T17:13:59.480916",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/alevin/alevin/1.9.0+galaxy2",
+        "history_id": "256a85cd904f6641",
+        "external_id": "gxy-galaxy-galaxy-sd84s",
+        "command_line": "mkdir ./index && mkdir ./output && salmon index -i ./index --kmerLen '31' --gencode --transcripts '/galaxy/server/database/objects/a/3/0/dataset_a3050a41-16f0-401e-b2ac-48daa98d64c8.dat' && ln -s '/galaxy/server/database/objects/7/2/d/dataset_72ddcc58-976a-45e7-9293-a1e02cd417ec.dat' ./mate1.fastq && ln -s '/galaxy/server/database/objects/b/0/2/dataset_b023a5a2-d845-414a-a643-0dbce6e310f9.dat' ./mate2.fastq  && ln -s '/galaxy/server/database/objects/9/1/e/dataset_91e778ca-ad46-4f37-9a5c-3b1b46a58008.dat' ./alevinmap.tsv && salmon alevin -l A -i ./index -1 ./mate1.fastq -2 ./mate2.fastq -o ./output -p \"${GALAXY_SLOTS:-4}\" --dropseq --tgMap ./alevinmap.tsv --keepCBFraction '1.0'  --dumpFeatures --dumpMtx --maxNumBarcodes '100000' --freqThreshold '3' && gunzip output/alevin/quants_mat.mtx.gz",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"f997697a2ca011eebbeb72370fc7de5d\"",
+            "refTranscriptSource": "{\"TranscriptSource\": \"history\", \"__current_case__\": 1, \"s_index\": {\"fasta\": {\"values\": [{\"id\": 200, \"src\": \"hda\"}]}, \"genome\": null, \"kmer\": \"31\", \"phash\": false}}",
+            "protocol_cond": "{\"__current_case__\": 0, \"protocol\": \"--dropseq\"}",
+            "pairstraight": "{\"__current_case__\": 0, \"file1\": {\"values\": [{\"id\": 4, \"src\": \"hda\"}]}, \"file2\": {\"values\": [{\"id\": 5, \"src\": \"hda\"}]}, \"libtype\": {\"__current_case__\": 0, \"strandedness\": \"A\"}, \"readselect\": \"paired\"}",
+            "output_files": "[\"dumpFeatures\", \"salmon_log\"]",
+            "optional": "{\"dumpMtx\": true, \"expectCells\": null, \"forceCells\": null, \"freqThreshold\": \"3\", \"keepCBFraction\": \"1.0\", \"maxNumBarcodes\": \"100000\", \"minScoreFraction\": null, \"mrna\": null, \"noDedup\": false, \"numCellBootstraps\": null, \"rrna\": null, \"whitelist\": null}"
+        },
+        "inputs": {
+            "refTranscriptSource|fasta": {
+                "id": "d605c1fb57fa0428",
+                "src": "hda",
+                "uuid": "a3050a41-16f0-401e-b2ac-48daa98d64c8"
+            },
+            "file1": {
+                "id": "e3f7de7796825c63",
+                "src": "hda",
+                "uuid": "72ddcc58-976a-45e7-9293-a1e02cd417ec"
+            },
+            "file2": {
+                "id": "17e5f1fe70ccf700",
+                "src": "hda",
+                "uuid": "b023a5a2-d845-414a-a643-0dbce6e310f9"
+            },
+            "tgmap": {
+                "id": "77b2cf049339191c",
+                "src": "hda",
+                "uuid": "91e778ca-ad46-4f37-9a5c-3b1b46a58008"
+            }
+        },
+        "outputs": {
+            "quants_mat_mtx": {
+                "id": "9d6d281235b765ea",
+                "src": "hda",
+                "uuid": "f4605b49-1865-4f8b-a24c-ff217a7190ae"
+            },
+            "quants_mat_gz": {
+                "id": "2103e168157c3d0c",
+                "src": "hda",
+                "uuid": "c911c650-2741-4c10-8485-e662fd5c74cf"
+            },
+            "quants_mat_cols_txt": {
+                "id": "3c894b0f6e5f9595",
+                "src": "hda",
+                "uuid": "a40672ea-080c-45d3-9098-f3ceffc6b8d1"
+            },
+            "quants_mat_rows_txt": {
+                "id": "8b5a9166acefadb7",
+                "src": "hda",
+                "uuid": "91b76fe8-bd90-4861-a3df-d82f0ec14f54"
+            },
+            "quants_tier_mat": {
+                "id": "aabeadb4831e0dc4",
+                "src": "hda",
+                "uuid": "6f9014fd-41da-4eb5-ac8f-8d20cc081830"
+            },
+            "featureDump_txt": {
+                "id": "e79a9ddfb9094545",
+                "src": "hda",
+                "uuid": "c40f71bb-8bb6-4c2b-8135-ca2e69fb2dd8"
+            },
+            "raw_cb_frequency_txt": {
+                "id": "b60f4cf51a3d953e",
+                "src": "hda",
+                "uuid": "8dee5408-9107-4999-b45f-403c7aa701b5"
+            },
+            "whitelist_txt": {
+                "id": "b603e89f9c375844",
+                "src": "hda",
+                "uuid": "31f88436-e21e-42de-a066-a9e6dbba1c04"
+            },
+            "salmon_quant_log": {
+                "id": "d1cc57c1ee805971",
+                "src": "hda",
+                "uuid": "ac69a8be-3a61-4144-a697-6ea9973370bd"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "be3e37e106482bf3",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-27T17:20:40.843609",
+        "create_time": "2023-07-27T17:13:59.480916",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/alevin/alevin/1.9.0+galaxy2",
+        "history_id": "256a85cd904f6641",
+        "external_id": "gxy-galaxy-galaxy-sd84s",
+        "command_line": "mkdir ./index && mkdir ./output && salmon index -i ./index --kmerLen '31' --gencode --transcripts '/galaxy/server/database/objects/a/3/0/dataset_a3050a41-16f0-401e-b2ac-48daa98d64c8.dat' && ln -s '/galaxy/server/database/objects/7/2/d/dataset_72ddcc58-976a-45e7-9293-a1e02cd417ec.dat' ./mate1.fastq && ln -s '/galaxy/server/database/objects/b/0/2/dataset_b023a5a2-d845-414a-a643-0dbce6e310f9.dat' ./mate2.fastq  && ln -s '/galaxy/server/database/objects/9/1/e/dataset_91e778ca-ad46-4f37-9a5c-3b1b46a58008.dat' ./alevinmap.tsv && salmon alevin -l A -i ./index -1 ./mate1.fastq -2 ./mate2.fastq -o ./output -p \"${GALAXY_SLOTS:-4}\" --dropseq --tgMap ./alevinmap.tsv --keepCBFraction '1.0'  --dumpFeatures --dumpMtx --maxNumBarcodes '100000' --freqThreshold '3' && gunzip output/alevin/quants_mat.mtx.gz",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"f997697a2ca011eebbeb72370fc7de5d\"",
+            "refTranscriptSource": "{\"TranscriptSource\": \"history\", \"__current_case__\": 1, \"s_index\": {\"fasta\": {\"values\": [{\"id\": 200, \"src\": \"hda\"}]}, \"genome\": null, \"kmer\": \"31\", \"phash\": false}}",
+            "protocol_cond": "{\"__current_case__\": 0, \"protocol\": \"--dropseq\"}",
+            "pairstraight": "{\"__current_case__\": 0, \"file1\": {\"values\": [{\"id\": 4, \"src\": \"hda\"}]}, \"file2\": {\"values\": [{\"id\": 5, \"src\": \"hda\"}]}, \"libtype\": {\"__current_case__\": 0, \"strandedness\": \"A\"}, \"readselect\": \"paired\"}",
+            "output_files": "[\"dumpFeatures\", \"salmon_log\"]",
+            "optional": "{\"dumpMtx\": true, \"expectCells\": null, \"forceCells\": null, \"freqThreshold\": \"3\", \"keepCBFraction\": \"1.0\", \"maxNumBarcodes\": \"100000\", \"minScoreFraction\": null, \"mrna\": null, \"noDedup\": false, \"numCellBootstraps\": null, \"rrna\": null, \"whitelist\": null}"
+        },
+        "inputs": {
+            "refTranscriptSource|fasta": {
+                "id": "d605c1fb57fa0428",
+                "src": "hda",
+                "uuid": "a3050a41-16f0-401e-b2ac-48daa98d64c8"
+            },
+            "file1": {
+                "id": "e3f7de7796825c63",
+                "src": "hda",
+                "uuid": "72ddcc58-976a-45e7-9293-a1e02cd417ec"
+            },
+            "file2": {
+                "id": "17e5f1fe70ccf700",
+                "src": "hda",
+                "uuid": "b023a5a2-d845-414a-a643-0dbce6e310f9"
+            },
+            "tgmap": {
+                "id": "77b2cf049339191c",
+                "src": "hda",
+                "uuid": "91e778ca-ad46-4f37-9a5c-3b1b46a58008"
+            }
+        },
+        "outputs": {
+            "quants_mat_mtx": {
+                "id": "9d6d281235b765ea",
+                "src": "hda",
+                "uuid": "f4605b49-1865-4f8b-a24c-ff217a7190ae"
+            },
+            "quants_mat_gz": {
+                "id": "2103e168157c3d0c",
+                "src": "hda",
+                "uuid": "c911c650-2741-4c10-8485-e662fd5c74cf"
+            },
+            "quants_mat_cols_txt": {
+                "id": "3c894b0f6e5f9595",
+                "src": "hda",
+                "uuid": "a40672ea-080c-45d3-9098-f3ceffc6b8d1"
+            },
+            "quants_mat_rows_txt": {
+                "id": "8b5a9166acefadb7",
+                "src": "hda",
+                "uuid": "91b76fe8-bd90-4861-a3df-d82f0ec14f54"
+            },
+            "quants_tier_mat": {
+                "id": "aabeadb4831e0dc4",
+                "src": "hda",
+                "uuid": "6f9014fd-41da-4eb5-ac8f-8d20cc081830"
+            },
+            "featureDump_txt": {
+                "id": "e79a9ddfb9094545",
+                "src": "hda",
+                "uuid": "c40f71bb-8bb6-4c2b-8135-ca2e69fb2dd8"
+            },
+            "raw_cb_frequency_txt": {
+                "id": "b60f4cf51a3d953e",
+                "src": "hda",
+                "uuid": "8dee5408-9107-4999-b45f-403c7aa701b5"
+            },
+            "whitelist_txt": {
+                "id": "b603e89f9c375844",
+                "src": "hda",
+                "uuid": "31f88436-e21e-42de-a066-a9e6dbba1c04"
+            },
+            "salmon_quant_log": {
+                "id": "d1cc57c1ee805971",
+                "src": "hda",
+                "uuid": "ac69a8be-3a61-4144-a697-6ea9973370bd"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.139.202.124:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

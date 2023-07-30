@@ -1,0 +1,116 @@
+{
+    "run": "2",
+    "cloud": "test",
+    "job_conf": "4x8",
+    "workflow_id": "4527f46579ebd0c5",
+    "history_id": "4478d34855f2a2d3",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "d64e166d400bafbd",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-27T20:24:21.146130",
+        "create_time": "2023-07-27T20:17:49.545300",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/droplet_barcode_plot/_dropletBarcodePlot/1.6.1+galaxy2",
+        "history_id": "4478d34855f2a2d3",
+        "external_id": "gxy-galaxy-galaxy-cwvmj",
+        "command_line": "dropletBarcodePlot.R --output-plot \"/galaxy/server/database/objects/c/5/0/dataset_c50c12a5-6528-4522-800d-f062301dcd54.dat\" --output-thresholds \"/galaxy/server/database/objects/1/1/4/dataset_114ebc5f-0183-41bb-a4c7-6a42a339bb11.dat\" --label \"Barcode rank plot (raw barcode frequencies)\" --density-bins \"50\" --roryk-multiplier \"1.5\" --barcode-frequencies /galaxy/server/database/objects/6/7/f/dataset_67fc5a90-e7d1-4329-954d-b7895647c382.dat",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"a7546a722cba11ee9814d6f283bd5784\"",
+            "roryk_multiplier": "\"1.5\"",
+            "label": "\"Barcode rank plot (raw barcode frequencies)\"",
+            "input": "{\"__current_case__\": 1, \"barcode_frequencies\": {\"values\": [{\"id\": 365, \"src\": \"hda\"}]}, \"type\": false}",
+            "density_bins": "\"50\""
+        },
+        "inputs": {
+            "barcode_frequencies": {
+                "id": "7a643c526cc978a8",
+                "src": "hda",
+                "uuid": "67fc5a90-e7d1-4329-954d-b7895647c382"
+            }
+        },
+        "outputs": {
+            "thresholds_file": {
+                "id": "d25bad833b9907e1",
+                "src": "hda",
+                "uuid": "114ebc5f-0183-41bb-a4c7-6a42a339bb11"
+            },
+            "plot_file": {
+                "id": "8d9ce09644e44efa",
+                "src": "hda",
+                "uuid": "c50c12a5-6528-4522-800d-f062301dcd54"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "d64e166d400bafbd",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-27T20:24:21.146130",
+        "create_time": "2023-07-27T20:17:49.545300",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/droplet_barcode_plot/_dropletBarcodePlot/1.6.1+galaxy2",
+        "history_id": "4478d34855f2a2d3",
+        "external_id": "gxy-galaxy-galaxy-cwvmj",
+        "command_line": "dropletBarcodePlot.R --output-plot \"/galaxy/server/database/objects/c/5/0/dataset_c50c12a5-6528-4522-800d-f062301dcd54.dat\" --output-thresholds \"/galaxy/server/database/objects/1/1/4/dataset_114ebc5f-0183-41bb-a4c7-6a42a339bb11.dat\" --label \"Barcode rank plot (raw barcode frequencies)\" --density-bins \"50\" --roryk-multiplier \"1.5\" --barcode-frequencies /galaxy/server/database/objects/6/7/f/dataset_67fc5a90-e7d1-4329-954d-b7895647c382.dat",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"a7546a722cba11ee9814d6f283bd5784\"",
+            "roryk_multiplier": "\"1.5\"",
+            "label": "\"Barcode rank plot (raw barcode frequencies)\"",
+            "input": "{\"__current_case__\": 1, \"barcode_frequencies\": {\"values\": [{\"id\": 365, \"src\": \"hda\"}]}, \"type\": false}",
+            "density_bins": "\"50\""
+        },
+        "inputs": {
+            "barcode_frequencies": {
+                "id": "7a643c526cc978a8",
+                "src": "hda",
+                "uuid": "67fc5a90-e7d1-4329-954d-b7895647c382"
+            }
+        },
+        "outputs": {
+            "thresholds_file": {
+                "id": "d25bad833b9907e1",
+                "src": "hda",
+                "uuid": "114ebc5f-0183-41bb-a4c7-6a42a339bb11"
+            },
+            "plot_file": {
+                "id": "8d9ce09644e44efa",
+                "src": "hda",
+                "uuid": "c50c12a5-6528-4522-800d-f062301dcd54"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.139.202.124:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

@@ -1,0 +1,147 @@
+{
+    "run": 0,
+    "cloud": "N/A",
+    "job_conf": "Unknown",
+    "workflow_id": "6cebdd6422cb618a",
+    "history_id": "80f74c7eb9deeb7f",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "128d34b06170bb2c",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-06-24T17:05:57.938976",
+        "create_time": "2023-06-24T17:03:08.928628",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff/4.3+T.galaxy1",
+        "history_id": "80f74c7eb9deeb7f",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "annotations": "[\"-formatEff\", \"-classic\"]",
+            "chr": "\"\"",
+            "csvStats": "false",
+            "filter": "{\"__current_case__\": 0, \"specificEffects\": \"no\"}",
+            "filterOut": "[\"-no-downstream\", \"-no-intergenic\", \"-no-intron\", \"-no-upstream\", \"-no-utr\"]",
+            "generate_stats": "true",
+            "inputFormat": "\"vcf\"",
+            "intervals": null,
+            "noLog": "true",
+            "offset": "\"default\"",
+            "outputConditional": "{\"__current_case__\": 0, \"outputFormat\": \"vcf\"}",
+            "snpDb": "{\"__current_case__\": 3, \"codon_table\": \"Standard\", \"genomeSrc\": \"custom\", \"snpeff_db\": {\"values\": [{\"id\": 8, \"src\": \"hda\"}]}}",
+            "spliceRegion": "{\"__current_case__\": 0, \"setSpliceRegions\": \"no\"}",
+            "spliceSiteSize": null,
+            "transcripts": null,
+            "udLength": "\"0\"",
+            "__workflow_invocation_uuid__": "\"fd9358c212b011eea1ed8e89dc5b2039\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"vcf\""
+        },
+        "inputs": {
+            "snpeff_db": {
+                "id": "6d9399e656438e52",
+                "src": "hda",
+                "uuid": "dcccb3d4-a7eb-423d-be44-12b7694bab75"
+            },
+            "input": {
+                "id": "b874a8c92abffabf",
+                "src": "hda",
+                "uuid": "10200459-fb14-4d24-ad85-72b36e57ab33"
+            }
+        },
+        "outputs": {
+            "statsFile": {
+                "id": "5465724ecd6dc1be",
+                "src": "hda",
+                "uuid": "bf59bc41-6c78-442a-a27b-bee113e5b035"
+            },
+            "snpeff_output": {
+                "id": "94ac8f750dbd2f2f",
+                "src": "hda",
+                "uuid": "404045f3-53c4-4d39-bd2e-3ee751c13dc7"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": null,
+        "tool_stderr": null,
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "128d34b06170bb2c",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-06-24T17:05:57.938976",
+        "create_time": "2023-06-24T17:03:08.928628",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff/4.3+T.galaxy1",
+        "history_id": "80f74c7eb9deeb7f",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "annotations": "[\"-formatEff\", \"-classic\"]",
+            "chr": "\"\"",
+            "csvStats": "false",
+            "filter": "{\"__current_case__\": 0, \"specificEffects\": \"no\"}",
+            "filterOut": "[\"-no-downstream\", \"-no-intergenic\", \"-no-intron\", \"-no-upstream\", \"-no-utr\"]",
+            "generate_stats": "true",
+            "inputFormat": "\"vcf\"",
+            "intervals": null,
+            "noLog": "true",
+            "offset": "\"default\"",
+            "outputConditional": "{\"__current_case__\": 0, \"outputFormat\": \"vcf\"}",
+            "snpDb": "{\"__current_case__\": 3, \"codon_table\": \"Standard\", \"genomeSrc\": \"custom\", \"snpeff_db\": {\"values\": [{\"id\": 8, \"src\": \"hda\"}]}}",
+            "spliceRegion": "{\"__current_case__\": 0, \"setSpliceRegions\": \"no\"}",
+            "spliceSiteSize": null,
+            "transcripts": null,
+            "udLength": "\"0\"",
+            "__workflow_invocation_uuid__": "\"fd9358c212b011eea1ed8e89dc5b2039\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"vcf\""
+        },
+        "inputs": {
+            "snpeff_db": {
+                "id": "6d9399e656438e52",
+                "src": "hda",
+                "uuid": "dcccb3d4-a7eb-423d-be44-12b7694bab75"
+            },
+            "input": {
+                "id": "b874a8c92abffabf",
+                "src": "hda",
+                "uuid": "10200459-fb14-4d24-ad85-72b36e57ab33"
+            }
+        },
+        "outputs": {
+            "statsFile": {
+                "id": "5465724ecd6dc1be",
+                "src": "hda",
+                "uuid": "bf59bc41-6c78-442a-a27b-bee113e5b035"
+            },
+            "snpeff_output": {
+                "id": "94ac8f750dbd2f2f",
+                "src": "hda",
+                "uuid": "404045f3-53c4-4d39-bd2e-3ee751c13dc7"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://149.165.152.110/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        390616
+    ]
+}

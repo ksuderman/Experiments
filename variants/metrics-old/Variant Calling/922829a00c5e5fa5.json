@@ -1,0 +1,192 @@
+{
+    "run": "3",
+    "cloud": "gkm",
+    "job_conf": "4x8",
+    "workflow_id": "2986ca77a6154e30",
+    "history_id": "8cbc1068ed0a4699",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "922829a00c5e5fa5",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-09T22:23:36.976695",
+        "create_time": "2023-07-09T22:23:24.313710",
+        "galaxy_version": "23.0",
+        "command_version": "fastp 0.23.2",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.2+galaxy0",
+        "history_id": "8cbc1068ed0a4699",
+        "external_id": "gxy-galaxy-galaxy-t4ksl",
+        "command_line": "ln -s '/galaxy/server/database/objects/b/b/2/dataset_bb2d58b4-d005-447d-9030-ad0314f7d4a8.dat' 'Paired Collection.fastq.gz' && ln -s '/galaxy/server/database/objects/9/3/8/dataset_938a496b-5eaa-48e8-b70a-b1bd7ac123f2.dat' 'Paired Collection_R2.fastq.gz' &&    fastp  --thread ${GALAXY_SLOTS:-1} --report_title 'fastp report for Paired Collection.fastq.gz'   -i 'Paired Collection.fastq.gz' -o first.fastq.gz  -I 'Paired Collection_R2.fastq.gz' -O second.fastq.gz       --detect_adapter_for_pe                                          &&  mv first.fastq.gz '/galaxy/server/database/objects/5/c/7/dataset_5c798e9c-0ad1-45b8-9d5d-f8c6121f5855.dat' && mv second.fastq.gz '/galaxy/server/database/objects/1/b/3/dataset_1b3fb088-67a3-4ee7-b370-0c98997a2508.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"fastqsanger.gz\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"37dc07341ea711ee9ada367d3aa430c2\"",
+            "single_paired": "{\"__current_case__\": 2, \"adapter_trimming_options\": {\"adapter_sequence1\": \"\", \"adapter_sequence2\": \"\", \"disable_adapter_trimming\": false}, \"global_trimming_options\": {\"trim_front1\": null, \"trim_front2\": null, \"trim_tail1\": null, \"trim_tail2\": null}, \"paired_input\": {\"values\": [{\"id\": 1, \"src\": \"hdca\"}]}, \"single_paired_selector\": \"paired_collection\"}",
+            "read_mod_options": "{\"base_correction_options\": {\"correction\": false}, \"cutting_by_quality_options\": {\"cut_by_quality3\": false, \"cut_by_quality5\": false, \"cut_mean_quality\": null, \"cut_window_size\": null}, \"polyg_tail_trimming\": {\"__current_case__\": 1, \"poly_g_min_len\": null, \"trimming_select\": \"\"}, \"polyx_tail_trimming\": {\"__current_case__\": 1, \"polyx_trimming_select\": \"\"}, \"umi_processing\": {\"umi\": false, \"umi_len\": null, \"umi_loc\": \"\", \"umi_prefix\": \"\"}}",
+            "overrepresented_sequence_analysis": "{\"overrepresentation_analysis\": false, \"overrepresentation_sampling\": null}",
+            "output_options": "{\"report_html\": true, \"report_json\": true}",
+            "filter_options": "{\"length_filtering_options\": {\"disable_length_filtering\": false, \"length_limit\": null, \"length_required\": null}, \"low_complexity_filter\": {\"complexity_threshold\": null, \"enable_low_complexity_filter\": false}, \"quality_filtering_options\": {\"disable_quality_filtering\": false, \"n_base_limit\": null, \"qualified_quality_phred\": null, \"unqualified_percent_limit\": null}}"
+        },
+        "inputs": {
+            "paired_input1": {
+                "id": "2986ca77a6154e30",
+                "src": "hda",
+                "uuid": "bb2d58b4-d005-447d-9030-ad0314f7d4a8"
+            },
+            "paired_input2": {
+                "id": "5932cdd779da8589",
+                "src": "hda",
+                "uuid": "938a496b-5eaa-48e8-b70a-b1bd7ac123f2"
+            }
+        },
+        "outputs": {
+            "output_paired_coll|__part__|forward": {
+                "id": "d94e0f725b0aa3b7",
+                "src": "hda",
+                "uuid": "5c798e9c-0ad1-45b8-9d5d-f8c6121f5855"
+            },
+            "output_paired_coll|__part__|reverse": {
+                "id": "766abd92b3983660",
+                "src": "hda",
+                "uuid": "1b3fb088-67a3-4ee7-b370-0c98997a2508"
+            },
+            "report_html": {
+                "id": "3eba4ce4dd88daeb",
+                "src": "hda",
+                "uuid": "d7be2731-cac9-4023-a7bd-2becf7c6dc79"
+            },
+            "report_json": {
+                "id": "919998e3d9ce7567",
+                "src": "hda",
+                "uuid": "cf10bd9a-7b4b-4031-b284-614de83a0b7b"
+            }
+        },
+        "output_collections": {
+            "output_paired_coll": {
+                "id": "356ae51a2f2db219",
+                "src": "hdca"
+            }
+        },
+        "tool_stdout": "",
+        "tool_stderr": "Detecting adapter sequence for read1...\nNo adapter detected for read1\n\nDetecting adapter sequence for read2...\nNo adapter detected for read2\n\nRead1 before filtering:\ntotal reads: 2500\ntotal bases: 376657\nQ20 bases: 371549(98.6439%)\nQ30 bases: 370136(98.2687%)\n\nRead2 before filtering:\ntotal reads: 2500\ntotal bases: 376700\nQ20 bases: 355761(94.4415%)\nQ30 bases: 351290(93.2546%)\n\nRead1 after filtering:\ntotal reads: 2492\ntotal bases: 375257\nQ20 bases: 370593(98.7571%)\nQ30 bases: 369355(98.4272%)\n\nRead2 after filtering:\ntotal reads: 2492\ntotal bases: 375297\nQ20 bases: 355082(94.6136%)\nQ30 bases: 350732(93.4545%)\n\nFiltering result:\nreads passed filter: 4984\nreads failed due to low quality: 16\nreads failed due to too many N: 0\nreads failed due to too short: 0\nreads with adapter trimmed: 30\nbases trimmed due to adapters: 393\n\nDuplication rate: 17.96%\n\nInsert size peak (evaluated by paired-end reads): 184\n\nJSON report: fastp.json\nHTML report: fastp.html\n\nfastp --thread 4 --report_title fastp report for Paired Collection.fastq.gz -i Paired Collection.fastq.gz -o first.fastq.gz -I Paired Collection_R2.fastq.gz -O second.fastq.gz --detect_adapter_for_pe \nfastp v0.23.2, time used: 1 seconds\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "Detecting adapter sequence for read1...\nNo adapter detected for read1\n\nDetecting adapter sequence for read2...\nNo adapter detected for read2\n\nRead1 before filtering:\ntotal reads: 2500\ntotal bases: 376657\nQ20 bases: 371549(98.6439%)\nQ30 bases: 370136(98.2687%)\n\nRead2 before filtering:\ntotal reads: 2500\ntotal bases: 376700\nQ20 bases: 355761(94.4415%)\nQ30 bases: 351290(93.2546%)\n\nRead1 after filtering:\ntotal reads: 2492\ntotal bases: 375257\nQ20 bases: 370593(98.7571%)\nQ30 bases: 369355(98.4272%)\n\nRead2 after filtering:\ntotal reads: 2492\ntotal bases: 375297\nQ20 bases: 355082(94.6136%)\nQ30 bases: 350732(93.4545%)\n\nFiltering result:\nreads passed filter: 4984\nreads failed due to low quality: 16\nreads failed due to too many N: 0\nreads failed due to too short: 0\nreads with adapter trimmed: 30\nbases trimmed due to adapters: 393\n\nDuplication rate: 17.96%\n\nInsert size peak (evaluated by paired-end reads): 184\n\nJSON report: fastp.json\nHTML report: fastp.html\n\nfastp --thread 4 --report_title fastp report for Paired Collection.fastq.gz -i Paired Collection.fastq.gz -o first.fastq.gz -I Paired Collection_R2.fastq.gz -O second.fastq.gz --detect_adapter_for_pe \nfastp v0.23.2, time used: 1 seconds\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "1 second",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "1.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-09 22:23:27",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1688941407.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-09 22:23:26",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1688941406.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "16320",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "16320.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "4",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "4.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "922829a00c5e5fa5",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-09T22:23:36.976695",
+        "create_time": "2023-07-09T22:23:24.313710",
+        "galaxy_version": "23.0",
+        "command_version": "fastp 0.23.2",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.2+galaxy0",
+        "history_id": "8cbc1068ed0a4699",
+        "external_id": "gxy-galaxy-galaxy-t4ksl",
+        "command_line": "ln -s '/galaxy/server/database/objects/b/b/2/dataset_bb2d58b4-d005-447d-9030-ad0314f7d4a8.dat' 'Paired Collection.fastq.gz' && ln -s '/galaxy/server/database/objects/9/3/8/dataset_938a496b-5eaa-48e8-b70a-b1bd7ac123f2.dat' 'Paired Collection_R2.fastq.gz' &&    fastp  --thread ${GALAXY_SLOTS:-1} --report_title 'fastp report for Paired Collection.fastq.gz'   -i 'Paired Collection.fastq.gz' -o first.fastq.gz  -I 'Paired Collection_R2.fastq.gz' -O second.fastq.gz       --detect_adapter_for_pe                                          &&  mv first.fastq.gz '/galaxy/server/database/objects/5/c/7/dataset_5c798e9c-0ad1-45b8-9d5d-f8c6121f5855.dat' && mv second.fastq.gz '/galaxy/server/database/objects/1/b/3/dataset_1b3fb088-67a3-4ee7-b370-0c98997a2508.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"fastqsanger.gz\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"37dc07341ea711ee9ada367d3aa430c2\"",
+            "single_paired": "{\"__current_case__\": 2, \"adapter_trimming_options\": {\"adapter_sequence1\": \"\", \"adapter_sequence2\": \"\", \"disable_adapter_trimming\": false}, \"global_trimming_options\": {\"trim_front1\": null, \"trim_front2\": null, \"trim_tail1\": null, \"trim_tail2\": null}, \"paired_input\": {\"values\": [{\"id\": 1, \"src\": \"hdca\"}]}, \"single_paired_selector\": \"paired_collection\"}",
+            "read_mod_options": "{\"base_correction_options\": {\"correction\": false}, \"cutting_by_quality_options\": {\"cut_by_quality3\": false, \"cut_by_quality5\": false, \"cut_mean_quality\": null, \"cut_window_size\": null}, \"polyg_tail_trimming\": {\"__current_case__\": 1, \"poly_g_min_len\": null, \"trimming_select\": \"\"}, \"polyx_tail_trimming\": {\"__current_case__\": 1, \"polyx_trimming_select\": \"\"}, \"umi_processing\": {\"umi\": false, \"umi_len\": null, \"umi_loc\": \"\", \"umi_prefix\": \"\"}}",
+            "overrepresented_sequence_analysis": "{\"overrepresentation_analysis\": false, \"overrepresentation_sampling\": null}",
+            "output_options": "{\"report_html\": true, \"report_json\": true}",
+            "filter_options": "{\"length_filtering_options\": {\"disable_length_filtering\": false, \"length_limit\": null, \"length_required\": null}, \"low_complexity_filter\": {\"complexity_threshold\": null, \"enable_low_complexity_filter\": false}, \"quality_filtering_options\": {\"disable_quality_filtering\": false, \"n_base_limit\": null, \"qualified_quality_phred\": null, \"unqualified_percent_limit\": null}}"
+        },
+        "inputs": {
+            "paired_input1": {
+                "id": "2986ca77a6154e30",
+                "src": "hda",
+                "uuid": "bb2d58b4-d005-447d-9030-ad0314f7d4a8"
+            },
+            "paired_input2": {
+                "id": "5932cdd779da8589",
+                "src": "hda",
+                "uuid": "938a496b-5eaa-48e8-b70a-b1bd7ac123f2"
+            }
+        },
+        "outputs": {
+            "output_paired_coll|__part__|forward": {
+                "id": "d94e0f725b0aa3b7",
+                "src": "hda",
+                "uuid": "5c798e9c-0ad1-45b8-9d5d-f8c6121f5855"
+            },
+            "output_paired_coll|__part__|reverse": {
+                "id": "766abd92b3983660",
+                "src": "hda",
+                "uuid": "1b3fb088-67a3-4ee7-b370-0c98997a2508"
+            },
+            "report_html": {
+                "id": "3eba4ce4dd88daeb",
+                "src": "hda",
+                "uuid": "d7be2731-cac9-4023-a7bd-2becf7c6dc79"
+            },
+            "report_json": {
+                "id": "919998e3d9ce7567",
+                "src": "hda",
+                "uuid": "cf10bd9a-7b4b-4031-b284-614de83a0b7b"
+            }
+        },
+        "output_collections": {
+            "output_paired_coll": {
+                "id": "356ae51a2f2db219",
+                "src": "hdca"
+            }
+        }
+    },
+    "server": "http://34.73.244.95:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

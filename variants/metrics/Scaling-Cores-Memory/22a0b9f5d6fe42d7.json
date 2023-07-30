@@ -1,0 +1,110 @@
+{
+    "run": "2",
+    "cloud": "gkm",
+    "job_conf": "8x16",
+    "workflow_id": "e692fc44b9391f5f",
+    "history_id": "110c1b7290aff8a8",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "22a0b9f5d6fe42d7",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-07-11T16:49:20.004884",
+        "create_time": "2023-07-11T16:30:47.271906",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_viterbi/lofreq_viterbi/2.1.5+galaxy0",
+        "history_id": "110c1b7290aff8a8",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"49da40c4200811eebee156872ea4f77d\"",
+            "reference_source": "{\"__current_case__\": 1, \"ref\": {\"values\": [{\"id\": 100, \"src\": \"hda\"}]}, \"ref_selector\": \"history\"}",
+            "adv_options": "{\"bq2_handling\": {\"__current_case__\": 0, \"defqual\": \"2\", \"replace_bq2\": \"keep\"}, \"keepflags\": false}"
+        },
+        "inputs": {
+            "reads": {
+                "id": "5e08ae4cbca7e061",
+                "src": "hda",
+                "uuid": "bd899d39-7be0-4305-96e9-bb9453804b49"
+            },
+            "ref": {
+                "id": "b820cfdc7ab86b2c",
+                "src": "hda",
+                "uuid": "2fe85a96-9851-4e4b-aa12-82e0631a9b44"
+            }
+        },
+        "outputs": {
+            "realigned": {
+                "id": "cc28930ebadbf888",
+                "src": "hda",
+                "uuid": "d0eaea51-4efa-4735-85ea-55c81c7e6825"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": null,
+        "tool_stderr": null,
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "22a0b9f5d6fe42d7",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-07-11T16:49:20.004884",
+        "create_time": "2023-07-11T16:30:47.271906",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_viterbi/lofreq_viterbi/2.1.5+galaxy0",
+        "history_id": "110c1b7290aff8a8",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"49da40c4200811eebee156872ea4f77d\"",
+            "reference_source": "{\"__current_case__\": 1, \"ref\": {\"values\": [{\"id\": 100, \"src\": \"hda\"}]}, \"ref_selector\": \"history\"}",
+            "adv_options": "{\"bq2_handling\": {\"__current_case__\": 0, \"defqual\": \"2\", \"replace_bq2\": \"keep\"}, \"keepflags\": false}"
+        },
+        "inputs": {
+            "reads": {
+                "id": "5e08ae4cbca7e061",
+                "src": "hda",
+                "uuid": "bd899d39-7be0-4305-96e9-bb9453804b49"
+            },
+            "ref": {
+                "id": "b820cfdc7ab86b2c",
+                "src": "hda",
+                "uuid": "2fe85a96-9851-4e4b-aa12-82e0631a9b44"
+            }
+        },
+        "outputs": {
+            "realigned": {
+                "id": "cc28930ebadbf888",
+                "src": "hda",
+                "uuid": "d0eaea51-4efa-4735-85ea-55c81c7e6825"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.23.223.221:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

@@ -1,0 +1,243 @@
+{
+    "run": "1",
+    "cloud": "test4",
+    "job_conf": "4x8",
+    "workflow_id": "a6390346d3e4b7c1",
+    "history_id": "f335aae786de3acf",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "4e154b564efe4294",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-29T00:57:45.623766",
+        "create_time": "2023-07-29T00:50:22.743924",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/droplet_barcode_plot/_dropletBarcodePlot/1.6.1+galaxy2",
+        "history_id": "f335aae786de3acf",
+        "external_id": "gxy-galaxy-galaxy-xs84k",
+        "command_line": "dropletBarcodePlot.R --output-plot \"/galaxy/server/database/objects/0/3/2/dataset_03295b8e-7573-4dbc-80b5-da38c8465135.dat\" --output-thresholds \"/galaxy/server/database/objects/3/9/9/dataset_3990802f-14f6-4ca4-b5e9-808b09edbd4b.dat\" --label \"Barcode rank plot (raw barcode frequencies)\" --density-bins \"50\" --roryk-multiplier \"1.5\" --barcode-frequencies /galaxy/server/database/objects/d/a/2/dataset_da2f0390-ffda-4bd3-93a7-ddb9fd763a03.dat",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"e56a429c2da911ee98a7ce5397ba3016\"",
+            "roryk_multiplier": "\"1.5\"",
+            "label": "\"Barcode rank plot (raw barcode frequencies)\"",
+            "input": "{\"__current_case__\": 1, \"barcode_frequencies\": {\"values\": [{\"id\": 467, \"src\": \"hda\"}]}, \"type\": false}",
+            "density_bins": "\"50\""
+        },
+        "inputs": {
+            "barcode_frequencies": {
+                "id": "3212d9a788be18b6",
+                "src": "hda",
+                "uuid": "da2f0390-ffda-4bd3-93a7-ddb9fd763a03"
+            }
+        },
+        "outputs": {
+            "thresholds_file": {
+                "id": "25b7cc93abbfafb0",
+                "src": "hda",
+                "uuid": "3990802f-14f6-4ca4-b5e9-808b09edbd4b"
+            },
+            "plot_file": {
+                "id": "ce56725e50f1b31f",
+                "src": "hda",
+                "uuid": "03295b8e-7573-4dbc-80b5-da38c8465135"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "null device \n          1 \n",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "",
+        "stdout": "null device \n          1 \n",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-galaxy-xs84k-ds2bv 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-galaxy-xs84k-ds2bv 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "122.9 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "132016184.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "32",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "32.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "954.4 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "1000775680.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "8.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "8589934592.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "954.4 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "1000775680.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "8.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "8589934592.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "12.743893325 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "12743893325.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "12 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "12.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-29 00:57:35",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1690592255.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-29 00:57:23",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1690592243.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "8589",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "8589.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "4",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "4.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "4e154b564efe4294",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-29T00:57:45.623766",
+        "create_time": "2023-07-29T00:50:22.743924",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/droplet_barcode_plot/_dropletBarcodePlot/1.6.1+galaxy2",
+        "history_id": "f335aae786de3acf",
+        "external_id": "gxy-galaxy-galaxy-xs84k",
+        "command_line": "dropletBarcodePlot.R --output-plot \"/galaxy/server/database/objects/0/3/2/dataset_03295b8e-7573-4dbc-80b5-da38c8465135.dat\" --output-thresholds \"/galaxy/server/database/objects/3/9/9/dataset_3990802f-14f6-4ca4-b5e9-808b09edbd4b.dat\" --label \"Barcode rank plot (raw barcode frequencies)\" --density-bins \"50\" --roryk-multiplier \"1.5\" --barcode-frequencies /galaxy/server/database/objects/d/a/2/dataset_da2f0390-ffda-4bd3-93a7-ddb9fd763a03.dat",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"e56a429c2da911ee98a7ce5397ba3016\"",
+            "roryk_multiplier": "\"1.5\"",
+            "label": "\"Barcode rank plot (raw barcode frequencies)\"",
+            "input": "{\"__current_case__\": 1, \"barcode_frequencies\": {\"values\": [{\"id\": 467, \"src\": \"hda\"}]}, \"type\": false}",
+            "density_bins": "\"50\""
+        },
+        "inputs": {
+            "barcode_frequencies": {
+                "id": "3212d9a788be18b6",
+                "src": "hda",
+                "uuid": "da2f0390-ffda-4bd3-93a7-ddb9fd763a03"
+            }
+        },
+        "outputs": {
+            "thresholds_file": {
+                "id": "25b7cc93abbfafb0",
+                "src": "hda",
+                "uuid": "3990802f-14f6-4ca4-b5e9-808b09edbd4b"
+            },
+            "plot_file": {
+                "id": "ce56725e50f1b31f",
+                "src": "hda",
+                "uuid": "03295b8e-7573-4dbc-80b5-da38c8465135"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.185.17.116:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

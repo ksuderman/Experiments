@@ -1,0 +1,353 @@
+{
+    "run": "1",
+    "cloud": "test8",
+    "job_conf": "8x16",
+    "workflow_id": "800628c6daa67366",
+    "history_id": "4ccb6eb6b72d39ab",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "5d356e7958e91652",
+        "state": "error",
+        "exit_code": 139,
+        "update_time": "2023-07-29T01:26:16.575841",
+        "create_time": "2023-07-29T00:26:53.632133",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/alevin/alevin/1.9.0+galaxy2",
+        "history_id": "4ccb6eb6b72d39ab",
+        "external_id": "gxy-galaxy-galaxy-x7dd9",
+        "command_line": "mkdir ./index && mkdir ./output && salmon index -i ./index --kmerLen '31' --gencode --transcripts '/galaxy/server/database/objects/1/c/c/dataset_1ccd7124-6cf0-4861-a3e5-4502ccb7d23d.dat' && ln -s '/galaxy/server/database/objects/e/6/8/dataset_e68edc07-a02c-439e-81a0-0015f564858a.dat' ./mate1.fastq && ln -s '/galaxy/server/database/objects/a/1/2/dataset_a12b6ece-7599-42a9-87c0-598592e037cb.dat' ./mate2.fastq  && ln -s '/galaxy/server/database/objects/1/a/f/dataset_1af6b5eb-751d-4fc9-b597-5e484c78edda.dat' ./alevinmap.tsv && salmon alevin -l A -i ./index -1 ./mate1.fastq -2 ./mate2.fastq -o ./output -p \"${GALAXY_SLOTS:-4}\" --dropseq --tgMap ./alevinmap.tsv  --dumpFeatures --dumpMtx --maxNumBarcodes '100000' && gunzip output/alevin/quants_mat.mtx.gz",
+        "traceback": null,
+        "params": {
+            "refTranscriptSource": "{\"TranscriptSource\": \"history\", \"__current_case__\": 1, \"s_index\": {\"fasta\": {\"values\": [{\"id\": 150, \"src\": \"hda\"}]}, \"genome\": null, \"kmer\": \"31\", \"phash\": false}}",
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"9d6d606c2da611eeaa569e420e218308\"",
+            "protocol_cond": "{\"__current_case__\": 0, \"protocol\": \"--dropseq\"}",
+            "pairstraight": "{\"__current_case__\": 0, \"file1\": {\"values\": [{\"id\": 4, \"src\": \"hda\"}]}, \"file2\": {\"values\": [{\"id\": 5, \"src\": \"hda\"}]}, \"libtype\": {\"__current_case__\": 0, \"strandedness\": \"A\"}, \"readselect\": \"paired\"}",
+            "output_files": "[\"dumpFeatures\", \"salmon_log\"]",
+            "optional": "{\"dumpMtx\": true, \"expectCells\": null, \"forceCells\": null, \"freqThreshold\": null, \"keepCBFraction\": null, \"maxNumBarcodes\": \"100000\", \"minScoreFraction\": null, \"mrna\": null, \"noDedup\": false, \"numCellBootstraps\": null, \"rrna\": null, \"whitelist\": null}"
+        },
+        "inputs": {
+            "refTranscriptSource|fasta": {
+                "id": "b1757ab73eebbf6a",
+                "src": "hda",
+                "uuid": "1ccd7124-6cf0-4861-a3e5-4502ccb7d23d"
+            },
+            "file1": {
+                "id": "f9e54c76530e4f0d",
+                "src": "hda",
+                "uuid": "e68edc07-a02c-439e-81a0-0015f564858a"
+            },
+            "file2": {
+                "id": "4e85dc1fc962c50b",
+                "src": "hda",
+                "uuid": "a12b6ece-7599-42a9-87c0-598592e037cb"
+            },
+            "tgmap": {
+                "id": "7d3ff5a46c64dc7c",
+                "src": "hda",
+                "uuid": "1af6b5eb-751d-4fc9-b597-5e484c78edda"
+            }
+        },
+        "outputs": {
+            "quants_mat_gz": {
+                "id": "6d8291043f2df03d",
+                "src": "hda",
+                "uuid": "c1371d74-e550-41e5-b75f-3e86f83a501a"
+            },
+            "quants_mat_rows_txt": {
+                "id": "f3e95728ac38f6d2",
+                "src": "hda",
+                "uuid": "4a984dc4-aa67-4814-91c0-6ad1a02318f4"
+            },
+            "quants_mat_mtx": {
+                "id": "9b7397309b6736ea",
+                "src": "hda",
+                "uuid": "79024223-70ad-43cd-8c8e-92bfed9cc0b8"
+            },
+            "quants_tier_mat": {
+                "id": "7986776261ebd1eb",
+                "src": "hda",
+                "uuid": "1b725c5b-d742-4a98-bce8-2a450e97b1f9"
+            },
+            "raw_cb_frequency_txt": {
+                "id": "62d77649591c5aa4",
+                "src": "hda",
+                "uuid": "439ac030-2dc2-45a5-8ecf-b0328f06d680"
+            },
+            "whitelist_txt": {
+                "id": "e8d3ae4030c14924",
+                "src": "hda",
+                "uuid": "9cff05c1-5b0f-464d-bfbd-0c45df52da42"
+            },
+            "salmon_quant_log": {
+                "id": "8503635208c265ee",
+                "src": "hda",
+                "uuid": "c4f4fcc3-eb10-4065-b60d-c4ce7be21e5a"
+            },
+            "quants_mat_cols_txt": {
+                "id": "71e6b05d89446dd1",
+                "src": "hda",
+                "uuid": "bfe238f1-9754-4b5d-9d12-9c82ff8d7f69"
+            },
+            "featureDump_txt": {
+                "id": "3f0bf646a6244af2",
+                "src": "hda",
+                "uuid": "fc0ad42d-6e66-42a8-a6fb-c96b276aa13a"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "Threads = 2\nVertex length = 31\nHash functions = 5\nFilter size = 2147483648\nCapacity = 2\nFiles: \n./index/ref_k31_fixed.fa\n--------------------------------------------------------------------------------\nRound 0, 0:2147483648\nPass\tFilling\tFiltering\n1\t29\t58\t\n2\t4\t0\nTrue junctions count = 473000\nFalse junctions count = 799094\nHash table size = 1272094\nCandidate marks count = 5169505\n--------------------------------------------------------------------------------\nReallocating bifurcations time: 1\nTrue marks count: 3376703\nEdges construction time: 4\n--------------------------------------------------------------------------------\nDistinct junctions = 473000\n\n",
+        "tool_stderr": "Version Info: ### PLEASE UPGRADE SALMON ###\n### A newer version of salmon with important bug fixes and improvements is available. ####\n###\nThe newest version, available at https://github.com/COMBINE-lab/salmon/releases\ncontains new features, improvements, and bug fixes; please upgrade at your\nearliest convenience.\n###\nSign up for the salmon mailing list to hear about new versions, features and updates at:\nhttps://oceangenomics.com/subscribe\n[2023-07-29 01:24:01.427] [jLog] [warning] The salmon index is being built without any decoy sequences.  It is recommended that decoy sequence (either computed auxiliary decoy sequence or the genome of the organism) be provided during indexing. Further details can be found at https://salmon.readthedocs.io/en/latest/salmon.html#preparing-transcriptome-indices-mapping-based-mode.\n[2023-07-29 01:24:01.427] [jLog] [info] building index\nout : ./index\n[2023-07-29 01:24:01.427] [puff::index::jointLog] [info] Running fixFasta\n\n[Step 1 of 4] : counting k-mers\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000177564.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000196221.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179664.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178537.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178862.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179520.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179883.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000195858.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179932.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000180001.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178815.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000177965.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178909.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000177646.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178230.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178483.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179262.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178549.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000193012.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179166.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179560.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000177839.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000103439.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000180266.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000103441.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.462] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000165700.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.652] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226961.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.724] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000231713.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.724] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000231466.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:02.243] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226615.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:02.750] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179793.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:02.778] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000227002.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:03.913] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000227223.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:03.993] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000229312.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:04.075] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226172.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:04.249] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226153.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:05.173] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226589.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:05.826] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000228114.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.060] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226226.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.217] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000103739.3], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.271] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000200713.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.331] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000191703.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.391] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000192089.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.391] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178902.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.391] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000170385.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.391] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178811.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n\n[2023-07-29 01:24:06.458] [puff::index::jointLog] [warning] Removed 769 transcripts that were sequence duplicates of indexed transcripts.\n[2023-07-29 01:24:06.458] [puff::index::jointLog] [warning] If you wish to retain duplicate transcripts, please use the `--keepDuplicates` flag\n[2023-07-29 01:24:06.463] [puff::index::jointLog] [info] Replaced 3 non-ATCG nucleotides\n[2023-07-29 01:24:06.463] [puff::index::jointLog] [info] Clipped poly-A tails from 647 transcripts\nwrote 116920 cleaned references\n[2023-07-29 01:24:08.839] [puff::index::jointLog] [info] Filter size not provided; estimating from number of distinct k-mers\n[2023-07-29 01:24:10.376] [puff::index::jointLog] [info] ntHll estimated 100415979 distinct k-mers, setting filter size to 2^31\nTwoPaCo::buildGraphMain:: allocated with scalable_malloc; freeing.\nTwoPaCo::buildGraphMain:: Calling scalable_allocation_command(TBBMALLOC_CLEAN_ALL_BUFFERS, 0);\nallowedIn: 21\nMax Junction ID: 563452\nseen.size():4507625 kmerInfo.size():563453\napproximateContigTotalLength: 72585090\ncounters for complex kmers:\n(prec>1 & succ>1)=21834 | (succ>1 & isStart)=431 | (prec>1 & isEnd)=411 | (isStart & isEnd)=30\ncontig count: 718297 element count: 122520142 complex nodes: 22706\n# of ones in rank vector: 718296\n[2023-07-29 01:26:04.166] [puff::index::jointLog] [info] Starting the Pufferfish indexing by reading the GFA binary file.\n[2023-07-29 01:26:04.166] [puff::index::jointLog] [info] Setting the index/BinaryGfa directory ./index\nsize = 122520142\n-----------------------------------------\n| Loading contigs | Time = 18.849 ms\n-----------------------------------------\nsize = 122520142\n-----------------------------------------\n| Loading contig boundaries | Time = 9.5529 ms\n-----------------------------------------\nNumber of ones: 718296\nNumber of ones per inventory item: 512\nInventory entries filled: 1403\n718296\n[2023-07-29 01:26:04.350] [puff::index::jointLog] [info] Done wrapping the rank vector with a rank9sel structure.\n[2023-07-29 01:26:04.357] [puff::index::jointLog] [info] contig count for validation: 718296\n/galaxy/server/database/jobs_directory/000/48/tool_script.sh: line 22:    27 Segmentation fault      (core dumped) salmon index -i ./index --kmerLen '31' --gencode --transcripts '/galaxy/server/database/objects/1/c/c/dataset_1ccd7124-6cf0-4861-a3e5-4502ccb7d23d.dat'\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "Version Info: ### PLEASE UPGRADE SALMON ###\n### A newer version of salmon with important bug fixes and improvements is available. ####\n###\nThe newest version, available at https://github.com/COMBINE-lab/salmon/releases\ncontains new features, improvements, and bug fixes; please upgrade at your\nearliest convenience.\n###\nSign up for the salmon mailing list to hear about new versions, features and updates at:\nhttps://oceangenomics.com/subscribe\n[2023-07-29 01:24:01.427] [jLog] [warning] The salmon index is being built without any decoy sequences.  It is recommended that decoy sequence (either computed auxiliary decoy sequence or the genome of the organism) be provided during indexing. Further details can be found at https://salmon.readthedocs.io/en/latest/salmon.html#preparing-transcriptome-indices-mapping-based-mode.\n[2023-07-29 01:24:01.427] [jLog] [info] building index\nout : ./index\n[2023-07-29 01:24:01.427] [puff::index::jointLog] [info] Running fixFasta\n\n[Step 1 of 4] : counting k-mers\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000177564.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000196221.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179664.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178537.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178862.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179520.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179883.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000195858.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179932.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000180001.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178815.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000177965.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178909.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000177646.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178230.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178483.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179262.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178549.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000193012.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179166.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179560.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000177839.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000103439.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000180266.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.447] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000103441.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.462] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000165700.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.652] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226961.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.724] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000231713.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:01.724] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000231466.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:02.243] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226615.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:02.750] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000179793.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:02.778] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000227002.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:03.913] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000227223.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:03.993] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000229312.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:04.075] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226172.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:04.249] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226153.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:05.173] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226589.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:05.826] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000228114.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.060] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000226226.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.217] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000103739.3], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.271] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000200713.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.331] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000191703.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.391] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000192089.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.391] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178902.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.391] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000170385.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n[2023-07-29 01:24:06.391] [puff::index::jointLog] [warning] Entry with header [ENSMUST00000178811.1], had length less than equal to the k-mer length of 31 (perhaps after poly-A clipping)\n\n[2023-07-29 01:24:06.458] [puff::index::jointLog] [warning] Removed 769 transcripts that were sequence duplicates of indexed transcripts.\n[2023-07-29 01:24:06.458] [puff::index::jointLog] [warning] If you wish to retain duplicate transcripts, please use the `--keepDuplicates` flag\n[2023-07-29 01:24:06.463] [puff::index::jointLog] [info] Replaced 3 non-ATCG nucleotides\n[2023-07-29 01:24:06.463] [puff::index::jointLog] [info] Clipped poly-A tails from 647 transcripts\nwrote 116920 cleaned references\n[2023-07-29 01:24:08.839] [puff::index::jointLog] [info] Filter size not provided; estimating from number of distinct k-mers\n[2023-07-29 01:24:10.376] [puff::index::jointLog] [info] ntHll estimated 100415979 distinct k-mers, setting filter size to 2^31\nTwoPaCo::buildGraphMain:: allocated with scalable_malloc; freeing.\nTwoPaCo::buildGraphMain:: Calling scalable_allocation_command(TBBMALLOC_CLEAN_ALL_BUFFERS, 0);\nallowedIn: 21\nMax Junction ID: 563452\nseen.size():4507625 kmerInfo.size():563453\napproximateContigTotalLength: 72585090\ncounters for complex kmers:\n(prec>1 & succ>1)=21834 | (succ>1 & isStart)=431 | (prec>1 & isEnd)=411 | (isStart & isEnd)=30\ncontig count: 718297 element count: 122520142 complex nodes: 22706\n# of ones in rank vector: 718296\n[2023-07-29 01:26:04.166] [puff::index::jointLog] [info] Starting the Pufferfish indexing by reading the GFA binary file.\n[2023-07-29 01:26:04.166] [puff::index::jointLog] [info] Setting the index/BinaryGfa directory ./index\nsize = 122520142\n-----------------------------------------\n| Loading contigs | Time = 18.849 ms\n-----------------------------------------\nsize = 122520142\n-----------------------------------------\n| Loading contig boundaries | Time = 9.5529 ms\n-----------------------------------------\nNumber of ones: 718296\nNumber of ones per inventory item: 512\nInventory entries filled: 1403\n718296\n[2023-07-29 01:26:04.350] [puff::index::jointLog] [info] Done wrapping the rank vector with a rank9sel structure.\n[2023-07-29 01:26:04.357] [puff::index::jointLog] [info] contig count for validation: 718296\n/galaxy/server/database/jobs_directory/000/48/tool_script.sh: line 22:    27 Segmentation fault      (core dumped) salmon index -i ./index --kmerLen '31' --gencode --transcripts '/galaxy/server/database/objects/1/c/c/dataset_1ccd7124-6cf0-4861-a3e5-4502ccb7d23d.dat'\n",
+        "stdout": "Threads = 2\nVertex length = 31\nHash functions = 5\nFilter size = 2147483648\nCapacity = 2\nFiles: \n./index/ref_k31_fixed.fa\n--------------------------------------------------------------------------------\nRound 0, 0:2147483648\nPass\tFilling\tFiltering\n1\t29\t58\t\n2\t4\t0\nTrue junctions count = 473000\nFalse junctions count = 799094\nHash table size = 1272094\nCandidate marks count = 5169505\n--------------------------------------------------------------------------------\nReallocating bifurcations time: 1\nTrue marks count: 3376703\nEdges construction time: 4\n--------------------------------------------------------------------------------\nDistinct junctions = 473000\n\n",
+        "job_messages": [
+            {
+                "code_desc": "",
+                "desc": "Fatal error: Exit code 139 ()",
+                "error_level": 3,
+                "exit_code": 139,
+                "type": "exit_code"
+            }
+        ],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-galaxy-x7dd9-wqd28 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-galaxy-x7dd9-wqd28 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "122.9 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "132016184.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "32",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "32.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "955.1 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "1001508864.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "16.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "17179869184.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "955.1 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "1001508864.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "16.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "17179869184.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "5 minutes",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "309706024360.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "2 minutes",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "124.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-29 01:26:05",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1690593965.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-29 01:24:01",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1690593841.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "17179",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "17179.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "8",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "8.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "5d356e7958e91652",
+        "state": "error",
+        "exit_code": 139,
+        "update_time": "2023-07-29T01:26:16.575841",
+        "create_time": "2023-07-29T00:26:53.632133",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/bgruening/alevin/alevin/1.9.0+galaxy2",
+        "history_id": "4ccb6eb6b72d39ab",
+        "external_id": "gxy-galaxy-galaxy-x7dd9",
+        "command_line": "mkdir ./index && mkdir ./output && salmon index -i ./index --kmerLen '31' --gencode --transcripts '/galaxy/server/database/objects/1/c/c/dataset_1ccd7124-6cf0-4861-a3e5-4502ccb7d23d.dat' && ln -s '/galaxy/server/database/objects/e/6/8/dataset_e68edc07-a02c-439e-81a0-0015f564858a.dat' ./mate1.fastq && ln -s '/galaxy/server/database/objects/a/1/2/dataset_a12b6ece-7599-42a9-87c0-598592e037cb.dat' ./mate2.fastq  && ln -s '/galaxy/server/database/objects/1/a/f/dataset_1af6b5eb-751d-4fc9-b597-5e484c78edda.dat' ./alevinmap.tsv && salmon alevin -l A -i ./index -1 ./mate1.fastq -2 ./mate2.fastq -o ./output -p \"${GALAXY_SLOTS:-4}\" --dropseq --tgMap ./alevinmap.tsv  --dumpFeatures --dumpMtx --maxNumBarcodes '100000' && gunzip output/alevin/quants_mat.mtx.gz",
+        "traceback": null,
+        "params": {
+            "refTranscriptSource": "{\"TranscriptSource\": \"history\", \"__current_case__\": 1, \"s_index\": {\"fasta\": {\"values\": [{\"id\": 150, \"src\": \"hda\"}]}, \"genome\": null, \"kmer\": \"31\", \"phash\": false}}",
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"9d6d606c2da611eeaa569e420e218308\"",
+            "protocol_cond": "{\"__current_case__\": 0, \"protocol\": \"--dropseq\"}",
+            "pairstraight": "{\"__current_case__\": 0, \"file1\": {\"values\": [{\"id\": 4, \"src\": \"hda\"}]}, \"file2\": {\"values\": [{\"id\": 5, \"src\": \"hda\"}]}, \"libtype\": {\"__current_case__\": 0, \"strandedness\": \"A\"}, \"readselect\": \"paired\"}",
+            "output_files": "[\"dumpFeatures\", \"salmon_log\"]",
+            "optional": "{\"dumpMtx\": true, \"expectCells\": null, \"forceCells\": null, \"freqThreshold\": null, \"keepCBFraction\": null, \"maxNumBarcodes\": \"100000\", \"minScoreFraction\": null, \"mrna\": null, \"noDedup\": false, \"numCellBootstraps\": null, \"rrna\": null, \"whitelist\": null}"
+        },
+        "inputs": {
+            "refTranscriptSource|fasta": {
+                "id": "b1757ab73eebbf6a",
+                "src": "hda",
+                "uuid": "1ccd7124-6cf0-4861-a3e5-4502ccb7d23d"
+            },
+            "file1": {
+                "id": "f9e54c76530e4f0d",
+                "src": "hda",
+                "uuid": "e68edc07-a02c-439e-81a0-0015f564858a"
+            },
+            "file2": {
+                "id": "4e85dc1fc962c50b",
+                "src": "hda",
+                "uuid": "a12b6ece-7599-42a9-87c0-598592e037cb"
+            },
+            "tgmap": {
+                "id": "7d3ff5a46c64dc7c",
+                "src": "hda",
+                "uuid": "1af6b5eb-751d-4fc9-b597-5e484c78edda"
+            }
+        },
+        "outputs": {
+            "quants_mat_gz": {
+                "id": "6d8291043f2df03d",
+                "src": "hda",
+                "uuid": "c1371d74-e550-41e5-b75f-3e86f83a501a"
+            },
+            "quants_mat_rows_txt": {
+                "id": "f3e95728ac38f6d2",
+                "src": "hda",
+                "uuid": "4a984dc4-aa67-4814-91c0-6ad1a02318f4"
+            },
+            "quants_mat_mtx": {
+                "id": "9b7397309b6736ea",
+                "src": "hda",
+                "uuid": "79024223-70ad-43cd-8c8e-92bfed9cc0b8"
+            },
+            "quants_tier_mat": {
+                "id": "7986776261ebd1eb",
+                "src": "hda",
+                "uuid": "1b725c5b-d742-4a98-bce8-2a450e97b1f9"
+            },
+            "raw_cb_frequency_txt": {
+                "id": "62d77649591c5aa4",
+                "src": "hda",
+                "uuid": "439ac030-2dc2-45a5-8ecf-b0328f06d680"
+            },
+            "whitelist_txt": {
+                "id": "e8d3ae4030c14924",
+                "src": "hda",
+                "uuid": "9cff05c1-5b0f-464d-bfbd-0c45df52da42"
+            },
+            "salmon_quant_log": {
+                "id": "8503635208c265ee",
+                "src": "hda",
+                "uuid": "c4f4fcc3-eb10-4065-b60d-c4ce7be21e5a"
+            },
+            "quants_mat_cols_txt": {
+                "id": "71e6b05d89446dd1",
+                "src": "hda",
+                "uuid": "bfe238f1-9754-4b5d-9d12-9c82ff8d7f69"
+            },
+            "featureDump_txt": {
+                "id": "3f0bf646a6244af2",
+                "src": "hda",
+                "uuid": "fc0ad42d-6e66-42a8-a6fb-c96b276aa13a"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.138.19.121:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

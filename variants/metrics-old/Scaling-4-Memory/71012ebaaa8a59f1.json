@@ -1,0 +1,158 @@
+{
+    "run": "1",
+    "cloud": "gkm",
+    "job_conf": "4x32",
+    "workflow_id": "7b2991ba651dfc6b",
+    "history_id": "45da66297c2ac112",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "71012ebaaa8a59f1",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-10T19:15:38.993107",
+        "create_time": "2023-07-10T19:14:40.075151",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2",
+        "history_id": "45da66297c2ac112",
+        "external_id": "gxy-galaxy-galaxy-km4ss",
+        "command_line": "_JAVA_OPTIONS=${_JAVA_OPTIONS:-'-Xmx2048m -Xms256m'} && export _JAVA_OPTIONS &&   ln -f -s '/galaxy/server/database/objects/c/5/2/dataset_c529c63a-8985-4d6d-b4b9-81bbcf9608fb.dat' 'Mapped_read_pairs__filtered_bwa-mem_result_' &&  picard MarkDuplicates  INPUT='Mapped_read_pairs__filtered_bwa-mem_result_' OUTPUT='/galaxy/server/database/objects/7/3/d/dataset_73df55b8-bf1e-4ee4-aab1-f0d70fa7569f.dat'  METRICS_FILE='/galaxy/server/database/objects/2/6/7/dataset_267f77d3-a24f-4659-8e6e-0cad2cdce8dd.dat'  REMOVE_DUPLICATES='true' ASSUME_SORTED='true'  DUPLICATE_SCORING_STRATEGY='SUM_OF_BASE_QUALITIES'  OPTICAL_DUPLICATE_PIXEL_DISTANCE='100'   VALIDATION_STRINGENCY='LENIENT' QUIET=true VERBOSITY=ERROR  `if [ -n \"$TMPDIR\" ] ; then echo 'TMP_DIR=$TMPDIR' ; else if [ -n \"$TEMP\" ] ; then echo 'TMP_DIR=$TEMP' ; fi ; fi`",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"bam\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"0401c57a1f5611ee8e5aee612b769f42\"",
+            "validation_stringency": "\"LENIENT\"",
+            "remove_duplicates": "true",
+            "read_name_regex": "\"\"",
+            "optical_duplicate_pixel_distance": "\"100\"",
+            "duplicate_scoring_strategy": "\"SUM_OF_BASE_QUALITIES\"",
+            "comments": "[]",
+            "barcode_tag": "\"\"",
+            "assume_sorted": "true"
+        },
+        "inputs": {
+            "inputFile": {
+                "id": "7cbd87c7d431a4cd",
+                "src": "hda",
+                "uuid": "c529c63a-8985-4d6d-b4b9-81bbcf9608fb"
+            }
+        },
+        "outputs": {
+            "outFile": {
+                "id": "5b97664036718ff6",
+                "src": "hda",
+                "uuid": "73df55b8-bf1e-4ee4-aab1-f0d70fa7569f"
+            },
+            "metrics_file": {
+                "id": "b0f8a5a4de72ab5f",
+                "src": "hda",
+                "uuid": "267f77d3-a24f-4659-8e6e-0cad2cdce8dd"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "/usr/local/bin/picard: line 5: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory\nPicked up _JAVA_OPTIONS: -Xmx32G -Xms1G\n19:15:17.307 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/usr/local/share/picard-2.18.2-0/picard.jar!/com/intel/gkl/native/libgkl_compression.so\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "/usr/local/bin/picard: line 5: warning: setlocale: LC_ALL: cannot change locale (en_US.UTF-8): No such file or directory\nPicked up _JAVA_OPTIONS: -Xmx32G -Xms1G\n19:15:17.307 INFO  NativeLibraryLoader - Loading libgkl_compression.so from jar:file:/usr/local/share/picard-2.18.2-0/picard.jar!/com/intel/gkl/native/libgkl_compression.so\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "14 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "14.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-10 19:15:30",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1689016530.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-10 19:15:16",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1689016516.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "34359",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "34359.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "4",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "4.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "71012ebaaa8a59f1",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-10T19:15:38.993107",
+        "create_time": "2023-07-10T19:14:40.075151",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2",
+        "history_id": "45da66297c2ac112",
+        "external_id": "gxy-galaxy-galaxy-km4ss",
+        "command_line": "_JAVA_OPTIONS=${_JAVA_OPTIONS:-'-Xmx2048m -Xms256m'} && export _JAVA_OPTIONS &&   ln -f -s '/galaxy/server/database/objects/c/5/2/dataset_c529c63a-8985-4d6d-b4b9-81bbcf9608fb.dat' 'Mapped_read_pairs__filtered_bwa-mem_result_' &&  picard MarkDuplicates  INPUT='Mapped_read_pairs__filtered_bwa-mem_result_' OUTPUT='/galaxy/server/database/objects/7/3/d/dataset_73df55b8-bf1e-4ee4-aab1-f0d70fa7569f.dat'  METRICS_FILE='/galaxy/server/database/objects/2/6/7/dataset_267f77d3-a24f-4659-8e6e-0cad2cdce8dd.dat'  REMOVE_DUPLICATES='true' ASSUME_SORTED='true'  DUPLICATE_SCORING_STRATEGY='SUM_OF_BASE_QUALITIES'  OPTICAL_DUPLICATE_PIXEL_DISTANCE='100'   VALIDATION_STRINGENCY='LENIENT' QUIET=true VERBOSITY=ERROR  `if [ -n \"$TMPDIR\" ] ; then echo 'TMP_DIR=$TMPDIR' ; else if [ -n \"$TEMP\" ] ; then echo 'TMP_DIR=$TEMP' ; fi ; fi`",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"bam\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"0401c57a1f5611ee8e5aee612b769f42\"",
+            "validation_stringency": "\"LENIENT\"",
+            "remove_duplicates": "true",
+            "read_name_regex": "\"\"",
+            "optical_duplicate_pixel_distance": "\"100\"",
+            "duplicate_scoring_strategy": "\"SUM_OF_BASE_QUALITIES\"",
+            "comments": "[]",
+            "barcode_tag": "\"\"",
+            "assume_sorted": "true"
+        },
+        "inputs": {
+            "inputFile": {
+                "id": "7cbd87c7d431a4cd",
+                "src": "hda",
+                "uuid": "c529c63a-8985-4d6d-b4b9-81bbcf9608fb"
+            }
+        },
+        "outputs": {
+            "outFile": {
+                "id": "5b97664036718ff6",
+                "src": "hda",
+                "uuid": "73df55b8-bf1e-4ee4-aab1-f0d70fa7569f"
+            },
+            "metrics_file": {
+                "id": "b0f8a5a4de72ab5f",
+                "src": "hda",
+                "uuid": "267f77d3-a24f-4659-8e6e-0cad2cdce8dd"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.185.71.107:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        288572,
+        390616
+    ]
+}

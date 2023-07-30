@@ -1,0 +1,120 @@
+{
+    "run": "1",
+    "cloud": "test8",
+    "job_conf": "8x64",
+    "workflow_id": "ac0e1c02b625db1b",
+    "history_id": "0c6002dcba8966cb",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "6205f977a2de638f",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-29T03:33:57.717387",
+        "create_time": "2023-07-29T03:22:44.763224",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "join1",
+        "history_id": "0c6002dcba8966cb",
+        "external_id": "gxy-galaxy-galaxy-xhkjw",
+        "command_line": "python '/galaxy/server/database/tools/filters/join.py' '/galaxy/server/database/objects/f/e/d/dataset_fed6702e-af86-4673-abce-0bf2da8ee00a.dat' '/galaxy/server/database/objects/7/1/e/dataset_71ed158b-dd13-490a-8aa4-a6c9ff3c7c62.dat' 1 1 '/galaxy/server/database/objects/2/6/0/dataset_260c80af-b820-44ff-8b4a-d54f72e0799e.dat' -u -p --index_depth=3 --buffer=50000000 --fill_options_file=/galaxy/server/database/jobs_directory/000/134/configs/tmpncgwrjtb",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"tabular\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"2e503d8a2dbf11ee9fceee473033cd13\"",
+            "unmatched": "\"-u\"",
+            "partial": "\"-p\"",
+            "header": "\"\"",
+            "fill_empty_columns": "{\"__current_case__\": 0, \"fill_empty_columns_switch\": \"no_fill\"}",
+            "field2": "\"1\"",
+            "field1": "\"1\""
+        },
+        "inputs": {
+            "input1": {
+                "id": "30d400480f5cfb6f",
+                "src": "hda",
+                "uuid": "fed6702e-af86-4673-abce-0bf2da8ee00a"
+            },
+            "input2": {
+                "id": "0044b80bab96b58f",
+                "src": "hda",
+                "uuid": "71ed158b-dd13-490a-8aa4-a6c9ff3c7c62"
+            }
+        },
+        "outputs": {
+            "out_file1": {
+                "id": "5aebcf9ee32721c8",
+                "src": "hda",
+                "uuid": "260c80af-b820-44ff-8b4a-d54f72e0799e"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "6205f977a2de638f",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-29T03:33:57.717387",
+        "create_time": "2023-07-29T03:22:44.763224",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "join1",
+        "history_id": "0c6002dcba8966cb",
+        "external_id": "gxy-galaxy-galaxy-xhkjw",
+        "command_line": "python '/galaxy/server/database/tools/filters/join.py' '/galaxy/server/database/objects/f/e/d/dataset_fed6702e-af86-4673-abce-0bf2da8ee00a.dat' '/galaxy/server/database/objects/7/1/e/dataset_71ed158b-dd13-490a-8aa4-a6c9ff3c7c62.dat' 1 1 '/galaxy/server/database/objects/2/6/0/dataset_260c80af-b820-44ff-8b4a-d54f72e0799e.dat' -u -p --index_depth=3 --buffer=50000000 --fill_options_file=/galaxy/server/database/jobs_directory/000/134/configs/tmpncgwrjtb",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"tabular\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"2e503d8a2dbf11ee9fceee473033cd13\"",
+            "unmatched": "\"-u\"",
+            "partial": "\"-p\"",
+            "header": "\"\"",
+            "fill_empty_columns": "{\"__current_case__\": 0, \"fill_empty_columns_switch\": \"no_fill\"}",
+            "field2": "\"1\"",
+            "field1": "\"1\""
+        },
+        "inputs": {
+            "input1": {
+                "id": "30d400480f5cfb6f",
+                "src": "hda",
+                "uuid": "fed6702e-af86-4673-abce-0bf2da8ee00a"
+            },
+            "input2": {
+                "id": "0044b80bab96b58f",
+                "src": "hda",
+                "uuid": "71ed158b-dd13-490a-8aa4-a6c9ff3c7c62"
+            }
+        },
+        "outputs": {
+            "out_file1": {
+                "id": "5aebcf9ee32721c8",
+                "src": "hda",
+                "uuid": "260c80af-b820-44ff-8b4a-d54f72e0799e"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.138.19.121:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

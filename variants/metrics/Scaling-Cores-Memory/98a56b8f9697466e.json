@@ -1,0 +1,274 @@
+{
+    "run": "2",
+    "cloud": "gkm",
+    "job_conf": "4x8",
+    "workflow_id": "5e1480b68a9ef87f",
+    "history_id": "c3b045ffcbadc506",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "98a56b8f9697466e",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-11T15:58:03.177611",
+        "create_time": "2023-07-11T15:55:08.098383",
+        "galaxy_version": "23.0",
+        "command_version": "SnpEff\t4.3t\t2017-11-24",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff/4.3+T.galaxy1",
+        "history_id": "c3b045ffcbadc506",
+        "external_id": "gxy-galaxy-galaxy-tjvhz",
+        "command_line": "snpEff -Xmx${GALAXY_MEMORY_MB:-8192}m eff -i vcf -o vcf -upDownStreamLen 0 -formatEff -classic -no-downstream -no-intergenic -no-intron -no-upstream -no-utr                  -stats '/galaxy/server/database/objects/0/7/a/dataset_07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0.dat' -noLog -dataDir '/galaxy/server/database/objects/e/9/7/dataset_e9722e94-8511-4c3b-b6d0-4556330b3fb3_files' -configOption 'Test genome database'.genome='Test genome database' -configOption 'Test genome database'.codonTable='Standard' 'Test genome database' '/galaxy/server/database/objects/6/2/0/dataset_620c7936-3ccf-4166-9376-4824160d3b2e.dat' > '/galaxy/server/database/objects/f/d/5/dataset_fd51f67b-76de-468a-9413-df3866276c85.dat' && mkdir '/galaxy/server/database/jobs_directory/000/27/working/dataset_07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0_files' && mv '/galaxy/server/database/objects/0/7/a/dataset_07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0.dat.genes.txt' '/galaxy/server/database/jobs_directory/000/27/working/dataset_07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0_files/dataset_07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0.dat.genes.txt'",
+        "traceback": null,
+        "params": {
+            "annotations": "[\"-formatEff\", \"-classic\"]",
+            "chr": "\"\"",
+            "csvStats": "false",
+            "filter": "{\"__current_case__\": 0, \"specificEffects\": \"no\"}",
+            "filterOut": "[\"-no-downstream\", \"-no-intergenic\", \"-no-intron\", \"-no-upstream\", \"-no-utr\"]",
+            "generate_stats": "true",
+            "inputFormat": "\"vcf\"",
+            "intervals": null,
+            "noLog": "true",
+            "offset": "\"default\"",
+            "outputConditional": "{\"__current_case__\": 0, \"outputFormat\": \"vcf\"}",
+            "snpDb": "{\"__current_case__\": 3, \"codon_table\": \"Standard\", \"genomeSrc\": \"custom\", \"snpeff_db\": {\"values\": [{\"id\": 34, \"src\": \"hda\"}]}}",
+            "spliceRegion": "{\"__current_case__\": 0, \"setSpliceRegions\": \"no\"}",
+            "spliceSiteSize": null,
+            "transcripts": null,
+            "udLength": "\"0\"",
+            "__workflow_invocation_uuid__": "\"4e5d96c8200311ee938dd28bf5147c7f\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"vcf\""
+        },
+        "inputs": {
+            "input": {
+                "id": "c358a8535c139115",
+                "src": "hda",
+                "uuid": "620c7936-3ccf-4166-9376-4824160d3b2e"
+            },
+            "snpeff_db": {
+                "id": "f93c01d5c05db945",
+                "src": "hda",
+                "uuid": "e9722e94-8511-4c3b-b6d0-4556330b3fb3"
+            }
+        },
+        "outputs": {
+            "statsFile": {
+                "id": "0c98638cecc8c7c1",
+                "src": "hda",
+                "uuid": "07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0"
+            },
+            "snpeff_output": {
+                "id": "255c68db43ff4787",
+                "src": "hda",
+                "uuid": "fd51f67b-76de-468a-9413-df3866276c85"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-galaxy-tjvhz-pclvj 5.10.162+ #1 SMP Thu Mar 16 14:55:19 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-galaxy-tjvhz-pclvj 5.10.162+ #1 SMP Thu Mar 16 14:55:19 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "492.1 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "528367336.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "64",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "64.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "151.1 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "158420992.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "12.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "12884901888.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "151.1 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "158420992.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "12.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "12884901888.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "3.084337147 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "3084337147.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "3 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "3.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-11 15:57:53",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1689091073.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-11 15:57:50",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1689091070.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "12884",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "12884.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "1",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "1.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "98a56b8f9697466e",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-11T15:58:03.177611",
+        "create_time": "2023-07-11T15:55:08.098383",
+        "galaxy_version": "23.0",
+        "command_version": "SnpEff\t4.3t\t2017-11-24",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff/4.3+T.galaxy1",
+        "history_id": "c3b045ffcbadc506",
+        "external_id": "gxy-galaxy-galaxy-tjvhz",
+        "command_line": "snpEff -Xmx${GALAXY_MEMORY_MB:-8192}m eff -i vcf -o vcf -upDownStreamLen 0 -formatEff -classic -no-downstream -no-intergenic -no-intron -no-upstream -no-utr                  -stats '/galaxy/server/database/objects/0/7/a/dataset_07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0.dat' -noLog -dataDir '/galaxy/server/database/objects/e/9/7/dataset_e9722e94-8511-4c3b-b6d0-4556330b3fb3_files' -configOption 'Test genome database'.genome='Test genome database' -configOption 'Test genome database'.codonTable='Standard' 'Test genome database' '/galaxy/server/database/objects/6/2/0/dataset_620c7936-3ccf-4166-9376-4824160d3b2e.dat' > '/galaxy/server/database/objects/f/d/5/dataset_fd51f67b-76de-468a-9413-df3866276c85.dat' && mkdir '/galaxy/server/database/jobs_directory/000/27/working/dataset_07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0_files' && mv '/galaxy/server/database/objects/0/7/a/dataset_07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0.dat.genes.txt' '/galaxy/server/database/jobs_directory/000/27/working/dataset_07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0_files/dataset_07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0.dat.genes.txt'",
+        "traceback": null,
+        "params": {
+            "annotations": "[\"-formatEff\", \"-classic\"]",
+            "chr": "\"\"",
+            "csvStats": "false",
+            "filter": "{\"__current_case__\": 0, \"specificEffects\": \"no\"}",
+            "filterOut": "[\"-no-downstream\", \"-no-intergenic\", \"-no-intron\", \"-no-upstream\", \"-no-utr\"]",
+            "generate_stats": "true",
+            "inputFormat": "\"vcf\"",
+            "intervals": null,
+            "noLog": "true",
+            "offset": "\"default\"",
+            "outputConditional": "{\"__current_case__\": 0, \"outputFormat\": \"vcf\"}",
+            "snpDb": "{\"__current_case__\": 3, \"codon_table\": \"Standard\", \"genomeSrc\": \"custom\", \"snpeff_db\": {\"values\": [{\"id\": 34, \"src\": \"hda\"}]}}",
+            "spliceRegion": "{\"__current_case__\": 0, \"setSpliceRegions\": \"no\"}",
+            "spliceSiteSize": null,
+            "transcripts": null,
+            "udLength": "\"0\"",
+            "__workflow_invocation_uuid__": "\"4e5d96c8200311ee938dd28bf5147c7f\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"vcf\""
+        },
+        "inputs": {
+            "input": {
+                "id": "c358a8535c139115",
+                "src": "hda",
+                "uuid": "620c7936-3ccf-4166-9376-4824160d3b2e"
+            },
+            "snpeff_db": {
+                "id": "f93c01d5c05db945",
+                "src": "hda",
+                "uuid": "e9722e94-8511-4c3b-b6d0-4556330b3fb3"
+            }
+        },
+        "outputs": {
+            "statsFile": {
+                "id": "0c98638cecc8c7c1",
+                "src": "hda",
+                "uuid": "07a425b0-ccc0-4b8e-ad8f-8ce5a6cba5b0"
+            },
+            "snpeff_output": {
+                "id": "255c68db43ff4787",
+                "src": "hda",
+                "uuid": "fd51f67b-76de-468a-9413-df3866276c85"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.23.223.221:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        390616
+    ]
+}

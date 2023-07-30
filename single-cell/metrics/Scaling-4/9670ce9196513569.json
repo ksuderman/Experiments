@@ -1,0 +1,122 @@
+{
+    "run": "2",
+    "cloud": "test",
+    "job_conf": "4x8",
+    "workflow_id": "4527f46579ebd0c5",
+    "history_id": "4478d34855f2a2d3",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "9670ce9196513569",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-27T20:26:28.480931",
+        "create_time": "2023-07-27T20:17:49.953765",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/dropletutils_empty_drops/dropletutils_empty_drops/1.0.4+galaxy0",
+        "history_id": "4478d34855f2a2d3",
+        "external_id": "gxy-galaxy-galaxy-psz9f",
+        "command_line": "dropletutils-empty-drops.R --input-object-file \"/galaxy/server/database/objects/e/8/b/dataset_e8b03f52-29c0-40a7-8654-fd86bd7e7a58.dat\" --output-object-file \"/galaxy/server/database/objects/1/a/0/dataset_1a050f9f-a3a2-420e-96ec-f6235558c9a9.dat\" --output-text-file \"/galaxy/server/database/objects/4/7/e/dataset_47ea8b7e-216f-4450-bc06-0037091db3a6.dat\" --lower \"100\" --niters \"1000\" --filter-fdr \"0.01\" --test-ambient \"false\" --filter-empty \"true\"",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"rdata\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"a7546a722cba11ee9814d6f283bd5784\"",
+            "testambient": "false",
+            "retain": null,
+            "niters": "\"1000\"",
+            "lower": "\"100\"",
+            "ignore": null,
+            "filter_fdr": "\"0.01\"",
+            "filter_empty": "true"
+        },
+        "inputs": {
+            "input": {
+                "id": "bb3b4023318e891f",
+                "src": "hda",
+                "uuid": "e8b03f52-29c0-40a7-8654-fd86bd7e7a58"
+            }
+        },
+        "outputs": {
+            "output_txt": {
+                "id": "857ce7802f4faef6",
+                "src": "hda",
+                "uuid": "47ea8b7e-216f-4450-bc06-0037091db3a6"
+            },
+            "output_rdata": {
+                "id": "2eadc072b609be1c",
+                "src": "hda",
+                "uuid": "1a050f9f-a3a2-420e-96ec-f6235558c9a9"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "9670ce9196513569",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-27T20:26:28.480931",
+        "create_time": "2023-07-27T20:17:49.953765",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/dropletutils_empty_drops/dropletutils_empty_drops/1.0.4+galaxy0",
+        "history_id": "4478d34855f2a2d3",
+        "external_id": "gxy-galaxy-galaxy-psz9f",
+        "command_line": "dropletutils-empty-drops.R --input-object-file \"/galaxy/server/database/objects/e/8/b/dataset_e8b03f52-29c0-40a7-8654-fd86bd7e7a58.dat\" --output-object-file \"/galaxy/server/database/objects/1/a/0/dataset_1a050f9f-a3a2-420e-96ec-f6235558c9a9.dat\" --output-text-file \"/galaxy/server/database/objects/4/7/e/dataset_47ea8b7e-216f-4450-bc06-0037091db3a6.dat\" --lower \"100\" --niters \"1000\" --filter-fdr \"0.01\" --test-ambient \"false\" --filter-empty \"true\"",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"rdata\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"a7546a722cba11ee9814d6f283bd5784\"",
+            "testambient": "false",
+            "retain": null,
+            "niters": "\"1000\"",
+            "lower": "\"100\"",
+            "ignore": null,
+            "filter_fdr": "\"0.01\"",
+            "filter_empty": "true"
+        },
+        "inputs": {
+            "input": {
+                "id": "bb3b4023318e891f",
+                "src": "hda",
+                "uuid": "e8b03f52-29c0-40a7-8654-fd86bd7e7a58"
+            }
+        },
+        "outputs": {
+            "output_txt": {
+                "id": "857ce7802f4faef6",
+                "src": "hda",
+                "uuid": "47ea8b7e-216f-4450-bc06-0037091db3a6"
+            },
+            "output_rdata": {
+                "id": "2eadc072b609be1c",
+                "src": "hda",
+                "uuid": "1a050f9f-a3a2-420e-96ec-f6235558c9a9"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.139.202.124:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "run": 0,
+    "cloud": "N/A",
+    "job_conf": "Unknown",
+    "workflow_id": "6cebdd6422cb618a",
+    "history_id": "80f74c7eb9deeb7f",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "6d9399e656438e52",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-06-24T17:06:02.030848",
+        "create_time": "2023-06-24T17:03:08.567418",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2",
+        "history_id": "80f74c7eb9deeb7f",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "assume_sorted": "true",
+            "barcode_tag": "\"\"",
+            "comments": "[]",
+            "duplicate_scoring_strategy": "\"SUM_OF_BASE_QUALITIES\"",
+            "optical_duplicate_pixel_distance": "\"100\"",
+            "read_name_regex": "\"\"",
+            "remove_duplicates": "true",
+            "validation_stringency": "\"LENIENT\"",
+            "__workflow_invocation_uuid__": "\"fd9358c212b011eea1ed8e89dc5b2039\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"bam\""
+        },
+        "inputs": {
+            "inputFile": {
+                "id": "120796650a5aa2bb",
+                "src": "hda",
+                "uuid": "9e02bcae-dc89-4424-9544-6d21b212e844"
+            }
+        },
+        "outputs": {
+            "outFile": {
+                "id": "a9bfd78e07c0ed6c",
+                "src": "hda",
+                "uuid": "980c098e-35bf-47ad-9ade-531acee568eb"
+            },
+            "metrics_file": {
+                "id": "f8587c2af5cbde9e",
+                "src": "hda",
+                "uuid": "7fea640b-8497-43e7-ae80-bf34708685a4"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": null,
+        "tool_stderr": null,
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "6d9399e656438e52",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-06-24T17:06:02.030848",
+        "create_time": "2023-06-24T17:03:08.567418",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2",
+        "history_id": "80f74c7eb9deeb7f",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "assume_sorted": "true",
+            "barcode_tag": "\"\"",
+            "comments": "[]",
+            "duplicate_scoring_strategy": "\"SUM_OF_BASE_QUALITIES\"",
+            "optical_duplicate_pixel_distance": "\"100\"",
+            "read_name_regex": "\"\"",
+            "remove_duplicates": "true",
+            "validation_stringency": "\"LENIENT\"",
+            "__workflow_invocation_uuid__": "\"fd9358c212b011eea1ed8e89dc5b2039\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"bam\""
+        },
+        "inputs": {
+            "inputFile": {
+                "id": "120796650a5aa2bb",
+                "src": "hda",
+                "uuid": "9e02bcae-dc89-4424-9544-6d21b212e844"
+            }
+        },
+        "outputs": {
+            "outFile": {
+                "id": "a9bfd78e07c0ed6c",
+                "src": "hda",
+                "uuid": "980c098e-35bf-47ad-9ade-531acee568eb"
+            },
+            "metrics_file": {
+                "id": "f8587c2af5cbde9e",
+                "src": "hda",
+                "uuid": "7fea640b-8497-43e7-ae80-bf34708685a4"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://149.165.152.110/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        390616
+    ]
+}

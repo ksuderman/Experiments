@@ -1,0 +1,148 @@
+{
+    "run": "3",
+    "cloud": "gkm",
+    "job_conf": "16x32",
+    "workflow_id": "fd3e8da7c6000406",
+    "history_id": "04256c3c2fb14390",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "e1b8c5473d16e449",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-10T17:10:40.548186",
+        "create_time": "2023-07-10T17:10:24.379023",
+        "galaxy_version": "23.0",
+        "command_version": "Picked up _JAVA_OPTIONS: -Xmx48G -Xms1G\nSnpEff\t4.3t\t2017-11-24",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff_build_gb/4.3+T.galaxy4",
+        "history_id": "04256c3c2fb14390",
+        "external_id": "gxy-galaxy-galaxy-tscqd",
+        "command_line": "python3 '/cvmfs/cloud.galaxyproject.org/tools/toolshed.g2.bx.psu.edu/repos/iuc/snpeff/74aebe30fb52/snpeff/gbk2fa.py' '/galaxy/server/database/objects/8/4/5/dataset_845ef7f6-ec6b-4cab-a8d7-191d29bcb902.dat' '/galaxy/server/database/objects/2/f/7/dataset_2f72ce45-5333-4d2a-8d1f-10d1fc30ba04.dat' '--remove_version' &&  mkdir -p '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files'/'Test genome database' &&  ln -s '/galaxy/server/database/objects/8/4/5/dataset_845ef7f6-ec6b-4cab-a8d7-191d29bcb902.dat' '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files'/'Test genome database'/genes.gbk &&  snpEff -Xmx${GALAXY_MEMORY_MB:-8192}m build -v -configOption 'Test genome database'.genome='Test genome database' -configOption 'Test genome database'.codonTable='Standard' -genbank -dataDir '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files' 'Test genome database' && echo \"Test genome database.genome : Test genome database\" >> '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files'/snpEff.config && echo \"Test genome database.codonTable : Standard\" >> '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files'/snpEff.config",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"genbank\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"a895a9381f4411ee8f0e3e5dbc9d44ec\"",
+            "input_type": "{\"__current_case__\": 0, \"fasta\": \"yes\", \"input_gbk\": {\"values\": [{\"id\": 6, \"src\": \"hda\"}]}, \"input_type_selector\": \"gb\", \"remove_version\": true}",
+            "genome_version": "\"Test genome database\"",
+            "codon_table": "\"Standard\""
+        },
+        "inputs": {
+            "input_gbk": {
+                "id": "7447100c5025b0ea",
+                "src": "hda",
+                "uuid": "845ef7f6-ec6b-4cab-a8d7-191d29bcb902"
+            }
+        },
+        "outputs": {
+            "snpeff_output": {
+                "id": "0938a0914135f6b9",
+                "src": "hda",
+                "uuid": "51238a08-abdd-45bb-9fcf-0bd9d7a9a834"
+            },
+            "output_fasta": {
+                "id": "bb01aa20c3790224",
+                "src": "hda",
+                "uuid": "2f72ce45-5333-4d2a-8d1f-10d1fc30ba04"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "Writing FASTA record: KP849471\n\n\tCreate exons from CDS (if needed): ............................................................................................................................................................................................\n\tExons created for 188 transcripts.\n\n\tDeleting redundant exons (if needed): \n\t\tTotal transcripts with deleted exons: 0\n\n\tCollapsing zero length introns (if needed): \n\t\tTotal collapsed transcripts: 0\n\t\tAdding genomic sequences to exons: \tDone (188 sequences added, 0 ignored).\n\n\tAdjusting transcripts: \n\tAdjusting genes: \n\tAdjusting chromosomes lengths: \n\tRanking exons: \n\tCreate UTRs from CDS (if needed): \n\tRemove empty chromosomes: \n\n\tMarking as 'coding' from CDS information: \n\tDone: 0 transcripts marked\n\t\t\t+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\t+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n\tProtein check:\tTest genome database\tOK: 188\tNot found: 0\tErrors: 0\tError percentage: 0.0%\n",
+        "tool_stderr": "Picked up _JAVA_OPTIONS: -Xmx48G -Xms1G\n00:00:00\tSnpEff version SnpEff 4.3t (build 2017-11-24 10:18), by Pablo Cingolani\n00:00:00\tCommand: 'build'\n00:00:00\tBuilding database for 'Test genome database'\n00:00:00\tReading configuration file 'snpEff.config'. Genome: 'Test genome database'\n00:00:00\tReading config file: /galaxy/server/database/jobs_directory/000/106/working/snpEff.config\n00:00:00\tReading config file: /usr/local/share/snpeff-4.3.1t-3/snpEff.config\n00:00:00\tdone\nChromosome: 'KP849471'\tlength: 197248\n00:00:01\tCaracterizing exons by splicing (stage 1) : \n\n00:00:01\tCaracterizing exons by splicing (stage 2) : \n00:00:01\tdone.\n00:00:01\t[Optional] Rare amino acid annotations\n00:00:01\tWarning: Cannot read optional protein sequence file '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files/Test genome database/protein.fa', nothing done.\n00:00:01\tProtein check file: '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files/Test genome database/genes.gbk'\n\n00:00:01\tChecking database using protein sequences\n00:00:01\tComparing Proteins...\n\tLabels:\n\t\t'+' : OK\n\t\t'.' : Missing\n\t\t'*' : Error\n00:00:01\tSaving database\n00:00:01\t[Optional] Reading regulation elements: GFF\n00:00:01\tWarning: Cannot read optional regulation file '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files/Test genome database/regulation.gff', nothing done.\n00:00:01\t[Optional] Reading regulation elements: BED \n00:00:01\tCannot find optional regulation dir '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files/Test genome database/regulation.bed/', nothing done.\n00:00:01\t[Optional] Reading motifs: GFF\n00:00:01\tWarning: Cannot open PWMs file /galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files/Test genome database/pwms.bin. Nothing done\n00:00:01\tDone\n00:00:01\tLogging\n00:00:02\tChecking for updates...\n00:00:03\tDone.\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "Picked up _JAVA_OPTIONS: -Xmx48G -Xms1G\n00:00:00\tSnpEff version SnpEff 4.3t (build 2017-11-24 10:18), by Pablo Cingolani\n00:00:00\tCommand: 'build'\n00:00:00\tBuilding database for 'Test genome database'\n00:00:00\tReading configuration file 'snpEff.config'. Genome: 'Test genome database'\n00:00:00\tReading config file: /galaxy/server/database/jobs_directory/000/106/working/snpEff.config\n00:00:00\tReading config file: /usr/local/share/snpeff-4.3.1t-3/snpEff.config\n00:00:00\tdone\nChromosome: 'KP849471'\tlength: 197248\n00:00:01\tCaracterizing exons by splicing (stage 1) : \n\n00:00:01\tCaracterizing exons by splicing (stage 2) : \n00:00:01\tdone.\n00:00:01\t[Optional] Rare amino acid annotations\n00:00:01\tWarning: Cannot read optional protein sequence file '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files/Test genome database/protein.fa', nothing done.\n00:00:01\tProtein check file: '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files/Test genome database/genes.gbk'\n\n00:00:01\tChecking database using protein sequences\n00:00:01\tComparing Proteins...\n\tLabels:\n\t\t'+' : OK\n\t\t'.' : Missing\n\t\t'*' : Error\n00:00:01\tSaving database\n00:00:01\t[Optional] Reading regulation elements: GFF\n00:00:01\tWarning: Cannot read optional regulation file '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files/Test genome database/regulation.gff', nothing done.\n00:00:01\t[Optional] Reading regulation elements: BED \n00:00:01\tCannot find optional regulation dir '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files/Test genome database/regulation.bed/', nothing done.\n00:00:01\t[Optional] Reading motifs: GFF\n00:00:01\tWarning: Cannot open PWMs file /galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files/Test genome database/pwms.bin. Nothing done\n00:00:01\tDone\n00:00:01\tLogging\n00:00:02\tChecking for updates...\n00:00:03\tDone.\n",
+        "stdout": "Writing FASTA record: KP849471\n\n\tCreate exons from CDS (if needed): ............................................................................................................................................................................................\n\tExons created for 188 transcripts.\n\n\tDeleting redundant exons (if needed): \n\t\tTotal transcripts with deleted exons: 0\n\n\tCollapsing zero length introns (if needed): \n\t\tTotal collapsed transcripts: 0\n\t\tAdding genomic sequences to exons: \tDone (188 sequences added, 0 ignored).\n\n\tAdjusting transcripts: \n\tAdjusting genes: \n\tAdjusting chromosomes lengths: \n\tRanking exons: \n\tCreate UTRs from CDS (if needed): \n\tRemove empty chromosomes: \n\n\tMarking as 'coding' from CDS information: \n\tDone: 0 transcripts marked\n\t\t\t+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\t+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n\tProtein check:\tTest genome database\tOK: 188\tNot found: 0\tErrors: 0\tError percentage: 0.0%\n",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "4 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "4.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-10 17:10:31",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1689009031.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-10 17:10:27",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1689009027.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "51539",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "51539.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "1",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "1.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "e1b8c5473d16e449",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-10T17:10:40.548186",
+        "create_time": "2023-07-10T17:10:24.379023",
+        "galaxy_version": "23.0",
+        "command_version": "Picked up _JAVA_OPTIONS: -Xmx48G -Xms1G\nSnpEff\t4.3t\t2017-11-24",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff_build_gb/4.3+T.galaxy4",
+        "history_id": "04256c3c2fb14390",
+        "external_id": "gxy-galaxy-galaxy-tscqd",
+        "command_line": "python3 '/cvmfs/cloud.galaxyproject.org/tools/toolshed.g2.bx.psu.edu/repos/iuc/snpeff/74aebe30fb52/snpeff/gbk2fa.py' '/galaxy/server/database/objects/8/4/5/dataset_845ef7f6-ec6b-4cab-a8d7-191d29bcb902.dat' '/galaxy/server/database/objects/2/f/7/dataset_2f72ce45-5333-4d2a-8d1f-10d1fc30ba04.dat' '--remove_version' &&  mkdir -p '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files'/'Test genome database' &&  ln -s '/galaxy/server/database/objects/8/4/5/dataset_845ef7f6-ec6b-4cab-a8d7-191d29bcb902.dat' '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files'/'Test genome database'/genes.gbk &&  snpEff -Xmx${GALAXY_MEMORY_MB:-8192}m build -v -configOption 'Test genome database'.genome='Test genome database' -configOption 'Test genome database'.codonTable='Standard' -genbank -dataDir '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files' 'Test genome database' && echo \"Test genome database.genome : Test genome database\" >> '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files'/snpEff.config && echo \"Test genome database.codonTable : Standard\" >> '/galaxy/server/database/jobs_directory/000/106/working/dataset_51238a08-abdd-45bb-9fcf-0bd9d7a9a834_files'/snpEff.config",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"genbank\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"a895a9381f4411ee8f0e3e5dbc9d44ec\"",
+            "input_type": "{\"__current_case__\": 0, \"fasta\": \"yes\", \"input_gbk\": {\"values\": [{\"id\": 6, \"src\": \"hda\"}]}, \"input_type_selector\": \"gb\", \"remove_version\": true}",
+            "genome_version": "\"Test genome database\"",
+            "codon_table": "\"Standard\""
+        },
+        "inputs": {
+            "input_gbk": {
+                "id": "7447100c5025b0ea",
+                "src": "hda",
+                "uuid": "845ef7f6-ec6b-4cab-a8d7-191d29bcb902"
+            }
+        },
+        "outputs": {
+            "snpeff_output": {
+                "id": "0938a0914135f6b9",
+                "src": "hda",
+                "uuid": "51238a08-abdd-45bb-9fcf-0bd9d7a9a834"
+            },
+            "output_fasta": {
+                "id": "bb01aa20c3790224",
+                "src": "hda",
+                "uuid": "2f72ce45-5333-4d2a-8d1f-10d1fc30ba04"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.185.71.107:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        288572,
+        390616
+    ]
+}

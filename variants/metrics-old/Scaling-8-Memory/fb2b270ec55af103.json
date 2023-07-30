@@ -1,0 +1,162 @@
+{
+    "run": "3",
+    "cloud": "gkm",
+    "job_conf": "8x32",
+    "workflow_id": "2fa203f8eb472cd0",
+    "history_id": "7831ed10fa87cf08",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "fb2b270ec55af103",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-10T20:58:53.143619",
+        "create_time": "2023-07-10T20:58:27.835978",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2",
+        "history_id": "7831ed10fa87cf08",
+        "external_id": "gxy-galaxy-galaxy-bs7tx",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;  ln -s '/galaxy/server/database/objects/0/2/2/dataset_022dda95-74b6-4a2e-ac55-e2d7768c4b04.dat' 'localref.fa' && bwa index 'localref.fa' &&    bwa mem  -t \"${GALAXY_SLOTS:-1}\" -v 1     -T '30' -h '5'    -Y   -q                'localref.fa' '/galaxy/server/database/objects/7/5/c/dataset_75cabc5a-ee19-4a99-8917-ad5a8f6cff2d.dat' '/galaxy/server/database/objects/4/9/7/dataset_497bf55c-63de-4318-9389-6a46f3182325.dat'  | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/8/4/4/dataset_8441be58-2638-4a2c-89cf-730d97e19cd9.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"fasta\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"84361a3a1f6411eea330ce631996e7c3\"",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "reference_source": "{\"__current_case__\": 1, \"index_a\": \"auto\", \"ref_file\": {\"values\": [{\"id\": 750, \"src\": \"hda\"}]}, \"reference_source_selector\": \"history\"}",
+            "output_sort": "\"coordinate\"",
+            "fastq_input": "{\"__current_case__\": 2, \"fastq_input1\": {\"values\": [{\"id\": 67, \"src\": \"hdca\"}]}, \"fastq_input_selector\": \"paired_collection\", \"iset_stats\": \"\"}",
+            "analysis_type": "{\"__current_case__\": 4, \"algorithmic_options\": {\"__current_case__\": 1, \"algorithmic_options_selector\": \"do_not_set\"}, \"analysis_type_selector\": \"full\", \"io_options\": {\"C\": false, \"M\": false, \"T\": \"30\", \"V\": false, \"Y\": true, \"__current_case__\": 0, \"a\": false, \"five\": false, \"h\": \"5\", \"io_options_selector\": \"set\", \"q\": true}, \"scoring_options\": {\"__current_case__\": 1, \"scoring_options_selector\": \"do_not_set\"}}"
+        },
+        "inputs": {
+            "fastq_input12": {
+                "id": "5f71a0d96766e8e3",
+                "src": "hda",
+                "uuid": "497bf55c-63de-4318-9389-6a46f3182325"
+            },
+            "fastq_input11": {
+                "id": "9092356f8e05517b",
+                "src": "hda",
+                "uuid": "75cabc5a-ee19-4a99-8917-ad5a8f6cff2d"
+            },
+            "ref_file": {
+                "id": "23cc22538fff9d82",
+                "src": "hda",
+                "uuid": "022dda95-74b6-4a2e-ac55-e2d7768c4b04"
+            }
+        },
+        "outputs": {
+            "bam_output": {
+                "id": "2070257288631f0f",
+                "src": "hda",
+                "uuid": "8441be58-2638-4a2c-89cf-730d97e19cd9"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "[bwa_index] Pack FASTA... 0.00 sec\n[bwa_index] Construct BWT for the packed sequence...\n[bwa_index] 0.03 seconds elapse.\n[bwa_index] Update BWT... 0.00 sec\n[bwa_index] Pack forward-only FASTA... 0.00 sec\n[bwa_index] Construct SA from BWT and Occ... 0.01 sec\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa index localref.fa\n[main] Real time: 0.081 sec; CPU: 0.047 sec\n[M::mem_pestat] skip orientation FF as there are not enough pairs\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (277, 334, 393)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (45, 625)\n[M::mem_pestat] mean and std.dev: (338.50, 89.49)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 741)\n[M::mem_pestat] skip orientation RF as there are not enough pairs\n[M::mem_pestat] skip orientation RR as there are not enough pairs\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa mem -t 8 -v 1 -T 30 -h 5 -Y -q localref.fa /galaxy/server/database/objects/7/5/c/dataset_75cabc5a-ee19-4a99-8917-ad5a8f6cff2d.dat /galaxy/server/database/objects/4/9/7/dataset_497bf55c-63de-4318-9389-6a46f3182325.dat\n[main] Real time: 0.066 sec; CPU: 0.244 sec\n[bam_sort_core] merging from 0 files and 8 in-memory blocks...\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "[bwa_index] Pack FASTA... 0.00 sec\n[bwa_index] Construct BWT for the packed sequence...\n[bwa_index] 0.03 seconds elapse.\n[bwa_index] Update BWT... 0.00 sec\n[bwa_index] Pack forward-only FASTA... 0.00 sec\n[bwa_index] Construct SA from BWT and Occ... 0.01 sec\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa index localref.fa\n[main] Real time: 0.081 sec; CPU: 0.047 sec\n[M::mem_pestat] skip orientation FF as there are not enough pairs\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (277, 334, 393)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (45, 625)\n[M::mem_pestat] mean and std.dev: (338.50, 89.49)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 741)\n[M::mem_pestat] skip orientation RF as there are not enough pairs\n[M::mem_pestat] skip orientation RR as there are not enough pairs\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa mem -t 8 -v 1 -T 30 -h 5 -Y -q localref.fa /galaxy/server/database/objects/7/5/c/dataset_75cabc5a-ee19-4a99-8917-ad5a8f6cff2d.dat /galaxy/server/database/objects/4/9/7/dataset_497bf55c-63de-4318-9389-6a46f3182325.dat\n[main] Real time: 0.066 sec; CPU: 0.244 sec\n[bam_sort_core] merging from 0 files and 8 in-memory blocks...\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "0 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-10 20:58:44",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1689022724.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-10 20:58:44",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1689022724.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "34359",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "34359.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "8",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "8.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "fb2b270ec55af103",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-10T20:58:53.143619",
+        "create_time": "2023-07-10T20:58:27.835978",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2",
+        "history_id": "7831ed10fa87cf08",
+        "external_id": "gxy-galaxy-galaxy-bs7tx",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;  ln -s '/galaxy/server/database/objects/0/2/2/dataset_022dda95-74b6-4a2e-ac55-e2d7768c4b04.dat' 'localref.fa' && bwa index 'localref.fa' &&    bwa mem  -t \"${GALAXY_SLOTS:-1}\" -v 1     -T '30' -h '5'    -Y   -q                'localref.fa' '/galaxy/server/database/objects/7/5/c/dataset_75cabc5a-ee19-4a99-8917-ad5a8f6cff2d.dat' '/galaxy/server/database/objects/4/9/7/dataset_497bf55c-63de-4318-9389-6a46f3182325.dat'  | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/8/4/4/dataset_8441be58-2638-4a2c-89cf-730d97e19cd9.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"fasta\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"84361a3a1f6411eea330ce631996e7c3\"",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "reference_source": "{\"__current_case__\": 1, \"index_a\": \"auto\", \"ref_file\": {\"values\": [{\"id\": 750, \"src\": \"hda\"}]}, \"reference_source_selector\": \"history\"}",
+            "output_sort": "\"coordinate\"",
+            "fastq_input": "{\"__current_case__\": 2, \"fastq_input1\": {\"values\": [{\"id\": 67, \"src\": \"hdca\"}]}, \"fastq_input_selector\": \"paired_collection\", \"iset_stats\": \"\"}",
+            "analysis_type": "{\"__current_case__\": 4, \"algorithmic_options\": {\"__current_case__\": 1, \"algorithmic_options_selector\": \"do_not_set\"}, \"analysis_type_selector\": \"full\", \"io_options\": {\"C\": false, \"M\": false, \"T\": \"30\", \"V\": false, \"Y\": true, \"__current_case__\": 0, \"a\": false, \"five\": false, \"h\": \"5\", \"io_options_selector\": \"set\", \"q\": true}, \"scoring_options\": {\"__current_case__\": 1, \"scoring_options_selector\": \"do_not_set\"}}"
+        },
+        "inputs": {
+            "fastq_input12": {
+                "id": "5f71a0d96766e8e3",
+                "src": "hda",
+                "uuid": "497bf55c-63de-4318-9389-6a46f3182325"
+            },
+            "fastq_input11": {
+                "id": "9092356f8e05517b",
+                "src": "hda",
+                "uuid": "75cabc5a-ee19-4a99-8917-ad5a8f6cff2d"
+            },
+            "ref_file": {
+                "id": "23cc22538fff9d82",
+                "src": "hda",
+                "uuid": "022dda95-74b6-4a2e-ac55-e2d7768c4b04"
+            }
+        },
+        "outputs": {
+            "bam_output": {
+                "id": "2070257288631f0f",
+                "src": "hda",
+                "uuid": "8441be58-2638-4a2c-89cf-730d97e19cd9"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.185.71.107:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        288572,
+        390616
+    ]
+}

@@ -1,0 +1,41 @@
+galaxy:
+  jobs:
+    rules:
+      tpv_rules_local.yml:
+        tools:  
+          toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/.*:
+            cores: 8
+            mem: 64
+          toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/.*:
+            cores: 8
+            mem: 64
+          toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/.*:
+            cores: 8
+            mem: 64
+          toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/.*:
+            cores: 8
+            mem: 64
+          toolshed.g2.bx.psu.edu/repos/iuc/lofreq_call/lofreq_call/.*:
+            cores: 8
+            mem: 64
+          toolshed.g2.bx.psu.edu/repos/iuc/lofreq_filter/lofreq_filter/.*:
+            cores: 8
+            mem: 64
+          toolshed.g2.bx.psu.edu/repos/iuc/lofreq_indelqual/lofreq_indelqual/.*:
+            cores: 8
+            mem: 64
+          toolshed.g2.bx.psu.edu/repos/iuc/lofreq_viterbi/lofreq_viterbi/.*:
+            cores: 8
+            mem: 64
+          toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/.*:
+            cores: 8
+            mem: 64
+          toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/.*:
+            cores: 8
+            mem: 64
+          toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff/.*:
+            cores: 8
+            mem: 64
+          toolshed.g2.bx.psu.edu/repos/iuc/sra_tools/fastq_dump/.*:
+            cores: 8
+            mem: 64

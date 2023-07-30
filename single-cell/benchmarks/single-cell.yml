@@ -1,0 +1,14 @@
+- output_history_base_name: SingleCell
+  workflow_id: Generating a single cell matrix using Alevin 1.9
+  runs:
+  - history_name: Alevin1.9
+    inputs:
+    - name: Read 1 - containing cell barcode & UMI
+      dataset_id: read1
+    - name: Read 2 - containing transcript
+      dataset_id: read2
+    - name: Mus_musculus.GRCm38.cdna.all.fa
+      dataset_id: cdna
+    - name: Mus_musculus.GRCm38.100.gtf.gz
+      dataset_id: gtf
+

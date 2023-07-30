@@ -1,0 +1,253 @@
+{
+    "run": "1",
+    "cloud": "gkm",
+    "job_conf": "8x16",
+    "workflow_id": "7b06d633908b5d4f",
+    "history_id": "5dd3c0cdc957f03e",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "b22659fcebc6d9ed",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-11T18:51:39.892743",
+        "create_time": "2023-07-11T18:47:12.173417",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2",
+        "history_id": "5dd3c0cdc957f03e",
+        "external_id": "gxy-galaxy-galaxy-sclpx",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;  ln -s '/galaxy/server/database/objects/0/5/1/dataset_051b0574-6802-4e72-9535-b9601f6e6d3b.dat' 'localref.fa' && bwa index 'localref.fa' &&    bwa mem  -t \"${GALAXY_SLOTS:-1}\" -v 1     -T '30' -h '5'    -Y   -q                'localref.fa' '/galaxy/server/database/objects/4/6/a/dataset_46a18efc-a5f8-4a0d-814f-dc7b952886ab.dat' '/galaxy/server/database/objects/7/6/b/dataset_76b7512b-db52-4209-b997-05e2ad63ff81.dat'  | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/d/6/c/dataset_d6cf3fa9-ccc7-4ee5-b71e-b5f39ebb3da3.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"fasta\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"584cd6ae201b11ee92949eb2f25b5dea\"",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "reference_source": "{\"__current_case__\": 1, \"index_a\": \"auto\", \"ref_file\": {\"values\": [{\"id\": 625, \"src\": \"hda\"}]}, \"reference_source_selector\": \"history\"}",
+            "output_sort": "\"coordinate\"",
+            "fastq_input": "{\"__current_case__\": 2, \"fastq_input1\": {\"values\": [{\"id\": 57, \"src\": \"hdca\"}]}, \"fastq_input_selector\": \"paired_collection\", \"iset_stats\": \"\"}",
+            "analysis_type": "{\"__current_case__\": 4, \"algorithmic_options\": {\"__current_case__\": 1, \"algorithmic_options_selector\": \"do_not_set\"}, \"analysis_type_selector\": \"full\", \"io_options\": {\"C\": false, \"M\": false, \"T\": \"30\", \"V\": false, \"Y\": true, \"__current_case__\": 0, \"a\": false, \"five\": false, \"h\": \"5\", \"io_options_selector\": \"set\", \"q\": true}, \"scoring_options\": {\"__current_case__\": 1, \"scoring_options_selector\": \"do_not_set\"}}"
+        },
+        "inputs": {
+            "fastq_input11": {
+                "id": "44b7bb509f096034",
+                "src": "hda",
+                "uuid": "46a18efc-a5f8-4a0d-814f-dc7b952886ab"
+            },
+            "fastq_input12": {
+                "id": "87b1b4e02b089d31",
+                "src": "hda",
+                "uuid": "76b7512b-db52-4209-b997-05e2ad63ff81"
+            },
+            "ref_file": {
+                "id": "8407b8df6ec4eba6",
+                "src": "hda",
+                "uuid": "051b0574-6802-4e72-9535-b9601f6e6d3b"
+            }
+        },
+        "outputs": {
+            "bam_output": {
+                "id": "06bc24e83188b56b",
+                "src": "hda",
+                "uuid": "d6cf3fa9-ccc7-4ee5-b71e-b5f39ebb3da3"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "[bwa_index] Pack FASTA... 0.00 sec\n[bwa_index] Construct BWT for the packed sequence...\n[bwa_index] 0.03 seconds elapse.\n[bwa_index] Update BWT... 0.00 sec\n[bwa_index] Pack forward-only FASTA... 0.00 sec\n[bwa_index] Construct SA from BWT and Occ... 0.02 sec\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa index localref.fa\n[main] Real time: 0.085 sec; CPU: 0.055 sec\n[M::mem_pestat] skip orientation FF as there are not enough pairs\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (277, 334, 393)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (45, 625)\n[M::mem_pestat] mean and std.dev: (338.50, 89.49)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 741)\n[M::mem_pestat] skip orientation RF as there are not enough pairs\n[M::mem_pestat] skip orientation RR as there are not enough pairs\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa mem -t 8 -v 1 -T 30 -h 5 -Y -q localref.fa /galaxy/server/database/objects/4/6/a/dataset_46a18efc-a5f8-4a0d-814f-dc7b952886ab.dat /galaxy/server/database/objects/7/6/b/dataset_76b7512b-db52-4209-b997-05e2ad63ff81.dat\n[main] Real time: 0.074 sec; CPU: 0.273 sec\n[bam_sort_core] merging from 0 files and 8 in-memory blocks...\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "[bwa_index] Pack FASTA... 0.00 sec\n[bwa_index] Construct BWT for the packed sequence...\n[bwa_index] 0.03 seconds elapse.\n[bwa_index] Update BWT... 0.00 sec\n[bwa_index] Pack forward-only FASTA... 0.00 sec\n[bwa_index] Construct SA from BWT and Occ... 0.02 sec\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa index localref.fa\n[main] Real time: 0.085 sec; CPU: 0.055 sec\n[M::mem_pestat] skip orientation FF as there are not enough pairs\n[M::mem_pestat] analyzing insert size distribution for orientation FR...\n[M::mem_pestat] (25, 50, 75) percentile: (277, 334, 393)\n[M::mem_pestat] low and high boundaries for computing mean and std.dev: (45, 625)\n[M::mem_pestat] mean and std.dev: (338.50, 89.49)\n[M::mem_pestat] low and high boundaries for proper pairs: (1, 741)\n[M::mem_pestat] skip orientation RF as there are not enough pairs\n[M::mem_pestat] skip orientation RR as there are not enough pairs\n[main] Version: 0.7.17-r1188\n[main] CMD: bwa mem -t 8 -v 1 -T 30 -h 5 -Y -q localref.fa /galaxy/server/database/objects/4/6/a/dataset_46a18efc-a5f8-4a0d-814f-dc7b952886ab.dat /galaxy/server/database/objects/7/6/b/dataset_76b7512b-db52-4209-b997-05e2ad63ff81.dat\n[main] Real time: 0.074 sec; CPU: 0.273 sec\n[bam_sort_core] merging from 0 files and 8 in-memory blocks...\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-galaxy-sclpx-wm49f 5.10.162+ #1 SMP Thu Mar 16 14:55:19 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-galaxy-sclpx-wm49f 5.10.162+ #1 SMP Thu Mar 16 14:55:19 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "492.1 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "528367336.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "64",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "64.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "10.6 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "11165696.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "8.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "8589934592.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "10.6 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "11165696.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "8.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "8589934592.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "0.594050422 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "594050422.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "0 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-11 18:51:30",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1689101490.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-11 18:51:30",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1689101490.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "8589",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "8589.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "8",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "8.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "b22659fcebc6d9ed",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-11T18:51:39.892743",
+        "create_time": "2023-07-11T18:47:12.173417",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bwa/bwa_mem/0.7.17.2",
+        "history_id": "5dd3c0cdc957f03e",
+        "external_id": "gxy-galaxy-galaxy-sclpx",
+        "command_line": "set -o | grep -q pipefail && set -o pipefail;  ln -s '/galaxy/server/database/objects/0/5/1/dataset_051b0574-6802-4e72-9535-b9601f6e6d3b.dat' 'localref.fa' && bwa index 'localref.fa' &&    bwa mem  -t \"${GALAXY_SLOTS:-1}\" -v 1     -T '30' -h '5'    -Y   -q                'localref.fa' '/galaxy/server/database/objects/4/6/a/dataset_46a18efc-a5f8-4a0d-814f-dc7b952886ab.dat' '/galaxy/server/database/objects/7/6/b/dataset_76b7512b-db52-4209-b997-05e2ad63ff81.dat'  | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O bam -o '/galaxy/server/database/objects/d/6/c/dataset_d6cf3fa9-ccc7-4ee5-b71e-b5f39ebb3da3.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"fasta\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"584cd6ae201b11ee92949eb2f25b5dea\"",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "reference_source": "{\"__current_case__\": 1, \"index_a\": \"auto\", \"ref_file\": {\"values\": [{\"id\": 625, \"src\": \"hda\"}]}, \"reference_source_selector\": \"history\"}",
+            "output_sort": "\"coordinate\"",
+            "fastq_input": "{\"__current_case__\": 2, \"fastq_input1\": {\"values\": [{\"id\": 57, \"src\": \"hdca\"}]}, \"fastq_input_selector\": \"paired_collection\", \"iset_stats\": \"\"}",
+            "analysis_type": "{\"__current_case__\": 4, \"algorithmic_options\": {\"__current_case__\": 1, \"algorithmic_options_selector\": \"do_not_set\"}, \"analysis_type_selector\": \"full\", \"io_options\": {\"C\": false, \"M\": false, \"T\": \"30\", \"V\": false, \"Y\": true, \"__current_case__\": 0, \"a\": false, \"five\": false, \"h\": \"5\", \"io_options_selector\": \"set\", \"q\": true}, \"scoring_options\": {\"__current_case__\": 1, \"scoring_options_selector\": \"do_not_set\"}}"
+        },
+        "inputs": {
+            "fastq_input11": {
+                "id": "44b7bb509f096034",
+                "src": "hda",
+                "uuid": "46a18efc-a5f8-4a0d-814f-dc7b952886ab"
+            },
+            "fastq_input12": {
+                "id": "87b1b4e02b089d31",
+                "src": "hda",
+                "uuid": "76b7512b-db52-4209-b997-05e2ad63ff81"
+            },
+            "ref_file": {
+                "id": "8407b8df6ec4eba6",
+                "src": "hda",
+                "uuid": "051b0574-6802-4e72-9535-b9601f6e6d3b"
+            }
+        },
+        "outputs": {
+            "bam_output": {
+                "id": "06bc24e83188b56b",
+                "src": "hda",
+                "uuid": "d6cf3fa9-ccc7-4ee5-b71e-b5f39ebb3da3"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.23.223.221:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

@@ -1,0 +1,235 @@
+{
+    "run": "2",
+    "cloud": "gkm",
+    "job_conf": "4x64",
+    "workflow_id": "bc129f597b736e08",
+    "history_id": "149eeae8d0588fab",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "69dad978cba1ad86",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-11T18:25:01.598975",
+        "create_time": "2023-07-11T18:23:30.691755",
+        "galaxy_version": "23.0",
+        "command_version": "2.1.5",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_indelqual/lofreq_indelqual/2.1.5+galaxy0",
+        "history_id": "149eeae8d0588fab",
+        "external_id": "gxy-galaxy-galaxy-2tt6q",
+        "command_line": "ln -s '/galaxy/server/database/objects/d/f/0/dataset_df027baf-d801-430e-9ba2-7d088e06dc47.dat' reference.fa && lofreq faidx reference.fa 2>&1 || echo \"Error running samtools faidx for indexing fasta reference for lofreq\" >&2 &&  lofreq indelqual --dindel --ref reference.fa -o output.bam /galaxy/server/database/objects/c/e/d/dataset_cedc20bc-b263-4899-a6e8-3b6b7a8d160a.dat",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"08b67c4c201811ee8e3a8a6668cbb6f7\"",
+            "strategy": "{\"__current_case__\": 1, \"reference_source\": {\"__current_case__\": 1, \"ref\": {\"values\": [{\"id\": 510, \"src\": \"hda\"}]}, \"ref_selector\": \"history\"}, \"selector\": \"dindel\"}"
+        },
+        "inputs": {
+            "strategy|ref": {
+                "id": "6d8c79ee73ceb631",
+                "src": "hda",
+                "uuid": "df027baf-d801-430e-9ba2-7d088e06dc47"
+            },
+            "reads": {
+                "id": "b403fd54e607f5ed",
+                "src": "hda",
+                "uuid": "cedc20bc-b263-4899-a6e8-3b6b7a8d160a"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "fbf48816f8b0e03a",
+                "src": "hda",
+                "uuid": "16b54174-efab-4463-b2e3-112ba6fc253d"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-galaxy-2tt6q-74p7t 5.10.162+ #1 SMP Thu Mar 16 14:55:19 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-galaxy-2tt6q-74p7t 5.10.162+ #1 SMP Thu Mar 16 14:55:19 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "492.1 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "528367336.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "64",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "64.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "5.0 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "5206016.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "32.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "34359738368.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "5.0 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "5206016.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "32.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "34359738368.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "0.130096585 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "130096585.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "1 second",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "1.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-11 18:24:53",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1689099893.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-11 18:24:52",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1689099892.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "34359",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "34359.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "4",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "4.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "69dad978cba1ad86",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-11T18:25:01.598975",
+        "create_time": "2023-07-11T18:23:30.691755",
+        "galaxy_version": "23.0",
+        "command_version": "2.1.5",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_indelqual/lofreq_indelqual/2.1.5+galaxy0",
+        "history_id": "149eeae8d0588fab",
+        "external_id": "gxy-galaxy-galaxy-2tt6q",
+        "command_line": "ln -s '/galaxy/server/database/objects/d/f/0/dataset_df027baf-d801-430e-9ba2-7d088e06dc47.dat' reference.fa && lofreq faidx reference.fa 2>&1 || echo \"Error running samtools faidx for indexing fasta reference for lofreq\" >&2 &&  lofreq indelqual --dindel --ref reference.fa -o output.bam /galaxy/server/database/objects/c/e/d/dataset_cedc20bc-b263-4899-a6e8-3b6b7a8d160a.dat",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"08b67c4c201811ee8e3a8a6668cbb6f7\"",
+            "strategy": "{\"__current_case__\": 1, \"reference_source\": {\"__current_case__\": 1, \"ref\": {\"values\": [{\"id\": 510, \"src\": \"hda\"}]}, \"ref_selector\": \"history\"}, \"selector\": \"dindel\"}"
+        },
+        "inputs": {
+            "strategy|ref": {
+                "id": "6d8c79ee73ceb631",
+                "src": "hda",
+                "uuid": "df027baf-d801-430e-9ba2-7d088e06dc47"
+            },
+            "reads": {
+                "id": "b403fd54e607f5ed",
+                "src": "hda",
+                "uuid": "cedc20bc-b263-4899-a6e8-3b6b7a8d160a"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "fbf48816f8b0e03a",
+                "src": "hda",
+                "uuid": "16b54174-efab-4463-b2e3-112ba6fc253d"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.23.223.221:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

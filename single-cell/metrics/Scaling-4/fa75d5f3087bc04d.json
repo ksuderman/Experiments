@@ -1,0 +1,102 @@
+{
+    "run": "2",
+    "cloud": "test4",
+    "job_conf": "4x16",
+    "workflow_id": "cf9165103533dfe6",
+    "history_id": "6b497918b4b370fb",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "fa75d5f3087bc04d",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-29T02:07:55.498443",
+        "create_time": "2023-07-29T01:59:47.484510",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "Cut1",
+        "history_id": "6b497918b4b370fb",
+        "external_id": "gxy-galaxy-galaxy-mtkpx",
+        "command_line": "perl '/galaxy/server/database/tools/filters/cutWrapper.pl' '/galaxy/server/database/objects/e/0/0/dataset_e00f6902-fee1-475f-8e86-0adcdf9df365.dat' 'c1,c4,c5' T '/galaxy/server/database/objects/1/3/2/dataset_1325468c-e168-4756-90eb-6dd341e92c0a.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"tabular\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"97cd801c2db311ee98de1e77d0329c3f\"",
+            "delimiter": "\"T\"",
+            "columnList": "\"c1,c4,c5\""
+        },
+        "inputs": {
+            "input": {
+                "id": "bc6838d4b01d587c",
+                "src": "hda",
+                "uuid": "e00f6902-fee1-475f-8e86-0adcdf9df365"
+            }
+        },
+        "outputs": {
+            "out_file1": {
+                "id": "3043bed87142c67b",
+                "src": "hda",
+                "uuid": "1325468c-e168-4756-90eb-6dd341e92c0a"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "fa75d5f3087bc04d",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-29T02:07:55.498443",
+        "create_time": "2023-07-29T01:59:47.484510",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "Cut1",
+        "history_id": "6b497918b4b370fb",
+        "external_id": "gxy-galaxy-galaxy-mtkpx",
+        "command_line": "perl '/galaxy/server/database/tools/filters/cutWrapper.pl' '/galaxy/server/database/objects/e/0/0/dataset_e00f6902-fee1-475f-8e86-0adcdf9df365.dat' 'c1,c4,c5' T '/galaxy/server/database/objects/1/3/2/dataset_1325468c-e168-4756-90eb-6dd341e92c0a.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"tabular\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"97cd801c2db311ee98de1e77d0329c3f\"",
+            "delimiter": "\"T\"",
+            "columnList": "\"c1,c4,c5\""
+        },
+        "inputs": {
+            "input": {
+                "id": "bc6838d4b01d587c",
+                "src": "hda",
+                "uuid": "e00f6902-fee1-475f-8e86-0adcdf9df365"
+            }
+        },
+        "outputs": {
+            "out_file1": {
+                "id": "3043bed87142c67b",
+                "src": "hda",
+                "uuid": "1325468c-e168-4756-90eb-6dd341e92c0a"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.185.17.116:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

@@ -1,0 +1,142 @@
+{
+    "run": "1",
+    "cloud": "gkm",
+    "job_conf": "4x8",
+    "workflow_id": "0eec9153dd61e195",
+    "history_id": "e360048d242247b4",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "1fc1b1e95fad00c5",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-10T17:33:14.970350",
+        "create_time": "2023-07-10T17:31:42.691925",
+        "galaxy_version": "23.0",
+        "command_version": "2.1.5",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_filter/lofreq_filter/2.1.5+galaxy0",
+        "history_id": "e360048d242247b4",
+        "external_id": "gxy-galaxy-galaxy-jf72z",
+        "command_line": "lofreq filter -i /galaxy/server/database/objects/0/8/4/dataset_0847433a-80bf-4ba0-8b16-424f1972a801.dat --no-defaults --verbose --print-all  -v 0 -V 0 -a 0.0 -A 0.0 -b fdr -c 0.001   -o filtered.vcf",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"a1b1df941f4711eeb7d0d2d37ea39dcf\"",
+            "sb": "{\"sb_filter\": {\"__current_case__\": 2, \"sb_alpha\": \"0.001\", \"sb_compound\": true, \"sb_indels\": false, \"sb_mtc\": \"fdr\", \"strand_bias\": \"mtc\"}}",
+            "flag_or_drop": "\"--print-all\"",
+            "filter_by_type": "{\"__current_case__\": 0, \"keep_only\": \"\", \"qual\": {\"indelqual_filter\": {\"__current_case__\": 0, \"indelqual\": \"no\"}, \"snvqual_filter\": {\"__current_case__\": 0, \"snvqual\": \"no\"}}}",
+            "coverage": "{\"cov_max\": \"0\", \"cov_min\": \"0\"}",
+            "af": "{\"af_max\": \"0.0\", \"af_min\": \"0.0\"}"
+        },
+        "inputs": {
+            "invcf": {
+                "id": "7ccddba1cfcc1ae2",
+                "src": "hda",
+                "uuid": "0847433a-80bf-4ba0-8b16-424f1972a801"
+            }
+        },
+        "outputs": {
+            "outvcf": {
+                "id": "a990db9c13a31234",
+                "src": "hda",
+                "uuid": "8c093bb7-591b-44e6-8a9a-75864a5de338"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "Skipping default settings\nAt least one type of multiple testing correction requested. Doing first pass of vcf\nMTC application completed\nSuccessful exit.\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "Skipping default settings\nAt least one type of multiple testing correction requested. Doing first pass of vcf\nMTC application completed\nSuccessful exit.\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "0 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-10 17:33:06",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1689010386.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-10 17:33:06",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1689010386.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "8589",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "8589.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "4",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "4.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "1fc1b1e95fad00c5",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-10T17:33:14.970350",
+        "create_time": "2023-07-10T17:31:42.691925",
+        "galaxy_version": "23.0",
+        "command_version": "2.1.5",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_filter/lofreq_filter/2.1.5+galaxy0",
+        "history_id": "e360048d242247b4",
+        "external_id": "gxy-galaxy-galaxy-jf72z",
+        "command_line": "lofreq filter -i /galaxy/server/database/objects/0/8/4/dataset_0847433a-80bf-4ba0-8b16-424f1972a801.dat --no-defaults --verbose --print-all  -v 0 -V 0 -a 0.0 -A 0.0 -b fdr -c 0.001   -o filtered.vcf",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"a1b1df941f4711eeb7d0d2d37ea39dcf\"",
+            "sb": "{\"sb_filter\": {\"__current_case__\": 2, \"sb_alpha\": \"0.001\", \"sb_compound\": true, \"sb_indels\": false, \"sb_mtc\": \"fdr\", \"strand_bias\": \"mtc\"}}",
+            "flag_or_drop": "\"--print-all\"",
+            "filter_by_type": "{\"__current_case__\": 0, \"keep_only\": \"\", \"qual\": {\"indelqual_filter\": {\"__current_case__\": 0, \"indelqual\": \"no\"}, \"snvqual_filter\": {\"__current_case__\": 0, \"snvqual\": \"no\"}}}",
+            "coverage": "{\"cov_max\": \"0\", \"cov_min\": \"0\"}",
+            "af": "{\"af_max\": \"0.0\", \"af_min\": \"0.0\"}"
+        },
+        "inputs": {
+            "invcf": {
+                "id": "7ccddba1cfcc1ae2",
+                "src": "hda",
+                "uuid": "0847433a-80bf-4ba0-8b16-424f1972a801"
+            }
+        },
+        "outputs": {
+            "outvcf": {
+                "id": "a990db9c13a31234",
+                "src": "hda",
+                "uuid": "8c093bb7-591b-44e6-8a9a-75864a5de338"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.185.71.107:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        288572,
+        390616
+    ]
+}

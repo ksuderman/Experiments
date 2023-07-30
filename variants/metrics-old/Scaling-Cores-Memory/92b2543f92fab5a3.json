@@ -1,0 +1,159 @@
+{
+    "run": "2",
+    "cloud": "gkm",
+    "job_conf": "4x8",
+    "workflow_id": "4163b1d642849f77",
+    "history_id": "90db338bfc9c6801",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "92b2543f92fab5a3",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-10T16:32:12.232551",
+        "create_time": "2023-07-10T16:31:26.480997",
+        "galaxy_version": "23.0",
+        "command_version": "Version: 1.9 (using htslib 1.9)",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.2+galaxy2",
+        "history_id": "90db338bfc9c6801",
+        "external_id": "gxy-galaxy-galaxy-nzlfq",
+        "command_line": "addthreads=${GALAXY_SLOTS:-1} && (( addthreads-- )) &&   ln -s '/galaxy/server/database/objects/2/4/b/dataset_24bee68d-cb02-4917-97f9-52fba1308616.dat' infile && ln -s '/galaxy/server/database/objects/_metadata_files/0/d/4/metadata_0d40822e-944f-4d88-8431-4fe22ac5eade.dat' infile.bai &&    samtools stats       -@ $addthreads infile   > '/galaxy/server/database/objects/a/8/f/dataset_a8f77890-4131-43d2-ae64-e4fe4566bc70.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"bam\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"36acfb5a1f3f11ee9b4ecaa67a5aac64\"",
+            "trim_quality": null,
+            "split_output_cond": "{\"__current_case__\": 0, \"split_output_selector\": \"no\"}",
+            "sparse": "false",
+            "remove_overlaps": "false",
+            "remove_dups": "false",
+            "read_length": null,
+            "most_inserts": null,
+            "insert_size": null,
+            "gc_depth": null,
+            "filter_by_flags": "{\"__current_case__\": 1, \"filter_flags\": \"nofilter\"}",
+            "coverage_cond": "{\"__current_case__\": 0, \"coverage_select\": \"no\"}",
+            "cov_threshold": null,
+            "cond_region": "{\"__current_case__\": 0, \"select_region\": \"no\"}",
+            "addref_cond": "{\"__current_case__\": 0, \"addref_select\": \"no\"}"
+        },
+        "inputs": {
+            "input": {
+                "id": "dad0334ff9c584da",
+                "src": "hda",
+                "uuid": "24bee68d-cb02-4917-97f9-52fba1308616"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "f5535d48bb840387",
+                "src": "hda",
+                "uuid": "a8f77890-4131-43d2-ae64-e4fe4566bc70"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Cores Allocated",
+                "value": "4",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "4.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "8589",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "8589.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-07-10 16:32:03",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1689006723.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-07-10 16:32:03",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1689006723.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "0 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "0E-7"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "92b2543f92fab5a3",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-07-10T16:32:12.232551",
+        "create_time": "2023-07-10T16:31:26.480997",
+        "galaxy_version": "23.0",
+        "command_version": "Version: 1.9 (using htslib 1.9)",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_stats/samtools_stats/2.0.2+galaxy2",
+        "history_id": "90db338bfc9c6801",
+        "external_id": "gxy-galaxy-galaxy-nzlfq",
+        "command_line": "addthreads=${GALAXY_SLOTS:-1} && (( addthreads-- )) &&   ln -s '/galaxy/server/database/objects/2/4/b/dataset_24bee68d-cb02-4917-97f9-52fba1308616.dat' infile && ln -s '/galaxy/server/database/objects/_metadata_files/0/d/4/metadata_0d40822e-944f-4d88-8431-4fe22ac5eade.dat' infile.bai &&    samtools stats       -@ $addthreads infile   > '/galaxy/server/database/objects/a/8/f/dataset_a8f77890-4131-43d2-ae64-e4fe4566bc70.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"bam\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"36acfb5a1f3f11ee9b4ecaa67a5aac64\"",
+            "trim_quality": null,
+            "split_output_cond": "{\"__current_case__\": 0, \"split_output_selector\": \"no\"}",
+            "sparse": "false",
+            "remove_overlaps": "false",
+            "remove_dups": "false",
+            "read_length": null,
+            "most_inserts": null,
+            "insert_size": null,
+            "gc_depth": null,
+            "filter_by_flags": "{\"__current_case__\": 1, \"filter_flags\": \"nofilter\"}",
+            "coverage_cond": "{\"__current_case__\": 0, \"coverage_select\": \"no\"}",
+            "cov_threshold": null,
+            "cond_region": "{\"__current_case__\": 0, \"select_region\": \"no\"}",
+            "addref_cond": "{\"__current_case__\": 0, \"addref_select\": \"no\"}"
+        },
+        "inputs": {
+            "input": {
+                "id": "dad0334ff9c584da",
+                "src": "hda",
+                "uuid": "24bee68d-cb02-4917-97f9-52fba1308616"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "f5535d48bb840387",
+                "src": "hda",
+                "uuid": "a8f77890-4131-43d2-ae64-e4fe4566bc70"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.185.71.107:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        390616
+    ]
+}

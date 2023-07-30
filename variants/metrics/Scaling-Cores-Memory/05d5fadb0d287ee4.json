@@ -1,0 +1,122 @@
+{
+    "run": "2",
+    "cloud": "gkm",
+    "job_conf": "8x16",
+    "workflow_id": "e692fc44b9391f5f",
+    "history_id": "110c1b7290aff8a8",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "05d5fadb0d287ee4",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-07-11T16:49:22.049522",
+        "create_time": "2023-07-11T16:30:47.151405",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2",
+        "history_id": "110c1b7290aff8a8",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"bam\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"49da40c4200811eebee156872ea4f77d\"",
+            "validation_stringency": "\"LENIENT\"",
+            "remove_duplicates": "true",
+            "read_name_regex": "\"\"",
+            "optical_duplicate_pixel_distance": "\"100\"",
+            "duplicate_scoring_strategy": "\"SUM_OF_BASE_QUALITIES\"",
+            "comments": "[]",
+            "barcode_tag": "\"\"",
+            "assume_sorted": "true"
+        },
+        "inputs": {
+            "inputFile": {
+                "id": "bd17324afd09c096",
+                "src": "hda",
+                "uuid": "c7efa56e-4a79-42bf-be52-311b5d9625cb"
+            }
+        },
+        "outputs": {
+            "metrics_file": {
+                "id": "68ead1703e46b43d",
+                "src": "hda",
+                "uuid": "df12d033-aa0f-4d1a-890b-55f69dc027e9"
+            },
+            "outFile": {
+                "id": "5e08ae4cbca7e061",
+                "src": "hda",
+                "uuid": "bd899d39-7be0-4305-96e9-bb9453804b49"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": null,
+        "tool_stderr": null,
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "05d5fadb0d287ee4",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-07-11T16:49:22.049522",
+        "create_time": "2023-07-11T16:30:47.151405",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2",
+        "history_id": "110c1b7290aff8a8",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"bam\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"49da40c4200811eebee156872ea4f77d\"",
+            "validation_stringency": "\"LENIENT\"",
+            "remove_duplicates": "true",
+            "read_name_regex": "\"\"",
+            "optical_duplicate_pixel_distance": "\"100\"",
+            "duplicate_scoring_strategy": "\"SUM_OF_BASE_QUALITIES\"",
+            "comments": "[]",
+            "barcode_tag": "\"\"",
+            "assume_sorted": "true"
+        },
+        "inputs": {
+            "inputFile": {
+                "id": "bd17324afd09c096",
+                "src": "hda",
+                "uuid": "c7efa56e-4a79-42bf-be52-311b5d9625cb"
+            }
+        },
+        "outputs": {
+            "metrics_file": {
+                "id": "68ead1703e46b43d",
+                "src": "hda",
+                "uuid": "df12d033-aa0f-4d1a-890b-55f69dc027e9"
+            },
+            "outFile": {
+                "id": "5e08ae4cbca7e061",
+                "src": "hda",
+                "uuid": "bd899d39-7be0-4305-96e9-bb9453804b49"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.23.223.221:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

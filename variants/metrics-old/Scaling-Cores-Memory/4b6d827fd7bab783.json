@@ -1,0 +1,121 @@
+{
+    "run": "1",
+    "cloud": "gkm",
+    "job_conf": "4x8",
+    "workflow_id": "4163b1d642849f77",
+    "history_id": "20222ef86a57d127",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "4b6d827fd7bab783",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-10T16:18:01.831442",
+        "create_time": "2023-07-10T16:16:09.451937",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2",
+        "history_id": "20222ef86a57d127",
+        "external_id": "gxy-galaxy-galaxy-8qp8g",
+        "command_line": "_JAVA_OPTIONS=${_JAVA_OPTIONS:-'-Xmx2048m -Xms256m'} && export _JAVA_OPTIONS &&   ln -f -s '/galaxy/server/database/objects/f/0/e/dataset_f0e226a1-a357-4024-8eba-7b5fb0d32802.dat' 'Mapped_read_pairs__filtered_bwa-mem_result_' &&  picard MarkDuplicates  INPUT='Mapped_read_pairs__filtered_bwa-mem_result_' OUTPUT='/galaxy/server/database/objects/b/c/e/dataset_bce50e70-e537-453d-8f14-2ea4eab69e36.dat'  METRICS_FILE='/galaxy/server/database/objects/0/4/b/dataset_04bc8418-d077-48ea-8806-fdfe6d98200d.dat'  REMOVE_DUPLICATES='true' ASSUME_SORTED='true'  DUPLICATE_SCORING_STRATEGY='SUM_OF_BASE_QUALITIES'  OPTICAL_DUPLICATE_PIXEL_DISTANCE='100'   VALIDATION_STRINGENCY='LENIENT' QUIET=true VERBOSITY=ERROR  `if [ -n \"$TMPDIR\" ] ; then echo 'TMP_DIR=$TMPDIR' ; else if [ -n \"$TEMP\" ] ; then echo 'TMP_DIR=$TEMP' ; fi ; fi`",
+        "traceback": null,
+        "params": {
+            "assume_sorted": "true",
+            "barcode_tag": "\"\"",
+            "comments": "[]",
+            "duplicate_scoring_strategy": "\"SUM_OF_BASE_QUALITIES\"",
+            "optical_duplicate_pixel_distance": "\"100\"",
+            "read_name_regex": "\"\"",
+            "remove_duplicates": "true",
+            "validation_stringency": "\"LENIENT\"",
+            "__workflow_invocation_uuid__": "\"144ce69e1f3d11ee9b4ecaa67a5aac64\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"bam\""
+        },
+        "inputs": {
+            "inputFile": {
+                "id": "9bb3fdb807d9f7bb",
+                "src": "hda",
+                "uuid": "f0e226a1-a357-4024-8eba-7b5fb0d32802"
+            }
+        },
+        "outputs": {
+            "metrics_file": {
+                "id": "a1b534c074771287",
+                "src": "hda",
+                "uuid": "04bc8418-d077-48ea-8806-fdfe6d98200d"
+            },
+            "outFile": {
+                "id": "5d4f98c570e1205c",
+                "src": "hda",
+                "uuid": "bce50e70-e537-453d-8f14-2ea4eab69e36"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "4b6d827fd7bab783",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-10T16:18:01.831442",
+        "create_time": "2023-07-10T16:16:09.451937",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/picard/picard_MarkDuplicates/2.18.2.2",
+        "history_id": "20222ef86a57d127",
+        "external_id": "gxy-galaxy-galaxy-8qp8g",
+        "command_line": "_JAVA_OPTIONS=${_JAVA_OPTIONS:-'-Xmx2048m -Xms256m'} && export _JAVA_OPTIONS &&   ln -f -s '/galaxy/server/database/objects/f/0/e/dataset_f0e226a1-a357-4024-8eba-7b5fb0d32802.dat' 'Mapped_read_pairs__filtered_bwa-mem_result_' &&  picard MarkDuplicates  INPUT='Mapped_read_pairs__filtered_bwa-mem_result_' OUTPUT='/galaxy/server/database/objects/b/c/e/dataset_bce50e70-e537-453d-8f14-2ea4eab69e36.dat'  METRICS_FILE='/galaxy/server/database/objects/0/4/b/dataset_04bc8418-d077-48ea-8806-fdfe6d98200d.dat'  REMOVE_DUPLICATES='true' ASSUME_SORTED='true'  DUPLICATE_SCORING_STRATEGY='SUM_OF_BASE_QUALITIES'  OPTICAL_DUPLICATE_PIXEL_DISTANCE='100'   VALIDATION_STRINGENCY='LENIENT' QUIET=true VERBOSITY=ERROR  `if [ -n \"$TMPDIR\" ] ; then echo 'TMP_DIR=$TMPDIR' ; else if [ -n \"$TEMP\" ] ; then echo 'TMP_DIR=$TEMP' ; fi ; fi`",
+        "traceback": null,
+        "params": {
+            "assume_sorted": "true",
+            "barcode_tag": "\"\"",
+            "comments": "[]",
+            "duplicate_scoring_strategy": "\"SUM_OF_BASE_QUALITIES\"",
+            "optical_duplicate_pixel_distance": "\"100\"",
+            "read_name_regex": "\"\"",
+            "remove_duplicates": "true",
+            "validation_stringency": "\"LENIENT\"",
+            "__workflow_invocation_uuid__": "\"144ce69e1f3d11ee9b4ecaa67a5aac64\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"bam\""
+        },
+        "inputs": {
+            "inputFile": {
+                "id": "9bb3fdb807d9f7bb",
+                "src": "hda",
+                "uuid": "f0e226a1-a357-4024-8eba-7b5fb0d32802"
+            }
+        },
+        "outputs": {
+            "metrics_file": {
+                "id": "a1b534c074771287",
+                "src": "hda",
+                "uuid": "04bc8418-d077-48ea-8806-fdfe6d98200d"
+            },
+            "outFile": {
+                "id": "5d4f98c570e1205c",
+                "src": "hda",
+                "uuid": "bce50e70-e537-453d-8f14-2ea4eab69e36"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.185.71.107:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        390616
+    ]
+}

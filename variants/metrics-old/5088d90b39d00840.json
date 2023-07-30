@@ -1,0 +1,105 @@
+{
+    "run": 0,
+    "cloud": "N/A",
+    "job_conf": "Unknown",
+    "workflow_id": "a60f2612bae087c3",
+    "history_id": "3287d9718f7d7258",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "5088d90b39d00840",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-07-05T21:20:51.432738",
+        "create_time": "2023-07-05T20:29:30.445278",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_filter/lofreq_filter/2.1.5+galaxy0",
+        "history_id": "3287d9718f7d7258",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "af": "{\"af_max\": \"0.0\", \"af_min\": \"0.0\"}",
+            "coverage": "{\"cov_max\": \"0\", \"cov_min\": \"0\"}",
+            "filter_by_type": "{\"__current_case__\": 0, \"keep_only\": \"\", \"qual\": {\"indelqual_filter\": {\"__current_case__\": 0, \"indelqual\": \"no\"}, \"snvqual_filter\": {\"__current_case__\": 0, \"snvqual\": \"no\"}}}",
+            "flag_or_drop": "\"--print-all\"",
+            "sb": "{\"sb_filter\": {\"__current_case__\": 2, \"sb_alpha\": \"0.001\", \"sb_compound\": true, \"sb_indels\": false, \"sb_mtc\": \"fdr\", \"strand_bias\": \"mtc\"}}",
+            "__workflow_invocation_uuid__": "\"a4705d2e1b7211ee99874a060b9ca169\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "invcf": {
+                "id": "fd89ffb7298d0134",
+                "src": "hda",
+                "uuid": "f18a0c1b-fd8d-4eec-b1a9-208b12fc3797"
+            }
+        },
+        "outputs": {
+            "outvcf": {
+                "id": "e00917b4e8741c9f",
+                "src": "hda",
+                "uuid": "3e5f6990-36b5-4a62-81e4-224491b65593"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": null,
+        "tool_stderr": null,
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "admin@cloudve.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "5088d90b39d00840",
+        "state": "deleted",
+        "exit_code": null,
+        "update_time": "2023-07-05T21:20:51.432738",
+        "create_time": "2023-07-05T20:29:30.445278",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_filter/lofreq_filter/2.1.5+galaxy0",
+        "history_id": "3287d9718f7d7258",
+        "external_id": null,
+        "command_line": null,
+        "traceback": null,
+        "params": {
+            "af": "{\"af_max\": \"0.0\", \"af_min\": \"0.0\"}",
+            "coverage": "{\"cov_max\": \"0\", \"cov_min\": \"0\"}",
+            "filter_by_type": "{\"__current_case__\": 0, \"keep_only\": \"\", \"qual\": {\"indelqual_filter\": {\"__current_case__\": 0, \"indelqual\": \"no\"}, \"snvqual_filter\": {\"__current_case__\": 0, \"snvqual\": \"no\"}}}",
+            "flag_or_drop": "\"--print-all\"",
+            "sb": "{\"sb_filter\": {\"__current_case__\": 2, \"sb_alpha\": \"0.001\", \"sb_compound\": true, \"sb_indels\": false, \"sb_mtc\": \"fdr\", \"strand_bias\": \"mtc\"}}",
+            "__workflow_invocation_uuid__": "\"a4705d2e1b7211ee99874a060b9ca169\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "invcf": {
+                "id": "fd89ffb7298d0134",
+                "src": "hda",
+                "uuid": "f18a0c1b-fd8d-4eec-b1a9-208b12fc3797"
+            }
+        },
+        "outputs": {
+            "outvcf": {
+                "id": "e00917b4e8741c9f",
+                "src": "hda",
+                "uuid": "3e5f6990-36b5-4a62-81e4-224491b65593"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.74.76.170:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        390616
+    ]
+}

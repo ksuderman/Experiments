@@ -1,0 +1,116 @@
+{
+    "run": 0,
+    "cloud": "N/A",
+    "job_conf": "Unknown",
+    "workflow_id": "baef5d5d4fb126ca",
+    "history_id": "36a52b2d48d60fdf",
+    "inputs": "Read1.fastq Read2.fastq GRCm38.cdna.all.fa.fasta GRCm38.100.gtf.gff",
+    "metrics": {
+        "model_class": "Job",
+        "id": "295c50a29c51ba14",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-26T20:24:48.320799",
+        "create_time": "2023-07-26T20:18:20.591784",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/droplet_barcode_plot/_dropletBarcodePlot/1.6.1+galaxy2",
+        "history_id": "36a52b2d48d60fdf",
+        "external_id": "gxy-galaxy-galaxy-rt96n",
+        "command_line": "dropletBarcodePlot.R --output-plot \"/galaxy/server/database/objects/e/b/8/dataset_eb8be4c0-a2af-4824-9c4b-990c087e23a6.dat\" --output-thresholds \"/galaxy/server/database/objects/e/e/e/dataset_eee6e9c9-6abe-4475-80e9-54b491e937b2.dat\" --label \"Barcode rank plot (Alevin-processed)\" --density-bins \"50\" --roryk-multiplier \"1.5\" --mtx-matrix /galaxy/server/database/objects/1/e/d/dataset_1ed644cf-a061-45b7-8c06-1bb5dab3d4a6.dat --cells-by-row",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"8fcc7d1e2bf111ee948d4e2a05288b89\"",
+            "roryk_multiplier": "\"1.5\"",
+            "label": "\"Barcode rank plot (Alevin-processed)\"",
+            "input": "{\"__current_case__\": 0, \"cellsbyrow\": true, \"mtx_matrix\": {\"values\": [{\"id\": 170, \"src\": \"hda\"}]}, \"type\": true}",
+            "density_bins": "\"50\""
+        },
+        "inputs": {
+            "mtx_matrix": {
+                "id": "b0dd7862c72aa0fc",
+                "src": "hda",
+                "uuid": "1ed644cf-a061-45b7-8c06-1bb5dab3d4a6"
+            }
+        },
+        "outputs": {
+            "plot_file": {
+                "id": "51ed681b911bd860",
+                "src": "hda",
+                "uuid": "eb8be4c0-a2af-4824-9c4b-990c087e23a6"
+            },
+            "thresholds_file": {
+                "id": "690440af92bb8565",
+                "src": "hda",
+                "uuid": "eee6e9c9-6abe-4475-80e9-54b491e937b2"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "295c50a29c51ba14",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-26T20:24:48.320799",
+        "create_time": "2023-07-26T20:18:20.591784",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/droplet_barcode_plot/_dropletBarcodePlot/1.6.1+galaxy2",
+        "history_id": "36a52b2d48d60fdf",
+        "external_id": "gxy-galaxy-galaxy-rt96n",
+        "command_line": "dropletBarcodePlot.R --output-plot \"/galaxy/server/database/objects/e/b/8/dataset_eb8be4c0-a2af-4824-9c4b-990c087e23a6.dat\" --output-thresholds \"/galaxy/server/database/objects/e/e/e/dataset_eee6e9c9-6abe-4475-80e9-54b491e937b2.dat\" --label \"Barcode rank plot (Alevin-processed)\" --density-bins \"50\" --roryk-multiplier \"1.5\" --mtx-matrix /galaxy/server/database/objects/1/e/d/dataset_1ed644cf-a061-45b7-8c06-1bb5dab3d4a6.dat --cells-by-row",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"8fcc7d1e2bf111ee948d4e2a05288b89\"",
+            "roryk_multiplier": "\"1.5\"",
+            "label": "\"Barcode rank plot (Alevin-processed)\"",
+            "input": "{\"__current_case__\": 0, \"cellsbyrow\": true, \"mtx_matrix\": {\"values\": [{\"id\": 170, \"src\": \"hda\"}]}, \"type\": true}",
+            "density_bins": "\"50\""
+        },
+        "inputs": {
+            "mtx_matrix": {
+                "id": "b0dd7862c72aa0fc",
+                "src": "hda",
+                "uuid": "1ed644cf-a061-45b7-8c06-1bb5dab3d4a6"
+            }
+        },
+        "outputs": {
+            "plot_file": {
+                "id": "51ed681b911bd860",
+                "src": "hda",
+                "uuid": "eb8be4c0-a2af-4824-9c4b-990c087e23a6"
+            },
+            "thresholds_file": {
+                "id": "690440af92bb8565",
+                "src": "hda",
+                "uuid": "eee6e9c9-6abe-4475-80e9-54b491e937b2"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://104.196.167.204:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

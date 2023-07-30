@@ -1,0 +1,140 @@
+{
+    "run": "3",
+    "cloud": "test4",
+    "job_conf": "4x32",
+    "workflow_id": "7b571c18809a3ef6",
+    "history_id": "02d5941aa9a0ee95",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "93d02c3583dcb59a",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-29T03:05:51.150971",
+        "create_time": "2023-07-29T02:58:08.749292",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/salmon_kallisto_mtx_to_10x/_salmon_kallisto_mtx_to_10x/0.0.1+galaxy6",
+        "history_id": "02d5941aa9a0ee95",
+        "external_id": "gxy-galaxy-galaxy-x2n94",
+        "command_line": "file /galaxy/server/database/objects/3/d/e/dataset_3de961b7-8a79-4c80-9d22-d63ff4cff8e0.dat | grep 'gzip compressed' > /dev/null; if [ $? -eq 0 ]; then matrixfile=matrix-in.mtx.gz; else matrixfile=matrix-in.mtx; fi; ln -s /galaxy/server/database/objects/3/d/e/dataset_3de961b7-8a79-4c80-9d22-d63ff4cff8e0.dat $matrixfile; /cvmfs/cloud.galaxyproject.org/tools/toolshed.g2.bx.psu.edu/repos/ebi-gxa/salmon_kallisto_mtx_to_10x/88f5a0a6a818/salmon_kallisto_mtx_to_10x/salmonKallistoMtxTo10x.py --cell_prefix \"\" \"${matrixfile}\" \"/galaxy/server/database/objects/4/6/7/dataset_4674462b-f394-4183-a9f7-7661b3cfde8a.dat\" \"/galaxy/server/database/objects/7/e/1/dataset_7e11016b-4876-4f2a-90ef-24089b04ae6c.dat\" ./",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"be992b802dbb11eea7b99e7b1091148c\"",
+            "cell_prefix": "\"\""
+        },
+        "inputs": {
+            "barcodes_file": {
+                "id": "71fbbc89b5394370",
+                "src": "hda",
+                "uuid": "7e11016b-4876-4f2a-90ef-24089b04ae6c"
+            },
+            "genes_file": {
+                "id": "a153057ba3242430",
+                "src": "hda",
+                "uuid": "4674462b-f394-4183-a9f7-7661b3cfde8a"
+            },
+            "mtx_file": {
+                "id": "cafa54e16d7375d6",
+                "src": "hda",
+                "uuid": "3de961b7-8a79-4c80-9d22-d63ff4cff8e0"
+            }
+        },
+        "outputs": {
+            "matrix_out": {
+                "id": "dad5c8f8a21685fa",
+                "src": "hda",
+                "uuid": "9a5485a0-7cd1-438e-a5eb-01511fb1bf13"
+            },
+            "barcodes_out": {
+                "id": "2a9e720695095fba",
+                "src": "hda",
+                "uuid": "b84c2918-6717-4896-b5f6-ab0b33241956"
+            },
+            "genes_out": {
+                "id": "2b3aaa5f03586461",
+                "src": "hda",
+                "uuid": "33fb7d14-20ae-4226-af42-724aae3e0f51"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "93d02c3583dcb59a",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-07-29T03:05:51.150971",
+        "create_time": "2023-07-29T02:58:08.749292",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/salmon_kallisto_mtx_to_10x/_salmon_kallisto_mtx_to_10x/0.0.1+galaxy6",
+        "history_id": "02d5941aa9a0ee95",
+        "external_id": "gxy-galaxy-galaxy-x2n94",
+        "command_line": "file /galaxy/server/database/objects/3/d/e/dataset_3de961b7-8a79-4c80-9d22-d63ff4cff8e0.dat | grep 'gzip compressed' > /dev/null; if [ $? -eq 0 ]; then matrixfile=matrix-in.mtx.gz; else matrixfile=matrix-in.mtx; fi; ln -s /galaxy/server/database/objects/3/d/e/dataset_3de961b7-8a79-4c80-9d22-d63ff4cff8e0.dat $matrixfile; /cvmfs/cloud.galaxyproject.org/tools/toolshed.g2.bx.psu.edu/repos/ebi-gxa/salmon_kallisto_mtx_to_10x/88f5a0a6a818/salmon_kallisto_mtx_to_10x/salmonKallistoMtxTo10x.py --cell_prefix \"\" \"${matrixfile}\" \"/galaxy/server/database/objects/4/6/7/dataset_4674462b-f394-4183-a9f7-7661b3cfde8a.dat\" \"/galaxy/server/database/objects/7/e/1/dataset_7e11016b-4876-4f2a-90ef-24089b04ae6c.dat\" ./",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"be992b802dbb11eea7b99e7b1091148c\"",
+            "cell_prefix": "\"\""
+        },
+        "inputs": {
+            "barcodes_file": {
+                "id": "71fbbc89b5394370",
+                "src": "hda",
+                "uuid": "7e11016b-4876-4f2a-90ef-24089b04ae6c"
+            },
+            "genes_file": {
+                "id": "a153057ba3242430",
+                "src": "hda",
+                "uuid": "4674462b-f394-4183-a9f7-7661b3cfde8a"
+            },
+            "mtx_file": {
+                "id": "cafa54e16d7375d6",
+                "src": "hda",
+                "uuid": "3de961b7-8a79-4c80-9d22-d63ff4cff8e0"
+            }
+        },
+        "outputs": {
+            "matrix_out": {
+                "id": "dad5c8f8a21685fa",
+                "src": "hda",
+                "uuid": "9a5485a0-7cd1-438e-a5eb-01511fb1bf13"
+            },
+            "barcodes_out": {
+                "id": "2a9e720695095fba",
+                "src": "hda",
+                "uuid": "b84c2918-6717-4896-b5f6-ab0b33241956"
+            },
+            "genes_out": {
+                "id": "2b3aaa5f03586461",
+                "src": "hda",
+                "uuid": "33fb7d14-20ae-4226-af42-724aae3e0f51"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://35.185.17.116:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}
