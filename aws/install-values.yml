@@ -1,24 +1,22 @@
 image:
-  repository: galaxyproject/galaxy-min
-  tag: dev
+  repository: quay.io/galaxyproject/galaxy-min
+  tag: 22.05
 postgresql:
+  deploy: false
   galaxyDatabasePassword: galaxydbpassword
   persistence:
     storageClass: nfs
 ingress:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-  path: "/"
+  path: "/galaxy"
   hosts:
     - host: ~
       paths:
-        - path: "/"
+        - path: "/galaxy"
 cvmfs:
-  enabled: true
-  deploy: true
-  cache:
-    alienCache:
-      storageClass: nfs
+  enabled: false
+  deploy: false
 persistence:
   accessMode: ReadWriteMany
   storageClass: nfs
@@ -36,7 +34,7 @@ configs:
   galaxy.yml:
     galaxy:
       job_metrics_config_file: job_metrics_conf.yml
-      admin_users: afgane@gmail.com,suderman@jhu.edu
+      admin_users: afgane@gmail.com,suderman@jhu.edu, admin@galaxyproject.org
       master_api_key: galaxypassword
   job_metrics_conf.yml:
     - type: core
@@ -44,3 +42,20 @@ configs:
     - type: cpuinfo
     - type: meminfo
     - type: uname
+jobs:
+  rules:
+    tpv_rules_local.yml:
+      tools:
+        default:
+          scheduling:
+            reject:
+            - local
+            - offline
+      destinations:
+        local:
+          scheduling:
+            require:
+            - local            
+rabbitmq:
+  persistence:
+    storageClassName: ebs

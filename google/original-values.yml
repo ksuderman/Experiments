@@ -11,14 +11,11 @@ configs:
   - type: meminfo
   - type: uname
 cvmfs:
-  cache:
-    alienCache:
-      storageClass: nfs
-  deploy: true
-  enabled: true
+  enable: false
+  deploy: false
 image:
   repository: galaxyproject/galaxy-min
-  tag: 22.01
+  tag: 22.05
 service:
   type: LoadBalancer
   port: 80
@@ -29,10 +26,10 @@ ingress:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
   hosts:
-  - host: null
+  - host: ~
     paths:
-    - path: /
-  path: /
+    - path: /galaxy
+  path: /galaxy
 initJob:
   downloadToolConfs:
     enabled: true
@@ -40,9 +37,10 @@ jobHandlers:
   startupDelay: 5
 persistence:
   accessMode: ReadWriteMany
-  size: 470Gi
+  size: 400Gi
   storageClass: nfs
 postgresql:
+  deploy: false
   galaxyDatabasePassword: galaxydbpassword
   persistence:
     storageClass: nfs

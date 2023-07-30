@@ -2,7 +2,11 @@
 
 #NAME=${NAME:-galaxy}
 CHART=${CHART:-galaxy/galaxy}
+#CHART=/Users/suderman/Workspaces/JHU/galaxy-helm/galaxy
 HTML=${1:-files/welcome-js1.html}
+
+echo "Installing Galaxy using Helm chart $CHART"
+echo "HTML welcome file: $HTML"
 
 helm upgrade --install galaxy -n galaxy $CHART \
   --reset-values \

@@ -1,34 +1,69 @@
 #!/usr/bin/env bash
 
-NAME=ks-cost-modeling-2
+#NAME=ks-m6a
 REGION=us-east-1
 ZONES=us-east-1a,us-east-1b
 
 function create() {
-eksctl create cluster --name $NAME \
---region $REGION \
---zones $ZONES \
---with-oidc \
---ssh-access=true \
---ssh-public-key=~/.ssh/id_rsa.pub \
---managed \
---node-type=m5.8xlarge \
---node-volume-size=200 \
---version=1.19
+	KEYFILE=clusters/$1.$2
+	if [[ -e $KEYFILE ]] ; then
+		echo "A cluster with that name already exists."
+		exit 1
+	fi
+	if [[ -e .kubeconfig ]] ; then
+		echo "Please delete the local .kubeconfig link/file"
+		return
+	fi
+	if [[ -e ~/.kube/config ]] ; then
+		echo "Please delete the local ~/.kube/config file."
+		return
+	fi
+	echo "Creating cluster $1"
+	#	--profile costmodeling \
+	eksctl create cluster --name ks-$1-$2 \
+		--region $REGION \
+		--zones $ZONES \
+		--with-oidc \
+		--ssh-access=true \
+		--ssh-public-key=~/.ssh/id_rsa.pub \
+		--managed \
+		--nodes=1 \
+		--node-type=$1.$2 \
+		--node-volume-size=525 \
+		--version=1.23
+	touch $KEYFILE
 }
 
 function delete() {
-	eksctl delete cluster -r $REGION -n $NAME
+	KEYFILE=clusters/$1.$2
+	if [[ ! -e $KEYFILE ]] ; then
+		echo "There is no such cluster."
+		exit 1
+	fi
+	rm $KEYFILE
+	eksctl delete cluster -r $REGION -n ks-$1-$2
 }
 
 if [[ $# = 0 ]] ; then
-	echo "USAGE: $(basename $0) [create|delete]"
+	echo "USAGE: $(basename $0) [create|delete] MACHINE_TYPE"
 	exit 1
 fi
 
 case $1 in
-	create) create ;;
-	delete|destroy) delete ;;
+	create) 
+		if [[ -z $3 ]] ; then
+			echo "ERROR: specify a machine type and size. EG $(basename $(realpath $0)) create m6i 8xlarge"
+			exit 1
+		fi
+		create $2 $3
+		;;
+	delete|destroy) 
+		if [[ -z $3 ]] ; then
+			echo "ERROR: specify a machine type and size. EG $(basename $(realpath $0)) delete m6i 8xlarge"
+			exit 1
+		fi
+		delete $2 $3
+		;;
 	*)
 		echo "Unknown option $1"
 		;;

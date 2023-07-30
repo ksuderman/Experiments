@@ -1,23 +1,24 @@
 image:
-  repository: galaxyproject/galaxy-min
-  tag: 22.01
+  repository: quay.io/galaxyproject/galaxy-min
+  tag: 22.05
 postgresql:
+  deploy: false
   galaxyDatabasePassword: galaxydbpassword
   persistence:
     storageClass: nfs
 ingress:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-  path: "/"
+  path: "/galaxy"
   canary:
     enabled: false
   hosts:
     - host: ~
       paths:
-        - path: "/"
+        - path: "/galaxy"
 cvmfs:
-  enabled: true
-  deploy: true
+  enabled: false
+  deploy: false
   cache:
     alienCache:
       storageClass: nfs
@@ -40,7 +41,7 @@ configs:
       job_metrics_config_file: job_metrics_conf.yml
       admin_users: "afgane@gmail.com,suderman@jhu.edu"
       master_api_key: galaxypassword
-      brand: EKS
+      brand: AWS
   job_metrics_conf.yml:
     - type: core
     - type: cgroup

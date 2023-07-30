@@ -6,7 +6,10 @@ EMAIL=suderman@jhu.edu
 PASSWORD=galaxypassword
 
 #INSTANCE_TYPES="c6a c6i m5 m5a m6a m6i r4 r5 r5a"
-INSTANCE_TYPES=${@:-"c6a c6i"}
+INSTANCE_TYPES=${@:-"m6a"}
+SIZE=4xlarge
+#SIZE=8xlarge
+#SIZE=12xlarge
 
 if [[ -e ~/.kube/config ]] ; then
 	echo "Please delete the global kube config before proceeding."
@@ -15,7 +18,7 @@ fi
 
 for type in $INSTANCE_TYPES ; do
 	echo "Creating $type cluster"
-	bin/cluster create $type 8xlarge
+	bin/cluster create $type $SIZE
 	cd ./ansible
 	upper=$(echo $type | tr 'a-z' 'A-Z')
 	if [[ -e files/values.yml ]] ; then

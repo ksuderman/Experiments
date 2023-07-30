@@ -17,8 +17,8 @@ cvmfs:
   deploy: true
   enabled: true
 image:
-  repository: galaxyproject/galaxy-min
-  tag: dev
+  repository: quay.io/galaxyproject/galaxy-min
+  tag: 22.05
 ingress:
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod

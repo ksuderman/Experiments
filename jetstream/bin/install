@@ -20,6 +20,9 @@ if [[ -e $HTML ]] ; then
 	exit 1
 fi
 
+echo "Performing system update and rebooting (if needed)"
+ansible-playbook -i $INVENTORY update.yml
+
 echo "Installing RKE2"
 rm rke/outputs/*
 ansible-playbook -i $INVENTORY rke/main.yml
@@ -27,16 +30,18 @@ config=$(ls rke/outputs)
 
 echo "Copying kubeconfig file"
 mv rke/outputs/$config $HOME/.kube/configs/$1
-chmod 0600 $HOME/.kube/$1
+chmod 0600 $HOME/.kube/configs/$1
 
 if [[ -e .ktx ]] ; then
 	rm .ktx
 fi
-kshim global $1
+#kshim global $1
+ln -s ~/.kube/configs/$1 ~/.kube/config
 ansible-playbook -i $INVENTORY setup.yml
 ansible-playbook -i $INVENTORY cert-manager.yml
 cd ../
 
-bin/install-galaxy files/welcome-$1.html
-kshim clear
+bin/install-galaxy $HTML
+#kshim clear
+rm ~/.kube/config
 echo "Done"

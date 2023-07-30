@@ -4,8 +4,20 @@ minSize: 1
 maxSize: 3
 volumeSize: 525
 key: aws-cloudcost-benchmark
-availabilityZones: [ 'us-east-1a', 'us-east-1b', 'us-east-1c' ]
+#key: ks-galaxy-aws
+availabilityZones: [ 'us-east-1a', 'us-east-1b', 'us-east-1d' ]
+#availabilityZones: [ 'us-east-1a', 'us-east-1b' ]
 region: us-east-1
 #ami: ami-039996e8636e0549a
 # ami on us-east-1
-ami: ami-070e4812804b3c418
+#ami: ami-070e4812804b3c418
+# us-east-1 64bit x86
+#ami: ami-05fa00d4c63e32376
+# us-east-2 64bit x86
+#ami: ami-0ee5c62243ab25259
+# us-east-1 64bit x86 ubuntu 22.04
+ami: ami-052efd3df9dad4825
+# us-east-1 64bit x86 ubuntu 20.04
+ami: ami-08d4ac5b634553e16
+#
+id: 12345

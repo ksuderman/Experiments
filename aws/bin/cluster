@@ -23,14 +23,14 @@ $(hi USAGE)
     $NAME [create|delete]
 	
 $(hi COMMANDS)
-	$(hi create) CPU SIZE
-	    Renders the cluster.yml template and then uses that template with
-	    eksctl to launch the cluster on AWS
-	$(hi delete) CPU SIZE
-	    If a cluster.yml file exists for the given configuration then it will be
-	    used with $(hi eksctl delete cluster) to attempt to destroy the cluster.
-  $(hi render) CPU SIZE
-      Renders a cluster.yml configuration file
+    $(hi create) CPU SIZE
+        Renders the cluster.yml template and then uses that template with
+        eksctl to launch the cluster on AWS
+    $(hi delete) CPU SIZE
+        If a cluster.yml file exists for the given configuration then it will be
+        used with $(hi eksctl delete cluster) to attempt to destroy the cluster.
+    $(hi render) CPU SIZE
+        Renders a cluster.yml configuration file
 $(hi EXAMPLES)
     $(hi \$\>) $NAME create c6i 2xlarge
     $(hi \$\>) $NAME delete c6i 2xlarge
@@ -51,7 +51,7 @@ case $1 in
 		if [[ ! -e $CONFIG ]] ; then
 		  ./bin/render-cluster.sh $2 $3
 		fi
-		eksctl create cluster -f $CONFIG --profile cost-modeling 
+		eksctl create cluster -f $CONFIG --profile cost-modeling --alb-ingress-access
 		;;
 	delete|destroy)
 		if [[ ! -e $CONFIG ]] ; then

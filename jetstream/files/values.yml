@@ -1,6 +1,6 @@
 image:
   repository: galaxyproject/galaxy-min
-  tag: 21.09
+  tag: 22.01
 configs:
   galaxy.yml:
     galaxy:
@@ -28,7 +28,7 @@ initJob:
     enabled: true
 persistence:
   accessMode: ReadWriteMany
-  size: '300Gi'
+  size: '200Gi'
   storageClass: "nfs"
 postgresql:
   deploy: true
@@ -38,7 +38,7 @@ postgresql:
 ingress:
   enabled: true
   canary:
-    enabled: false
+    enabled: true
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     nginx.ingress.kubernetes.io/proxy-body-size: "10G"

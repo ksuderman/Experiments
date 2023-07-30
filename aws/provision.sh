@@ -1,28 +1,33 @@
 #!/usr/bin/env bash
 
-function invoke() {
-	if [[ -e .ktx ]] ; then
-		KUBECONFIG=$(readlink .ktx) $@
-	else
-		$@
-	fi
+# DO NOT USE THIS SCRIPT
+#
+# Use bin/eks to create/destroy clusters and then run
+# the galaxy-helm.yml Ansible playbook to install Galaxy.
+
+function cluster() {
+	bin/eks create
+}
+
+function cleanup() {
+	bin/eks delete
 }
 
 function nfs() {
-	invoke helm install nfs-provisioner stable/nfs-server-provisioner \
+	helm install nfs-provisioner nfs-ganesha/nfs-server-provisioner \
 	--set persistence.enabled=true\
 	--set persistence.storageClass="ebs" \
 	--set persistence.size="200Gi" \
 	--set storageClass.create=true \
-	--set storageClass.defaultClass=true \
+	--set storageClass.defaultClass=false \
 	--set storageClass.allowVolumeExpansion=true \
 	--set storageClass.reclaimPolicy="Delete" \
 	--namespace nfs-provisioner \
 	--create-namespace
 	
-	invoke helm upgrade --install aws-ebs-csi-driver \
-    --namespace kube-system\
-    aws-ebs-csi-driver/aws-ebs-csi-driver
+	kubectl apply -f ansible/files/ebs_storage_class.yml
+	helm upgrade --install aws-ebs-csi-driver \
+    --namespace kube-system aws-ebs-csi-driver/aws-ebs-csi-driver
 }
 
 function cvmfs() {
@@ -34,6 +39,20 @@ function cvmfs() {
   --create-namespace
 }
 
+function galaxy() {
+	helm install galaxy -n galaxy galaxy/galaxy --create-namespace --values install-values.yml
+}
+
+cat <<EOF
+
+!!!THIS SCRIPT HAS BEEN DEPRECATED!!!
+Use bin/eks to create and destroy EKS clusters on AWS and then
+run the galaxy-helm.yml Ansible playbook to install Galaxy.
+
+EOF
+
+exit 1
+
 if [[ $# = 0 ]] ; then
 	echo "USAGE: $(basename $0) [cvmfs|nfs]"
 	exit 1
@@ -41,8 +60,9 @@ fi
 
 while [[ $# > 0 ]] ; do 
 	case $1 in
-		cvmfs) cvmfs ;;
-		nfs) nfs ;;
+		cluster|cleanup|nfs|galaxy) 
+			$1
+		;;
 		*)
 			echo "Invalid option $1"
 			exit

@@ -6,9 +6,9 @@ kind: ClusterConfig
 availabilityZones: {{ availabilityZones }}
 
 metadata:
-  name: {{ cpuType }}{{ cpuSize }}
+  name: {{ cpuType }}{{ cpuSize }}-{{ id }}
   region: {{ region }}
-  version: '1.19'
+  version: '1.22'
 
 managedNodeGroups:
   - name: master

@@ -16,7 +16,8 @@
   vars:
     helm_version: 3.5.2
     nfs_storage_class: ebs
-    nginx_version: 3.34.0
+    # nginx_version: 3.34.0
+    nginx_version: 4.1.0
   tasks:
     # From storage.yml, but needs to come first
     - name: Install Python3 and pip
@@ -55,7 +56,12 @@
       helm_repository:
         name: cloudve
         repo_url: https://raw.githubusercontent.com/CloudVE/helm-charts/master/
-
+        
+    - name: Add NFS provisioner repo
+      helm_repository:
+        name: nfs-ganesha 
+        repo_url: https://raw.githubusercontent.com/kubernetes-sigs/nfs-ganesha-server-and-external-provisioner/gh-pages
+        
     # ingress.yml
     - name: Create namespace for nginx ingress
       k8s:
@@ -82,7 +88,9 @@
             hostNetwork: true
             daemonset:
               useHostPort: true
-
+          ingressClassResource:
+            default: true
+          watchIngressWithoutClass: true
     - name: Fix for issue https://github.com/kubernetes/ingress-nginx/issues/5401
       k8s:
         name: ingress-nginx-admission
@@ -99,8 +107,7 @@
 
     - name: Render the ebs storage class
       k8s:
-        template:
-          path: ebs_storage_class.yml.j2
+        src: files/ebs_storage_class.yml
         state: present
 
     - name: Create CSI driver namespace

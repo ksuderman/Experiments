@@ -12,15 +12,15 @@
     loop:
       - lock
       - lock-frontend
-  - name: apt-get update
-    apt:
-      update_cache: yes 
-      force_apt_get: yes 
-      cache_valid_time: 3600
-  - name: apt-get upgrade
-    apt:
-      upgrade: dist 
-      force_apt_get: yes
+#  - name: apt-get update
+#    apt:
+#      update_cache: yes 
+#      force_apt_get: yes 
+#      cache_valid_time: 3600
+#  - name: apt-get upgrade
+#    apt:
+#      upgrade: dist 
+#      force_apt_get: yes
   - name: install nfs-common (needed for csi mount)
     apt: pkg=nfs-common state=latest
   - name: Install Python3
