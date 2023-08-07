@@ -1,0 +1,93 @@
+galaxy:
+  image: 
+    repository: quay.io/galaxyproject/galaxy-anvil
+    tag: 22.05
+  nodeSelector:
+    cloud.google.com/gke-nodepool: worker-pool
+  ingress:
+    ingressClassName: ""
+  cvmfs:
+    cvmfscsi:
+      cache:
+        alien:
+          pvc:
+            name: cvmfs-alien-cache
+            storageClass: nfs
+  tusd:
+    ingress:
+      ingressClassName: ""
+  terra:
+    launch:
+      namespace: galaxy-anvil-edge
+      workspace: De novo transcriptome reconstruction with RNA-Seq
+  configs:
+    job_conf.yml:
+      runners:
+        k8s:
+          k8s_node_selector: "cloud.google.com/gke-nodepool: worker-pool"
+    galaxy.yml:
+      galaxy:
+        master_api_key: galaxypassword
+        single_user: suderman@jhu.edu
+        admin_users: suderman@jhu.edu
+        job_metrics_config_file: job_metrics_conf.yml
+  persistence:
+    storageClass: nfs-ks-terra-dev
+    size: "200Gi"
+  service:
+    type: LoadBalancer
+    port: 8000   
+  postgres:
+    galaxyDatabasePassword: galaxypassword
+    persistence:
+      existingClaim: ks-terra-dev-postgres-disk-pvc
+    master:
+      nodeSelector:
+        cloud.google.com/gke-nodepool: worker-pool
+  webHandlers:
+    startupDelay: 10
+  jobHandlers:
+    startupDelay: 5
+  workflowHandlers:
+    startupDelay: 0
+s3csi:
+  nodeSelector:
+    cloud.google.com/gke-nodepool: worker-pool
+nfs:
+  storageClass:
+    defaultClass: false
+    name: nfs
+  persistence:
+    existingClaim: ks-terra-dev-nfs-disk-pvc
+    size: "505Gi"
+rbac:
+  enabled: false
+  serviceAccount: default
+persistence:
+  nfs:
+    name: ks-terra-dev-nfs-disk
+    size: "505Gi"
+    persistentVolume:
+      extraSpec:
+        gcePersistentDisk:
+          pdName: ks-terra-dev-nfs-pd
+  postgres:
+    name: ks-terra-dev-postgres-disk
+    size: "10Gi"
+    persistentVolume:
+      extraSpec:
+        gcePersistentDisk:
+          pdName: ks-terra-dev-postgres-pd
+cvmfs:
+  cvmfscsi:
+    cache:
+      alien:
+        pvc:
+          name: cvmfs-alien-cache
+          storageClass: nfs
+cvmfscsi:
+  cache:
+    alien:
+      pvc:
+        name: cvmfs-alien-cache
+        storageClass: nfs

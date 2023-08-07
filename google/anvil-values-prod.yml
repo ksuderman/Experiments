@@ -1,0 +1,70 @@
+galaxy:
+  configs:
+    job_conf.yml:
+      execution:
+        environments:
+          tpv_dispatcher:
+            tpv_config_files: {https://raw.githubusercontent.com/galaxyproject/tpv-shared-database/main/tools.yml,lib/galaxy/jobs/rules/tpv_rules_local.yml,https://gist.githubusercontent.com/afgane/68d1dbbe0af2468ba347dc74b6d3f7fa/raw/20edda50161bdcb74ff38935e7f76d79bfdaf303/tvp_rules_tests.yml}
+cvmfs:
+  cvmfscsi:
+    cache:
+      alien:
+        pvc:
+          storageClass: "nfs-ks-terra-dev-1"
+galaxy:
+  configs:
+    "galaxy.yml":
+      galaxy:
+        admin_users: "tests@fake.org"
+        master_api_key: galaxypassword
+        single_user: "tests@fake.org"
+    "job_conf.yml":
+      runners:
+        k8s:
+          k8s_node_selector: "cloud.google.com/gke-nodepool: default-pool"
+  image:
+    version: 22.05
+  ingress:
+    ingressClassName: ""
+  nodeSelector:
+    "cloud.google.com/gke-nodepool": "default-pool"
+  persistence:
+    storageClass: "nfs-ks-terra-dev-1"
+  postgresql:
+    galaxyDatabasePassword: galaxypassword
+    master:
+      nodeSelector:
+        "cloud.google.com/gke-nodepool": "default-pool"
+    persistence:
+      existingClaim: "ks-terra-dev-1-postgres-disk-pvc"
+  rabbitmq:
+    nodeSelector:
+      "cloud.google.com/gke-nodepool": "default-pool"
+    persistence:
+      storageClassName: "nfs-ks-terra-dev-1"
+  service:
+    type: LoadBalancer
+  tusd:
+    ingress:
+      ingressClassName: ""
+nfs:
+  nodeSelector:
+    "cloud.google.com/gke-nodepool": "default-pool"
+  persistence:
+    existingClaim: "ks-terra-dev-1-nfs-disk-pvc"
+  storageClass:
+    name: "nfs-ks-terra-dev-1"
+persistence:
+  nfs:
+    name: "ks-terra-dev-nfs-disk"
+    persistentVolume:
+      extraSpec:
+        gcePersistentDisk:
+          pdName: "ks-terra-dev-nfs-pd"
+  postgres:
+    name: "ks-terra-dev-postgres-disk"
+    persistentVolume:
+      extraSpec:
+        gcePersistentDisk:
+          pdName: "ks-terra-dev-postgres-pd"
+

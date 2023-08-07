@@ -1,0 +1,85 @@
+configs:
+  galaxy.yml:
+    galaxy:
+      admin_users: afgane@gmail.com,suderman@jhu.edu,admin@galaxyproject.org
+#      job_metrics_config_file: job_metrics_conf.yml
+      master_api_key: galaxypassword
+      cleanup_job: onsuccess
+#   job_metrics_conf.yml:
+#   - type: core
+#   - type: cgroup
+#   - type: cpuinfo
+#   - type: meminfo
+#   - type: uname
+#   job_conf.yml:
+#     execution:
+#       environment:
+#         tpv_dispatcher:
+#           tpv_config_files:
+#             - lib/galaxy/jobs/rules/tpv_rules_local.yml
+refdata:
+  enabled: true
+  type: cvmfs
+  pvc:
+    size: 10Gi
+cvmfs:
+  enable: true
+  deploy: true
+  cvmfscsi:
+    cvmfs:
+      cache:
+        alien:
+          pvc:
+            name: cvmfs-alien-cache
+# image:
+#   repository: quay.io/galaxyproject/galaxy-min
+#   tag: 22.05
+service:
+  type: LoadBalancer
+  port: 80
+ingress:
+  enabled: false
+  ingressClassName: ""
+  canary:
+    enabled: false
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+  - host: ~
+    paths:
+    - path: /galaxy
+  path: /galaxy
+tusd:
+  ingress:
+    ingressClassName: ""
+initJob:
+  downloadToolConfs:
+    enabled: true
+# jobHandlers:
+#   startupDelay: 5
+persistence:
+  accessMode: ReadWriteMany
+  size: 100Gi
+  storageClass: nfs
+postgresql:
+#   enabled: true
+#   deploy: true
+  galaxyDatabasePassword: galaxydbpassword
+  persistence:
+    storageClass: nfs
+# webHandlers:
+#   startupDelay: 10
+# workflowHandlers:
+#   startupDelay: 0
+# resources:
+#   limits:
+#     cpu: 3
+#     memory: 16G
+#     ephemeral-storage: 64Gi
+rabbitmq:
+  timeoutGracePeriod: 90
+#  disablePreStopHook: true
+#  persistence:
+#    storageClassName: ebs
+rbac:
+  serviceAccount: gkm-cm-svc-account

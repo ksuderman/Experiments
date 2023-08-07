@@ -1,0 +1,24 @@
+postgresql:
+  deploy: false
+  galaxyDatabasePassword: galaxydbpassword
+  persistence:
+    storageClass: nfs
+cvmfs:
+  enabled: false
+  deploy: false
+persistence:
+  accessMode: ReadWriteMany
+  storageClass: nfs
+  size: 449Gi
+configs:
+  galaxy.yml:
+    galaxy:
+      job_metrics_config_file: job_metrics_conf.yml
+      admin_users: afgane@gmail.com,suderman@jhu.edu
+      master_api_key: galaxypassword
+  job_metrics_conf.yml:
+    - type: core
+    - type: cgroup
+    - type: cpuinfo
+    - type: meminfo
+    - type: uname

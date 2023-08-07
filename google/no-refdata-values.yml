@@ -1,0 +1,70 @@
+configs:
+  galaxy.yml:
+    galaxy:
+      admin_users: afgane@gmail.com,suderman@jhu.edu
+      job_metrics_config_file: job_metrics_conf.yml
+      master_api_key: galaxypassword
+  job_metrics_conf.yml:
+  - type: core
+  - type: cgroup
+  - type: cpuinfo
+  - type: meminfo
+  - type: uname
+  job_conf.yml:
+    runners:
+      k8s:
+        k8s_unschedulable_walltime_limit: 604800
+        k8s_walltime_limit: 604800
+        k8s_cleanup_job: never  
+cvmfs:
+  enabled: false
+  cache:
+    alienCache:
+      storageClass: nfs
+refdata:
+  enabled: false
+s3csi:
+  deploy: false
+image:
+  repository: galaxyproject/galaxy-min
+  tag: 22.05
+service:
+  type: LoadBalancer
+  port: 80
+ingress:
+  enabled: false
+  canary:
+    enabled: false
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+  - host: null
+    paths:
+    - path: /galaxy
+  - host: 34.67.93.233.nip.io
+    paths:
+    - path: /galaxy
+  path: /galaxy
+initJob:
+  downloadToolConfs:
+    enabled: true
+jobHandlers:
+  startupDelay: 5
+persistence:
+  accessMode: ReadWriteMany
+  size: 470Gi
+  storageClass: nfs
+postgresql:
+  deploy: false
+  galaxyDatabasePassword: galaxydbpassword
+  persistence:
+    storageClass: nfs
+webHandlers:
+  startupDelay: 10
+workflowHandlers:
+  startupDelay: 0
+resources:
+  limits:
+    cpu: 3
+    memory: 16G
+    ephemeral-storage: 64Gi

@@ -1,0 +1,247 @@
+{
+    "run": "1",
+    "cloud": "test",
+    "job_conf": "8x64",
+    "workflow_id": "1e14379f398a166d",
+    "history_id": "2527e2bcda78d625",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "ec0bd2cc3cb918cd",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-08-01T03:21:26.240788",
+        "create_time": "2023-08-01T03:14:09.550745",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/dropletutils_read_10x/dropletutils_read_10x/1.0.4+galaxy0",
+        "history_id": "2527e2bcda78d625",
+        "external_id": "gxy-galaxy-galaxy-nghf4",
+        "command_line": "ln -s '/galaxy/server/database/objects/2/3/e/dataset_23ec4976-9419-45f5-8874-70d9c838c68d.dat' matrix.mtx && ln -s '/galaxy/server/database/objects/e/7/c/dataset_e7c3daea-1972-49ea-a0ab-6f46286216ec.dat' genes.tsv && ln -s '/galaxy/server/database/objects/2/7/3/dataset_27306de1-da1e-4735-a433-9b6d279785b8.dat' barcodes.tsv && dropletutils-read-10x-counts.R -s . -c TRUE -o '/galaxy/server/database/objects/f/2/f/dataset_f2f339b6-4cca-4d47-93d4-583ccc7c22cc.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"mtx\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"7a5562d0301911ee891e1e734a8e1a8a\"",
+            "add_metadata": "{\"__current_case__\": 1, \"add_metadata_file\": false}"
+        },
+        "inputs": {
+            "matrix": {
+                "id": "f66cc24733677ed9",
+                "src": "hda",
+                "uuid": "23ec4976-9419-45f5-8874-70d9c838c68d"
+            },
+            "genes": {
+                "id": "e6fbd38aa3dd75f5",
+                "src": "hda",
+                "uuid": "e7c3daea-1972-49ea-a0ab-6f46286216ec"
+            },
+            "barcodes": {
+                "id": "02e7aad5cd37bc0a",
+                "src": "hda",
+                "uuid": "27306de1-da1e-4735-a433-9b6d279785b8"
+            }
+        },
+        "outputs": {
+            "output_rds": {
+                "id": "1b94a48e30f24d7e",
+                "src": "hda",
+                "uuid": "f2f339b6-4cca-4d47-93d4-583ccc7c22cc"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "# Object summary\nclass: SingleCellExperiment \ndim: 35734 22952 \nmetadata(0):\nassays(1): counts\nrownames(35734): ENSMUSG00000051951 ENSMUSG00000102851 ...\n  ENSMUSG00000096730 ENSMUSG00000095742\nrowData names(3): ID Symbol NA\ncolnames(22952): CCATTCCTGTCT CCATGACGCTGT ... AAAAACCTTCTA\n  AAAAAATACGGC\ncolData names(2): Sample Barcode\nreducedDimNames(0):\nspikeNames(0):\n\n# Metadata sample\nDataFrame with 6 rows and 2 columns\n                  Sample      Barcode\n             <character>  <character>\nCCATTCCTGTCT           . CCATTCCTGTCT\nCCATGACGCTGT           . CCATGACGCTGT\nTCGTAAATTGCC           . TCGTAAATTGCC\nTTTCCGACCTTC           . TTTCCGACCTTC\nGATGCATTCCTG           . GATGCATTCCTG\nTTGTTCGCTATT           . TTGTTCGCTATT\n",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "",
+        "stdout": "# Object summary\nclass: SingleCellExperiment \ndim: 35734 22952 \nmetadata(0):\nassays(1): counts\nrownames(35734): ENSMUSG00000051951 ENSMUSG00000102851 ...\n  ENSMUSG00000096730 ENSMUSG00000095742\nrowData names(3): ID Symbol NA\ncolnames(22952): CCATTCCTGTCT CCATGACGCTGT ... AAAAACCTTCTA\n  AAAAAATACGGC\ncolData names(2): Sample Barcode\nreducedDimNames(0):\nspikeNames(0):\n\n# Metadata sample\nDataFrame with 6 rows and 2 columns\n                  Sample      Barcode\n             <character>  <character>\nCCATTCCTGTCT           . CCATTCCTGTCT\nCCATGACGCTGT           . CCATGACGCTGT\nTCGTAAATTGCC           . TCGTAAATTGCC\nTTTCCGACCTTC           . TTTCCGACCTTC\nGATGCATTCCTG           . GATGCATTCCTG\nTTGTTCGCTATT           . TTGTTCGCTATT\n",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-galaxy-nghf4-skfzm 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-galaxy-nghf4-skfzm 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "122.9 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "132016184.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "32",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "32.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "530.6 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "556376064.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "48.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "51539607552.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "530.6 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "556376064.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "48.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "51539607552.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "6.960192131 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "6960192131.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "6 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "6.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-08-01 03:21:17",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1690860077.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-08-01 03:21:11",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1690860071.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "51539",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "51539.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "8",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "8.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "ec0bd2cc3cb918cd",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-08-01T03:21:26.240788",
+        "create_time": "2023-08-01T03:14:09.550745",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/dropletutils_read_10x/dropletutils_read_10x/1.0.4+galaxy0",
+        "history_id": "2527e2bcda78d625",
+        "external_id": "gxy-galaxy-galaxy-nghf4",
+        "command_line": "ln -s '/galaxy/server/database/objects/2/3/e/dataset_23ec4976-9419-45f5-8874-70d9c838c68d.dat' matrix.mtx && ln -s '/galaxy/server/database/objects/e/7/c/dataset_e7c3daea-1972-49ea-a0ab-6f46286216ec.dat' genes.tsv && ln -s '/galaxy/server/database/objects/2/7/3/dataset_27306de1-da1e-4735-a433-9b6d279785b8.dat' barcodes.tsv && dropletutils-read-10x-counts.R -s . -c TRUE -o '/galaxy/server/database/objects/f/2/f/dataset_f2f339b6-4cca-4d47-93d4-583ccc7c22cc.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"mtx\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"7a5562d0301911ee891e1e734a8e1a8a\"",
+            "add_metadata": "{\"__current_case__\": 1, \"add_metadata_file\": false}"
+        },
+        "inputs": {
+            "matrix": {
+                "id": "f66cc24733677ed9",
+                "src": "hda",
+                "uuid": "23ec4976-9419-45f5-8874-70d9c838c68d"
+            },
+            "genes": {
+                "id": "e6fbd38aa3dd75f5",
+                "src": "hda",
+                "uuid": "e7c3daea-1972-49ea-a0ab-6f46286216ec"
+            },
+            "barcodes": {
+                "id": "02e7aad5cd37bc0a",
+                "src": "hda",
+                "uuid": "27306de1-da1e-4735-a433-9b6d279785b8"
+            }
+        },
+        "outputs": {
+            "output_rds": {
+                "id": "1b94a48e30f24d7e",
+                "src": "hda",
+                "uuid": "f2f339b6-4cca-4d47-93d4-583ccc7c22cc"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.139.26.155:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

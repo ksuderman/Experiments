@@ -1,0 +1,46 @@
+galaxy:
+  image:
+    tag: "22.05"
+  service:
+    type: LoadBalancer
+  configs:
+    "galaxy.yml":
+      galaxy:
+        admin_users: admin@cloudve.org
+        master_api_key: galaxypassword
+        single_user: admin@cloudve.org
+    "job_conf.yml":
+      runners:
+        k8s:
+          k8s_node_selector: "cloud.google.com/gke-nodepool: default-pool"
+  nodeSelector:
+    "cloud.google.com/gke-nodepool": "default-pool"
+  persistence:
+    #storageClass: "standard"
+    size: "20Gi"
+  postgresql:
+    galaxyDatabasePassword: galaxypassword
+    master:
+      nodeSelector:
+        "cloud.google.com/gke-nodepool": "default-pool"
+  rabbitmq:
+    nodeSelector:
+      "cloud.google.com/gke-nodepool": "default-pool"
+  ingress:
+    annotations: {}
+    ingressClassName: ""
+    tls: []
+  tusd:
+    ingress:
+      ingressClassName: ""
+
+nfs:
+  storageClass:
+    name: "nfs"
+#persistence:
+#  nfs:
+#    storageClass: "-"
+#  postgres:
+#    storageClass: "-"
+rbac:
+  serviceAccount: gkm-cm-svc-account

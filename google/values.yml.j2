@@ -1,0 +1,68 @@
+galaxy:
+  #chart_repo: https://raw.githubusercontent.com/cloudve/helm-charts/master/
+  #version: 5.5.0
+  image:
+    #repository: quay.io/galaxyproject/galaxy-min
+    tag: "22.05"
+    #tag: 23.0
+  service:
+    type: LoadBalancer
+  configs:
+    "galaxy.yml":
+      galaxy:
+        admin_users: admin@cloudve.org
+        master_api_key: galaxypassword
+        single_user: admin@cloudve.org
+    "job_conf.yml":
+      runners:
+        k8s:
+          k8s_node_selector: "cloud.google.com/gke-nodepool: default-pool"
+  nodeSelector:
+    "cloud.google.com/gke-nodepool": "default-pool"
+  persistence:
+    storageClass: "nfs"
+    size: "20Gi"
+  postgresql:
+    galaxyDatabasePassword: galaxypassword
+    master:
+      nodeSelector:
+        "cloud.google.com/gke-nodepool": "default-pool"
+    persistence:
+      existingClaim: "{{ prefix }}-postgres-disk-pvc"
+  rabbitmq:
+    nodeSelector:
+      "cloud.google.com/gke-nodepool": "default-pool"
+  ingress:
+    annotations: {}
+    ingressClassName: ""
+    tls: []
+  tusd:
+    ingress:
+      ingressClassName: ""
+
+nfs:
+  nodeSelector:
+    "cloud.google.com/gke-nodepool": "default-pool"
+  persistence:
+    existingClaim: "{{ prefix }}-nfs-disk-pvc"
+  storageClass:
+    name: "nfs"
+
+persistence:
+  nfs:
+    name: "{{ prefix }}-nfs-disk"
+    storageClass: "-"
+    persistentVolume:
+      extraSpec:
+        gcePersistentDisk:
+          pdName: "{{ prefix }}-nfs-pd"
+  postgres:
+    name: "{{ prefix }}-postgres-disk"
+    storageClass: "-"
+    persistentVolume:
+      extraSpec:
+        gcePersistentDisk:
+          pdName: "{{ prefix }}-postgres-pd"
+
+rbac:
+  serviceAccount: gkm-cm-svc-account

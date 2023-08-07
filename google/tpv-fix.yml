@@ -1,0 +1,17 @@
+jobs:
+  rules:
+    tpv_rules_local.yml:
+      tools:
+        default:
+          scheduling:
+            reject:
+            - local
+            - offline
+      destinations:
+        local:
+          scheduling:
+            require:
+            - local
+
+           
+            

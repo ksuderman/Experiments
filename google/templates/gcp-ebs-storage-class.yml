@@ -1,0 +1,20 @@
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: ebs
+provisioner: pd.csi.storage.gke.io
+parameters:
+  type: pd-ssd
+  volumeCapabilities:
+    mount:
+      readOnly: false
+      mountOptions:
+        - debug
+      fsType: ext4
+    accessModes:
+      - ReadWriteOnce
+
+reclaimPolicy: Delete
+allowVolumeExpansion: true
+volumeBindingMode: WaitForFirstConsumer
+

@@ -1,0 +1,231 @@
+{
+    "run": 0,
+    "cloud": "N/A",
+    "job_conf": "Unknown",
+    "workflow_id": "865acafbd6d36cfd",
+    "history_id": "cbf7bd8641bca600",
+    "inputs": "human-1x-f human-1x-r",
+    "metrics": {
+        "model_class": "Job",
+        "id": "4d753b97da3567cc",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2022-10-09T00:48:39.738482",
+        "create_time": "2022-10-09T00:37:04.874272",
+        "galaxy_version": "22.05",
+        "command_version": "2.17-r941",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+galaxy4",
+        "history_id": "cbf7bd8641bca600",
+        "external_id": "gxy-galaxy-wwlcb",
+        "command_line": "ln -f -s '/cvmfs/data.galaxyproject.org/byhand/hg38/seq/hg38.fa' reference.fa && minimap2 -x sr           -t ${GALAXY_SLOTS:-4} reference.fa '/galaxy/server/database/objects/7/9/1/dataset_7913486f-da25-44dd-bb02-087e22791f58.dat' '/galaxy/server/database/objects/5/1/f/dataset_51fd16b0-b22e-405e-9a44-30be0debeba5.dat' -a | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O BAM -o '/galaxy/server/database/objects/8/c/b/dataset_8cb0762c-a22a-4a0c-9fb7-25b10f766c62.dat'",
+        "traceback": null,
+        "params": {
+            "alignment_options": "{\"A\": null, \"B\": null, \"E\": null, \"E2\": null, \"O\": null, \"O2\": null, \"no_end_flt\": \"true\", \"s\": null, \"splicing\": {\"__current_case__\": 0, \"splice_mode\": \"preset\"}, \"z\": null, \"z2\": null}",
+            "fastq_input": "{\"__current_case__\": 1, \"analysis_type_selector\": \"sr\", \"fastq_input1\": {\"values\": [{\"id\": 2, \"src\": \"hda\"}]}, \"fastq_input2\": {\"values\": [{\"id\": 1, \"src\": \"hda\"}]}, \"fastq_input_selector\": \"paired\"}",
+            "indexing_options": "{\"H\": \"false\", \"I\": null, \"k\": null, \"w\": null}",
+            "io_options": "{\"K\": null, \"L\": \"false\", \"Q\": \"false\", \"Y\": \"false\", \"c\": \"false\", \"cs\": null, \"eqx\": \"false\", \"output_format\": \"BAM\"}",
+            "mapping_options": "{\"F\": null, \"N\": null, \"X\": \"false\", \"f\": null, \"g\": null, \"m\": null, \"max_chain_iter\": null, \"max_chain_skip\": null, \"min_occ_floor\": null, \"n\": null, \"p\": null, \"r\": null}",
+            "reference_source": "{\"__current_case__\": 0, \"ref_file\": \"hg38\", \"reference_source_selector\": \"cached\"}",
+            "__workflow_invocation_uuid__": "\"7f148a0a476a11ed85f1c22725b15430\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "fastq_input2": {
+                "id": "7407fc0cea66dd09",
+                "src": "hda",
+                "uuid": "51fd16b0-b22e-405e-9a44-30be0debeba5"
+            },
+            "fastq_input1": {
+                "id": "865acafbd6d36cfd",
+                "src": "hda",
+                "uuid": "7913486f-da25-44dd-bb02-087e22791f58"
+            }
+        },
+        "outputs": {
+            "alignment_output": {
+                "id": "4d753b97da3567cc",
+                "src": "hda",
+                "uuid": "8cb0762c-a22a-4a0c-9fb7-25b10f766c62"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "[M::mm_idx_gen::113.726*0.60] collected minimizers\n[M::mm_idx_gen::116.667*0.97] sorted minimizers\n[M::main::116.667*0.97] loaded/built the index for 455 target sequence(s)\n[M::mm_mapopt_update::116.667*0.97] mid_occ = 1000\n[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 455\n[M::mm_idx_stat::118.899*0.97] distinct minimizers: 381630162 (93.71% are singletons); average occurrences: 1.335; average spacing: 6.297\n[M::worker_pipeline::125.265*1.66] mapped 333334 sequences\n[M::worker_pipeline::130.045*2.18] mapped 333334 sequences\n[M::worker_pipeline::134.890*2.66] mapped 333334 sequences\n[M::worker_pipeline::139.473*3.09] mapped 333334 sequences\n[M::worker_pipeline::143.859*3.48] mapped 333334 sequences\n[M::worker_pipeline::148.422*3.86] mapped 333334 sequences\n[M::worker_pipeline::152.851*4.20] mapped 333334 sequences\n[M::worker_pipeline::157.427*4.53] mapped 333334 sequences\n[M::worker_pipeline::162.016*4.85] mapped 333334 sequences\n[M::worker_pipeline::166.091*5.12] mapped 333334 sequences\n[M::worker_pipeline::170.169*5.37] mapped 333334 sequences\n[M::worker_pipeline::174.447*5.63] mapped 333334 sequences\n[M::worker_pipeline::178.971*5.89] mapped 333334 sequences\n[M::worker_pipeline::183.372*6.12] mapped 333334 sequences\n[M::worker_pipeline::187.747*6.34] mapped 333334 sequences\n[M::worker_pipeline::192.194*6.56] mapped 333334 sequences\n[M::worker_pipeline::196.929*6.78] mapped 333334 sequences\n[M::worker_pipeline::201.362*6.98] mapped 333334 sequences\n[M::worker_pipeline::205.677*7.17] mapped 333334 sequences\n[M::worker_pipeline::210.446*7.36] mapped 333334 sequences\n[M::worker_pipeline::214.905*7.53] mapped 333334 sequences\n[M::worker_pipeline::219.192*7.70] mapped 333334 sequences\n[M::worker_pipeline::223.644*7.85] mapped 333334 sequences\n[M::worker_pipeline::228.009*8.00] mapped 333334 sequences\n[M::worker_pipeline::232.559*8.15] mapped 333334 sequences\n[M::worker_pipeline::237.098*8.30] mapped 333334 sequences\n[M::worker_pipeline::241.376*8.43] mapped 333334 sequences\n[M::worker_pipeline::245.712*8.56] mapped 333334 sequences\n[M::worker_pipeline::250.105*8.69] mapped 333334 sequences\n[M::worker_pipeline::254.425*8.81] mapped 333334 sequences\n[M::worker_pipeline::258.911*8.93] mapped 333334 sequences\n[M::worker_pipeline::263.262*9.04] mapped 333334 sequences\n[M::worker_pipeline::267.462*9.15] mapped 333334 sequences\n[M::worker_pipeline::271.812*9.25] mapped 333334 sequences\n[M::worker_pipeline::275.935*9.35] mapped 333334 sequences\n[M::worker_pipeline::280.008*9.44] mapped 333334 sequences\n[M::worker_pipeline::284.162*9.53] mapped 333334 sequences\n[M::worker_pipeline::288.366*9.62] mapped 333334 sequences\n[M::worker_pipeline::289.861*9.64] mapped 148214 sequences\n[M::main] Version: 2.17-r941\n[M::main] CMD: minimap2 -x sr -t 16 -a reference.fa /galaxy/server/database/objects/7/9/1/dataset_7913486f-da25-44dd-bb02-087e22791f58.dat /galaxy/server/database/objects/5/1/f/dataset_51fd16b0-b22e-405e-9a44-30be0debeba5.dat\n[M::main] Real time: 290.195 sec; CPU: 2794.260 sec; Peak RSS: 19.902 GB\n[bam_sort_core] merging from 0 files and 16 in-memory blocks...\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "[M::mm_idx_gen::113.726*0.60] collected minimizers\n[M::mm_idx_gen::116.667*0.97] sorted minimizers\n[M::main::116.667*0.97] loaded/built the index for 455 target sequence(s)\n[M::mm_mapopt_update::116.667*0.97] mid_occ = 1000\n[M::mm_idx_stat] kmer size: 21; skip: 11; is_hpc: 0; #seq: 455\n[M::mm_idx_stat::118.899*0.97] distinct minimizers: 381630162 (93.71% are singletons); average occurrences: 1.335; average spacing: 6.297\n[M::worker_pipeline::125.265*1.66] mapped 333334 sequences\n[M::worker_pipeline::130.045*2.18] mapped 333334 sequences\n[M::worker_pipeline::134.890*2.66] mapped 333334 sequences\n[M::worker_pipeline::139.473*3.09] mapped 333334 sequences\n[M::worker_pipeline::143.859*3.48] mapped 333334 sequences\n[M::worker_pipeline::148.422*3.86] mapped 333334 sequences\n[M::worker_pipeline::152.851*4.20] mapped 333334 sequences\n[M::worker_pipeline::157.427*4.53] mapped 333334 sequences\n[M::worker_pipeline::162.016*4.85] mapped 333334 sequences\n[M::worker_pipeline::166.091*5.12] mapped 333334 sequences\n[M::worker_pipeline::170.169*5.37] mapped 333334 sequences\n[M::worker_pipeline::174.447*5.63] mapped 333334 sequences\n[M::worker_pipeline::178.971*5.89] mapped 333334 sequences\n[M::worker_pipeline::183.372*6.12] mapped 333334 sequences\n[M::worker_pipeline::187.747*6.34] mapped 333334 sequences\n[M::worker_pipeline::192.194*6.56] mapped 333334 sequences\n[M::worker_pipeline::196.929*6.78] mapped 333334 sequences\n[M::worker_pipeline::201.362*6.98] mapped 333334 sequences\n[M::worker_pipeline::205.677*7.17] mapped 333334 sequences\n[M::worker_pipeline::210.446*7.36] mapped 333334 sequences\n[M::worker_pipeline::214.905*7.53] mapped 333334 sequences\n[M::worker_pipeline::219.192*7.70] mapped 333334 sequences\n[M::worker_pipeline::223.644*7.85] mapped 333334 sequences\n[M::worker_pipeline::228.009*8.00] mapped 333334 sequences\n[M::worker_pipeline::232.559*8.15] mapped 333334 sequences\n[M::worker_pipeline::237.098*8.30] mapped 333334 sequences\n[M::worker_pipeline::241.376*8.43] mapped 333334 sequences\n[M::worker_pipeline::245.712*8.56] mapped 333334 sequences\n[M::worker_pipeline::250.105*8.69] mapped 333334 sequences\n[M::worker_pipeline::254.425*8.81] mapped 333334 sequences\n[M::worker_pipeline::258.911*8.93] mapped 333334 sequences\n[M::worker_pipeline::263.262*9.04] mapped 333334 sequences\n[M::worker_pipeline::267.462*9.15] mapped 333334 sequences\n[M::worker_pipeline::271.812*9.25] mapped 333334 sequences\n[M::worker_pipeline::275.935*9.35] mapped 333334 sequences\n[M::worker_pipeline::280.008*9.44] mapped 333334 sequences\n[M::worker_pipeline::284.162*9.53] mapped 333334 sequences\n[M::worker_pipeline::288.366*9.62] mapped 333334 sequences\n[M::worker_pipeline::289.861*9.64] mapped 148214 sequences\n[M::main] Version: 2.17-r941\n[M::main] CMD: minimap2 -x sr -t 16 -a reference.fa /galaxy/server/database/objects/7/9/1/dataset_7913486f-da25-44dd-bb02-087e22791f58.dat /galaxy/server/database/objects/5/1/f/dataset_51fd16b0-b22e-405e-9a44-30be0debeba5.dat\n[M::main] Real time: 290.195 sec; CPU: 2794.260 sec; Peak RSS: 19.902 GB\n[bam_sort_core] merging from 0 files and 16 in-memory blocks...\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-wwlcb-wc7mm 5.4.0-1045-aws #47-Ubuntu SMP Tue Apr 13 07:02:25 UTC 2021 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-wwlcb-wc7mm 5.4.0-1045-aws #47-Ubuntu SMP Tue Apr 13 07:02:25 UTC 2021 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "16",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "16.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "68719",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "68719.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2022-10-09 00:43:12",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1665276192.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2022-10-09 00:48:13",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1665276493.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "5 minutes",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "301.0000000"
+            },
+            {
+                "title": "CPU Time",
+                "value": "49 minutes",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "2942946429511.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "64.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "68719476736.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "27.7 GB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "29760393216.0000000"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "48",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "48.0000000"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "180.4 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "193736796.0000000"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "4d753b97da3567cc",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2022-10-09T00:48:39.738482",
+        "create_time": "2022-10-09T00:37:04.874272",
+        "galaxy_version": "22.05",
+        "command_version": "2.17-r941",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/minimap2/minimap2/2.17+galaxy4",
+        "history_id": "cbf7bd8641bca600",
+        "external_id": "gxy-galaxy-wwlcb",
+        "command_line": "ln -f -s '/cvmfs/data.galaxyproject.org/byhand/hg38/seq/hg38.fa' reference.fa && minimap2 -x sr           -t ${GALAXY_SLOTS:-4} reference.fa '/galaxy/server/database/objects/7/9/1/dataset_7913486f-da25-44dd-bb02-087e22791f58.dat' '/galaxy/server/database/objects/5/1/f/dataset_51fd16b0-b22e-405e-9a44-30be0debeba5.dat' -a | samtools sort -@${GALAXY_SLOTS:-2} -T \"${TMPDIR:-.}\" -O BAM -o '/galaxy/server/database/objects/8/c/b/dataset_8cb0762c-a22a-4a0c-9fb7-25b10f766c62.dat'",
+        "traceback": null,
+        "params": {
+            "alignment_options": "{\"A\": null, \"B\": null, \"E\": null, \"E2\": null, \"O\": null, \"O2\": null, \"no_end_flt\": \"true\", \"s\": null, \"splicing\": {\"__current_case__\": 0, \"splice_mode\": \"preset\"}, \"z\": null, \"z2\": null}",
+            "fastq_input": "{\"__current_case__\": 1, \"analysis_type_selector\": \"sr\", \"fastq_input1\": {\"values\": [{\"id\": 2, \"src\": \"hda\"}]}, \"fastq_input2\": {\"values\": [{\"id\": 1, \"src\": \"hda\"}]}, \"fastq_input_selector\": \"paired\"}",
+            "indexing_options": "{\"H\": \"false\", \"I\": null, \"k\": null, \"w\": null}",
+            "io_options": "{\"K\": null, \"L\": \"false\", \"Q\": \"false\", \"Y\": \"false\", \"c\": \"false\", \"cs\": null, \"eqx\": \"false\", \"output_format\": \"BAM\"}",
+            "mapping_options": "{\"F\": null, \"N\": null, \"X\": \"false\", \"f\": null, \"g\": null, \"m\": null, \"max_chain_iter\": null, \"max_chain_skip\": null, \"min_occ_floor\": null, \"n\": null, \"p\": null, \"r\": null}",
+            "reference_source": "{\"__current_case__\": 0, \"ref_file\": \"hg38\", \"reference_source_selector\": \"cached\"}",
+            "__workflow_invocation_uuid__": "\"7f148a0a476a11ed85f1c22725b15430\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "fastq_input2": {
+                "id": "7407fc0cea66dd09",
+                "src": "hda",
+                "uuid": "51fd16b0-b22e-405e-9a44-30be0debeba5"
+            },
+            "fastq_input1": {
+                "id": "865acafbd6d36cfd",
+                "src": "hda",
+                "uuid": "7913486f-da25-44dd-bb02-087e22791f58"
+            }
+        },
+        "outputs": {
+            "alignment_output": {
+                "id": "4d753b97da3567cc",
+                "src": "hda",
+                "uuid": "8cb0762c-a22a-4a0c-9fb7-25b10f766c62"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://18.208.57.3/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        558003467,
+        591264254
+    ]
+}

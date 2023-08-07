@@ -1,0 +1,65 @@
+image:
+  #repository: galaxyproject/galaxy-min
+  tag: 22.05
+configs:
+  galaxy.yml:
+    galaxy:
+      admin_users: afgane@gmail.com,suderman@jhu.edu,admin@galaxyproject.org
+      job_metrics_config_file: job_metrics_conf.yml
+      master_api_key: galaxypassword
+      cleanup_job: onsuccess
+  job_metrics_conf.yml:
+    - type: core
+    - type: cgroup
+    - type: cpuinfo
+    - type: meminfo
+    - type: uname
+  job_conf.yml:
+    execution:
+      environment:
+        tpv_dispatcher:
+          tpv_config_files:
+            - lib/galaxy/jobs/rules/tpv_rules_local.yml
+cvmfs:
+  enable: false
+  deploy: false
+service:
+  type: LoadBalancer
+  port: 8000
+ingress:
+  enabled: false
+  canary:
+    enabled: false
+  annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+  hosts:
+  - host: ~
+    paths:
+    - path: /galaxy
+  path: /galaxy
+initJob:
+  downloadToolConfs:
+    enabled: true
+jobHandlers:
+  startupDelay: 5
+persistence:
+  accessMode: ReadWriteMany
+  size: 400Gi
+  storageClass: nfs
+postgresql:
+  deploy: false
+  galaxyDatabasePassword: galaxydbpassword
+  persistence:
+    storageClass: nfs
+webHandlers:
+  startupDelay: 10
+workflowHandlers:
+  startupDelay: 0
+resources:
+  limits:
+    cpu: 3
+    memory: 16G
+    ephemeral-storage: 64Gi
+#rabbitmq:
+#  persistence:
+#    storageClassName: ebs

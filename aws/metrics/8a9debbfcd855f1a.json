@@ -1,0 +1,118 @@
+{
+    "run": 0,
+    "cloud": "N/A",
+    "job_conf": "Unknown",
+    "workflow_id": "865acafbd6d36cfd",
+    "history_id": "cbf7bd8641bca600",
+    "inputs": "human-1x-f human-1x-r",
+    "metrics": {
+        "model_class": "Job",
+        "id": "8a9debbfcd855f1a",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2022-10-09T00:37:06.740664",
+        "create_time": "2022-10-09T00:37:04.617872",
+        "galaxy_version": "22.05",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.4.2+galaxy0",
+        "history_id": "cbf7bd8641bca600",
+        "external_id": null,
+        "command_line": null,
+        "traceback": "Traceback (most recent call last):\n  File \"/galaxy/server/lib/galaxy/jobs/runners/__init__.py\", line 260, in prepare_job\n    job_wrapper.prepare()\n  File \"/galaxy/server/lib/galaxy/jobs/__init__.py\", line 1232, in prepare\n    tool_evaluator.set_compute_environment(compute_environment, get_special=get_special)\n  File \"/galaxy/server/lib/galaxy/tools/evaluation.py\", line 132, in set_compute_environment\n    self._validate_incoming(incoming)\n  File \"/galaxy/server/lib/galaxy/tools/evaluation.py\", line 265, in _validate_incoming\n    visit_input_values(self.tool.inputs, incoming, validate_inputs)\n  File \"/galaxy/server/lib/galaxy/tools/parameters/__init__.py\", line 202, in visit_input_values\n    visit_input_values(\n  File \"/galaxy/server/lib/galaxy/tools/parameters/__init__.py\", line 218, in visit_input_values\n    callback_helper(\n  File \"/galaxy/server/lib/galaxy/tools/parameters/__init__.py\", line 153, in callback_helper\n    new_value = callback(**args)\n  File \"/galaxy/server/lib/galaxy/tools/evaluation.py\", line 262, in validate_inputs\n    value = input.from_json(value, request_context, context)\n  File \"/galaxy/server/lib/galaxy/tools/parameters/basic.py\", line 1021, in from_json\n    raise ParameterValueError(\ngalaxy.tools.parameters.basic.ParameterValueError: parameter 'index': an invalid option ('hg38') was selected (valid options: nomLeu3,galGal3canon,eschColi_K12,vicPac1,allMis1,equCab2,bosTau8,oryza_sativa_japonica_nipponbare_IRGSP4.0,loxAfr3,galGal3full,melUnd1,galgal4,galGal4,apiMel4,Amel_4.5,panPan1,musFur1,rheMac3,sacCer2,danRer10,rheMac2,dasNov3,gadMor1,melGal1,vicPac2,felCat8,aptMan1,papAnu2,sacCer3,loxAfr1,rn6,cerSim1,dm6,Schizosaccharomyces_pombe_1.1,equCab1)\n",
+        "params": {
+            "analysis_type": "{\"__current_case__\": 0, \"analysis_type_selector\": \"simple\", \"presets\": \"no_presets\"}",
+            "library": "{\"__current_case__\": 1, \"aligned_file\": \"false\", \"input_1\": {\"values\": [{\"id\": 2, \"src\": \"hda\"}]}, \"input_2\": {\"values\": [{\"id\": 1, \"src\": \"hda\"}]}, \"paired_options\": {\"__current_case__\": 1, \"paired_options_selector\": \"no\"}, \"type\": \"paired\", \"unaligned_file\": \"false\"}",
+            "reference_genome": "{\"__current_case__\": 0, \"index\": \"hg38\", \"source\": \"indexed\"}",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "sam_options": "{\"__current_case__\": 1, \"sam_options_selector\": \"no\"}",
+            "save_mapping_stats": "\"false\"",
+            "__workflow_invocation_uuid__": "\"7f148a0a476a11ed85f1c22725b15430\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "input_2": {
+                "id": "7407fc0cea66dd09",
+                "src": "hda",
+                "uuid": "51fd16b0-b22e-405e-9a44-30be0debeba5"
+            },
+            "input_1": {
+                "id": "865acafbd6d36cfd",
+                "src": "hda",
+                "uuid": "7913486f-da25-44dd-bb02-087e22791f58"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "8a9debbfcd855f1a",
+                "src": "hda",
+                "uuid": "e35bf272-ea58-47bc-bede-42eb6be809b9"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "suderman@jhu.edu",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "8a9debbfcd855f1a",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2022-10-09T00:37:06.740664",
+        "create_time": "2022-10-09T00:37:04.617872",
+        "galaxy_version": "22.05",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.4.2+galaxy0",
+        "history_id": "cbf7bd8641bca600",
+        "external_id": null,
+        "command_line": null,
+        "traceback": "Traceback (most recent call last):\n  File \"/galaxy/server/lib/galaxy/jobs/runners/__init__.py\", line 260, in prepare_job\n    job_wrapper.prepare()\n  File \"/galaxy/server/lib/galaxy/jobs/__init__.py\", line 1232, in prepare\n    tool_evaluator.set_compute_environment(compute_environment, get_special=get_special)\n  File \"/galaxy/server/lib/galaxy/tools/evaluation.py\", line 132, in set_compute_environment\n    self._validate_incoming(incoming)\n  File \"/galaxy/server/lib/galaxy/tools/evaluation.py\", line 265, in _validate_incoming\n    visit_input_values(self.tool.inputs, incoming, validate_inputs)\n  File \"/galaxy/server/lib/galaxy/tools/parameters/__init__.py\", line 202, in visit_input_values\n    visit_input_values(\n  File \"/galaxy/server/lib/galaxy/tools/parameters/__init__.py\", line 218, in visit_input_values\n    callback_helper(\n  File \"/galaxy/server/lib/galaxy/tools/parameters/__init__.py\", line 153, in callback_helper\n    new_value = callback(**args)\n  File \"/galaxy/server/lib/galaxy/tools/evaluation.py\", line 262, in validate_inputs\n    value = input.from_json(value, request_context, context)\n  File \"/galaxy/server/lib/galaxy/tools/parameters/basic.py\", line 1021, in from_json\n    raise ParameterValueError(\ngalaxy.tools.parameters.basic.ParameterValueError: parameter 'index': an invalid option ('hg38') was selected (valid options: nomLeu3,galGal3canon,eschColi_K12,vicPac1,allMis1,equCab2,bosTau8,oryza_sativa_japonica_nipponbare_IRGSP4.0,loxAfr3,galGal3full,melUnd1,galgal4,galGal4,apiMel4,Amel_4.5,panPan1,musFur1,rheMac3,sacCer2,danRer10,rheMac2,dasNov3,gadMor1,melGal1,vicPac2,felCat8,aptMan1,papAnu2,sacCer3,loxAfr1,rn6,cerSim1,dm6,Schizosaccharomyces_pombe_1.1,equCab1)\n",
+        "params": {
+            "analysis_type": "{\"__current_case__\": 0, \"analysis_type_selector\": \"simple\", \"presets\": \"no_presets\"}",
+            "library": "{\"__current_case__\": 1, \"aligned_file\": \"false\", \"input_1\": {\"values\": [{\"id\": 2, \"src\": \"hda\"}]}, \"input_2\": {\"values\": [{\"id\": 1, \"src\": \"hda\"}]}, \"paired_options\": {\"__current_case__\": 1, \"paired_options_selector\": \"no\"}, \"type\": \"paired\", \"unaligned_file\": \"false\"}",
+            "reference_genome": "{\"__current_case__\": 0, \"index\": \"hg38\", \"source\": \"indexed\"}",
+            "rg": "{\"__current_case__\": 3, \"rg_selector\": \"do_not_set\"}",
+            "sam_options": "{\"__current_case__\": 1, \"sam_options_selector\": \"no\"}",
+            "save_mapping_stats": "\"false\"",
+            "__workflow_invocation_uuid__": "\"7f148a0a476a11ed85f1c22725b15430\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "dbkey": "\"?\"",
+            "__input_ext": "\"input\""
+        },
+        "inputs": {
+            "input_2": {
+                "id": "7407fc0cea66dd09",
+                "src": "hda",
+                "uuid": "51fd16b0-b22e-405e-9a44-30be0debeba5"
+            },
+            "input_1": {
+                "id": "865acafbd6d36cfd",
+                "src": "hda",
+                "uuid": "7913486f-da25-44dd-bb02-087e22791f58"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "8a9debbfcd855f1a",
+                "src": "hda",
+                "uuid": "e35bf272-ea58-47bc-bede-42eb6be809b9"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://18.208.57.3/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        558003467,
+        591264254
+    ]
+}

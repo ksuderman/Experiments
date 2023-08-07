@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "test-setup-galaxy"
+  namespace: galaxy
+spec:
+  containers:
+  - name: kubectl-galaxy-setup
+    image: "galaxy/cloudman-server:latest"
+    volumeMounts:
+      - name: galaxy-conf-files
+        mountPath: /scripts
+  volumes:
+    - name: galaxy-conf-files
+      configMap:
+        name: "galaxy-galaxykubeman-setup-galaxy"

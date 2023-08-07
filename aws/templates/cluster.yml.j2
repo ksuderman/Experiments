@@ -1,0 +1,41 @@
+# Install eksctl and use with:
+# eksctl create cluster -f cluster.yaml --profile cost-modeling
+#
+# This is the same as the cluster2.yml.j2 file without a custom ami and the 
+# overrideBootstrapCommand block.
+
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+availabilityZones: {{ availabilityZones }}
+
+metadata:
+  name: {{ cpuType }}{{ cpuSize }}-{{ id }}
+  region: {{ region }}
+  version: '1.23'
+
+managedNodeGroups:
+  - name: master
+    instanceType: {{ cpuType }}.xlarge
+    minSize: 1
+    maxSize: 1
+    volumeSize: 99
+    ssh:
+      allow: true
+      publicKeyName: {{ key }}
+    labels: {role: master}
+    iam:
+      withAddonPolicies:
+        externalDNS: true
+        certManager: true
+        ebs: true
+
+  - name: workers
+    instanceType: {{ cpuType }}.{{ cpuSize }}
+    minSize: {{ minSize }}
+    maxSize: {{ maxSize }}
+    desiredCapacity: {{ minSize }}
+    volumeSize: {{ volumeSize }}
+    iam:
+      withAddonPolicies:
+        ebs: true
+    labels: {role: worker}
