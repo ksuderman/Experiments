@@ -1,0 +1,68 @@
+{
+    "run": "3",
+    "cloud": "variant",
+    "job_conf": "8x32",
+    "workflow_id": "08fafdebaf2f7600",
+    "history_id": "755da3256de78868",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "628a32559c5d995a",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-14T19:11:47.940153",
+        "create_time": "2023-08-14T19:10:41.259324",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_viterbi/lofreq_viterbi/2.1.5+galaxy0",
+        "history_id": "755da3256de78868",
+        "external_id": "gxy-galaxy-qkd9d",
+        "command_line": "ln -s '/galaxy/server/database/objects/1/0/1/dataset_10162a8c-5012-42ea-858b-2297efedabcb.dat' reference.fa && lofreq faidx reference.fa 2>&1 || echo \"Error running samtools faidx for indexing fasta reference for lofreq\" >&2 &&  lofreq viterbi --ref 'reference.fa'  --defqual 2 --out tmp.bam '/galaxy/server/database/objects/4/c/c/dataset_4ccfb15e-5a62-4a6d-b334-b1bfd188f4dc.dat' &&  samtools sort --no-PG -T \"${TMPDIR:-.}\" -@ ${GALAXY_SLOTS:-1} -O BAM -o '/galaxy/server/database/objects/7/e/c/dataset_7ec7168c-e292-441d-94e5-f39d1cb78939.dat' tmp.bam",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"41eff4a63ad611eeb560a6c18bd25c9a\"",
+            "reference_source": "{\"__current_case__\": 1, \"ref\": {\"values\": [{\"id\": 745, \"src\": \"hda\"}]}, \"ref_selector\": \"history\"}",
+            "adv_options": "{\"bq2_handling\": {\"__current_case__\": 0, \"defqual\": \"2\", \"replace_bq2\": \"keep\"}, \"keepflags\": false}"
+        },
+        "inputs": {
+            "ref": {
+                "id": "9df01027dbd123d4",
+                "src": "hda",
+                "uuid": "10162a8c-5012-42ea-858b-2297efedabcb"
+            },
+            "reads": {
+                "id": "433280a0c453f747",
+                "src": "hda",
+                "uuid": "4ccfb15e-5a62-4a6d-b334-b1bfd188f4dc"
+            }
+        },
+        "outputs": {
+            "realigned": {
+                "id": "178322cc81b0cb46",
+                "src": "hda",
+                "uuid": "7ec7168c-e292-441d-94e5-f39d1cb78939"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://34.75.187.243:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        288572,
+        390616
+    ]
+}

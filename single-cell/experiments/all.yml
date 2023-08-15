@@ -1,14 +1,14 @@
 # VC Experiemnts
 name: Single-Cell-All
 # The number of times each benchmark will be executed.
-runs: 1
+runs: 3
 # The benchmarks that will be run as part of the experiment. Each benchmark
 # configuration defines the Galaxy workflow and input datasets to be used.
 benchmark_confs:
   - benchmarks/single-cell.yml
 # The cloud instances, as defined in the $HOME/.abm/profile.yml file.
 cloud:
-  - test
+  - sc
 # The Galaxy container_mapper_rules.yml files that defined the CPU and memory
 # resources allocated to tools. List the file names without the .yml extension.
 # These files are expected to be found in the rules directory.
@@ -29,4 +29,5 @@ job_configs:
 # TODO Discuss if this belongs here...
 galaxy:
   namespace: galaxy
-  chart: anvil/galaxykubeman
+  #chart: anvil/galaxykubeman
+  chart: /Users/suderman/Workspaces/JHU/galaxykubeman-helm/galaxykubeman

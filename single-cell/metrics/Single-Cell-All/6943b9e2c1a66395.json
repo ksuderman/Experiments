@@ -1,0 +1,243 @@
+{
+    "run": "3",
+    "cloud": "sc",
+    "job_conf": "4x32",
+    "workflow_id": "560cdcfd9d597b92",
+    "history_id": "bb82f0ba4d3d8f7d",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "6943b9e2c1a66395",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-08-13T01:25:22.997402",
+        "create_time": "2023-08-13T01:19:03.032141",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/droplet_barcode_plot/_dropletBarcodePlot/1.6.1+galaxy2",
+        "history_id": "bb82f0ba4d3d8f7d",
+        "external_id": "gxy-galaxy-6c8f9",
+        "command_line": "dropletBarcodePlot.R --output-plot \"/galaxy/server/database/objects/b/a/7/dataset_ba74700e-bb4a-4373-ae12-d3cb308cf749.dat\" --output-thresholds \"/galaxy/server/database/objects/5/3/b/dataset_53b1c83e-8680-4635-96fc-be679fa56dc5.dat\" --label \"Barcode rank plot (Alevin-processed)\" --density-bins \"50\" --roryk-multiplier \"1.5\" --mtx-matrix /galaxy/server/database/objects/4/b/0/dataset_4b0da8d8-485c-4e4a-a04b-f866ccb3bf7e.dat --cells-by-row",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"6327375c397711ee93307a42ee2ea84a\"",
+            "roryk_multiplier": "\"1.5\"",
+            "label": "\"Barcode rank plot (Alevin-processed)\"",
+            "input": "{\"__current_case__\": 0, \"cellsbyrow\": true, \"mtx_matrix\": {\"values\": [{\"id\": 301, \"src\": \"hda\"}]}, \"type\": true}",
+            "density_bins": "\"50\""
+        },
+        "inputs": {
+            "mtx_matrix": {
+                "id": "280de037e5490b25",
+                "src": "hda",
+                "uuid": "4b0da8d8-485c-4e4a-a04b-f866ccb3bf7e"
+            }
+        },
+        "outputs": {
+            "thresholds_file": {
+                "id": "8462fb993158d208",
+                "src": "hda",
+                "uuid": "53b1c83e-8680-4635-96fc-be679fa56dc5"
+            },
+            "plot_file": {
+                "id": "10cccef04ddf63f1",
+                "src": "hda",
+                "uuid": "ba74700e-bb4a-4373-ae12-d3cb308cf749"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "null device \n          1 \n",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "",
+        "stdout": "null device \n          1 \n",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-6c8f9-glc2d 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-6c8f9-glc2d 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "184.5 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "198070092.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "48",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "48.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "610.1 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "639787008.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "32.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "34359738368.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "610.1 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "639787008.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "32.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "34359738368.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "8.292784827 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "8292784827.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "7 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "7.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-08-13 01:25:13",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1691889913.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-08-13 01:25:06",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1691889906.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "34359",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "34359.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "4",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "4.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "6943b9e2c1a66395",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-08-13T01:25:22.997402",
+        "create_time": "2023-08-13T01:19:03.032141",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/droplet_barcode_plot/_dropletBarcodePlot/1.6.1+galaxy2",
+        "history_id": "bb82f0ba4d3d8f7d",
+        "external_id": "gxy-galaxy-6c8f9",
+        "command_line": "dropletBarcodePlot.R --output-plot \"/galaxy/server/database/objects/b/a/7/dataset_ba74700e-bb4a-4373-ae12-d3cb308cf749.dat\" --output-thresholds \"/galaxy/server/database/objects/5/3/b/dataset_53b1c83e-8680-4635-96fc-be679fa56dc5.dat\" --label \"Barcode rank plot (Alevin-processed)\" --density-bins \"50\" --roryk-multiplier \"1.5\" --mtx-matrix /galaxy/server/database/objects/4/b/0/dataset_4b0da8d8-485c-4e4a-a04b-f866ccb3bf7e.dat --cells-by-row",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"6327375c397711ee93307a42ee2ea84a\"",
+            "roryk_multiplier": "\"1.5\"",
+            "label": "\"Barcode rank plot (Alevin-processed)\"",
+            "input": "{\"__current_case__\": 0, \"cellsbyrow\": true, \"mtx_matrix\": {\"values\": [{\"id\": 301, \"src\": \"hda\"}]}, \"type\": true}",
+            "density_bins": "\"50\""
+        },
+        "inputs": {
+            "mtx_matrix": {
+                "id": "280de037e5490b25",
+                "src": "hda",
+                "uuid": "4b0da8d8-485c-4e4a-a04b-f866ccb3bf7e"
+            }
+        },
+        "outputs": {
+            "thresholds_file": {
+                "id": "8462fb993158d208",
+                "src": "hda",
+                "uuid": "53b1c83e-8680-4635-96fc-be679fa56dc5"
+            },
+            "plot_file": {
+                "id": "10cccef04ddf63f1",
+                "src": "hda",
+                "uuid": "ba74700e-bb4a-4373-ae12-d3cb308cf749"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.73.164.210:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

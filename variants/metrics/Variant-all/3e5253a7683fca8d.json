@@ -1,0 +1,196 @@
+{
+    "run": "1",
+    "cloud": "variant",
+    "job_conf": "32x64",
+    "workflow_id": "73ec2d40327319c9",
+    "history_id": "d6da74e0ce075362",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "3e5253a7683fca8d",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-08-14T20:01:02.840545",
+        "create_time": "2023-08-14T20:00:46.515857",
+        "galaxy_version": "23.0",
+        "command_version": "Picked up _JAVA_OPTIONS: -Xmx48G -Xms1G\nSnpEff\t4.3t\t2017-11-24",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff_build_gb/4.3+T.galaxy4",
+        "history_id": "d6da74e0ce075362",
+        "external_id": "gxy-galaxy-ckfx5",
+        "command_line": "python3 '/cvmfs/cloud.galaxyproject.org/tools/toolshed.g2.bx.psu.edu/repos/iuc/snpeff/74aebe30fb52/snpeff/gbk2fa.py' '/galaxy/server/database/objects/c/b/0/dataset_cb02d5ca-6c73-4920-a0fe-81d7fd3255e2.dat' '/galaxy/server/database/objects/9/a/e/dataset_9aef7035-3602-4946-8c60-c7afcd03d6fe.dat' '--remove_version' &&  mkdir -p '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files'/'Test genome database' &&  ln -s '/galaxy/server/database/objects/c/b/0/dataset_cb02d5ca-6c73-4920-a0fe-81d7fd3255e2.dat' '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files'/'Test genome database'/genes.gbk &&  snpEff -Xmx${GALAXY_MEMORY_MB:-8192}m build -v -configOption 'Test genome database'.genome='Test genome database' -configOption 'Test genome database'.codonTable='Standard' -genbank -dataDir '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files' 'Test genome database' && echo \"Test genome database.genome : Test genome database\" >> '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files'/snpEff.config && echo \"Test genome database.codonTable : Standard\" >> '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files'/snpEff.config",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"genbank\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"4165fbf03add11ee9c310e264c197797\"",
+            "input_type": "{\"__current_case__\": 0, \"fasta\": \"yes\", \"input_gbk\": {\"values\": [{\"id\": 6, \"src\": \"hda\"}]}, \"input_type_selector\": \"gb\", \"remove_version\": true}",
+            "genome_version": "\"Test genome database\"",
+            "codon_table": "\"Standard\""
+        },
+        "inputs": {
+            "input_gbk": {
+                "id": "4fcd0052a1dfe460",
+                "src": "hda",
+                "uuid": "cb02d5ca-6c73-4920-a0fe-81d7fd3255e2"
+            }
+        },
+        "outputs": {
+            "output_fasta": {
+                "id": "ce353be07e6153f2",
+                "src": "hda",
+                "uuid": "9aef7035-3602-4946-8c60-c7afcd03d6fe"
+            },
+            "snpeff_output": {
+                "id": "5f86117159e624e4",
+                "src": "hda",
+                "uuid": "829bd098-f9c8-4975-85c5-44c058fb719d"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "Writing FASTA record: KP849471\n\n\tCreate exons from CDS (if needed): ............................................................................................................................................................................................\n\tExons created for 188 transcripts.\n\n\tDeleting redundant exons (if needed): \n\t\tTotal transcripts with deleted exons: 0\n\n\tCollapsing zero length introns (if needed): \n\t\tTotal collapsed transcripts: 0\n\t\tAdding genomic sequences to exons: \tDone (188 sequences added, 0 ignored).\n\n\tAdjusting transcripts: \n\tAdjusting genes: \n\tAdjusting chromosomes lengths: \n\tRanking exons: \n\tCreate UTRs from CDS (if needed): \n\tRemove empty chromosomes: \n\n\tMarking as 'coding' from CDS information: \n\tDone: 0 transcripts marked\n\t\t\t+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\t+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n\tProtein check:\tTest genome database\tOK: 188\tNot found: 0\tErrors: 0\tError percentage: 0.0%\n",
+        "tool_stderr": "Picked up _JAVA_OPTIONS: -Xmx48G -Xms1G\n00:00:00\tSnpEff version SnpEff 4.3t (build 2017-11-24 10:18), by Pablo Cingolani\n00:00:00\tCommand: 'build'\n00:00:00\tBuilding database for 'Test genome database'\n00:00:00\tReading configuration file 'snpEff.config'. Genome: 'Test genome database'\n00:00:00\tReading config file: /galaxy/server/database/jobs_directory/000/594/working/snpEff.config\n00:00:00\tReading config file: /usr/local/share/snpeff-4.3.1t-3/snpEff.config\n00:00:01\tdone\nChromosome: 'KP849471'\tlength: 197248\n00:00:01\tCaracterizing exons by splicing (stage 1) : \n\n00:00:01\tCaracterizing exons by splicing (stage 2) : \n00:00:01\tdone.\n00:00:01\t[Optional] Rare amino acid annotations\n00:00:01\tWarning: Cannot read optional protein sequence file '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files/Test genome database/protein.fa', nothing done.\n00:00:01\tProtein check file: '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files/Test genome database/genes.gbk'\n\n00:00:01\tChecking database using protein sequences\n00:00:01\tComparing Proteins...\n\tLabels:\n\t\t'+' : OK\n\t\t'.' : Missing\n\t\t'*' : Error\n00:00:01\tSaving database\n00:00:01\t[Optional] Reading regulation elements: GFF\n00:00:01\tWarning: Cannot read optional regulation file '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files/Test genome database/regulation.gff', nothing done.\n00:00:01\t[Optional] Reading regulation elements: BED \n00:00:01\tCannot find optional regulation dir '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files/Test genome database/regulation.bed/', nothing done.\n00:00:01\t[Optional] Reading motifs: GFF\n00:00:01\tWarning: Cannot open PWMs file /galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files/Test genome database/pwms.bin. Nothing done\n00:00:01\tDone\n00:00:01\tLogging\n00:00:02\tChecking for updates...\n00:00:03\tDone.\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "Picked up _JAVA_OPTIONS: -Xmx48G -Xms1G\n00:00:00\tSnpEff version SnpEff 4.3t (build 2017-11-24 10:18), by Pablo Cingolani\n00:00:00\tCommand: 'build'\n00:00:00\tBuilding database for 'Test genome database'\n00:00:00\tReading configuration file 'snpEff.config'. Genome: 'Test genome database'\n00:00:00\tReading config file: /galaxy/server/database/jobs_directory/000/594/working/snpEff.config\n00:00:00\tReading config file: /usr/local/share/snpeff-4.3.1t-3/snpEff.config\n00:00:01\tdone\nChromosome: 'KP849471'\tlength: 197248\n00:00:01\tCaracterizing exons by splicing (stage 1) : \n\n00:00:01\tCaracterizing exons by splicing (stage 2) : \n00:00:01\tdone.\n00:00:01\t[Optional] Rare amino acid annotations\n00:00:01\tWarning: Cannot read optional protein sequence file '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files/Test genome database/protein.fa', nothing done.\n00:00:01\tProtein check file: '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files/Test genome database/genes.gbk'\n\n00:00:01\tChecking database using protein sequences\n00:00:01\tComparing Proteins...\n\tLabels:\n\t\t'+' : OK\n\t\t'.' : Missing\n\t\t'*' : Error\n00:00:01\tSaving database\n00:00:01\t[Optional] Reading regulation elements: GFF\n00:00:01\tWarning: Cannot read optional regulation file '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files/Test genome database/regulation.gff', nothing done.\n00:00:01\t[Optional] Reading regulation elements: BED \n00:00:01\tCannot find optional regulation dir '/galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files/Test genome database/regulation.bed/', nothing done.\n00:00:01\t[Optional] Reading motifs: GFF\n00:00:01\tWarning: Cannot open PWMs file /galaxy/server/database/jobs_directory/000/594/working/dataset_829bd098-f9c8-4975-85c5-44c058fb719d_files/Test genome database/pwms.bin. Nothing done\n00:00:01\tDone\n00:00:01\tLogging\n00:00:02\tChecking for updates...\n00:00:03\tDone.\n",
+        "stdout": "Writing FASTA record: KP849471\n\n\tCreate exons from CDS (if needed): ............................................................................................................................................................................................\n\tExons created for 188 transcripts.\n\n\tDeleting redundant exons (if needed): \n\t\tTotal transcripts with deleted exons: 0\n\n\tCollapsing zero length introns (if needed): \n\t\tTotal collapsed transcripts: 0\n\t\tAdding genomic sequences to exons: \tDone (188 sequences added, 0 ignored).\n\n\tAdjusting transcripts: \n\tAdjusting genes: \n\tAdjusting chromosomes lengths: \n\tRanking exons: \n\tCreate UTRs from CDS (if needed): \n\tRemove empty chromosomes: \n\n\tMarking as 'coding' from CDS information: \n\tDone: 0 transcripts marked\n\t\t\t+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\t+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++\n\n\tProtein check:\tTest genome database\tOK: 188\tNot found: 0\tErrors: 0\tError percentage: 0.0%\n",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-ckfx5-sbhgc 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-ckfx5-sbhgc 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "184.5 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "198070092.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "48",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "48.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "197.5 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "207085568.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "48.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "51539607552.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "197.5 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "207085568.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "48.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "51539607552.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "2.467859277 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "2467859277.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "5 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "5.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-08-14 20:00:54",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1692043254.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-08-14 20:00:49",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1692043249.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "51539",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "51539.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "1",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "1.0000000"
+            }
+        ]
+    },
+    "status": "ok",
+    "server": "http://34.75.187.243:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        288572,
+        390616
+    ]
+}

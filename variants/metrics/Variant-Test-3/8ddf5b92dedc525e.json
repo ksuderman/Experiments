@@ -1,0 +1,67 @@
+{
+    "run": "2",
+    "cloud": "variant",
+    "job_conf": "4x16",
+    "workflow_id": "2e0b969fc1fcfdc7",
+    "history_id": "f20fc6b22357e731",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "8ddf5b92dedc525e",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-14T17:56:57.750522",
+        "create_time": "2023-08-14T17:55:04.095238",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/lofreq_indelqual/lofreq_indelqual/2.1.5+galaxy0",
+        "history_id": "f20fc6b22357e731",
+        "external_id": "gxy-galaxy-7r4bz",
+        "command_line": "ln -s '/galaxy/server/database/objects/0/b/2/dataset_0b2336a3-831a-49ab-9402-daa51859edba.dat' reference.fa && lofreq faidx reference.fa 2>&1 || echo \"Error running samtools faidx for indexing fasta reference for lofreq\" >&2 &&  lofreq indelqual --dindel --ref reference.fa -o output.bam /galaxy/server/database/objects/e/4/a/dataset_e4a39811-35c5-4121-994b-0d2c944ee150.dat",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"b19fd0ce3acb11ee989d6290677b7a3d\"",
+            "strategy": "{\"__current_case__\": 1, \"reference_source\": {\"__current_case__\": 1, \"ref\": {\"values\": [{\"id\": 215, \"src\": \"hda\"}]}, \"ref_selector\": \"history\"}, \"selector\": \"dindel\"}"
+        },
+        "inputs": {
+            "strategy|ref": {
+                "id": "7c091fd1eecb4324",
+                "src": "hda",
+                "uuid": "0b2336a3-831a-49ab-9402-daa51859edba"
+            },
+            "reads": {
+                "id": "fee71f23a18a3c42",
+                "src": "hda",
+                "uuid": "e4a39811-35c5-4121-994b-0d2c944ee150"
+            }
+        },
+        "outputs": {
+            "output": {
+                "id": "13650ecc355a0cee",
+                "src": "hda",
+                "uuid": "4a3c064e-7297-43a1-9a75-47a6d0fd4eca"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://34.75.187.243:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        288572,
+        390616
+    ]
+}

@@ -1,0 +1,134 @@
+{
+    "run": "2",
+    "cloud": "sc",
+    "job_conf": "4x16",
+    "workflow_id": "805c7896c2c1870d",
+    "history_id": "d3cb0f7abcd6bb0a",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "1409c7bc5ece0543",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-12T23:57:42.378319",
+        "create_time": "2023-08-12T23:55:33.382508",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/gtf2gene_list/_ensembl_gtf2gene_list/1.52.0+galaxy0",
+        "history_id": "d3cb0f7abcd6bb0a",
+        "external_id": "gxy-galaxy-55xs5",
+        "command_line": "ln -s '/galaxy/server/database/objects/0/9/f/dataset_09f445e3-98a4-4d62-b424-cc3a7dde7bd4.dat' input.gtf; gtf2featureAnnotation.R --gtf-file input.gtf --no-header --version-transcripts --parse-cdnas \"/galaxy/server/database/objects/e/5/a/dataset_e5aed5bb-f022-4c43-8404-320df5f873a8.dat\" --parse-cdna-field \"transcript_id\" --filter-cdnas-output \"/galaxy/server/database/objects/8/8/e/dataset_88e2ed02-8b2a-4ea8-88e5-545d424c4e72.dat\" --feature-type \"transcript\" --first-field \"transcript_id\" --output-file annotation.txt --fields \"transcript_id,gene_id\"",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"b9656ffa396b11eeb8705af2b2848338\"",
+            "version_transcripts": "true",
+            "noheader": "true",
+            "mito": "{\"__current_case__\": 1, \"mark_mito\": false}",
+            "first_field": "\"transcript_id\"",
+            "fill_empty": "\"\"",
+            "fields": "\"transcript_id,gene_id\"",
+            "feature_type": "\"transcript\"",
+            "cdnas": "{\"__current_case__\": 0, \"cdnas_field\": \"transcript_id\", \"fasta_input\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}]}, \"filter_cdnas\": true, \"parse_cdna_names\": false, \"parse_cdnas\": true}"
+        },
+        "inputs": {
+            "gtf_input": {
+                "id": "ec24d8096c95f112",
+                "src": "hda",
+                "uuid": "09f445e3-98a4-4d62-b424-cc3a7dde7bd4"
+            },
+            "fasta_input": {
+                "id": "5c7c9a31edfd256e",
+                "src": "hda",
+                "uuid": "e5aed5bb-f022-4c43-8404-320df5f873a8"
+            }
+        },
+        "outputs": {
+            "feature_annotation": {
+                "id": "48fdce174e06665c",
+                "src": "hda",
+                "uuid": "a83dea4d-e8dd-4258-b52a-65fee386dd46"
+            },
+            "fasta_output": {
+                "id": "8d4558c0b983b032",
+                "src": "hda",
+                "uuid": "88e2ed02-8b2a-4ea8-88e5-545d424c4e72"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "1409c7bc5ece0543",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-12T23:57:42.378319",
+        "create_time": "2023-08-12T23:55:33.382508",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/gtf2gene_list/_ensembl_gtf2gene_list/1.52.0+galaxy0",
+        "history_id": "d3cb0f7abcd6bb0a",
+        "external_id": "gxy-galaxy-55xs5",
+        "command_line": "ln -s '/galaxy/server/database/objects/0/9/f/dataset_09f445e3-98a4-4d62-b424-cc3a7dde7bd4.dat' input.gtf; gtf2featureAnnotation.R --gtf-file input.gtf --no-header --version-transcripts --parse-cdnas \"/galaxy/server/database/objects/e/5/a/dataset_e5aed5bb-f022-4c43-8404-320df5f873a8.dat\" --parse-cdna-field \"transcript_id\" --filter-cdnas-output \"/galaxy/server/database/objects/8/8/e/dataset_88e2ed02-8b2a-4ea8-88e5-545d424c4e72.dat\" --feature-type \"transcript\" --first-field \"transcript_id\" --output-file annotation.txt --fields \"transcript_id,gene_id\"",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"b9656ffa396b11eeb8705af2b2848338\"",
+            "version_transcripts": "true",
+            "noheader": "true",
+            "mito": "{\"__current_case__\": 1, \"mark_mito\": false}",
+            "first_field": "\"transcript_id\"",
+            "fill_empty": "\"\"",
+            "fields": "\"transcript_id,gene_id\"",
+            "feature_type": "\"transcript\"",
+            "cdnas": "{\"__current_case__\": 0, \"cdnas_field\": \"transcript_id\", \"fasta_input\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}]}, \"filter_cdnas\": true, \"parse_cdna_names\": false, \"parse_cdnas\": true}"
+        },
+        "inputs": {
+            "gtf_input": {
+                "id": "ec24d8096c95f112",
+                "src": "hda",
+                "uuid": "09f445e3-98a4-4d62-b424-cc3a7dde7bd4"
+            },
+            "fasta_input": {
+                "id": "5c7c9a31edfd256e",
+                "src": "hda",
+                "uuid": "e5aed5bb-f022-4c43-8404-320df5f873a8"
+            }
+        },
+        "outputs": {
+            "feature_annotation": {
+                "id": "48fdce174e06665c",
+                "src": "hda",
+                "uuid": "a83dea4d-e8dd-4258-b52a-65fee386dd46"
+            },
+            "fasta_output": {
+                "id": "8d4558c0b983b032",
+                "src": "hda",
+                "uuid": "88e2ed02-8b2a-4ea8-88e5-545d424c4e72"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.73.164.210:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

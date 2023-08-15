@@ -1,0 +1,69 @@
+{
+    "run": "2",
+    "cloud": "variant",
+    "job_conf": "16x64",
+    "workflow_id": "d86aa6132317a697",
+    "history_id": "f13f76ca66116924",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "bae301b325c8e71a",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-14T19:45:29.919130",
+        "create_time": "2023-08-14T19:45:17.818582",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff_build_gb/4.3+T.galaxy4",
+        "history_id": "f13f76ca66116924",
+        "external_id": "gxy-galaxy-dwmnn",
+        "command_line": "python3 '/cvmfs/cloud.galaxyproject.org/tools/toolshed.g2.bx.psu.edu/repos/iuc/snpeff/74aebe30fb52/snpeff/gbk2fa.py' '/galaxy/server/database/objects/c/b/0/dataset_cb02d5ca-6c73-4920-a0fe-81d7fd3255e2.dat' '/galaxy/server/database/objects/d/8/e/dataset_d8eb6607-e79f-41f8-8c5d-403bd804539d.dat' '--remove_version' &&  mkdir -p '/galaxy/server/database/jobs_directory/000/528/working/dataset_cb8810b4-87b1-4910-ab9a-0536a8fc1f9f_files'/'Test genome database' &&  ln -s '/galaxy/server/database/objects/c/b/0/dataset_cb02d5ca-6c73-4920-a0fe-81d7fd3255e2.dat' '/galaxy/server/database/jobs_directory/000/528/working/dataset_cb8810b4-87b1-4910-ab9a-0536a8fc1f9f_files'/'Test genome database'/genes.gbk &&  snpEff -Xmx${GALAXY_MEMORY_MB:-8192}m build -v -configOption 'Test genome database'.genome='Test genome database' -configOption 'Test genome database'.codonTable='Standard' -genbank -dataDir '/galaxy/server/database/jobs_directory/000/528/working/dataset_cb8810b4-87b1-4910-ab9a-0536a8fc1f9f_files' 'Test genome database' && echo \"Test genome database.genome : Test genome database\" >> '/galaxy/server/database/jobs_directory/000/528/working/dataset_cb8810b4-87b1-4910-ab9a-0536a8fc1f9f_files'/snpEff.config && echo \"Test genome database.codonTable : Standard\" >> '/galaxy/server/database/jobs_directory/000/528/working/dataset_cb8810b4-87b1-4910-ab9a-0536a8fc1f9f_files'/snpEff.config",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"genbank\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"184b45423adb11eebee5329f3a31e264\"",
+            "input_type": "{\"__current_case__\": 0, \"fasta\": \"yes\", \"input_gbk\": {\"values\": [{\"id\": 6, \"src\": \"hda\"}]}, \"input_type_selector\": \"gb\", \"remove_version\": true}",
+            "genome_version": "\"Test genome database\"",
+            "codon_table": "\"Standard\""
+        },
+        "inputs": {
+            "input_gbk": {
+                "id": "cc238d36bb5bf696",
+                "src": "hda",
+                "uuid": "cb02d5ca-6c73-4920-a0fe-81d7fd3255e2"
+            }
+        },
+        "outputs": {
+            "output_fasta": {
+                "id": "d03251cd8d77034f",
+                "src": "hda",
+                "uuid": "d8eb6607-e79f-41f8-8c5d-403bd804539d"
+            },
+            "snpeff_output": {
+                "id": "7f459d58cd981152",
+                "src": "hda",
+                "uuid": "cb8810b4-87b1-4910-ab9a-0536a8fc1f9f"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://34.75.187.243:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        288572,
+        390616
+    ]
+}

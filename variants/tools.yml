@@ -3,45 +3,69 @@ install_repository_dependencies: True
 install_resolver_dependencies: True
 
 tools:
-- name: gtf2gene_list
-  owner: ebi-gxa
+- name: fastp
+  owner: iuc
   revisions:
-  - 14b3f2a4523b
+  - 65b93b623c77
   tool_panel_section_label: Tools from workflows
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: alevin
-  owner: bgruening
+- name: snpeff
+  owner: iuc
   revisions:
-  - f2000bc73102
+  - 74aebe30fb52
   tool_panel_section_label: Tools from workflows
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: droplet_barcode_plot
-  owner: ebi-gxa
+- name: bwa
+  owner: devteam
   revisions:
-  - 8f605643ccfd
+  - 64f11cf59c6e
   tool_panel_section_label: Tools from workflows
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: salmon_kallisto_mtx_to_10x
-  owner: ebi-gxa
+- name: samtools_view
+  owner: iuc
   revisions:
-  - 88f5a0a6a818
+  - c370440f901e
   tool_panel_section_label: Tools from workflows
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: dropletutils_read_10x
-  owner: ebi-gxa
+- name: picard
+  owner: devteam
   revisions:
-  - ca62f52e0d7f
+  - a1f0b3f4b781
   tool_panel_section_label: Tools from workflows
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: dropletutils_empty_drops
-  owner: ebi-gxa
+- name: samtools_stats
+  owner: devteam
   revisions:
-  - fa662ca7ae7f
+  - 145f6d74ff5e
   tool_panel_section_label: Tools from workflows
   tool_shed_url: https://toolshed.g2.bx.psu.edu/
-- name: sceasy_convert
-  owner: ebi-gxa
+- name: lofreq_viterbi
+  owner: iuc
   revisions:
-  - f62bc418173f
+  - af7e416d8176
+  tool_panel_section_label: Tools from workflows
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: multiqc
+  owner: iuc
+  revisions:
+  - 9a913cdee30e
+  tool_panel_section_label: Tools from workflows
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: lofreq_indelqual
+  owner: iuc
+  revisions:
+  - 354b534eeab7
+  tool_panel_section_label: Tools from workflows
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: lofreq_call
+  owner: iuc
+  revisions:
+  - e1461b5c52a0
+  tool_panel_section_label: Tools from workflows
+  tool_shed_url: https://toolshed.g2.bx.psu.edu/
+- name: lofreq_filter
+  owner: iuc
+  revisions:
+  - 950d1d49d678
   tool_panel_section_label: Tools from workflows
   tool_shed_url: https://toolshed.g2.bx.psu.edu/

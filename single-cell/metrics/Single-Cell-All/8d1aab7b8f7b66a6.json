@@ -1,0 +1,227 @@
+{
+    "run": "3",
+    "cloud": "sc",
+    "job_conf": "32x32",
+    "workflow_id": "d7fc4231ac759eea",
+    "history_id": "80a9296a8c4d0c9b",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "8d1aab7b8f7b66a6",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-08-13T17:07:03.674816",
+        "create_time": "2023-08-13T16:54:31.017083",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/sceasy_convert/sceasy_convert/0.0.5+galaxy1",
+        "history_id": "80a9296a8c4d0c9b",
+        "external_id": "gxy-galaxy-ptvqf",
+        "command_line": "ln -s /galaxy/server/database/objects/e/b/4/dataset_eb41bba6-ddfc-4984-a0cd-3063112f683a.dat input.rds &&  Rscript -e 'library(sceasy)' -e 'sce <- readRDS(\"input.rds\")' -e 'sceasy::convertFormat(sce, outFile=\"output.h5ad\", from=\"sce\", to=\"anndata\", main_layer=\"counts\")' -e 'print(sce)'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"rdata\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"11afffd439fa11ee85d13e66240a8b21\"",
+            "conversion": "{\"__current_case__\": 2, \"assay\": \"counts\", \"direction\": \"sce2anndata\", \"input_object_file\": {\"values\": [{\"id\": 1342, \"src\": \"hda\"}]}}"
+        },
+        "inputs": {
+            "input_object_file": {
+                "id": "6fbfe283d67a3d5c",
+                "src": "hda",
+                "uuid": "eb41bba6-ddfc-4984-a0cd-3063112f683a"
+            }
+        },
+        "outputs": {
+            "output_anndata": {
+                "id": "cb3b9bf2178aae89",
+                "src": "hda",
+                "uuid": "bb6635b6-5611-46d8-b8a2-4e6d4a957482"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "AnnData object with n_obs <U+00D7> n_vars = 41 <U+00D7> 35734 \n    obs: 'Barcode', 'emptyTotal', 'emptyLogProb', 'emptyPValue', 'emptyLimited', 'emptyFDR'\n    var: 'ID', 'Symbol', 'NA.'\nclass: SingleCellExperiment \ndim: 35734 41 \nmetadata(0):\nassays(1): counts\nrownames(35734): ENSMUSG00000051951 ENSMUSG00000102851 ...\n  ENSMUSG00000096730 ENSMUSG00000095742\nrowData names(3): ID Symbol NA\ncolnames(41): CCATTCCTGTCT TTGTTCGCTATT ... GTGGCCGGTTAA CACCGAGTTACT\ncolData names(7): Sample Barcode ... emptyLimited emptyFDR\nreducedDimNames(0):\naltExpNames(0):\n",
+        "tool_stderr": "Loading required package: reticulate\nLoading required package: SingleCellExperiment\nLoading required package: SummarizedExperiment\nLoading required package: GenomicRanges\nLoading required package: stats4\nLoading required package: BiocGenerics\nLoading required package: parallel\n\nAttaching package: 'BiocGenerics'\n\nThe following objects are masked from 'package:parallel':\n\n    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,\n    clusterExport, clusterMap, parApply, parCapply, parLapply,\n    parLapplyLB, parRapply, parSapply, parSapplyLB\n\nThe following objects are masked from 'package:stats':\n\n    IQR, mad, sd, var, xtabs\n\nThe following objects are masked from 'package:base':\n\n    Filter, Find, Map, Position, Reduce, anyDuplicated, append,\n    as.data.frame, basename, cbind, colnames, dirname, do.call,\n    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,\n    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,\n    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,\n    tapply, union, unique, unsplit, which, which.max, which.min\n\nLoading required package: S4Vectors\n\nAttaching package: 'S4Vectors'\n\nThe following object is masked from 'package:base':\n\n    expand.grid\n\nLoading required package: IRanges\nLoading required package: GenomeInfoDb\nLoading required package: Biobase\nWelcome to Bioconductor\n\n    Vignettes contain introductory material; view with\n    'browseVignettes()'. To cite Bioconductor, see\n    'citation(\"Biobase\")', and for packages 'citation(\"pkgname\")'.\n\nLoading required package: DelayedArray\nLoading required package: matrixStats\n\nAttaching package: 'matrixStats'\n\nThe following objects are masked from 'package:Biobase':\n\n    anyMissing, rowMedians\n\n\nAttaching package: 'DelayedArray'\n\nThe following objects are masked from 'package:matrixStats':\n\n    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges\n\nThe following objects are masked from 'package:base':\n\n    aperm, apply, rowsum\n\n/usr/local/lib/python3.7/site-packages/anndata/base.py:17: FutureWarning: pandas.core.index is deprecated and will be removed in a future version.  The public classes are available in the top-level namespace.\n  from pandas.core.index import RangeIndex\n... storing 'Symbol' as categorical\n... storing 'NA.' as categorical\nWarning message:\nIn .regularise_df(as.data.frame(SummarizedExperiment::colData(obj))) :\n  Dropping single category variables:Sample\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "Loading required package: reticulate\nLoading required package: SingleCellExperiment\nLoading required package: SummarizedExperiment\nLoading required package: GenomicRanges\nLoading required package: stats4\nLoading required package: BiocGenerics\nLoading required package: parallel\n\nAttaching package: 'BiocGenerics'\n\nThe following objects are masked from 'package:parallel':\n\n    clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,\n    clusterExport, clusterMap, parApply, parCapply, parLapply,\n    parLapplyLB, parRapply, parSapply, parSapplyLB\n\nThe following objects are masked from 'package:stats':\n\n    IQR, mad, sd, var, xtabs\n\nThe following objects are masked from 'package:base':\n\n    Filter, Find, Map, Position, Reduce, anyDuplicated, append,\n    as.data.frame, basename, cbind, colnames, dirname, do.call,\n    duplicated, eval, evalq, get, grep, grepl, intersect, is.unsorted,\n    lapply, mapply, match, mget, order, paste, pmax, pmax.int, pmin,\n    pmin.int, rank, rbind, rownames, sapply, setdiff, sort, table,\n    tapply, union, unique, unsplit, which, which.max, which.min\n\nLoading required package: S4Vectors\n\nAttaching package: 'S4Vectors'\n\nThe following object is masked from 'package:base':\n\n    expand.grid\n\nLoading required package: IRanges\nLoading required package: GenomeInfoDb\nLoading required package: Biobase\nWelcome to Bioconductor\n\n    Vignettes contain introductory material; view with\n    'browseVignettes()'. To cite Bioconductor, see\n    'citation(\"Biobase\")', and for packages 'citation(\"pkgname\")'.\n\nLoading required package: DelayedArray\nLoading required package: matrixStats\n\nAttaching package: 'matrixStats'\n\nThe following objects are masked from 'package:Biobase':\n\n    anyMissing, rowMedians\n\n\nAttaching package: 'DelayedArray'\n\nThe following objects are masked from 'package:matrixStats':\n\n    colMaxs, colMins, colRanges, rowMaxs, rowMins, rowRanges\n\nThe following objects are masked from 'package:base':\n\n    aperm, apply, rowsum\n\n/usr/local/lib/python3.7/site-packages/anndata/base.py:17: FutureWarning: pandas.core.index is deprecated and will be removed in a future version.  The public classes are available in the top-level namespace.\n  from pandas.core.index import RangeIndex\n... storing 'Symbol' as categorical\n... storing 'NA.' as categorical\nWarning message:\nIn .regularise_df(as.data.frame(SummarizedExperiment::colData(obj))) :\n  Dropping single category variables:Sample\n",
+        "stdout": "AnnData object with n_obs <U+00D7> n_vars = 41 <U+00D7> 35734 \n    obs: 'Barcode', 'emptyTotal', 'emptyLogProb', 'emptyPValue', 'emptyLimited', 'emptyFDR'\n    var: 'ID', 'Symbol', 'NA.'\nclass: SingleCellExperiment \ndim: 35734 41 \nmetadata(0):\nassays(1): counts\nrownames(35734): ENSMUSG00000051951 ENSMUSG00000102851 ...\n  ENSMUSG00000096730 ENSMUSG00000095742\nrowData names(3): ID Symbol NA\ncolnames(41): CCATTCCTGTCT TTGTTCGCTATT ... GTGGCCGGTTAA CACCGAGTTACT\ncolData names(7): Sample Barcode ... emptyLimited emptyFDR\nreducedDimNames(0):\naltExpNames(0):\n",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-ptvqf-7vxpd 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-ptvqf-7vxpd 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "184.5 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "198070092.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "48",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "48.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "559.2 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "586399744.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "32.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "34359738368.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "559.2 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "586399744.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "32.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "34359738368.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "6.714229909 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "6714229909.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "6 seconds",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "6.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-08-13 17:06:53",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1691946413.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-08-13 17:06:47",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1691946407.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "34359",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "34359.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "8",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "8.0000000"
+            }
+        ]
+    },
+    "status": {
+        "model_class": "Job",
+        "id": "8d1aab7b8f7b66a6",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-08-13T17:07:03.674816",
+        "create_time": "2023-08-13T16:54:31.017083",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/sceasy_convert/sceasy_convert/0.0.5+galaxy1",
+        "history_id": "80a9296a8c4d0c9b",
+        "external_id": "gxy-galaxy-ptvqf",
+        "command_line": "ln -s /galaxy/server/database/objects/e/b/4/dataset_eb41bba6-ddfc-4984-a0cd-3063112f683a.dat input.rds &&  Rscript -e 'library(sceasy)' -e 'sce <- readRDS(\"input.rds\")' -e 'sceasy::convertFormat(sce, outFile=\"output.h5ad\", from=\"sce\", to=\"anndata\", main_layer=\"counts\")' -e 'print(sce)'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"rdata\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"11afffd439fa11ee85d13e66240a8b21\"",
+            "conversion": "{\"__current_case__\": 2, \"assay\": \"counts\", \"direction\": \"sce2anndata\", \"input_object_file\": {\"values\": [{\"id\": 1342, \"src\": \"hda\"}]}}"
+        },
+        "inputs": {
+            "input_object_file": {
+                "id": "6fbfe283d67a3d5c",
+                "src": "hda",
+                "uuid": "eb41bba6-ddfc-4984-a0cd-3063112f683a"
+            }
+        },
+        "outputs": {
+            "output_anndata": {
+                "id": "cb3b9bf2178aae89",
+                "src": "hda",
+                "uuid": "bb6635b6-5611-46d8-b8a2-4e6d4a957482"
+            }
+        },
+        "output_collections": {}
+    },
+    "server": "http://34.73.164.210:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}
