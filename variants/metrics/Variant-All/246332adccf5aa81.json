@@ -1,0 +1,63 @@
+{
+    "run": "1",
+    "cloud": "variant",
+    "job_conf": "4x32",
+    "workflow_id": "dec466ad87582f92",
+    "history_id": "8bdc1d389e2bae8b",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "246332adccf5aa81",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-15T23:39:33.590706",
+        "create_time": "2023-08-15T23:38:59.009608",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/samtools_view/samtools_view/1.13+galaxy1",
+        "history_id": "8bdc1d389e2bae8b",
+        "external_id": "gxy-galaxy-fb7d4",
+        "command_line": "addthreads=${GALAXY_SLOTS:-1} && (( addthreads-- )) &&   addmemory=${GALAXY_MEMORY_MB_PER_SLOT:-768} && ((addmemory=addmemory*75/100)) &&        ln -s '/galaxy/server/database/objects/7/3/6/dataset_736694da-cad0-415a-90e7-8d14e7f77491.dat' infile && ln -s '/galaxy/server/database/objects/_metadata_files/d/0/c/metadata_d0cdac8a-7caf-4efa-8b8d-193d0286c4c3.dat' infile.bai &&               samtools view -@ $addthreads -b  -f 3 -F 0 -G 0    -o outfile      infile",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"e7baca163bc411eeba99a67b8bd3694e\"",
+            "mode": "{\"__current_case__\": 1, \"filter_config\": {\"cigarcons\": null, \"cond_region\": {\"__current_case__\": 0, \"select_region\": \"no\"}, \"cond_rg\": {\"__current_case__\": 0, \"select_rg\": \"no\"}, \"exclusive_filter\": null, \"exclusive_filter_all\": null, \"inclusive_filter\": [\"1\", \"2\"], \"library\": \"\", \"qname_file\": null, \"quality\": \"0\", \"tag\": \"\"}, \"output_options\": {\"__current_case__\": 0, \"adv_output\": {\"collapsecigar\": false, \"readtags\": []}, \"complementary_output\": false, \"output_format\": {\"__current_case__\": 2, \"oformat\": \"bam\"}, \"reads_report_type\": \"retained\"}, \"outtype\": \"selected_reads\", \"subsample_config\": {\"subsampling_mode\": {\"__current_case__\": 0, \"factor\": \"1.0\", \"seed\": null, \"select_subsample\": \"fraction\"}}}",
+            "addref_cond": "{\"__current_case__\": 0, \"addref_select\": \"no\"}"
+        },
+        "inputs": {
+            "input": {
+                "id": "70129a757bdf343e",
+                "src": "hda",
+                "uuid": "736694da-cad0-415a-90e7-8d14e7f77491"
+            }
+        },
+        "outputs": {
+            "outputsam": {
+                "id": "be4d3c3ccd34e2e6",
+                "src": "hda",
+                "uuid": "3083bbb5-c2c2-46b2-a6cf-199be47b76c4"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://34.138.4.123:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

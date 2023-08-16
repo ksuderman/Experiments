@@ -1,0 +1,75 @@
+{
+    "run": "1",
+    "cloud": "sc2",
+    "job_conf": "16x16",
+    "workflow_id": "5a682f9862b4224c",
+    "history_id": "d3743cdb74557522",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "5dfaf514780e8efe",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-16T03:35:30.442125",
+        "create_time": "2023-08-16T03:28:16.650528",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/dropletutils_empty_drops/dropletutils_empty_drops/1.0.4+galaxy0",
+        "history_id": "d3743cdb74557522",
+        "external_id": "gxy-galaxy-n6fb2",
+        "command_line": "dropletutils-empty-drops.R --input-object-file \"/galaxy/server/database/objects/c/e/5/dataset_ce5ec7c4-852f-4843-bfec-e5651711e770.dat\" --output-object-file \"/galaxy/server/database/objects/9/6/c/dataset_96cd5ddb-b4a4-48c2-a350-10208a76feb8.dat\" --output-text-file \"/galaxy/server/database/objects/5/4/4/dataset_5446c8d1-54b4-488a-b2aa-cda962fe8c1d.dat\" --lower \"100\" --niters \"1000\" --filter-fdr \"0.01\" --test-ambient \"false\" --filter-empty \"true\"",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"rdata\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"ef577a1a3be411eeb7857263fc1d424f\"",
+            "testambient": "false",
+            "retain": null,
+            "niters": "\"1000\"",
+            "lower": "\"100\"",
+            "ignore": null,
+            "filter_fdr": "\"0.01\"",
+            "filter_empty": "true"
+        },
+        "inputs": {
+            "input": {
+                "id": "d9087e7ef426dd03",
+                "src": "hda",
+                "uuid": "ce5ec7c4-852f-4843-bfec-e5651711e770"
+            }
+        },
+        "outputs": {
+            "output_txt": {
+                "id": "f5c8344bade0a67e",
+                "src": "hda",
+                "uuid": "5446c8d1-54b4-488a-b2aa-cda962fe8c1d"
+            },
+            "output_rdata": {
+                "id": "d993cae2bdfc6922",
+                "src": "hda",
+                "uuid": "96cd5ddb-b4a4-48c2-a350-10208a76feb8"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://104.196.19.109:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

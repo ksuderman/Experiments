@@ -1,0 +1,74 @@
+{
+    "run": "2",
+    "cloud": "sc2",
+    "job_conf": "16x32",
+    "workflow_id": "17e2aa5ca8ebd7cf",
+    "history_id": "c53364e99d573cc0",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "3f1ac7f9910ff70c",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-16T04:14:04.342261",
+        "create_time": "2023-08-16T04:02:52.262632",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "join1",
+        "history_id": "c53364e99d573cc0",
+        "external_id": "gxy-galaxy-rcxct",
+        "command_line": "python '/galaxy/server/database/tools/filters/join.py' '/galaxy/server/database/objects/1/6/4/dataset_1647fed9-f6f0-44c8-a8e0-b717fa12b63b.dat' '/galaxy/server/database/objects/d/d/d/dataset_ddd18296-9127-430a-bf76-2dc3a32ae201.dat' 1 1 '/galaxy/server/database/objects/f/f/b/dataset_ffb17f7c-8c5e-499a-8aac-75956619ae5a.dat' -u -p --index_depth=3 --buffer=50000000 --fill_options_file=/galaxy/server/database/jobs_directory/000/425/configs/tmpavztsihh",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"tabular\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"c4d064dc3be911ee8573ba97a6517121\"",
+            "unmatched": "\"-u\"",
+            "partial": "\"-p\"",
+            "header": "\"\"",
+            "fill_empty_columns": "{\"__current_case__\": 0, \"fill_empty_columns_switch\": \"no_fill\"}",
+            "field2": "\"1\"",
+            "field1": "\"1\""
+        },
+        "inputs": {
+            "input2": {
+                "id": "be845124c75f3312",
+                "src": "hda",
+                "uuid": "ddd18296-9127-430a-bf76-2dc3a32ae201"
+            },
+            "input1": {
+                "id": "eb8a5c4a9cacd684",
+                "src": "hda",
+                "uuid": "1647fed9-f6f0-44c8-a8e0-b717fa12b63b"
+            }
+        },
+        "outputs": {
+            "out_file1": {
+                "id": "e7852562918d9be3",
+                "src": "hda",
+                "uuid": "ffb17f7c-8c5e-499a-8aac-75956619ae5a"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://104.196.19.109:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

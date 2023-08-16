@@ -1,0 +1,65 @@
+{
+    "run": "2",
+    "cloud": "sc2",
+    "job_conf": "16x64",
+    "workflow_id": "585c3e0c147d7cd5",
+    "history_id": "87e9f05c47875c91",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "bbe67a6482533dc2",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-16T04:40:08.049777",
+        "create_time": "2023-08-16T04:33:56.384785",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "Cut1",
+        "history_id": "87e9f05c47875c91",
+        "external_id": "gxy-galaxy-94sbq",
+        "command_line": "perl '/galaxy/server/database/tools/filters/cutWrapper.pl' '/galaxy/server/database/objects/3/c/c/dataset_3cc38b13-c9f5-4477-92b3-4ee462a7bd14.dat' 'c1,c4,c5' T '/galaxy/server/database/objects/5/a/9/dataset_5a9a2129-8915-422f-bd24-04d57cd82163.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"tabular\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"1be745983bee11eeb00d96d46387b1fb\"",
+            "delimiter": "\"T\"",
+            "columnList": "\"c1,c4,c5\""
+        },
+        "inputs": {
+            "input": {
+                "id": "1c7718a265201a95",
+                "src": "hda",
+                "uuid": "3cc38b13-c9f5-4477-92b3-4ee462a7bd14"
+            }
+        },
+        "outputs": {
+            "out_file1": {
+                "id": "700362e3edb0d35d",
+                "src": "hda",
+                "uuid": "5a9a2129-8915-422f-bd24-04d57cd82163"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://104.196.19.109:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

@@ -1,0 +1,214 @@
+{
+    "run": "2",
+    "cloud": "variant",
+    "job_conf": "4x64",
+    "workflow_id": "f0aca293ceeeb1d4",
+    "history_id": "53f7ea53dad83aa2",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "7cf2c8489bf1260d",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-08-15T23:54:49.910606",
+        "create_time": "2023-08-15T23:52:29.035912",
+        "galaxy_version": "23.0",
+        "command_version": "SnpEff\t4.3t\t2017-11-24",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff/4.3+T.galaxy1",
+        "history_id": "53f7ea53dad83aa2",
+        "external_id": "gxy-galaxy-86np4",
+        "command_line": "snpEff -Xmx${GALAXY_MEMORY_MB:-8192}m eff -i vcf -o vcf -upDownStreamLen 0 -formatEff -classic -no-downstream -no-intergenic -no-intron -no-upstream -no-utr                  -stats '/galaxy/server/database/objects/2/5/0/dataset_25026b79-493b-4de7-a0c0-c91c03bbd873.dat' -noLog -dataDir '/galaxy/server/database/objects/2/c/b/dataset_2cb02ba2-6ddd-4608-82fb-c5e14e4ceb51_files' -configOption 'Test genome database'.genome='Test genome database' -configOption 'Test genome database'.codonTable='Standard' 'Test genome database' '/galaxy/server/database/objects/2/5/5/dataset_255128bc-22f4-4ec1-b11c-b7c3ecfc36a8.dat' > '/galaxy/server/database/objects/2/4/a/dataset_24ad5fb5-5bdf-4052-9808-b25c42328d85.dat' && mkdir '/galaxy/server/database/jobs_directory/000/143/working/dataset_25026b79-493b-4de7-a0c0-c91c03bbd873_files' && mv '/galaxy/server/database/objects/2/5/0/dataset_25026b79-493b-4de7-a0c0-c91c03bbd873.dat.genes.txt' '/galaxy/server/database/jobs_directory/000/143/working/dataset_25026b79-493b-4de7-a0c0-c91c03bbd873_files/dataset_25026b79-493b-4de7-a0c0-c91c03bbd873.dat.genes.txt'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"vcf\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"ca55a53e3bc611ee9dfd26ef6888b4b3\"",
+            "udLength": "\"0\"",
+            "transcripts": null,
+            "spliceSiteSize": null,
+            "spliceRegion": "{\"__current_case__\": 0, \"setSpliceRegions\": \"no\"}",
+            "snpDb": "{\"__current_case__\": 3, \"codon_table\": \"Standard\", \"genomeSrc\": \"custom\", \"snpeff_db\": {\"values\": [{\"id\": 253, \"src\": \"hda\"}]}}",
+            "outputConditional": "{\"__current_case__\": 0, \"outputFormat\": \"vcf\"}",
+            "offset": "\"default\"",
+            "noLog": "true",
+            "intervals": null,
+            "inputFormat": "\"vcf\"",
+            "generate_stats": "true",
+            "filterOut": "[\"-no-downstream\", \"-no-intergenic\", \"-no-intron\", \"-no-upstream\", \"-no-utr\"]",
+            "filter": "{\"__current_case__\": 0, \"specificEffects\": \"no\"}",
+            "csvStats": "false",
+            "chr": "\"\"",
+            "annotations": "[\"-formatEff\", \"-classic\"]"
+        },
+        "inputs": {
+            "snpeff_db": {
+                "id": "acf9422e095ae8f7",
+                "src": "hda",
+                "uuid": "2cb02ba2-6ddd-4608-82fb-c5e14e4ceb51"
+            },
+            "input": {
+                "id": "38590ba3c6ec309a",
+                "src": "hda",
+                "uuid": "255128bc-22f4-4ec1-b11c-b7c3ecfc36a8"
+            }
+        },
+        "outputs": {
+            "snpeff_output": {
+                "id": "7f052b7f5ddc7faf",
+                "src": "hda",
+                "uuid": "24ad5fb5-5bdf-4052-9808-b25c42328d85"
+            },
+            "statsFile": {
+                "id": "1bdb10aaeaf79313",
+                "src": "hda",
+                "uuid": "25026b79-493b-4de7-a0c0-c91c03bbd873"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-86np4-cpbsh 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-86np4-cpbsh 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "184.5 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "198070092.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "48",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "48.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "193.6 MB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "202960896.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "64.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "68719476736.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "193.6 MB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "202960896.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "64.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "68719476736.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "3.825211752 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "3825211752.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "1 second",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "1.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-08-15 23:54:40",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1692143680.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-08-15 23:54:39",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1692143679.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "68719",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "68719.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "4",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "4.0000000"
+            }
+        ]
+    },
+    "status": "ok",
+    "server": "http://34.138.4.123:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

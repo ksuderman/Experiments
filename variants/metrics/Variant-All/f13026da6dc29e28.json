@@ -1,0 +1,86 @@
+{
+    "run": "2",
+    "cloud": "variant",
+    "job_conf": "4x8",
+    "workflow_id": "e56b8fd15a10e85f",
+    "history_id": "d0b19757dd002b46",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "f13026da6dc29e28",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-15T23:23:15.515822",
+        "create_time": "2023-08-15T23:23:07.352288",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.2+galaxy0",
+        "history_id": "d0b19757dd002b46",
+        "external_id": "gxy-galaxy-csh6k",
+        "command_line": "ln -s '/galaxy/server/database/objects/0/5/5/dataset_05517ab9-a487-4ea3-a56d-666c25a9494d.dat' 'Paired Collection.fastq.gz' && ln -s '/galaxy/server/database/objects/a/8/7/dataset_a872ba29-7a10-4737-ba5f-4856206272a8.dat' 'Paired Collection_R2.fastq.gz' &&    fastp  --thread ${GALAXY_SLOTS:-1} --report_title 'fastp report for Paired Collection.fastq.gz'   -i 'Paired Collection.fastq.gz' -o first.fastq.gz  -I 'Paired Collection_R2.fastq.gz' -O second.fastq.gz       --detect_adapter_for_pe                                          &&  mv first.fastq.gz '/galaxy/server/database/objects/a/9/4/dataset_a947da07-d01f-4d4c-9a7b-fb1feba3bf86.dat' && mv second.fastq.gz '/galaxy/server/database/objects/7/7/1/dataset_77149352-c382-40a6-a51d-b0f3f418c5da.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"fastqsanger.gz\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"b07fcc383bc211eea1fcd6caa9e45f6d\"",
+            "single_paired": "{\"__current_case__\": 2, \"adapter_trimming_options\": {\"adapter_sequence1\": \"\", \"adapter_sequence2\": \"\", \"disable_adapter_trimming\": false}, \"global_trimming_options\": {\"trim_front1\": null, \"trim_front2\": null, \"trim_tail1\": null, \"trim_tail2\": null}, \"paired_input\": {\"values\": [{\"id\": 1, \"src\": \"hdca\"}]}, \"single_paired_selector\": \"paired_collection\"}",
+            "read_mod_options": "{\"base_correction_options\": {\"correction\": false}, \"cutting_by_quality_options\": {\"cut_by_quality3\": false, \"cut_by_quality5\": false, \"cut_mean_quality\": null, \"cut_window_size\": null}, \"polyg_tail_trimming\": {\"__current_case__\": 1, \"poly_g_min_len\": null, \"trimming_select\": \"\"}, \"polyx_tail_trimming\": {\"__current_case__\": 1, \"polyx_trimming_select\": \"\"}, \"umi_processing\": {\"umi\": false, \"umi_len\": null, \"umi_loc\": \"\", \"umi_prefix\": \"\"}}",
+            "overrepresented_sequence_analysis": "{\"overrepresentation_analysis\": false, \"overrepresentation_sampling\": null}",
+            "output_options": "{\"report_html\": true, \"report_json\": true}",
+            "filter_options": "{\"length_filtering_options\": {\"disable_length_filtering\": false, \"length_limit\": null, \"length_required\": null}, \"low_complexity_filter\": {\"complexity_threshold\": null, \"enable_low_complexity_filter\": false}, \"quality_filtering_options\": {\"disable_quality_filtering\": false, \"n_base_limit\": null, \"qualified_quality_phred\": null, \"unqualified_percent_limit\": null}}"
+        },
+        "inputs": {
+            "paired_input1": {
+                "id": "e56b8fd15a10e85f",
+                "src": "hda",
+                "uuid": "05517ab9-a487-4ea3-a56d-666c25a9494d"
+            },
+            "paired_input2": {
+                "id": "ff73ced7225f7136",
+                "src": "hda",
+                "uuid": "a872ba29-7a10-4737-ba5f-4856206272a8"
+            }
+        },
+        "outputs": {
+            "report_html": {
+                "id": "6d76f32102196c58",
+                "src": "hda",
+                "uuid": "c10b4d32-80e8-4582-b0d2-d7fd8b024625"
+            },
+            "report_json": {
+                "id": "0121e052a9647ccb",
+                "src": "hda",
+                "uuid": "e82460ae-4692-4e78-8271-95151d135012"
+            },
+            "output_paired_coll|__part__|forward": {
+                "id": "b6da602327d6f3c4",
+                "src": "hda",
+                "uuid": "a947da07-d01f-4d4c-9a7b-fb1feba3bf86"
+            },
+            "output_paired_coll|__part__|reverse": {
+                "id": "c995a2305d8acbeb",
+                "src": "hda",
+                "uuid": "77149352-c382-40a6-a51d-b0f3f418c5da"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://34.138.4.123:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

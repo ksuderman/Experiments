@@ -1,0 +1,87 @@
+{
+    "run": "1",
+    "cloud": "variant",
+    "job_conf": "4x16",
+    "workflow_id": "a9e8001a1ec35be5",
+    "history_id": "b44135392a9ba10a",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "040c9716d7ba998c",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-15T23:31:18.025433",
+        "create_time": "2023-08-15T23:29:23.496587",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/snpeff/snpEff/4.3+T.galaxy1",
+        "history_id": "b44135392a9ba10a",
+        "external_id": "gxy-galaxy-4gwp4",
+        "command_line": "snpEff -Xmx${GALAXY_MEMORY_MB:-8192}m eff -i vcf -o vcf -upDownStreamLen 0 -formatEff -classic -no-downstream -no-intergenic -no-intron -no-upstream -no-utr                  -stats '/galaxy/server/database/objects/2/2/3/dataset_223c866e-ea57-44c9-9b0d-139c013df679.dat' -noLog -dataDir '/galaxy/server/database/objects/b/c/f/dataset_bcf7522a-c21f-4aee-a435-74fdd364849b_files' -configOption 'Test genome database'.genome='Test genome database' -configOption 'Test genome database'.codonTable='Standard' 'Test genome database' '/galaxy/server/database/objects/f/b/0/dataset_fb0cdc66-df81-4a38-93e6-4c987e77a88a.dat' > '/galaxy/server/database/objects/1/a/3/dataset_1a3ea451-d799-43b0-a326-ac1d394afc87.dat' && mkdir '/galaxy/server/database/jobs_directory/000/53/working/dataset_223c866e-ea57-44c9-9b0d-139c013df679_files' && mv '/galaxy/server/database/objects/2/2/3/dataset_223c866e-ea57-44c9-9b0d-139c013df679.dat.genes.txt' '/galaxy/server/database/jobs_directory/000/53/working/dataset_223c866e-ea57-44c9-9b0d-139c013df679_files/dataset_223c866e-ea57-44c9-9b0d-139c013df679.dat.genes.txt'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"vcf\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"903f9fce3bc311ee99ae069f4551b62e\"",
+            "udLength": "\"0\"",
+            "transcripts": null,
+            "spliceSiteSize": null,
+            "spliceRegion": "{\"__current_case__\": 0, \"setSpliceRegions\": \"no\"}",
+            "snpDb": "{\"__current_case__\": 3, \"codon_table\": \"Standard\", \"genomeSrc\": \"custom\", \"snpeff_db\": {\"values\": [{\"id\": 83, \"src\": \"hda\"}]}}",
+            "outputConditional": "{\"__current_case__\": 0, \"outputFormat\": \"vcf\"}",
+            "offset": "\"default\"",
+            "noLog": "true",
+            "intervals": null,
+            "inputFormat": "\"vcf\"",
+            "generate_stats": "true",
+            "filterOut": "[\"-no-downstream\", \"-no-intergenic\", \"-no-intron\", \"-no-upstream\", \"-no-utr\"]",
+            "filter": "{\"__current_case__\": 0, \"specificEffects\": \"no\"}",
+            "csvStats": "false",
+            "chr": "\"\"",
+            "annotations": "[\"-formatEff\", \"-classic\"]"
+        },
+        "inputs": {
+            "snpeff_db": {
+                "id": "337e78ca1fd50455",
+                "src": "hda",
+                "uuid": "bcf7522a-c21f-4aee-a435-74fdd364849b"
+            },
+            "input": {
+                "id": "d4b0238bab79ddbd",
+                "src": "hda",
+                "uuid": "fb0cdc66-df81-4a38-93e6-4c987e77a88a"
+            }
+        },
+        "outputs": {
+            "snpeff_output": {
+                "id": "52779592091555d1",
+                "src": "hda",
+                "uuid": "1a3ea451-d799-43b0-a326-ac1d394afc87"
+            },
+            "statsFile": {
+                "id": "c2bec82ef1bce31e",
+                "src": "hda",
+                "uuid": "223c866e-ea57-44c9-9b0d-139c013df679"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://34.138.4.123:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

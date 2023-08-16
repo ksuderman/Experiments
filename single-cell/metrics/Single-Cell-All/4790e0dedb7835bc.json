@@ -1,0 +1,208 @@
+{
+    "run": "2",
+    "cloud": "sc2",
+    "job_conf": "32x64",
+    "workflow_id": "f2f8ea412ba179d2",
+    "history_id": "ec41e520e754413c",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "4790e0dedb7835bc",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-08-16T05:41:14.017206",
+        "create_time": "2023-08-16T05:38:40.987664",
+        "galaxy_version": "23.0",
+        "command_version": "",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/gtf2gene_list/_ensembl_gtf2gene_list/1.52.0+galaxy0",
+        "history_id": "ec41e520e754413c",
+        "external_id": "gxy-galaxy-gshrt",
+        "command_line": "ln -s '/galaxy/server/database/objects/2/8/4/dataset_284c1696-6646-4522-ae9d-fc62410e7147.dat' input.gtf; gtf2featureAnnotation.R --gtf-file input.gtf --no-header --version-transcripts --parse-cdnas \"/galaxy/server/database/objects/9/f/a/dataset_9fa9bb45-51ce-4273-9883-1a3a6ceeb899.dat\" --parse-cdna-field \"transcript_id\" --filter-cdnas-output \"/galaxy/server/database/objects/b/e/5/dataset_be501971-8832-4895-8564-4cb0ebe2ce59.dat\" --feature-type \"transcript\" --first-field \"transcript_id\" --output-file annotation.txt --fields \"transcript_id,gene_id\"",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"27e49d883bf711ee9cafd21987a239f2\"",
+            "version_transcripts": "true",
+            "noheader": "true",
+            "mito": "{\"__current_case__\": 1, \"mark_mito\": false}",
+            "first_field": "\"transcript_id\"",
+            "fill_empty": "\"\"",
+            "fields": "\"transcript_id,gene_id\"",
+            "feature_type": "\"transcript\"",
+            "cdnas": "{\"__current_case__\": 0, \"cdnas_field\": \"transcript_id\", \"fasta_input\": {\"values\": [{\"id\": 3, \"src\": \"hda\"}]}, \"filter_cdnas\": true, \"parse_cdna_names\": false, \"parse_cdnas\": true}"
+        },
+        "inputs": {
+            "fasta_input": {
+                "id": "307657609f0ddf6d",
+                "src": "hda",
+                "uuid": "9fa9bb45-51ce-4273-9883-1a3a6ceeb899"
+            },
+            "gtf_input": {
+                "id": "4e098645d8147e01",
+                "src": "hda",
+                "uuid": "284c1696-6646-4522-ae9d-fc62410e7147"
+            }
+        },
+        "outputs": {
+            "fasta_output": {
+                "id": "ce6e8f6e6c2100a2",
+                "src": "hda",
+                "uuid": "be501971-8832-4895-8564-4cb0ebe2ce59"
+            },
+            "feature_annotation": {
+                "id": "78f6c6d4877f49cc",
+                "src": "hda",
+                "uuid": "50f69666-c506-4cc6-9cee-63144370e751"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "[1] \"Reading input.gtf elements of type transcript\"\n[1] \"Found 142699 features\"\n[1] \"Reading cDNAs\"\n[1] \"Versioning transcripts\"\n[1] \"Parsing annotation info from cDNA FASTA headers\"\n[1] \"Filtering /galaxy/server/database/objects/9/f/a/dataset_9fa9bb45-51ce-4273-9883-1a3a6ceeb899.dat to match available annotations\"\n[1] \"Storing filtered sequences to /galaxy/server/database/objects/b/e/5/dataset_be501971-8832-4895-8564-4cb0ebe2ce59.dat\"\n[1] \"Storing output to annotation.txt\"\n",
+        "tool_stderr": "",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "",
+        "stdout": "[1] \"Reading input.gtf elements of type transcript\"\n[1] \"Found 142699 features\"\n[1] \"Reading cDNAs\"\n[1] \"Versioning transcripts\"\n[1] \"Parsing annotation info from cDNA FASTA headers\"\n[1] \"Filtering /galaxy/server/database/objects/9/f/a/dataset_9fa9bb45-51ce-4273-9883-1a3a6ceeb899.dat to match available annotations\"\n[1] \"Storing filtered sequences to /galaxy/server/database/objects/b/e/5/dataset_be501971-8832-4895-8564-4cb0ebe2ce59.dat\"\n[1] \"Storing output to annotation.txt\"\n",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-gshrt-8bj7h 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-gshrt-8bj7h 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "184.5 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "198070092.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "48",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "48.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "1.3 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "1370943488.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "64.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "68719476736.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "1.3 GB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "1370943488.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "64.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "68719476736.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "2 minutes",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "129891789190.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "2 minutes",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "126.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-08-16 05:41:02",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1692164462.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-08-16 05:38:56",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1692164336.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "68719",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "68719.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "32",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "32.0000000"
+            }
+        ]
+    },
+    "status": "ok",
+    "server": "http://104.196.19.109:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

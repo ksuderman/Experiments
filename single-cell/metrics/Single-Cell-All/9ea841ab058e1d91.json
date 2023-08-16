@@ -1,0 +1,74 @@
+{
+    "run": "3",
+    "cloud": "sc2",
+    "job_conf": "8x32",
+    "workflow_id": "fc4bea6f673bef60",
+    "history_id": "f2562cd8c23e502a",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "9ea841ab058e1d91",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-16T02:43:07.323935",
+        "create_time": "2023-08-16T02:33:34.367218",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/dropletutils_read_10x/dropletutils_read_10x/1.0.4+galaxy0",
+        "history_id": "f2562cd8c23e502a",
+        "external_id": "gxy-galaxy-ttd2b",
+        "command_line": "ln -s '/galaxy/server/database/objects/a/6/9/dataset_a69c94fc-a036-4b2a-9114-00fd27def939.dat' matrix.mtx && ln -s '/galaxy/server/database/objects/6/4/5/dataset_645434c8-fb71-47b2-b116-5d4d9b33ec92.dat' genes.tsv && ln -s '/galaxy/server/database/objects/3/3/2/dataset_332ca8c2-fb23-4f3a-aa04-ad3fcd340a35.dat' barcodes.tsv && dropletutils-read-10x-counts.R -s . -c TRUE -o '/galaxy/server/database/objects/3/9/5/dataset_395b42d8-adb5-4b38-8074-1c57d2aadcbf.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"mtx\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"4aeb89fa3bdd11eea787f655ae09c91a\"",
+            "add_metadata": "{\"__current_case__\": 1, \"add_metadata_file\": false}"
+        },
+        "inputs": {
+            "barcodes": {
+                "id": "9df154cf1c0495bb",
+                "src": "hda",
+                "uuid": "332ca8c2-fb23-4f3a-aa04-ad3fcd340a35"
+            },
+            "genes": {
+                "id": "868bbc6dbeb4ac85",
+                "src": "hda",
+                "uuid": "645434c8-fb71-47b2-b116-5d4d9b33ec92"
+            },
+            "matrix": {
+                "id": "45e5aa774da9466e",
+                "src": "hda",
+                "uuid": "a69c94fc-a036-4b2a-9114-00fd27def939"
+            }
+        },
+        "outputs": {
+            "output_rds": {
+                "id": "8612f503a995a766",
+                "src": "hda",
+                "uuid": "395b42d8-adb5-4b38-8074-1c57d2aadcbf"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://104.196.19.109:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

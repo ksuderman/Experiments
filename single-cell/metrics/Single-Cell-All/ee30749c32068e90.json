@@ -1,0 +1,76 @@
+{
+    "run": "1",
+    "cloud": "sc2",
+    "job_conf": "32x64",
+    "workflow_id": "f2f8ea412ba179d2",
+    "history_id": "b1e1415ab563a64e",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "ee30749c32068e90",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-16T05:27:26.327885",
+        "create_time": "2023-08-16T05:27:09.361139",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/ebi-gxa/gtf2gene_list/_ensembl_gtf2gene_list/1.52.0+galaxy0",
+        "history_id": "b1e1415ab563a64e",
+        "external_id": "gxy-galaxy-pjsxj",
+        "command_line": "ln -s '/galaxy/server/database/objects/2/8/4/dataset_284c1696-6646-4522-ae9d-fc62410e7147.dat' input.gtf; gtf2featureAnnotation.R --gtf-file input.gtf --no-header --version-transcripts --mito --mito-chr \"mt,mitochondrion_genome,mito,m,chrM,chrMt\" --mito-biotypes \"mt_trna,mt_rrna,mt_trna_pseudogene\" --feature-type \"gene\" --first-field \"gene_id\" --output-file annotation.txt --fields \"gene_id,gene_name,mito\"",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"8b979be83bf511ee9cafd21987a239f2\"",
+            "version_transcripts": "true",
+            "noheader": "true",
+            "mito": "{\"__current_case__\": 0, \"mark_mito\": true, \"mito_biotypes\": \"mt_trna,mt_rrna,mt_trna_pseudogene\", \"mito_chr\": \"mt,mitochondrion_genome,mito,m,chrM,chrMt\"}",
+            "first_field": "\"gene_id\"",
+            "fill_empty": "\"\"",
+            "fields": "\"gene_id,gene_name,mito\"",
+            "feature_type": "\"gene\"",
+            "cdnas": "{\"__current_case__\": 1, \"parse_cdnas\": false}"
+        },
+        "inputs": {
+            "gtf_input": {
+                "id": "4e098645d8147e01",
+                "src": "hda",
+                "uuid": "284c1696-6646-4522-ae9d-fc62410e7147"
+            }
+        },
+        "outputs": {
+            "fasta_output": {
+                "id": "232c83f31a711cc2",
+                "src": "hda",
+                "uuid": "2e461554-67a9-4f38-88f5-36e9d58b2ea7"
+            },
+            "feature_annotation": {
+                "id": "c9c8ba0ec7dde909",
+                "src": "hda",
+                "uuid": "373d2834-ac8d-4ade-810a-6ff1566be5f8"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://104.196.19.109:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

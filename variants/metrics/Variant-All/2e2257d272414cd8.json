@@ -1,0 +1,92 @@
+{
+    "run": "3",
+    "cloud": "variant",
+    "job_conf": "4x16",
+    "workflow_id": "a9e8001a1ec35be5",
+    "history_id": "63fc27fe1c63603b",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "2e2257d272414cd8",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-15T23:36:18.031905",
+        "create_time": "2023-08-15T23:35:07.275228",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/multiqc/multiqc/1.11+galaxy0",
+        "history_id": "63fc27fe1c63603b",
+        "external_id": "gxy-galaxy-7j7hw",
+        "command_line": "die() { echo \"$@\" 1>&2 ; exit 1; } &&  mkdir multiqc_WDir &&   mkdir multiqc_WDir/fastp_0 &&    ln -s '/galaxy/server/database/objects/3/5/a/dataset_35a395be-b90f-414c-b52c-d835d53c3b9d.dat' 'multiqc_WDir/fastp_0/fastp on data 2 and data 1_ JSON reportfastp.json' && grep -q \"report_title\" 'multiqc_WDir/fastp_0/fastp on data 2 and data 1_ JSON reportfastp.json' || die \"'report_title' or 'report_title' not found in the file\" && mkdir multiqc_WDir/samtools_1 &&    mkdir 'multiqc_WDir/samtools_1/stats_0' &&      grep -q 'This file was produced by samtools stats' /galaxy/server/database/objects/d/3/0/dataset_d30b2bb7-d54d-4ee1-b349-3efd985ead10.dat || die \"Module 'samtools: 'This file was produced by samtools stats' not found in the file 'Samtools stats on data 9'\" && ln -s '/galaxy/server/database/objects/d/3/0/dataset_d30b2bb7-d54d-4ee1-b349-3efd985ead10.dat' 'multiqc_WDir/samtools_1/stats_0/Samtools stats on data 9'  &&    mkdir multiqc_WDir/picard_2 &&      mkdir 'multiqc_WDir/picard_2/markdups_0' &&    grep -q 'MarkDuplicates' /galaxy/server/database/objects/c/5/7/dataset_c574bd13-e70a-452f-a3e5-acd52dc5aaf3.dat || die \"Module 'picard: 'MarkDuplicates' not found in the file 'MarkDuplicates on data 9_ MarkDuplicate metrics'\" && ln -s '/galaxy/server/database/objects/c/5/7/dataset_c574bd13-e70a-452f-a3e5-acd52dc5aaf3.dat' 'multiqc_WDir/picard_2/markdups_0/MarkDuplicates on data 9_ MarkDuplicate metrics'  &&     multiqc multiqc_WDir --filename 'report'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"5d47af663bc411ee99ae069f4551b62e\"",
+            "title": "\"\"",
+            "saveLog": "false",
+            "results": "[{\"__index__\": 0, \"software_cond\": {\"__current_case__\": 7, \"input\": {\"values\": [{\"id\": 131, \"src\": \"hda\"}]}, \"software\": \"fastp\"}}, {\"__index__\": 1, \"software_cond\": {\"__current_case__\": 24, \"output\": [{\"__index__\": 0, \"type\": {\"__current_case__\": 0, \"input\": {\"values\": [{\"id\": 138, \"src\": \"hda\"}]}, \"type\": \"stats\"}}], \"software\": \"samtools\"}}, {\"__index__\": 2, \"software_cond\": {\"__current_case__\": 17, \"output\": [{\"__index__\": 0, \"input\": {\"values\": [{\"id\": 136, \"src\": \"hda\"}]}, \"type\": \"markdups\"}], \"software\": \"picard\"}}]",
+            "flat": "false",
+            "export": "false",
+            "comment": "\"\""
+        },
+        "inputs": {
+            "results_0|input1": {
+                "id": "0406219f37db93ec",
+                "src": "hda",
+                "uuid": "35a395be-b90f-414c-b52c-d835d53c3b9d"
+            },
+            "results_0|input": {
+                "id": "0406219f37db93ec",
+                "src": "hda",
+                "uuid": "35a395be-b90f-414c-b52c-d835d53c3b9d"
+            },
+            "results_2|software_cond|output_0|input1": {
+                "id": "7d7d5039d435e9d1",
+                "src": "hda",
+                "uuid": "c574bd13-e70a-452f-a3e5-acd52dc5aaf3"
+            },
+            "results_2|software_cond|output_0|input": {
+                "id": "7d7d5039d435e9d1",
+                "src": "hda",
+                "uuid": "c574bd13-e70a-452f-a3e5-acd52dc5aaf3"
+            },
+            "results_1|software_cond|output_0|input1": {
+                "id": "23e9adadf461d7c4",
+                "src": "hda",
+                "uuid": "d30b2bb7-d54d-4ee1-b349-3efd985ead10"
+            },
+            "results_1|software_cond|output_0|input": {
+                "id": "23e9adadf461d7c4",
+                "src": "hda",
+                "uuid": "d30b2bb7-d54d-4ee1-b349-3efd985ead10"
+            }
+        },
+        "outputs": {
+            "html_report": {
+                "id": "9654e5ee70b918fe",
+                "src": "hda",
+                "uuid": "5317cb9f-59cc-4183-ad44-a1c0d4c9112d"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://34.138.4.123:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}

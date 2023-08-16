@@ -1,0 +1,63 @@
+{
+    "run": "1",
+    "cloud": "sc2",
+    "job_conf": "16x16",
+    "workflow_id": "5a682f9862b4224c",
+    "history_id": "d3743cdb74557522",
+    "inputs": "read1 read2 cdna gtf",
+    "metrics": {
+        "model_class": "Job",
+        "id": "18b3b3d5e1cc19ad",
+        "state": "error",
+        "exit_code": null,
+        "update_time": "2023-08-16T03:30:44.712606",
+        "create_time": "2023-08-16T03:28:16.037973",
+        "galaxy_version": "23.0",
+        "command_version": null,
+        "tool_id": "CONVERTER_gz_to_uncompressed",
+        "history_id": "d3743cdb74557522",
+        "external_id": "gxy-galaxy-rn5tf",
+        "command_line": "cp '/galaxy/server/database/jobs_directory/000/364/configs/tmprgjw91ah' 'galaxy.json' && gzip -dcf '/galaxy/server/database/objects/3/b/7/dataset_3b711190-ef29-49aa-9832-273aa40dcec2.dat' > '/galaxy/server/database/objects/e/9/e/dataset_e9e78584-cd1a-4934-bc11-07004b6f62af.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"input\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__target_datatype__": "\"fasta\""
+        },
+        "inputs": {
+            "input1": {
+                "id": "c59c23d8b8e6172a",
+                "src": "hda",
+                "uuid": "3b711190-ef29-49aa-9832-273aa40dcec2"
+            }
+        },
+        "outputs": {
+            "output1": {
+                "id": "e814b5674c3cb8fe",
+                "src": "hda",
+                "uuid": "e9e78584-cd1a-4934-bc11-07004b6f62af"
+            }
+        },
+        "output_collections": {},
+        "tool_stdout": "",
+        "tool_stderr": "",
+        "job_stdout": null,
+        "job_stderr": null,
+        "stderr": "",
+        "stdout": "",
+        "job_messages": null,
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": []
+    },
+    "status": "error",
+    "server": "http://104.196.19.109:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        39834229,
+        102234229,
+        253580346,
+        1036917979
+    ]
+}

@@ -1,0 +1,218 @@
+{
+    "run": "3",
+    "cloud": "variant",
+    "job_conf": "16x16",
+    "workflow_id": "d500ad760310b2e2",
+    "history_id": "209b430c42282abf",
+    "inputs": "Paired Collection genome.genbank",
+    "metrics": {
+        "model_class": "Job",
+        "id": "bd2e39c41c4adee7",
+        "state": "ok",
+        "exit_code": 0,
+        "update_time": "2023-08-16T00:41:53.561842",
+        "create_time": "2023-08-16T00:41:38.552580",
+        "galaxy_version": "23.0",
+        "command_version": "fastp 0.23.2",
+        "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/fastp/fastp/0.23.2+galaxy0",
+        "history_id": "209b430c42282abf",
+        "external_id": "gxy-galaxy-8n7zr",
+        "command_line": "ln -s '/galaxy/server/database/objects/0/5/5/dataset_05517ab9-a487-4ea3-a56d-666c25a9494d.dat' 'Paired Collection.fastq.gz' && ln -s '/galaxy/server/database/objects/a/8/7/dataset_a872ba29-7a10-4737-ba5f-4856206272a8.dat' 'Paired Collection_R2.fastq.gz' &&    fastp  --thread ${GALAXY_SLOTS:-1} --report_title 'fastp report for Paired Collection.fastq.gz'   -i 'Paired Collection.fastq.gz' -o first.fastq.gz  -I 'Paired Collection_R2.fastq.gz' -O second.fastq.gz       --detect_adapter_for_pe                                          &&  mv first.fastq.gz '/galaxy/server/database/objects/8/a/6/dataset_8a62bfb5-3068-4466-81f2-9b6e26f95b1c.dat' && mv second.fastq.gz '/galaxy/server/database/objects/d/6/f/dataset_d6f65fa2-e466-4fb2-ad7c-7cd7447930f0.dat'",
+        "traceback": null,
+        "params": {
+            "__input_ext": "\"fastqsanger.gz\"",
+            "dbkey": "\"?\"",
+            "chromInfo": "\"/cvmfs/data.galaxyproject.org/managed/len/ucsc/?.len\"",
+            "__workflow_invocation_uuid__": "\"a86c90e83bcd11eeb868c65e3502880c\"",
+            "single_paired": "{\"__current_case__\": 2, \"adapter_trimming_options\": {\"adapter_sequence1\": \"\", \"adapter_sequence2\": \"\", \"disable_adapter_trimming\": false}, \"global_trimming_options\": {\"trim_front1\": null, \"trim_front2\": null, \"trim_tail1\": null, \"trim_tail2\": null}, \"paired_input\": {\"values\": [{\"id\": 1, \"src\": \"hdca\"}]}, \"single_paired_selector\": \"paired_collection\"}",
+            "read_mod_options": "{\"base_correction_options\": {\"correction\": false}, \"cutting_by_quality_options\": {\"cut_by_quality3\": false, \"cut_by_quality5\": false, \"cut_mean_quality\": null, \"cut_window_size\": null}, \"polyg_tail_trimming\": {\"__current_case__\": 1, \"poly_g_min_len\": null, \"trimming_select\": \"\"}, \"polyx_tail_trimming\": {\"__current_case__\": 1, \"polyx_trimming_select\": \"\"}, \"umi_processing\": {\"umi\": false, \"umi_len\": null, \"umi_loc\": \"\", \"umi_prefix\": \"\"}}",
+            "overrepresented_sequence_analysis": "{\"overrepresentation_analysis\": false, \"overrepresentation_sampling\": null}",
+            "output_options": "{\"report_html\": true, \"report_json\": true}",
+            "filter_options": "{\"length_filtering_options\": {\"disable_length_filtering\": false, \"length_limit\": null, \"length_required\": null}, \"low_complexity_filter\": {\"complexity_threshold\": null, \"enable_low_complexity_filter\": false}, \"quality_filtering_options\": {\"disable_quality_filtering\": false, \"n_base_limit\": null, \"qualified_quality_phred\": null, \"unqualified_percent_limit\": null}}"
+        },
+        "inputs": {
+            "paired_input2": {
+                "id": "b07e00494b610094",
+                "src": "hda",
+                "uuid": "a872ba29-7a10-4737-ba5f-4856206272a8"
+            },
+            "paired_input1": {
+                "id": "d500ad760310b2e2",
+                "src": "hda",
+                "uuid": "05517ab9-a487-4ea3-a56d-666c25a9494d"
+            }
+        },
+        "outputs": {
+            "report_json": {
+                "id": "22d6ca253c5f0c96",
+                "src": "hda",
+                "uuid": "0a756cdb-e877-4d1e-a7fe-73b9a48bb79f"
+            },
+            "report_html": {
+                "id": "d544b7b64cbd0e5a",
+                "src": "hda",
+                "uuid": "442b1b55-5d84-4f0d-891d-cf46835de14f"
+            },
+            "output_paired_coll|__part__|reverse": {
+                "id": "651496b6b7285034",
+                "src": "hda",
+                "uuid": "d6f65fa2-e466-4fb2-ad7c-7cd7447930f0"
+            },
+            "output_paired_coll|__part__|forward": {
+                "id": "5dfb53803aa7a3ad",
+                "src": "hda",
+                "uuid": "8a62bfb5-3068-4466-81f2-9b6e26f95b1c"
+            }
+        },
+        "output_collections": {
+            "output_paired_coll": {
+                "id": "4419b58b88de51f3",
+                "src": "hdca"
+            }
+        },
+        "tool_stdout": "",
+        "tool_stderr": "Detecting adapter sequence for read1...\nNo adapter detected for read1\n\nDetecting adapter sequence for read2...\nNo adapter detected for read2\n\nRead1 before filtering:\ntotal reads: 2500\ntotal bases: 376657\nQ20 bases: 371549(98.6439%)\nQ30 bases: 370136(98.2687%)\n\nRead2 before filtering:\ntotal reads: 2500\ntotal bases: 376700\nQ20 bases: 355761(94.4415%)\nQ30 bases: 351290(93.2546%)\n\nRead1 after filtering:\ntotal reads: 2492\ntotal bases: 375257\nQ20 bases: 370593(98.7571%)\nQ30 bases: 369355(98.4272%)\n\nRead2 after filtering:\ntotal reads: 2492\ntotal bases: 375297\nQ20 bases: 355082(94.6136%)\nQ30 bases: 350732(93.4545%)\n\nFiltering result:\nreads passed filter: 4984\nreads failed due to low quality: 16\nreads failed due to too many N: 0\nreads failed due to too short: 0\nreads with adapter trimmed: 30\nbases trimmed due to adapters: 393\n\nDuplication rate: 17.96%\n\nInsert size peak (evaluated by paired-end reads): 184\n\nJSON report: fastp.json\nHTML report: fastp.html\n\nfastp --thread 16 --report_title fastp report for Paired Collection.fastq.gz -i Paired Collection.fastq.gz -o first.fastq.gz -I Paired Collection_R2.fastq.gz -O second.fastq.gz --detect_adapter_for_pe \nfastp v0.23.2, time used: 1 seconds\n",
+        "job_stdout": "",
+        "job_stderr": "",
+        "stderr": "Detecting adapter sequence for read1...\nNo adapter detected for read1\n\nDetecting adapter sequence for read2...\nNo adapter detected for read2\n\nRead1 before filtering:\ntotal reads: 2500\ntotal bases: 376657\nQ20 bases: 371549(98.6439%)\nQ30 bases: 370136(98.2687%)\n\nRead2 before filtering:\ntotal reads: 2500\ntotal bases: 376700\nQ20 bases: 355761(94.4415%)\nQ30 bases: 351290(93.2546%)\n\nRead1 after filtering:\ntotal reads: 2492\ntotal bases: 375257\nQ20 bases: 370593(98.7571%)\nQ30 bases: 369355(98.4272%)\n\nRead2 after filtering:\ntotal reads: 2492\ntotal bases: 375297\nQ20 bases: 355082(94.6136%)\nQ30 bases: 350732(93.4545%)\n\nFiltering result:\nreads passed filter: 4984\nreads failed due to low quality: 16\nreads failed due to too many N: 0\nreads failed due to too short: 0\nreads with adapter trimmed: 30\nbases trimmed due to adapters: 393\n\nDuplication rate: 17.96%\n\nInsert size peak (evaluated by paired-end reads): 184\n\nJSON report: fastp.json\nHTML report: fastp.html\n\nfastp --thread 16 --report_title fastp report for Paired Collection.fastq.gz -i Paired Collection.fastq.gz -o first.fastq.gz -I Paired Collection_R2.fastq.gz -O second.fastq.gz --detect_adapter_for_pe \nfastp v0.23.2, time used: 1 seconds\n",
+        "stdout": "",
+        "job_messages": [],
+        "dependencies": [],
+        "user_email": "tests@fake.org",
+        "job_metrics": [
+            {
+                "title": "Operating System",
+                "value": "Linux gxy-galaxy-8n7zr-45f9f 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n",
+                "plugin": "uname",
+                "name": "uname",
+                "raw_value": "Linux gxy-galaxy-8n7zr-45f9f 5.10.176+ #1 SMP Fri May 26 15:04:00 UTC 2023 x86_64 GNU/Linux\n"
+            },
+            {
+                "title": "Total System Swap",
+                "value": "0 bytes",
+                "plugin": "meminfo",
+                "name": "swaptotal",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Total System Memory",
+                "value": "184.5 GB",
+                "plugin": "meminfo",
+                "name": "memtotal",
+                "raw_value": "198070092.0000000"
+            },
+            {
+                "title": "Processor Count",
+                "value": "48",
+                "plugin": "cpuinfo",
+                "name": "processor_count",
+                "raw_value": "48.0000000"
+            },
+            {
+                "title": "Memory softlimit on cgroup",
+                "value": "8.0 EB",
+                "plugin": "cgroup",
+                "name": "memory.soft_limit_in_bytes",
+                "raw_value": "9223372036854771712.0000000"
+            },
+            {
+                "title": "Was OOM Killer active?",
+                "value": "No",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.under_oom",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "OOM Control enabled",
+                "value": "Yes",
+                "plugin": "cgroup",
+                "name": "memory.oom_control.oom_kill_disable",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "Max memory usage (MEM+SWP)",
+                "value": "1.2 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.max_usage_in_bytes",
+                "raw_value": "1315524608.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM+SWP)",
+                "value": "16.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.memsw.limit_in_bytes",
+                "raw_value": "17179869184.0000000"
+            },
+            {
+                "title": "Max memory usage (MEM)",
+                "value": "1.2 GB",
+                "plugin": "cgroup",
+                "name": "memory.max_usage_in_bytes",
+                "raw_value": "1315524608.0000000"
+            },
+            {
+                "title": "Memory limit on cgroup (MEM)",
+                "value": "16.0 GB",
+                "plugin": "cgroup",
+                "name": "memory.limit_in_bytes",
+                "raw_value": "17179869184.0000000"
+            },
+            {
+                "title": "Failed to allocate memory count",
+                "value": 0.0,
+                "plugin": "cgroup",
+                "name": "memory.failcnt",
+                "raw_value": "0E-7"
+            },
+            {
+                "title": "CPU Time",
+                "value": "0.987217097 seconds",
+                "plugin": "cgroup",
+                "name": "cpuacct.usage",
+                "raw_value": "987217097.0000000"
+            },
+            {
+                "title": "Job Runtime (Wall Clock)",
+                "value": "1 second",
+                "plugin": "core",
+                "name": "runtime_seconds",
+                "raw_value": "1.0000000"
+            },
+            {
+                "title": "Job End Time",
+                "value": "2023-08-16 00:41:43",
+                "plugin": "core",
+                "name": "end_epoch",
+                "raw_value": "1692146503.0000000"
+            },
+            {
+                "title": "Job Start Time",
+                "value": "2023-08-16 00:41:42",
+                "plugin": "core",
+                "name": "start_epoch",
+                "raw_value": "1692146502.0000000"
+            },
+            {
+                "title": "Memory Allocated (MB)",
+                "value": "17179",
+                "plugin": "core",
+                "name": "galaxy_memory_mb",
+                "raw_value": "17179.0000000"
+            },
+            {
+                "title": "Cores Allocated",
+                "value": "16",
+                "plugin": "core",
+                "name": "galaxy_slots",
+                "raw_value": "16.0000000"
+            }
+        ]
+    },
+    "status": "ok",
+    "server": "http://34.138.4.123:8000/galaxy/",
+    "ref_data_size": [],
+    "input_data_size": [
+        240308,
+        390616
+    ]
+}
